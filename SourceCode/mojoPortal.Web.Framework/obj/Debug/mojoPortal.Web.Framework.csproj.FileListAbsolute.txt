@@ -1,0 +1,12 @@
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.pdb
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\CsvHelper.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\HtmlAgilityPack.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\log4net.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\CsvHelper.xml
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\log4net.xml
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.csproj.AssemblyReference.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.csproj.CoreCompileInputs.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPort.A7DF4B80.Up2Date
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.pdb

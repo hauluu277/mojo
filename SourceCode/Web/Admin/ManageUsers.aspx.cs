@@ -29,8 +29,7 @@ using mojoPortal.Web.Controls;
 using mojoPortal.Web.Editor;
 using mojoPortal.Web.Framework;
 using mojoPortal.Web.UI;
-using Resources;
-using DocumentFormat.OpenXml.VariantTypes;
+using Resources; 
 
 namespace mojoPortal.Web.AdminUI
 {

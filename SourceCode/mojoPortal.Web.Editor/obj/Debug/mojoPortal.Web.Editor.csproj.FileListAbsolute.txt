@@ -1,0 +1,9 @@
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.pdb
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.xml
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.AssemblyReference.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.CoreCompileInputs.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPort.58E39726.Up2Date
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb

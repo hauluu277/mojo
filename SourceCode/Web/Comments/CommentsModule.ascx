@@ -3,7 +3,7 @@
 <portal:OuterWrapperPanel ID="pnlOuterWrap" runat="server">
 <mp:CornerRounderTop id="ctop1" runat="server" />
 <portal:InnerWrapperPanel ID="pnlInnerWrap" runat="server" CssClass="panelwrapper Comments">
-<portal:ModuleTitleControl runat="server" id="TitleControl" />
+<portal:ModuleTitleControl EditText="Edit" EditUrl="~/Comments/CommentsEdit.aspx" runat="server" id="TitleControl" />
 <portal:OuterBodyPanel ID="pnlOuterBody" runat="server">
 <portal:InnerBodyPanel ID="pnlInnerBody" runat="server" CssClass="modulecontent">
 <portal:CommentsWidget ID="InternalCommentSystem" runat="server"  />

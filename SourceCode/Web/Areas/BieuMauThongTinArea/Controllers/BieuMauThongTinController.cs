@@ -9,7 +9,7 @@ using mojoPortal.Service.Business;
 using mojoPortal.Service.CommonModel.BieuMauThongTin;
 using mojoPortal.Web.Areas.BieuMauThongTinArea.Data;
 using mojoPortal.Web.Base;
-using Novacode;
+//using Novacode;
 using OpenXmlPowerTools;
 using System;
 using System.Collections.Generic;
@@ -154,7 +154,7 @@ namespace mojoPortal.Web.Areas.BieuMauThongTinArea.Controllers
 
                     //lấy thông tin của biểu mẫu
                     var filePath = uploadResult.fullPath;
-                    var docx = DocX.Load(filePath);
+                    /*var docx = DocX.Load(filePath);
                     var countTable = docx.Tables.Count;
                     for (int i = 0; i < countTable; i++)
                     {
@@ -178,7 +178,7 @@ namespace mojoPortal.Web.Areas.BieuMauThongTinArea.Controllers
                             }
                         }
                     }
-                    docx.SaveAs(filePath);
+                    docx.SaveAs(filePath);*/
                     byte[] byteArray = System.IO.File.ReadAllBytes(filePath);
 
                     //cập nhật chứng thư

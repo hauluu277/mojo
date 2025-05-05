@@ -1,5 +1,4 @@
-﻿using CKFinder.Connector;
-using DocumentFormat.OpenXml.EMMA;
+﻿using CKFinder.Connector; 
 using GCheckout.Util;
 using mojoportal.CoreHelpers;
 using mojoportal.Service.CommonBusiness;
