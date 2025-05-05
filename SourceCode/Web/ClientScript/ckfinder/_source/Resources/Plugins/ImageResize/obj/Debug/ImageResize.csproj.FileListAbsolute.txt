@@ -1,0 +1,9 @@
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\bin\Debug\CKFinder_ImageResize.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\bin\Debug\CKFinder_ImageResize.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\bin\Debug\CKFinder.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\bin\Debug\CKFinder.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\obj\Debug\ImageResize.csprojAssemblyReference.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\obj\Debug\ImageResize.csproj.CoreCompileInputs.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\obj\Debug\ImageResize.csproj.CopyComplete
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\obj\Debug\CKFinder_ImageResize.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\ImageResize\obj\Debug\CKFinder_ImageResize.pdb

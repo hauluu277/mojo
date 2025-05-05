@@ -1,0 +1,282 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BaoCaoArea.Models
+@model BaoCaoFormVM
+@{
+    ViewBag.Title = "Quản lý công khai ngân sách";
+
+    var title = "Thêm mới công khai ngân sách";
+
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật công khai ngân sách";
+
+    }
+
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #fileList {
+        margin-left: 18%;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmReport .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+@using (
+Ajax.BeginForm("SaveForm", "BaoCao",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ccc", OnFailure = "AjaxError" },
+new { @class = "", id = "frmReport", area = "BaoCaoArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+
+    <div class="modal-dialog" style="width:1000px;max-width:100%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <h3 class="legend-title">Thông tin công khai ngân sách</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tiêu đề<span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.TenBaoCao, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.TenBaoCao)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Lĩnh vực<span class="red">*</span></label>
+
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.LinhVucID, Model.ListLinhVuc, "--Lĩnh vực báo cáo--", new { @class = "select2 form-control" })
+                            @Html.ValidationMessageFor(x => x.LinhVucID)
+                        </div>
+
+                        <label class="control-label col-sm-2">Ngày công bố</label>
+
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(x => x.NgayCongBo, string.Format("{0:dd/MM/yyyy}", Model.NgayCongBo), new { @class = "form-control txt-picker" })
+                            @Html.ValidationMessageFor(x => x.NgayCongBo)
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Năm chu kỳ báo cáo <span class="red">*</span></label>
+                        <div class="col-sm-4">
+
+                            @Html.TextBoxFor(x => x.NamChuKyBaoCao, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.NamChuKyBaoCao)
+                        </div>
+
+                        <label class="control-label col-sm-2">Số QĐ công bố</label>
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(x => x.SoQuyetDinhCongBo, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.SoQuyetDinhCongBo)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Biểu mẫu</label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.BieuMau, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.BieuMau)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label  col-sm-2" for="IsPublished">Xuất bản</label>
+                        <div class="col-sm-4">
+                            <input type="checkbox" id="IsPublish" name="IsPublish" @(Model.IsPublish == true ? "checked" : string.Empty) />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tệp đính kèm</label>
+
+                        <span class="btn btn-danger" onclick="ChooseFileReference()" style="margin-left:10px">
+                            <i class="fa fa-plus"></i>&nbsp;Chọn tệp đính kèm
+                        </span>
+                        <div id="fileList" style="float: right; width: calc(100% - 100px); margin-top: 15px;">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading" style="padding: 5px 15px">
+                                    Danh sách tệp đính kèm
+                                </div>
+                                <div class="panel-body">
+                                    <ul id="tblFileList" class="table table-striped">
+                                        @if (!string.IsNullOrEmpty(Model.PathFile))
+                                        {
+                                            var listFile = Model.PathFile.Split('?');
+                                            foreach (var item in listFile)
+                                            {
+                                                <li data-id="@item">
+                                                    <div class="div1"><a href="@item" download="@item">@item</a></div>
+                                                    <div class="div2">
+                                                        <span style="cursor: pointer;" onclick="removeFileAtachment('@item')" title="Xóa tệp đính kèm"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                                    </div>
+                                                </li>
+                                            }
+
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer center boder-box">
+                @Html.HiddenFor(x => x.PathFile)
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+@*<script src="~/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery/jquery.unobtrusive-ajax.min.js"></script>*@
+<script src="~/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+
+<script>
+    var arrFileList = [];
+    function ChooseFileReference() {
+        var finder = new CKFinder();
+        finder.inpopup = true;
+        finder.defaultlanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupfeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectmultiple = true;
+        finder.startuppath = "Files:/";
+        finder.baseurl = "/File/";
+        finder.resourcetype = 'File';
+        finder.selectActionFunction = function (fileurl, data, allfiles) {
+            $(allfiles).each(function (index, element) {
+                var filePath = this.data.fileUrl;
+                var fileName = filePath.substring(filePath.lastIndexOf("/") + 1, filePath.length);
+                var fileInfo = {
+                    filePath: filePath,
+                    fileName: fileName
+                };
+                var hasExisted = false;
+                $.each(arrFileList, function (index, element) {
+                    if (element.fileName == fileName) {
+                        hasExisted = true;
+                    }
+                });
+                if (hasExisted) return;
+                arrFileList.push(filePath);
+                $("#PathFile").val(arrFileList.join("?"));
+
+                var table = $("#tblFileList");
+                var append = "<li data-id='" + fileName + "'>";
+                append += `<div class="div1">`;
+                append += `<a href=` + filePath + ` download='` + fileName + `'>` + fileName + `</a>`;
+                append += `</div>`;
+                append += `<div class="div2">`;
+                append += `<span style="cursor: pointer;" onclick="removeFileAtachment('` + fileName + `')" title="Xóa tài liệu đính kèm"><i class="fa fa-times" aria-hidden="true"></i></span>`;
+                append += `</div>`;
+                append += `</li>`;
+                $(table).prepend(append)
+
+            });
+        };
+        finder.popup();
+    }
+
+    function removeFileAtachment(fileName) {
+        if (confirm("Xóa file đính kèm đã chọn ?")) {
+
+            $("#tblFileList li[data-id='" + fileName + "']").remove();
+            $.each(arrFileList, function (i) {
+                if (arrFileList[i] == i) {
+                    arrFileList.splice(i, 0);
+                    $("#PathFile").val(arrFileList.join("?"));
+                    return false;
+                }
+            });
+        }
+    }
+
+
+
+    function GetUrlImage() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("#PathFile").val(fileUrl);
+            //$("#viewVideo").empty();
+            //$("#viewVideo").append("<img src='" + fileUrl + "' width='200'/>");
+            //$("#PathFile").change();
+        };
+        finder.popup();
+    }
+
+    function SubmitForm() {
+        debugger;
+        var oke = jQuery('#frmReport').valid();
+        if (oke) {
+            $("#frmReport").submit();
+        }
+    }
+    $(document).ready(function () {
+        $(".select2").select2();
+        $(".txt-picker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true, yearRange: "-50:+20",
+            showWeek: false, weekHeader: "Tuần",
+            language: 'vi',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (date) {
+
+            }
+        });
+    });
+
+    function ccc(rs) {
+        if (rs.Status == true) {
+            reloadTable();
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+
+
+</script>

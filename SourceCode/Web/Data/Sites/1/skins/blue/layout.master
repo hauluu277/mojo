@@ -1,0 +1,461 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="mojoPortal.Web.layout" %>
+
+<%@ Register Src="~/Controls/MenuControl.ascx" TagPrefix="portal" TagName="MenuControl" %>
+<%@ Register Src="~/Controls/MenuTopControl.ascx" TagPrefix="portal" TagName="MenuTopControl" %>
+<%@ Register Src="~/Controls/FooterControl.ascx" TagPrefix="portal" TagName="FooterControl" %>
+
+
+<!DOCTYPE html>
+<html class="htmlclass" data-theme="light">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <!--#include file="includes/favicons.html"-->
+    <portal:MetaContent ID="MetaContent" runat="server" DisableContentType="true" PreZoomForIPhone="false" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/Data/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <link href="css/MyStyle.css" rel="stylesheet" />
+    <link href="/scripts/jquery/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+
+    <link href="/Data/plugins/smartmenu/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Data/plugins/smartmenu/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.css" rel="stylesheet">
+    <link href="/Data/plugins/notifit/notifit.min.css" rel="stylesheet" />
+    <link href="/Data/Sites/1/skins/framework/css/menu_desktop.css" rel="stylesheet" />
+
+   <!-- 
+        <link href="/Data/plugins/lightbox2/css/demo.css" rel="stylesheet" />
+    <link href="/Data/plugins/lightbox2/js/simple-lightbox.css" rel="stylesheet" />
+       -->
+
+
+    <portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" IncludeColorBox="true" />
+    <link href="/Data/Sites/1/skins/framework/js/wow/css/site.css" rel="stylesheet" />
+    <link href="/Data/Sites/1/skins/framework/js/wow/css/libs/animate.css" rel="stylesheet" />
+
+        <link href="/ClientScript/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/ClientScript/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <!-- Scripts -->
+    <portal:ScriptLoader ID="ScriptLoader1" runat="server" AssumejQueryIsLoaded="true" AssumejQueryUiIsLoaded="true" IncludeColorBox="false" IncludeSimpleFaq="true" IncludejQueryAccordion="true" />
+    <script src="/scripts/jquery/jquery-2.2.1.min.js"></script>
+    <script src="/scripts/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+
+
+
+
+    <!-- Font-->
+   
+
+
+    <!-- Change JQueryUI plugin names to fix name collision with Bootstrap. -->
+    <script>$.widget.bridge('uiTooltip', $.ui.tooltip); $.widget.bridge('uiButton', $.ui.button);</script>
+</head>
+<body class="pagebody" id="Body" runat="server">
+    <portal:FacebookSdk ID="fbsdk" runat="server" />
+    <portal:AnalyticsAsyncTopScript ID="analyticsTop" runat="server" />
+    <portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+    <form id="frmMain" runat="server" class="main-form">
+        <asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+        <asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+        <asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+        <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true" />
+
+        <!--#include file="includes/browsehappy.html"-->
+        <!--#include file="includes/administration-drawer.html"-->
+        <div class="width100">
+            <div id="loading">
+                <div class="main-load">
+                    <div class="load"></div>
+                    Đang xử lý.....
+                </div>
+            </div>
+        </div>
+        <div class="sitewrap">
+            <div id="haan_header_top">
+                <div class="Banner-School">
+                    <div class="container pd0">
+                        <div class="col-sm-12 Banner-School__logo pdl0">
+                            <div class="logo_top">
+                             <div class="header-logo">
+                                <img src="/Data/Sites/1/skins/framework/images/img_header-logo.png" alt="Alternate Text" />
+                            </div>
+                            <div class="tit-site">
+
+                                <h1 class="art-slogan">
+                                    <portal:SiteSlogan ID="SiteSlogan1" runat="server"></portal:SiteSlogan>
+                                </h1>
+                                <h2 class="art-title">
+                                    <portal:SiteTitle ID="SiteTitle" runat="server" IncludeStandardClasses="false" UseElement="false" CssClass="art-headline"></portal:SiteTitle>
+                                </h2>
+                                <%-- <h1 class="art-subSlogan">
+                                    <portal:SiteSubSlogan ID="ss" runat="server"></portal:SiteSubSlogan>
+                                </h1> --%>
+                            </div>
+                            </div>
+
+
+                            <%-- 
+                            <div class="class-but-ul">
+                                <ul class=" hidden-xs">
+                                    <li class="li-class">
+                                        <portal:RegisterLink ID="RegisterLink1" runat="server" RenderAsListItem="false" />
+                                        <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
+                                    </li>
+                                    <li style="padding-right: 5px">
+                                        <img src="/data/sites/1/skins/framework/ImgCucTTDLV2/logo-user.png" /></li>
+                                    <li class="li-class">
+                                        <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" />
+                                        <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" />
+                                    </li>
+                                    <li style="padding: 0px 5px" class="li-class">| </li>
+
+                                    <li style="margin-top: -5px;"><a href="/">
+                                        <img src="/data/sites/1/skins/framework/ImgCucTTDLV2/LoGo-vn.png" /></a></li>
+                                </ul>
+                            </div>     
+                                --%>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header class="head header-top" role="banner">
+                <div id="menu_desktop">
+                    <asp:Panel ID="pnlSearch" runat="server" CssClass="container no-padding" DefaultButton="search_button">
+                        <%--<portal:SiteLogo runat="server" LinkCssClass="Banner-School__logo__a" />--%>
+                        <portal:MenuControl runat="server" ID="MenuControl" />
+                         
+                            <div class="class-but-ul">
+                                <ul class=" hidden-xs nav_right-btn">
+                                    <li style="padding-right: 5px">
+                                        <img src="/data/sites/1/skins/framework/images/icon_user.png" />
+                                    </li>
+                                    <li class="nav_user">
+                                        <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
+                                        <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" />
+                                        <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
+                                    </li>
+                                   
+                                     <li>
+                                        <div class="ButtonSearch">
+                                            <div class="form-control">
+                                                <asp:TextBox ID="search_text" runat="server" CssClass="form-control" placeholder="Nhập từ khóa"></asp:TextBox>
+                                            </div>
+                                            <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
+                                            <div id="search-header">
+                                            </div>
+                                        </div>  
+                                    </li> 
+                                   <%-- 
+                                        <li>
+                                        <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
+                                        <img src="/data/sites/1/skins/framework/images/img_header-find.png" alt="Alternate Text" />
+                                    </li>
+                                       --%>
+                                     <li class="menu_chil">
+                                        <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
+                                         <div class="menu_chil-chil">
+                                                <div class="menu-child-header active-menu">
+                                                    <portal:MenuTopControl runat="server" ID="MenuControl1" />
+                                                </div>
+                                         </div>
+                                    </li>
+                                </ul>
+                            </div>     
+                    </asp:Panel>
+                    <portal:GenderPageID ID="gdp" runat="server"></portal:GenderPageID>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //$("#menu_desktop").load("/Data/Sites/1/skins/framework/MenuDesktop.html");
+                        var page_list = $("#page_list").val();
+                        if (page_list != null && page_list.length > 0) {
+                            var page_arr = page_list.split(",");
+                            for (var i = 0; i < page_arr.length; i++) {
+                                $("a[data-pid=" + page_arr[i] + "]").first().parent().addClass("menu_active");
+                            }
+                        }
+                    });
+                </script>
+                <%-- navbar-fixed-top--%>
+            </header>
+
+        </div>
+        <div class="art-sheet clearfix">
+            <div class="art-layout-wrapper wow zoomIn sliderShow" data-wow-delay="0.4s">
+                <portal:LayoutPanel ID="divTop" runat="server" SkinID="TopPane">
+                    <asp:ContentPlaceHolder ID="topContent" runat="server"></asp:ContentPlaceHolder>
+                </portal:LayoutPanel>
+            </div>
+        </div>
+
+        <%--            <main class="main-content">--%>
+
+
+        <div class="container bg-body">
+            <portal:Breadcrumbs ID="Breadcrumbs" runat="server" Separator="" ItemWrapperTop="<li>" ItemWrapperBottom="</li>" CssClass="" CurrentPageCssClass="active" />
+
+            <div class="row only__document" id="start-content">
+                <portal:LayoutPanel ID="divLeft" runat="server" SkinID="LeftPane">
+                    <asp:ContentPlaceHolder ID="leftContent" runat="server"></asp:ContentPlaceHolder>
+                </portal:LayoutPanel>
+
+                <portal:LayoutPanel ID="divCenter" runat="server">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
+                </portal:LayoutPanel>
+
+                <portal:LayoutPanel ID="divRight" runat="server" SkinID="RightPane">
+                    <asp:ContentPlaceHolder ID="rightContent" runat="server"></asp:ContentPlaceHolder>
+                </portal:LayoutPanel>
+            </div>
+        </div>
+
+        <portal:LayoutPanel ID="divBottom" runat="server" SkinID="BottomPane">
+            <asp:ContentPlaceHolder ID="bottomContent" runat="server"></asp:ContentPlaceHolder>
+        </portal:LayoutPanel>
+        <%--     </main>--%>
+
+        <a href="#" class="back-to-top"></a>
+        <%--<div class="info-footer">
+
+            <portal:FooterControl runat="server" ID="FooterControl1" />
+        </div>--%>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="tieude-footer">CỔNG THÔNG TIN ĐIỆN TỬ SỞ GIÁO DỤC VÀ ĐÀO TẠO (GD&ĐT) TỈNH BẾN TRE</p>
+                <div class="contact">
+                    <div class="row" >
+                        <div class="contact_left col-sm-12 col-lg-7 ">
+                            <div class="manager_boss">
+                                <p>Người chịu trách nhiệm: Bà La Thị Thúy - Giám Đốc sở GD&ĐT Tỉnh Bến Tre</p>
+                            </div>
+                            <div class="dia-chi">
+                                <p>Địa chỉ: tầng 4-5, số 126A, Nguyễn Thị Định, phường Phú Tân, thành phố Bến Tre, tỉnh Bến Tre</p>
+                            </div>
+                            <div class="ban-quyen">Bản quyền của Sở Giáo dục và Đào tạo Bến Tre</div>
+                        </div>
+                        <div class="contact-right col-sm-12 col-lg-5 ">
+                            <div class="sdt">
+                                <a class="telephone" href="/">Điện thoại: (0275) 3 822  217 </a>
+                            </div>
+                            <div class="fax">
+                                <a>Fax: (0275) 3 825 090</a>
+                            </div>
+                            <div class="dcs-email">
+                                <a class="email" href="/">Email: vanphong.sobentre@moet.edu.vn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+
+    <portal:AnalyticsAsyncBottomScript ID="analyticsBottom" runat="server" />
+
+    <!-- Main Script -->
+    <portal:SkinFolderScript runat="server" ScriptFileName="/js/bootstrap.min.js" RenderInPlace="true" />
+    <!-- Change Bootstrap plugin names to fix name collision with jQueryUI -->
+    <script>var bstt = $.fn.tooltip.noConflict(); $.fn.bsTooltip = bstt;</script>
+    <%--<portal:SkinFolderScript runat="server" ScriptFileName="/js/vendors/smartmenus/jquery.smartmenus.bootstrap.min.js" RenderInPlace="true" />--%>
+
+    <script type="text/javascript" src="/Data/Sites/1/skins/framework/js/wow/dist/wow.min.js"></script>
+    <portal:SkinFolderScript runat="server" ScriptFileName="/js/administration.min.js" RenderInPlace="true" VisibleRoles="Authenticated Users" />
+
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="/Data/plugins/smartmenu/jquery.smartmenus.js"></script>
+    <!-- SmartMenus jQuery Bootstrap 4 Addon -->
+    <script type="text/javascript" src="/Data/plugins/smartmenu/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.js"></script>
+
+    <script src="/ClientScript/ckfinder/ckfinder.js"></script>
+    <script src="/Data/plugins/notifit/notifit.min.js"></script>
+    <script src="/Data/Script/Common.js"></script>
+    <script src="/Data/Script/CommonValidation.js"></script>
+    <script src="/ClientScript/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+
+    <script type="text/javascript">
+        wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 100,
+                callback: function (box) {
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                }
+            }
+        );
+        wow.init();
+
+
+          function detectMob() {
+            const toMatch = [
+                /Android/i,
+                /webOS/i,
+                /iPhone/i,
+                /iPad/i,
+                /iPod/i,
+                /BlackBerry/i,
+                /Windows Phone/i
+            ];
+
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+
+        }
+
+        $(document).ready(function () {
+
+            "use strict";
+
+            $(window).scroll(function () {
+
+                "use strict";
+                if ($(window).scrollTop() > 40) {
+                    $(".header-top").addClass("top0")
+                } else {
+                    $(".header-top").removeClass("top0")
+                }
+                //$(".page").each(function () {
+
+                //    "use strict";
+
+                //    var bb = $(this).attr("id");
+                //    var hei = $(this).outerHeight();
+                //    var grttop = $(this).offset().top - 70;
+                //    if ($(window).scrollTop() > grttop - 1 && $(window).scrollTop() < grttop + hei - 1) {
+                //        var uu = $(".navbar-nav li a[href='#" + bb + "']").parent().addClass("active");
+                //    } else {
+                //        var uu = $(".navbar-nav li a[href='#" + bb + "']").parent().removeClass("active");
+                //    }
+                //});
+            });
+        });
+        $(document).ready(function () {
+
+            var offset = 250, // At what pixels show Back to Top Button
+                scrollDuration = 300; // Duration of scrolling to top
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > offset) {
+                    $('.back-to-top').fadeIn(500); // Time(in Milliseconds) of appearing of the Button when scrolling down.
+                } else {
+                    $('.back-to-top').fadeOut(500); // Time(in Milliseconds) of disappearing of Button when scrolling up.
+                }
+            });
+            $('.back-to-top').click(function (event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, scrollDuration);
+            });
+
+        });
+
+        $(document).on("click", "#search-header", function () {
+
+            $(".ButtonSearch > .form-control").toggleClass("hienthi");
+        })
+
+
+        //Cắt chuỗi với N từ tại khoảng trắng và thêm "..."
+        $(document).ready(function () {
+            function shorten(text, max) {
+                return text && text.length > max ? text.slice(0, max).split(' ').slice(0, -1).join(' ') : text
+            }
+            //Khoảng 3 dòng
+            $(".single-news h3 a, .event_hot__item__clone__content a").each(function (i) {
+                var text = $(this).text();
+                var size = $(this).text().trim().length;
+                if (size > 105) {
+                    $(this).text(shorten(text, 105) + " ...");
+                }
+            });
+            $(".tab-3 a").each(function (i) {
+                var text = $(this).text();
+                var size = $(this).text().trim().length;
+                if (size > 120) {
+                    $(this).text(shorten(text, 120) + " ...");
+                }
+            });
+            $(".tintucNoibat .tintucNoibat__Mota").each(function (i) {
+                var text = $(this).text();
+                var size = $(this).text().trim().length;
+                if (size > 145) {
+                    $(this).text(shorten(text, 145) + " ...");
+                }
+            });
+
+            //Khoảng 2 dòng
+            $(".event_hot__last ul li a").each(function (i) {
+                var text = $(this).text();
+                var size = $(this).text().trim().length;
+                if (size > 90) {
+                    $(this).text(shorten(text, 90) + " ...");
+                }
+            });
+        });
+        //End cắt chuỗi
+
+        //$(window).bind('load', function () {
+        //    $('img').each(function () {
+        //        if ((typeof this.naturalWidth != "undefined" &&
+        //            this.naturalWidth == 0)
+        //            || this.readyState == 'uninitialized') {
+        //            $(this).attr('src', '../Data/Images/haan_noimage.jpg');
+        //            $(this).addClass("imgDefault");
+        //            $(this).parent(0).addClass("parentImgDefault");
+        //        }
+        //    });
+        //});
+
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $("#admin-drawer").removeClass("active");
+            }, 500);
+
+            ShortTitle(".title_han_article_home_hot", 20);
+            ShortTitle(".tintucNoibat__Mota", 30);
+            ShortTitle(".event_title_han_lenght", 20);
+            ShortTitle(".title_right_han_lenght", 20);
+
+
+            //      ShortTitle(".qh_hoatdong_right_item h3 a", 15);
+            //      ShortTitle(".owl-item .item a:nth-child(2)", 39);
+            //ShortTitle(".TinMoiRight_Top_item--2 h3 a", 17);
+
+            //Hàm cắt chuỗi tiêu đề
+
+        });
+        function ShortTitle(element, number) {
+            $(element).each(function () {
+                var titleMoi = $(this).text().split(" ");
+                var titleAdd = "";
+                for (var i = 0; i < titleMoi.length; i++) {
+                    if (i < number) {
+                        titleAdd += titleMoi[i] + " ";
+                    } if (i == (number + 1)) {
+                        titleAdd += "...";
+                    }
+                }
+                $(this).html(titleAdd);
+            });
+        }
+    </script>
+    <%--    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>--%>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <%--  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d3959e22f352b9d"></script>--%>
+</body>
+</html>

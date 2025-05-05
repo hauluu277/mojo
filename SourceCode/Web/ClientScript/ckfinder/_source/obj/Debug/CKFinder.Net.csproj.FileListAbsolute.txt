@@ -1,0 +1,11 @@
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\bin\Debug\CKFinder.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\bin\Debug\CKFinder.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.Net.csprojAssemblyReference.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.Net.csproj.CoreCompileInputs.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.pdb
+D:\Project\2021\PortalTongCucThongKe\trunk\Deverloping\Web\ClientScript\ckfinder\_source\bin\Debug\CKFinder.dll
+D:\Project\2021\PortalTongCucThongKe\trunk\Deverloping\Web\ClientScript\ckfinder\_source\bin\Debug\CKFinder.pdb
+D:\Project\2021\PortalTongCucThongKe\trunk\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.Net.csproj.CoreCompileInputs.cache
+D:\Project\2021\PortalTongCucThongKe\trunk\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.dll
+D:\Project\2021\PortalTongCucThongKe\trunk\Deverloping\Web\ClientScript\ckfinder\_source\obj\Debug\CKFinder.pdb

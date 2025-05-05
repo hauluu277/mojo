@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RoleIdSetting.ascx.cs" Inherits="mojoPortal.Web.RoleSetting.UI.RoleIdSetting" %>
+<asp:DropDownList ID="ddlRoleSetting" runat="server" ></asp:DropDownList>

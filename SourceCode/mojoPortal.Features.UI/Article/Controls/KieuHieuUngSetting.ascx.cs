@@ -1,0 +1,128 @@
+﻿using System;
+using System.Data;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using mojoPortal.Web.UI;
+using System.Collections.Generic;
+using Resources;
+using mojoPortal.Business;
+using Utilities;
+using mojoPortal.Features;
+
+namespace ArticleFeature.UI
+{
+    public partial class KieuHieuUngSetting : UserControl, ISettingControl
+    {
+        private string selectedValue = string.Empty;
+
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            if (HttpContext.Current == null) { return; }
+            Load += Page_Load;
+            EnsureItems();
+        }
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Page.IsPostBack) return;
+            PopulateLabels();
+            BindDDLModules();
+        }
+
+
+        private void PopulateLabels()
+        {
+        }
+
+        private void EnsureItems()
+        {
+            //why is this null here, its declared
+            if (rblTab != null) return;
+            rblTab = new DropDownList();
+            if (Controls.Count != 0) return;
+            Controls.Add(rblTab);
+        }
+
+        private void GetSelectedItems()
+        {
+            selectedValue = string.Empty;
+            selectedValue = rblTab.SelectedValue;
+            if (selectedValue == string.Empty) return;
+        }
+
+        private void BindSelection()
+        {
+            if (!selectedValue.Equals(string.Empty))
+            {
+                BindDDLModules();
+            }
+        }
+
+        private void BindDDLModules()
+        {
+            //Get Articles Module only
+            DBUtilities repository = new DBUtilities();
+
+
+            List<ListItem> listTab = new List<ListItem>();
+            listTab.Add(new ListItem { Text = "Không hiệu ứng", Value = HieuUngConstant.KhongHieuUng.ToString() });
+            listTab.Add(new ListItem { Text = "FadeInLeft", Value = HieuUngConstant.FadeInLeft.ToString() });
+            listTab.Add(new ListItem { Text = "FadeInRight", Value = HieuUngConstant.FadeInRight.ToString() });
+
+
+            rblTab.DataSource = listTab;
+            rblTab.DataTextField = "Text";
+            rblTab.DataValueField = "Value";
+            rblTab.DataBind();
+
+            if (rblTab.Items.Count > 1)
+            {
+                if (!selectedValue.Equals(string.Empty))
+                {
+                    ListItem item = rblTab.Items.FindByValue(selectedValue);
+                    if (item != null)
+                    {
+                        rblTab.Items.FindByValue(selectedValue).Selected = true;
+                    }
+                }
+                else { rblTab.SelectedIndex = 0; }
+            }
+        }
+
+        private void FormatModuleTitle()
+        {
+            foreach (ListItem item in rblTab.Items)
+            {
+                if (item.Value == string.Empty) continue;
+                if (item.Text.Contains("</span>"))
+                {
+                    item.Text = FeatureUtilities.RemoveTwoColorModuleTitleText(item.Text);
+                }
+                Module m = new Module(Convert.ToInt32(item.Value));
+                item.Text += @" (Site " + m.SiteId + @")";
+            }
+        }
+
+        #region ISettingControl
+
+        public string GetValue()
+        {
+            EnsureItems();
+            GetSelectedItems();
+            return selectedValue;
+        }
+
+        public void SetValue(string val)
+        {
+            EnsureItems();
+            selectedValue = val;
+            BindSelection();
+        }
+
+        #endregion
+
+    }
+}

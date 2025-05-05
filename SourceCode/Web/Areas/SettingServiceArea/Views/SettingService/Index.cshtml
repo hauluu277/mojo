@@ -1,0 +1,57 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.SettingServiceArea.Models
+@model SettingServiceIndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListData.ListItem));
+}
+<style>
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Danh sách các cuộc điều tra</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+                </a>
+                @*<a href="javascript:void(0)" onclick="onEdit(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                </a>*@
+            </div>
+        </div>
+        @Html.Partial("_SearchPartial")
+        <div class="widge-t-body no-padding">
+            <div id="tbl-SettingService" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Tổng điều tra/Cuộc điều tra</th>
+                            <th>Lĩnh vực</th>
+                            <th>Webservice/API</th>
+                            <th>Ngày tạo</th>
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.ListData.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.ListData.Count" />
+
+
+
+
+<script>
+    var groupData = eval(@groupData);
+    $(document).ready(function () {
+    });
+</script>
+<script src="~/Scripts/modules/webservice/webservice_index.js"></script>

@@ -1,0 +1,125 @@
+﻿<style>
+    .row-block {
+        margin: 5px 0px;
+        display: flex;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+    <div class="well">
+
+        @using (Ajax.BeginForm("searchData", "ThuTuc",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "ThuTucArea", id = "frmSearchThuTuc" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row row-block">
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Từ khóa</div>
+                    <div class="col-md-8">
+                        <input class="form-control width100" type="text" name="KeywordFillter" placeholder="Nhập Mã thủ tục hoặc Tên thủ tục để tra cứu" />
+                    </div>
+
+                </div>
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Cơ quan thực hiện</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdCoQuanFilter", (List<SelectListItem>)ViewBag.ListCoQuanThucHien, "--Chọn--", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Lĩnh vực</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdLinhVucFillter", (List<SelectListItem>)ViewBag.ListLinhVuc, "--Chọn--", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Mức độ DVC</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdMucDoDVCFillter", (List<SelectListItem>)ViewBag.ListMucDoDVC, "--Chọn--", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Cách thức thực hiện</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdCachThucThucHienFilter", (List<SelectListItem>)ViewBag.ListCachThucThucHien, "--Chọn--", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Đối tượng thực hiện</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdDoiTuongThucHien", (List<SelectListItem>)ViewBag.ListDoiTuongThucHien, "--Chọn--", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                        <span class="btn-label">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        Tìm kiếm
+                    </button>
+
+                    <a aria-expanded="false" href="#collapseDiv" data-toggle="collapse" role="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        Đóng
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    function SearchSubmit() {
+        $("#frmSearchThuTuc").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-ThuTuc").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

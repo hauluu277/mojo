@@ -1,0 +1,149 @@
+﻿@using mojoPortal.Web.Areas.QL_LichCongTacArea.Models
+
+@model EditVM
+@{
+
+}
+<div class="modal-dialog" style="min-width:950px">
+    @using (Ajax.BeginForm("Edit", "QLLichLamViec", new { @area = "QLLichLamViecArea" }, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "AjaxFormError",
+        OnSuccess = "onAjaxSubmitSuccess",
+    }, new { id = "createQL_LichCongTacForm", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        //HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="center">
+                    <h4 class="modal-title">Cập nhật Quản lý lịch công tác</h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    @Html.HiddenFor(x => x.ItemID)
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Ngày làm việc <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(m => m.NgayLamViec, string.Format("{0:dd/MM/yyyy}", Model.NgayLamViec), new { @class = "form-control date-picker" })
+                            @Html.ValidationMessageFor(m => m.NgayLamViec, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Thời gian bắt đầu <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            <div class="col-sm-6 text-center" style="padding-left:0px">
+                                @Html.DropDownListFor(m => m.Gio, Model.ListDropdownGio, new { @class = "form-control select2" })
+                                @Html.ValidationMessageFor(m => m.Gio, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-sm-6 text-center" style="padding-right:0px">
+                                @Html.DropDownListFor(m => m.Phut, Model.ListDropdownPhut, new { @class = "form-control select2" })
+                                @Html.ValidationMessageFor(m => m.Phut, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Nội dung <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.TextAreaFor(m => m.NoiDung, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.NoiDung, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Địa điểm <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.TextAreaFor(m => m.DiaDiem, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.DiaDiem, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Thành phần tham dự <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.DropDownListFor(m => m.ThanhPhanThamDuArray, Model.ListThanhPhanThamDu, new { @class = "form-control select2", @multiple = "@multiple" })
+                            @Html.ValidationMessageFor(m => m.ThanhPhanThamDuArray, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Duyệt? <span class="red"></span></label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="IsPublish" @(Model.IsPublish ? "checked" : "") />
+                            @Html.ValidationMessageFor(m => m.IsPublish, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer center">
+                <button type="button" onclick="SubmitForm()" id="btnSubmit" class="btn btn-primary">Hoàn thành</button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    }
+</div>
+<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var thanhTD = '@Model.ThanhPhanThamDu';
+        console.log(thanhTD);
+        if (thanhTD) {
+            var split = thanhTD.split(' ');
+            for (var i = 0; i < split.length; i++) {
+                $("#ThanhPhanThamDuArray option[value='" + split[i] + "']").prop("selected", true);
+            }
+        }
+      
+    })
+    function SubmitForm() {
+        var oke = jQuery('#createQL_LichCongTacForm').valid();
+        if (oke) {
+            $("#btnSubmit").prop("disabled", false);
+
+            // Get form
+            var form = $('#createQL_LichCongTacForm')[0];
+
+            // Create an FormData object
+            var data = new FormData(form);
+            $.ajax({
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/QLLichLamViecArea/QLLichLamViec/Edit",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    onAjaxSubmitSuccess(data);
+                },
+                error: function (e) {
+
+                    console.log("ERROR : ", e);
+
+                }
+            });
+
+        }
+
+    }
+    $(document).ready(function () {
+
+        $(".date-picker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true, yearRange: "-50:+20",
+            showWeek: false, weekHeader: "Tuần",
+            language: 'vi',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (date) {
+
+            }
+        });
+        $(".select2").select2();
+    })
+</script>

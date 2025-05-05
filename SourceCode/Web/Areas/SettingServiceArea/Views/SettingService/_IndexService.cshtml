@@ -1,0 +1,77 @@
+﻿@using mojoPortal.Web.Areas.SettingServiceArea.Models
+@model IndexServiceVM
+
+<style>
+    .table_admin .listvanban__box__thaotac {
+        border: 0;
+    }
+
+    .close-fix {
+        font-size: 25px;
+        opacity: 1;
+    }
+
+    .content__main_table {
+        padding: 0;
+        border: 0;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="modal-dialog" role="document" style="width:90%;max-width:1150px;">
+    <div class="modal-content" style="min-height:80vh">
+        <span class="close close-fix" data-dismiss="modal">&times;</span>
+        <div class="content__main_table table_admin" style="padding:10px;">
+            <div class="width100" style="padding:10px;">
+                <div class="alert alert-success" role="alert" style="margin:0">
+                    <p class="font-bold">Tổng điều tra/Cuộc điều tra</p>
+                    @Model.Site.SiteName
+                </div>
+            </div>
+            <div class="wf100 titleDanhsach listvanban__box_admin">
+                <h2>Danh sách webservice/api</h2>
+            </div>
+
+            <div class="listvanban__box__thaotac wf100">
+                <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0" style="text-align:right">
+                    <a href="javascript:void(0)" onclick="FormSetting(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                        <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                    </a>
+                </div>
+            </div>
+            <div id="tblService">
+                @Html.Partial("_ListService", Model.ListSetting)
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function ReloadService() {
+        CallAjaxLoading("get", "/SettingServiceArea/SettingService/LoadWebservice", { siteId:@Model.Site.SiteID }, true, function (rs) {
+            $("#tblService").html(rs);
+        })
+    }
+    function FormSetting(id) {
+        OpenGlobalModal2("get", "/SettingServiceArea/SettingService/FormSetting", { id: id,siteId:@Model.Site.SiteID }, true);
+    }
+    function DeleteSetting(id, obj) {
+        var name = $(obj).attr("data-object-name");
+        if (confirm("Xác nhận xóa webservice/api '" + name + "'?")) {
+            $.ajax({
+                type: "post",
+                url: "/SettingServiceArea/SettingService/Delete",
+                data: { id: id },
+                success: function (rs) {
+                    if (rs.Status) {
+                        NotifySuccess("Xóa webservice/api thành công");
+                        reloadTable();
+                    } else {
+                        NotifyError("Xóa webservice/api thất bại");
+                    }
+                }, error: function (er) {
+                    console.log(er.Message);
+                }
+            })
+        }
+    }
+</script>

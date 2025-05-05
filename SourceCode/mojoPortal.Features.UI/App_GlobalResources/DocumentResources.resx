@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CoQuanIDLabel" xml:space="preserve">
+    <value>Agency issued (*)</value>
+  </data>
+  <data name="CreatedByUserLabel" xml:space="preserve">
+    <value>The poster</value>
+  </data>
+  <data name="DateEffectLabel" xml:space="preserve">
+    <value>Date Effect (*)</value>
+  </data>
+  <data name="DatePromulgateLabel" xml:space="preserve">
+    <value>Date Promulgate (*)</value>
+  </data>
+  <data name="FilePathLabel" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FileUrlErrorFileExtension" xml:space="preserve">
+    <value>Invalid file</value>
+  </data>
+  <data name="FileUrlErrorFileSize" xml:space="preserve">
+    <value>File size exceeds</value>
+  </data>
+  <data name="IsApprovedLabel" xml:space="preserve">
+    <value>Approve?</value>
+  </data>
+  <data name="ItemUrlLabel" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="LinhVucLabel" xml:space="preserve">
+    <value>Field of document (*)</value>
+  </data>
+  <data name="LoaiVBLabel" xml:space="preserve">
+    <value>Type of document (*)</value>
+  </data>
+  <data name="SignerLabel" xml:space="preserve">
+    <value>Signer (*)</value>
+  </data>
+  <data name="SignLabel" xml:space="preserve">
+    <value>Sign (*)</value>
+  </data>
+  <data name="SummaryLabel" xml:space="preserve">
+    <value>Summary (*)</value>
+  </data>
+  <data name="HeaderDoc" xml:space="preserve">
+    <value>Summary (*)</value>
+  </data>
+  <data name="HeaderDocumentApprove" xml:space="preserve">
+    <value>Approve?</value>
+  </data>
+  <data name="DocumentOtherNumberSetting" xml:space="preserve">
+    <value>Number of Document Other </value>
+  </data>
+  <data name="PageSizeSetting" xml:space="preserve">
+    <value>Record/Page</value>
+  </data>
+  <data name="NamLabel" xml:space="preserve">
+    <value>Year of Promulgate</value>
+  </data>
+  <data name="ShowLeftPanelSetting" xml:space="preserve">
+    <value>Show Left Panel?</value>
+  </data>
+  <data name="ShowRightPanelSetting" xml:space="preserve">
+    <value>Show Right Panel?</value>
+  </data>
+  <data name="BannerCurrentImageLabel" xml:space="preserve">
+    <value>Banner hiện tại</value>
+  </data>
+  <data name="ShowBlogSearchBox" xml:space="preserve">
+    <value>Show search box?</value>
+  </data>
+  <data name="documentSildeNumberSetting" xml:space="preserve">
+    <value>Number of Document Silde</value>
+  </data>
+  <data name="HeaderLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="DocumentOtherLabel" xml:space="preserve">
+    <value>Document Orther</value>
+  </data>
+  <data name="KeywordLabel" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="AgencyLabel" xml:space="preserve">
+    <value>Choose agency</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ChooseFieldLabel" xml:space="preserve">
+    <value>Choose field</value>
+  </data>
+  <data name="ChooseTypeDocumentLabel" xml:space="preserve">
+    <value>Choose document</value>
+  </data>
+  <data name="BoxSearchLabel" xml:space="preserve">
+    <value>Search legal document</value>
+  </data>
+  <data name="SearchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AddPostLabel" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnDel" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnSubmit" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="TitleEditLabel" xml:space="preserve">
+    <value>Edit Legal Document</value>
+  </data>
+  <data name="CoQuanIDHeaderLabel" xml:space="preserve">
+    <value>Agency issued</value>
+  </data>
+  <data name="DateEffectHeaderLabel" xml:space="preserve">
+    <value>Date Effect</value>
+  </data>
+  <data name="DateEffectRequiredLabel" xml:space="preserve">
+    <value>Date Effect is field required.</value>
+  </data>
+  <data name="DatePromulgateHeaderLabel" xml:space="preserve">
+    <value>Date Promulgate</value>
+  </data>
+  <data name="DatePromulgateRequiredLabel" xml:space="preserve">
+    <value>Date Promulgate is field required.</value>
+  </data>
+  <data name="LinhVucHeaderLabel" xml:space="preserve">
+    <value>Field of document</value>
+  </data>
+  <data name="LoaiVBHeaderLabel" xml:space="preserve">
+    <value>Type of document</value>
+  </data>
+  <data name="SignerHeaderLabel" xml:space="preserve">
+    <value>Signer</value>
+  </data>
+  <data name="SignerRequiredLabel" xml:space="preserve">
+    <value>Signer is field required.</value>
+  </data>
+  <data name="SignHeaderLabel" xml:space="preserve">
+    <value>Sign</value>
+  </data>
+  <data name="SignRequiredLabel" xml:space="preserve">
+    <value>Sign is field required.</value>
+  </data>
+  <data name="SummaryDocHeaderLabel" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="SummaryRequiredLabel" xml:space="preserve">
+    <value>Summary is field required.</value>
+  </data>
+  <data name="ContentLabel" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ChangeStateWarning" xml:space="preserve">
+    <value>Change state, are you sure?</value>
+  </data>
+  <data name="StateLink" xml:space="preserve">
+    <value>Change state</value>
+  </data>
+  <data name="CurrentFileLabel" xml:space="preserve">
+    <value>Current file</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Subject (*)</value>
+  </data>
+  <data name="SubjectHeaderLabel" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubjectRequiredLabel" xml:space="preserve">
+    <value>Subject is field required</value>
+  </data>
+  <data name="TitDocLegalLabel" xml:space="preserve">
+    <value>Legal document</value>
+  </data>
+  <data name="SoLuongHienThiSetting" xml:space="preserve">
+    <value>Số lượng hiển thị?</value>
+  </data>
+  <data name="TitleHotNewSetting" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="DonViNhanLabel" xml:space="preserve">
+    <value>Đơn vị nhận (*)</value>
+  </data>
+  <data name="NgayGuiLabel" xml:space="preserve">
+    <value>Ngày gửi (*)</value>
+  </data>
+  <data name="NgayGuiHeader" xml:space="preserve">
+    <value>Ngày Gửi</value>
+  </data>
+  <data name="NgayNhanHeader" xml:space="preserve">
+    <value>Ngày nhận</value>
+  </data>
+  <data name="DonViGuiHeader" xml:space="preserve">
+    <value>Đơn vị gửi</value>
+  </data>
+  <data name="DonViNhanHeader" xml:space="preserve">
+    <value>Đơn vị nhận</value>
+  </data>
+  <data name="RoleAdminSetting" xml:space="preserve">
+    <value>Quyền quản trị văn bản</value>
+  </data>
+  <data name="RoleGroupVanBanSetting" xml:space="preserve">
+    <value>Quyền xử lý văn bản</value>
+  </data>
+  <data name="RoleReadSetting" xml:space="preserve">
+    <value>Quyền nhận văn bản</value>
+  </data>
+  <data name="DonViHeader" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="DatePromulgateTitle" xml:space="preserve">
+    <value>Ngày ban hành</value>
+  </data>
+  <data name="SingerTitleLabel" xml:space="preserve">
+    <value>Người ký</value>
+  </data>
+  <data name="DocumentStatus" xml:space="preserve">
+    <value>-1:Trạng thái duyệt,1:Đã duyệt,0:Chưa duyệt</value>
+  </data>
+  <data name="SummaryTitle" xml:space="preserve">
+    <value>Trích yếu</value>
+  </data>
+  <data name="RoleUserSetting" xml:space="preserve">
+    <value>Quyền người nhận, người gửi văn bản</value>
+  </data>
+  <data name="NguoiNhanLabel" xml:space="preserve">
+    <value>Người nhận</value>
+  </data>
+  <data name="NguoiNhanTitle" xml:space="preserve">
+    <value>Người nhận</value>
+  </data>
+  <data name="ContentSMSLabel" xml:space="preserve">
+    <value>Nội dung tin nhắn (*)</value>
+  </data>
+  <data name="SendSMSLabel" xml:space="preserve">
+    <value>Gửi tin nhắn (SMS) ?</value>
+  </data>
+  <data name="BTVLabel" xml:space="preserve">
+    <value>Ban thường vụ Tỉnh Ủy</value>
+  </data>
+  <data name="SendMailLabel" xml:space="preserve">
+    <value>Gửi mail thông báo ?</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="CssCustomSetting" xml:space="preserve">
+    <value>Thiết lập css</value>
+  </data>
+  <data name="NhomVanBanSetting" xml:space="preserve">
+    <value>Nhóm văn bản?</value>
+  </data>
+</root>

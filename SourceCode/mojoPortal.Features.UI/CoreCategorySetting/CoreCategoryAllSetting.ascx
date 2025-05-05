@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CoreCategoryAllSetting.ascx.cs" Inherits="mojoPortal.Web.CoreCategoryUI.CoreCategoryAllSetting" %>
+<asp:ListBox ID="lbCategory" runat="server"  Width="300" Height="250"></asp:ListBox>

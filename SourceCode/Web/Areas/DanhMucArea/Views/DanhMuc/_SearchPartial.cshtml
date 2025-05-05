@@ -1,0 +1,94 @@
+﻿<style>
+    .row-block {
+        margin: 5px 0px;
+        display: flex;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+    <div class="well">
+
+        @using (Ajax.BeginForm("searchData", "DanhMuc",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "DanhMucArea", id="frmSearchReport" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row row-block">
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Tiêu đề</div>
+                    <div class="col-md-8">
+                        <input class="form-control width100" type="text" name="TitleFilter" />
+                    </div>
+                </div>
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                        <span class="btn-label">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        Tìm kiếm
+                    </button>
+
+                    <a aria-expanded="false" href="#collapseDiv" data-toggle="collapse" role="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        Đóng
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    function SearchSubmit() {
+        $("#frmSearchReport").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-BaoCao").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

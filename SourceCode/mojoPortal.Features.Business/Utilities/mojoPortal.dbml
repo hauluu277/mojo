@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bni" Class="mojoPortalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VIKILI-PC;Initial Catalog=bni;Integrated Security=True" SettingsObjectName="mojoPortal.Features.Business.Properties.Settings" SettingsPropertyName="bniConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.mp_Modules" Member="mp_Modules">
+    <Type Name="mp_Module">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModuleDefID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AuthorizedEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CacheTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowTitle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EditUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvailableForMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowMultipleInstancesOnMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CountOfUseOnMyPage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FeatureGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SiteGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EditUserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HideFromUnAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HideFromAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViewRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DraftEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="mp_Module_mp_PageModule" Member="mp_PageModules" ThisKey="ModuleID" OtherKey="ModuleID" Type="mp_PageModule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mp_PageModules" Member="mp_PageModules">
+    <Type Name="mp_PageModule">
+      <Column Name="PageID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PaneName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublishBeginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublishEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PageGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModuleGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="mp_Module_mp_PageModule" Member="mp_Module" ThisKey="ModuleID" OtherKey="ModuleID" Type="mp_Module" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ud_Counter" Member="ud_Counters">
+    <Type Name="ud_Counter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Num" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mp_Users" Member="mp_Users">
+    <Type Name="mp_User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ProfileApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegisterConfirmGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedForForums" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Trusted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayInMemberList" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WebSiteURL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Interests" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Yahoo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AIM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ICQ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalPosts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvatarUrl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeOffsetHours" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Signature" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Skin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailedPwdAttemptWindowStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FailedPwdAnswerAttemptCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailedPwdAnswerWindowStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePIN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OpenIDURI" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="WindowsLiveID" Type="System.String" DbType="NVarChar(36)" CanBeNull="true" />
+      <Column Name="SiteGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TotalRevenue" Type="System.Decimal" DbType="Decimal(15,4)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Pwd" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MustChangePwd" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NewEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EditorPreference" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailChangeGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TimeZoneId" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="PasswordResetGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mp_GeoCountry" Member="mp_GeoCountries">
+    <Type Name="mp_GeoCountry">
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ISOCode2" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ISOCode3" Type="System.String" DbType="NChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="mp_GeoCountry_mp_GeoZone" Member="mp_GeoZones" ThisKey="Guid" OtherKey="CountryGuid" Type="mp_GeoZone" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mp_GeoZone" Member="mp_GeoZones">
+    <Type Name="mp_GeoZone">
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="mp_GeoCountry_mp_GeoZone" Member="mp_GeoCountry" ThisKey="CountryGuid" OtherKey="Guid" Type="mp_GeoCountry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mp_UserRoles" Member="mp_UserRoles">
+    <Type Name="mp_UserRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RoleGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.mp_ModuleSettings_Update" Method="mp_ModuleSettings_Update">
+    <Parameter Name="ModuleGuid" Parameter="moduleGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ModuleID" Parameter="moduleID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SettingName" Parameter="settingName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SettingValue" Parameter="settingValue" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.mp_ModuleSettings_Select" Method="mp_ModuleSettings_Select">
+    <Parameter Name="ModuleID" Parameter="moduleID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="mp_ModuleSettings_SelectResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SettingName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SettingValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ModuleDefID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeatureGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceFile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ControlType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegexValidationExpression" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ControlSrc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HelpKey" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.mp_Modules_SelectOne" Method="mp_Modules_SelectOne">
+    <Parameter Name="ModuleID" Parameter="moduleID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="mp_Modules_SelectOneResult">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModuleDefID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AuthorizedEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CacheTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowTitle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EditUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvailableForMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowMultipleInstancesOnMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CountOfUseOnMyPage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FeatureGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SiteGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EditUserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HideFromUnAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HideFromAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViewRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DraftEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IncludeInSearch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,125 @@
+﻿@using mojoPortal.Web.Areas.OrganizationArea.Models
+@model OrganizationPublishVM
+<div class="width100" style="margin-bottom: 20px;">
+
+    <h1 style="text-align: center; margin: 40px 0; font-size:31px">@Model.core_CCTC.TitleBoxLanhDao</h1>
+    <div class="bg-cocautochuc">
+        @if (Model.ListLeader != null && Model.ListLeader.Any())
+        {
+            var boss = Model.ListLeader.FirstOrDefault();
+            <div class="col-sm-12" style="margin-bottom: 75px">
+                <div class="col-sm-4">&nbsp;</div>
+
+                <div class="col-sm-4" style="text-align: center;padding: 10px">
+                    @if (!string.IsNullOrEmpty(boss.PathIMG))
+                    {
+                        <a href="@boss.LinkDetail">
+                            <img alt="" src="@boss.PathIMG" style="width: 200px; margin-bottom: 15px; height: 235px; " />
+                        </a>
+                    }
+                    else
+                    {
+                        <div style="width: 200px; margin-bottom: 20px; height: 235px; " />
+                    }
+                    <p style="font-weight: bold; text-transform: uppercase; color: #333333"><a href="@boss.LinkDetail">@string.Format("{0} : {1}", boss.ChucVu, boss.Title)</a></p>
+                </div>
+
+                <div class="col-sm-4">&nbsp;</div>
+            </div>
+            <div class="col-sm-12">
+
+                @if (Model.ListLeader.Count > 1)
+                {
+
+                    var listData = Model.ListLeader.Skip(1).ToList();
+                    foreach (var item in listData)
+                    {
+                        <div class="col-sm-4">
+                            <div style="text-align: center;padding: 10px">
+                                @if (!string.IsNullOrEmpty(item.PathIMG))
+                                {
+                                    <a href="@item.LinkDetail">
+                                        <img alt="" src="@item.PathIMG" style="width: 200px; margin-bottom: 15px; height: 180px;"  />
+                                    </a>
+                                }
+                                else
+                                {
+                                    <div style="width: 100%; margin-bottom: 20px; height: 180px; width: auto " />
+                                }
+                                <p style="font-weight: bold; text-transform: uppercase; margin-bottom:5px">@item.ChucVu :</p>
+                                <p style="font-weight: bold; text-transform:uppercase;color: #333333"><a href="@item.LinkDetail">@item.Title</a></p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+        }
+        else
+        {
+
+            <h4 style="text-align: center; margin: 10px 0; color: #ce1127;width: 100%;float: left;">
+                (ĐANG CẬP NHẬT)
+            </h4>
+        }
+
+        <div style=" margin-bottom: 30px; width: 100%;float: left;">
+            @*<h2 style="text-align: center; margin: 40px 0 0;width: 100%;float: left;">
+                    @Model.core_CCTC.TitleBoxPhongBan
+                </h2>*@
+            @if (Model.ListDepartment != null && Model.ListDepartment.Any())
+            {
+                <div class="department">
+
+                    @foreach (var item in Model.ListDepartment)
+                    {
+                        <a href="@item.LinkDetail">
+                            <div class="col-sm-6 name-department">@item.Name</div>
+                        </a>
+                    }
+                </div>
+            }
+            else
+            {
+                <h4 style="text-align: center; margin: 10px 0; color: #ce1127;width: 100%;float: left;">
+                    (ĐANG CẬP NHẬT)
+                </h4>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-cocautochuc {
+        background-image: url('../../../../Data/Sites/1/skins/framework/ImgCucTTDLV2/bngxx.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        float: left;
+        height: 1095px;
+    }
+
+    .name-department {
+        font-weight: bold;
+        margin-bottom: 70px;
+        color: #333333;
+        font-size: 16px;
+    }
+
+    .department {
+        width: 1000px;
+        /*margin: 0 auto;*/
+        float: right;
+        padding-top: 115px;
+    }
+
+        .department ul {
+            float: left;
+            margin-top: 30px;
+        }
+
+            .department ul li {
+                font-size: 15px;
+                padding: 10px;
+            }
+</style>

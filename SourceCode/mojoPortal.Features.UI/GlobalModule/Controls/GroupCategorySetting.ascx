@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GroupCategorySetting.ascx.cs" Inherits="GlobalFeature.UI.GroupCategorySetting" %>
+<asp:ListBox ID="lboxCategory" runat="server" Width="300" Height="150"></asp:ListBox>

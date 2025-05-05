@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddQuestionLabel" xml:space="preserve">
+    <value>Đăng câu hỏi</value>
+  </data>
+  <data name="AllQuestion" xml:space="preserve">
+    <value>Xem tất cả</value>
+  </data>
+  <data name="AnswerPrefix" xml:space="preserve">
+    <value>Trả lời:</value>
+  </data>
+  <data name="BlogEditEntryLink" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="ButtonBack" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="ButtonFinish" xml:space="preserve">
+    <value>Hoàn thành</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="CategoryRequired" xml:space="preserve">
+    <value>Bạn phải chọn lĩnh vực hỏi</value>
+  </data>
+  <data name="ContentTab" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="CreatedEmail" xml:space="preserve">
+    <value>Email (*)</value>
+  </data>
+  <data name="CreatedEmailRegularExpression" xml:space="preserve">
+    <value>Bạn chưa nhập đúng địa chỉ email</value>
+  </data>
+  <data name="CreatedEmailRequired" xml:space="preserve">
+    <value>Bạn phải nhập email người hỏi</value>
+  </data>
+  <data name="CreatedName" xml:space="preserve">
+    <value>Họ tên (*)</value>
+  </data>
+  <data name="CreatedNameRequired" xml:space="preserve">
+    <value>Bạn phải nhập họ tên người hỏi</value>
+  </data>
+  <data name="CreatedPhone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="CustomCssClassSetting" xml:space="preserve">
+    <value>Custom Css Class</value>
+  </data>
+  <data name="DateTimeFormatSetting" xml:space="preserve">
+    <value>Định dạng ngày tháng</value>
+  </data>
+  <data name="DeleteConfirmWarning" xml:space="preserve">
+    <value>Bạn có chắc chắc muốn xóa mục này?</value>
+  </data>
+  <data name="DeleteImageAltText" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="EditImageAltText" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="EditLink" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="EmptyGridView" xml:space="preserve">
+    <value>Chưa có câu hỏi</value>
+  </data>
+  <data name="ExcerptLengthSetting" xml:space="preserve">
+    <value>Chiều dài đoạn trích</value>
+  </data>
+  <data name="ExcerptSettings" xml:space="preserve">
+    <value>Excerpt Settings</value>
+  </data>
+  <data name="ExcerptSuffixSetting" xml:space="preserve">
+    <value>Excerpt Suffix</value>
+  </data>
+  <data name="ExcerptTab" xml:space="preserve">
+    <value>Tóm tắt</value>
+  </data>
+  <data name="faqNote" xml:space="preserve">
+    <value>(Miễn phí)</value>
+  </data>
+  <data name="faqTitle" xml:space="preserve">
+    <value>Giải đáp - hỗ trợ</value>
+  </data>
+  <data name="FeedbackLabel" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="IsHot" xml:space="preserve">
+    <value>tin hot?</value>
+  </data>
+  <data name="IsPublished" xml:space="preserve">
+    <value>Xuất bản?</value>
+  </data>
+  <data name="ItemUrl" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="LabelFinishInfo" xml:space="preserve">
+    <value>Cám ơn bạn đã đăng câu hỏi.</value>
+  </data>
+  <data name="LabelFinishInfo1" xml:space="preserve">
+    <value>Chúng tôi sẽ trả lời trong thời gian sớm nhất.</value>
+  </data>
+  <data name="LabelFinishPage" xml:space="preserve">
+    <value>Hoàn thành</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Đang tải...</value>
+  </data>
+  <data name="ManageQuestion" xml:space="preserve">
+    <value>Quản lý câu hỏi</value>
+  </data>
+  <data name="MaxCharsInTitleSetting" xml:space="preserve">
+    <value>Title Max Chars</value>
+  </data>
+  <data name="ModuleChooseLabel" xml:space="preserve">
+    <value>Chọn module</value>
+  </data>
+  <data name="ModuleLoaderSetting" xml:space="preserve">
+    <value>Module Loader</value>
+  </data>
+  <data name="ModuleLoaderSettings" xml:space="preserve">
+    <value>Module Loader Settings</value>
+  </data>
+  <data name="MoreLinkTextSetting" xml:space="preserve">
+    <value>Link tiêu đề</value>
+  </data>
+  <data name="OtherQASetting" xml:space="preserve">
+    <value>Other Question Text</value>
+  </data>
+  <data name="OthersDetailPageSizeSetting" xml:space="preserve">
+    <value>Others Detail Page Size</value>
+  </data>
+  <data name="OthersPageSizeSetting" xml:space="preserve">
+    <value>Others Page Size</value>
+  </data>
+  <data name="OthersUsePagingSetting" xml:space="preserve">
+    <value>Others Paging?</value>
+  </data>
+  <data name="PageIndexLabel" xml:space="preserve">
+    <value>Trang</value>
+  </data>
+  <data name="PageSizeSetting" xml:space="preserve">
+    <value>Số bản ghi/trang</value>
+  </data>
+  <data name="PageTotalLabel" xml:space="preserve">
+    <value>của</value>
+  </data>
+  <data name="PageUrlInUseBlogErrorMessage" xml:space="preserve">
+    <value>Url đã dùng</value>
+  </data>
+  <data name="PagingSettings" xml:space="preserve">
+    <value>Paging Settings</value>
+  </data>
+  <data name="PanelSettings" xml:space="preserve">
+    <value>Panel Settings</value>
+  </data>
+  <data name="ParentCategoryChoose" xml:space="preserve">
+    <value>Chọn lĩnh vực</value>
+  </data>
+  <data name="ParseDateFailureMessage" xml:space="preserve">
+    <value>Ngày tháng không hợp lệ</value>
+  </data>
+  <data name="PublishedQuestion" xml:space="preserve">
+    <value>Xem các câu hỏi đã xuất bản (chờ trả lời)</value>
+  </data>
+  <data name="QuestionAuthorFormat" xml:space="preserve">
+    <value>Hỏi bởi</value>
+  </data>
+  <data name="QuestionPrefix" xml:space="preserve">
+    <value>Hỏi:</value>
+  </data>
+  <data name="QuestionRequired" xml:space="preserve">
+    <value>Bạn chưa nhập nội dung câu hỏi</value>
+  </data>
+  <data name="ResultCssSetting" xml:space="preserve">
+    <value>Result Page Css</value>
+  </data>
+  <data name="SearchButtonTextSetting" xml:space="preserve">
+    <value>Button Text</value>
+  </data>
+  <data name="SearchSettings" xml:space="preserve">
+    <value>Search Settings</value>
+  </data>
+  <data name="SearchWatermarkTextSettings" xml:space="preserve">
+    <value>Watermark Text</value>
+  </data>
+  <data name="ShowBottomPanelSetting" xml:space="preserve">
+    <value>Show Bottom Panel?</value>
+  </data>
+  <data name="ShowHeaderSetting" xml:space="preserve">
+    <value>Show Header?</value>
+  </data>
+  <data name="ShowLeftPanelSetting" xml:space="preserve">
+    <value>Show Left Panel?</value>
+  </data>
+  <data name="ShowNumberModuleSetting" xml:space="preserve">
+    <value>Show Number Module</value>
+  </data>
+  <data name="ShowOthersSetting" xml:space="preserve">
+    <value>Show Others?</value>
+  </data>
+  <data name="ShowQuestionAuthorSetting" xml:space="preserve">
+    <value>Hiển thị tên người hỏi?</value>
+  </data>
+  <data name="ShowRightPanelSetting" xml:space="preserve">
+    <value>Hiển thị vùng bên phải?</value>
+  </data>
+  <data name="ShowSearchPlaceSetting" xml:space="preserve">
+    <value>Show Search Place?</value>
+  </data>
+  <data name="ShowTopPanelSetting" xml:space="preserve">
+    <value>Show Top Panel?</value>
+  </data>
+  <data name="ShowTweetThisLinkSetting" xml:space="preserve">
+    <value>Hiển thị Twitter</value>
+  </data>
+  <data name="SocialSettings" xml:space="preserve">
+    <value>Social Settings</value>
+  </data>
+  <data name="StartDateLabel" xml:space="preserve">
+    <value>Ngày đăng</value>
+  </data>
+  <data name="SwirlingQuestionAnswer" xml:space="preserve">
+    <value>Trả lời</value>
+  </data>
+  <data name="SwirlingQuestionCategoryLabel" xml:space="preserve">
+    <value>Lĩnh vực (*)</value>
+  </data>
+  <data name="SwirlingQuestionDeleteCategoryWarning" xml:space="preserve">
+    <value>Tất cả câu hỏi của lĩnh vực này và các lĩnh vực con cũng sẽ xóa theo. Bạn muốn xóa?</value>
+  </data>
+  <data name="SwirlingQuestionDeleteLinkText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SwirlingQuestionEditCategoriesLabel" xml:space="preserve">
+    <value>Quản trị lĩnh vực hỏi đáp</value>
+  </data>
+  <data name="SwirlingQuestionEditPage" xml:space="preserve">
+    <value>Đăng câu hỏi</value>
+  </data>
+  <data name="SwirlingQuestionFeatureName" xml:space="preserve">
+    <value>Hỏi đáp</value>
+  </data>
+  <data name="SwirlingQuestionLoaderFeatureName" xml:space="preserve">
+    <value>Hỏi đáp (Loader)</value>
+  </data>
+  <data name="SwirlingQuestionName" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="SwirlingQuestionQuestion" xml:space="preserve">
+    <value>Câu hỏi (*)</value>
+  </data>
+  <data name="SwirlingQuestionTitle" xml:space="preserve">
+    <value>Tiêu đề (*)</value>
+  </data>
+  <data name="TitleOnlySetting" xml:space="preserve">
+    <value>Chỉ để tiêu để?</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>Bạn phải nhập tiêu đề câu hỏi</value>
+  </data>
+  <data name="UnpublishedQuestion" xml:space="preserve">
+    <value>Xem các câu hỏi chưa xuất bản</value>
+  </data>
+  <data name="UseExcerptSetting" xml:space="preserve">
+    <value>Hiển thị trích đoạn?</value>
+  </data>
+  <data name="UseFacebookShareButtonSetting" xml:space="preserve">
+    <value>Hiển thị nút chia sẻ của Facebook?</value>
+  </data>
+  <data name="UseGoogleBookmarkButtonSetting" xml:space="preserve">
+    <value>Hiển thị nút google Bookmart?</value>
+  </data>
+  <data name="UseLinkForHeadingSetting" xml:space="preserve">
+    <value>Sử dụng Link đối với tiêu đề?</value>
+  </data>
+  <data name="UsePagingSetting" xml:space="preserve">
+    <value>Sử dụng phân trang?</value>
+  </data>
+  <data name="UsePostQuestionInListSetting" xml:space="preserve">
+    <value>Sử dụng đăng câu hỏi trong danh sách</value>
+  </data>
+  <data name="UsePostQuestionInTitleControlSetting" xml:space="preserve">
+    <value>Sử dụng đăng câu hỏi trong tiêu đề?</value>
+  </data>
+  <data name="ViewCategory" xml:space="preserve">
+    <value>Xem câu hỏi của lĩnh vực này</value>
+  </data>
+  <data name="WrongAnswer" xml:space="preserve">
+    <value>Bạn đã nhập sai mã bảo mật, vui lòng nhập lại!</value>
+  </data>
+  <data name="ApprovedQuestion" xml:space="preserve">
+    <value>Xem câu hỏi đã duyệt (Chờ xuất bản)</value>
+  </data>
+  <data name="DeletedQuestion" xml:space="preserve">
+    <value>Xem câu hỏi đã xóa</value>
+  </data>
+  <data name="UnApprovedQuestion" xml:space="preserve">
+    <value>Xem câu hỏi chưa kiểm duyệt</value>
+  </data>
+  <data name="VRQuestion" xml:space="preserve">
+    <value>Xem câu hỏi vi phạm quy chế</value>
+  </data>
+  <data name="ReceptionQuestion" xml:space="preserve">
+    <value>Xem câu hỏi đã tiếp nhận</value>
+  </data>
+  <data name="WaitReceptionQuestion" xml:space="preserve">
+    <value>Xem câu hỏi chờ tiếp nhận</value>
+  </data>
+  <data name="QuestionViPham" xml:space="preserve">
+    <value>Câu hỏi vi phạm quy chế?</value>
+  </data>
+  <data name="RoleApproveSetting" xml:space="preserve">
+    <value>Quyền kiểm duyệt câu hỏi</value>
+  </data>
+  <data name="RoleReceptionSetting" xml:space="preserve">
+    <value>Quyền tiếp nhận và hiển thị câu hỏi</value>
+  </data>
+  <data name="SwirlingQuestionNote" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="QuestionApprove" xml:space="preserve">
+    <value>Duyệt câu hỏi?</value>
+  </data>
+  <data name="QuestionRecept" xml:space="preserve">
+    <value>Tiếp nhận câu hỏi?</value>
+  </data>
+  <data name="ResetStateApproveWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn chuyển sang trạng thái đã kiểm duyệt?</value>
+  </data>
+  <data name="ResetStatePublicAnswerWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn chuyển sang trạng thái xuất bản và chuyển dự thảo đã phê duyệt?</value>
+  </data>
+  <data name="ResetStateReceptWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn chuyển sang trạng thái đã tiếp nhận?</value>
+  </data>
+  <data name="ResetStateLinkText" xml:space="preserve">
+    <value>Thay đổi trạng thái</value>
+  </data>
+  <data name="SwirlingQuestionCoQuanLabel" xml:space="preserve">
+    <value>Chọn cơ quan (*)</value>
+  </data>
+  <data name="DraftAnswer" xml:space="preserve">
+    <value>Dự thảo trả lời</value>
+  </data>
+  <data name="IsPublishedAnswer" xml:space="preserve">
+    <value>Xuất bản câu trả lời?</value>
+  </data>
+  <data name="ApprovedAnswer" xml:space="preserve">
+    <value>Xem danh sách câu trả lời đã phê duyệt (chờ xuất bản)</value>
+  </data>
+  <data name="ListDraftAnswer" xml:space="preserve">
+    <value>Xem danh sách dự thảo trả lời</value>
+  </data>
+  <data name="PublisedAnswer" xml:space="preserve">
+    <value>Xem danh sách câu trả lời đã xuất bản</value>
+  </data>
+  <data name="ApproveAnswer" xml:space="preserve">
+    <value>Duyệt dự thảo trả lời?</value>
+  </data>
+  <data name="ApproveDraftAnswerWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn duyệt dự thảo trả lời?</value>
+  </data>
+  <data name="CreateDraftAnswer" xml:space="preserve">
+    <value>Tạo dự thảo trả lời</value>
+  </data>
+  <data name="PublicAnswerWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn xuất bản câu hỏi?</value>
+  </data>
+  <data name="AnswerUnApprove" xml:space="preserve">
+    <value>Không phê duyệt dự thảo trả lời?</value>
+  </data>
+  <data name="SwirlingReasonUnApprove" xml:space="preserve">
+    <value>Lý do không phê duyệt dự thảo trả lời</value>
+  </data>
+  <data name="KeywordLabel" xml:space="preserve">
+    <value>Từ khóa tìm kiếm</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="ViewAnswerUnApprove" xml:space="preserve">
+    <value>Xem dự thảo trả lời không được phê duyệt</value>
+  </data>
+  <data name="CreatedDraftAnswer" xml:space="preserve">
+    <value>Đã tạo dự thảo?</value>
+  </data>
+  <data name="ShowQAOthersSetting" xml:space="preserve">
+    <value>Số câu hỏi khác được phép hiển thị?</value>
+  </data>
+  <data name="PublishedLabel" xml:space="preserve">
+    <value>Đã xuất bản? (*)</value>
+  </data>
+  <data name="ReasonLabel" xml:space="preserve">
+    <value>Lý do (*)</value>
+  </data>
+  <data name="UnApproveDraftAnswer" xml:space="preserve">
+    <value>Không duyêt dự thảo? (*)</value>
+  </data>
+  <data name="ChooseDepartment" xml:space="preserve">
+    <value>Chọn phòng ban</value>
+  </data>
+  <data name="SwirlingQuestionPhongBanLabel" xml:space="preserve">
+    <value>Chọn phòng ban (*)</value>
+  </data>
+  <data name="ListAnswerApproved" xml:space="preserve">
+    <value>Danh sách câu trả lời đã phế duyệt</value>
+  </data>
+  <data name="ListAnswerDraft" xml:space="preserve">
+    <value>Danh sách dự thảo trả lời</value>
+  </data>
+  <data name="ListAnswerPublished" xml:space="preserve">
+    <value>Danh sách câu trả lời đã xuất bản</value>
+  </data>
+  <data name="ListAnswerUnApproved" xml:space="preserve">
+    <value>Danh sách câu trả lời không được phê duyệt</value>
+  </data>
+  <data name="ListQuestionApproved" xml:space="preserve">
+    <value>Danh sách câu hỏi đã duyệt</value>
+  </data>
+  <data name="ListQuestionDeleted" xml:space="preserve">
+    <value>Danh sách câu hỏi đã xóa</value>
+  </data>
+  <data name="ListQuestionPublic" xml:space="preserve">
+    <value>Danh sách câu hỏi đã duyệt</value>
+  </data>
+  <data name="ListQuestionReception" xml:space="preserve">
+    <value>Danh sách câu hỏi đã tiếp nhận</value>
+  </data>
+  <data name="ListQuestionWaitingReception" xml:space="preserve">
+    <value>Danh sách câu hỏi chờ tiếp nhận</value>
+  </data>
+  <data name="ListViolateRegulationsQuestion" xml:space="preserve">
+    <value>Danh sách câu hỏi vi phạm quy chế</value>
+  </data>
+  <data name="btnDelAll" xml:space="preserve">
+    <value>Xóa tất cả</value>
+  </data>
+  <data name="ChooseStateLabel" xml:space="preserve">
+    <value>Chọn trạng thái</value>
+  </data>
+  <data name="SwirlingQuestionStateLabel" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="AdministratorLabel" xml:space="preserve">
+    <value>Quản trị hỏi đáp</value>
+  </data>
+  <data name="RestoreLabel" xml:space="preserve">
+    <value>Khôi phục</value>
+  </data>
+  <data name="RestoreQuestionWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn phục hồi câu hỏi?</value>
+  </data>
+  <data name="ApproveViPhamConfirmWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn duyệt thông báo này và chuyển thông báo đã phê duyệt?</value>
+  </data>
+  <data name="ApproveVRList" xml:space="preserve">
+    <value>Thông báo đã kiểm duyệt</value>
+  </data>
+  <data name="ChangeStateNoticeLabel" xml:space="preserve">
+    <value>Thay đổi trạng thái thông báo</value>
+  </data>
+  <data name="PublicViPhamConfirmWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn xuất bản thông báo này?</value>
+  </data>
+  <data name="PublishedVRList" xml:space="preserve">
+    <value>Thông báo đã xuất bản</value>
+  </data>
+  <data name="QuestionApproveViPham" xml:space="preserve">
+    <value>Duyệt thông báo?</value>
+  </data>
+  <data name="QuestionPublicViPham" xml:space="preserve">
+    <value>Xuất bản thông báo?</value>
+  </data>
+  <data name="PublicNoticeLabel" xml:space="preserve">
+    <value>Xuất bản thông báo?</value>
+  </data>
+  <data name="PublicButton" xml:space="preserve">
+    <value>Xuất bản</value>
+  </data>
+  <data name="SettingGeneralLabel" xml:space="preserve">
+    <value>Cài đặt chung</value>
+  </data>
+  <data name="DateTimeLabel" xml:space="preserve">
+    <value>Ngày gửi</value>
+  </data>
+  <data name="lblHitCount" xml:space="preserve">
+    <value>Lượt xem</value>
+  </data>
+  <data name="ModuleIdSetting" xml:space="preserve">
+    <value>Cài đặt ModuleId</value>
+  </data>
+  <data name="PageIdSetting" xml:space="preserve">
+    <value>Cài đặt PageId</value>
+  </data>
+  <data name="SwirlingQuestionEmailRequired" xml:space="preserve">
+    <value>Nhập email</value>
+  </data>
+  <data name="SwirlingQuestionNameRequired" xml:space="preserve">
+    <value>Nhập họ tên</value>
+  </data>
+  <data name="SwirlingQuestionTitleRequired" xml:space="preserve">
+    <value>Nhập tiêu đề</value>
+  </data>
+  <data name="SwirlingQuestionChooseCoQuanLabel" xml:space="preserve">
+    <value>Chọn cơ quan</value>
+  </data>
+  <data name="EmailRequiredFormatLabel" xml:space="preserve">
+    <value>Email chưa đúng!</value>
+  </data>
+  <data name="SwirlingQuestionCategoryHeaderLabel" xml:space="preserve">
+    <value>Lĩnh vực</value>
+  </data>
+  <data name="SwirlingQuestionCoQuanHeaderLabel" xml:space="preserve">
+    <value>Cơ quan</value>
+  </data>
+  <data name="SwirlingQuestionPhongBanHeaderLabel" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="SwirlingQuestionQuestionHeader" xml:space="preserve">
+    <value>Câu hỏi</value>
+  </data>
+  <data name="SwirlingQuestionTitleHeader" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="ActiveRepEmailSetting" xml:space="preserve">
+    <value>Kích hoạt trả lời qua email</value>
+  </data>
+  <data name="GenaralSetting" xml:space="preserve">
+    <value>Thiếp lập chung</value>
+  </data>
+  <data name="ApproveNoticeLabel" xml:space="preserve">
+    <value>Duyệt thông báo?</value>
+  </data>
+  <data name="CreatedDraftLabel" xml:space="preserve">
+    <value>Đã tạo dự thảo?</value>
+  </data>
+  <data name="CreateDraftLabel" xml:space="preserve">
+    <value>Tạo dự thảo</value>
+  </data>
+  <data name="EditLabel" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="NoticeLabel" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="ReasonHeaderLabel" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="ReceptionLabel" xml:space="preserve">
+    <value>Tiếp nhận?</value>
+  </data>
+  <data name="UnApproveLabel" xml:space="preserve">
+    <value>Không duyệt</value>
+  </data>
+  <data name="ViolateLabel" xml:space="preserve">
+    <value>Vi phạm?</value>
+  </data>
+  <data name="ViewViolateRegulationsDeleted" xml:space="preserve">
+    <value>Xem câu hỏi vi phạm quy chế đã xóa</value>
+  </data>
+  <data name="CurrentFileLabel" xml:space="preserve">
+    <value>Tệp đã tải lên: </value>
+  </data>
+  <data name="SaveAndViewLabel" xml:space="preserve">
+    <value>Lưu và xem trước</value>
+  </data>
+  <data name="SendLabel" xml:space="preserve">
+    <value>Gửi</value>
+  </data>
+  <data name="DeleteLabel" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="EditHeaderLabel" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="RemoveDraftHeaderLabel" xml:space="preserve">
+    <value>Trình dự thảo?</value>
+  </data>
+  <data name="ResetStateRemoveDraftWarning" xml:space="preserve">
+    <value>Bạn có muốn trình lãnh đạo duyệt dự thảo trả lời?</value>
+  </data>
+  <data name="BtnSaveAndSend" xml:space="preserve">
+    <value>Lưu và trình dự thảo</value>
+  </data>
+  <data name="BtnExportExcel" xml:space="preserve">
+    <value>Xuất báo cáo</value>
+  </data>
+  <data name="LnkReportLabel" xml:space="preserve">
+    <value>Báo cáo -Thống kê</value>
+  </data>
+  <data name="SendEmailWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn gửi email?</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Trạng thái: </value>
+  </data>
+  <data name="SwirlingQuestionOrderLabel" xml:space="preserve">
+    <value>Sắp xếp theo ngày</value>
+  </data>
+  <data name="NoticePrefix" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="btnDeleteAnswer" xml:space="preserve">
+    <value>Xóa dự thảo</value>
+  </data>
+  <data name="ResetStateApproveAnswerWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn duyệt và chuyển sang trạng thái đã duyệt?</value>
+  </data>
+  <data name="ResetStatePublicWarning" xml:space="preserve">
+    <value>Bạn có chắc muốn  chuyển sang trạng thái đã xuất bản?</value>
+  </data>
+  <data name="ActiveVRSendEmailSetting" xml:space="preserve">
+    <value>Kích hoạt gửi nội dung câu hỏi vi phạm qua email</value>
+  </data>
+  <data name="SendMailHeaderLabel" xml:space="preserve">
+    <value>Gửi mail</value>
+  </data>
+  <data name="RestoreQuestionVRLabel" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn khôi phục lại câu hỏi vi phạm quy chế này?</value>
+  </data>
+  <data name="DateEndLabel" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="DateStartLabel" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="ShowListVRSetting" xml:space="preserve">
+    <value>Hiển thị danh sách câu hỏi vi phạm?</value>
+  </data>
+  <data name="ExportLabel" xml:space="preserve">
+    <value>Xuất báo cáo</value>
+  </data>
+  <data name="AreaLabel" xml:space="preserve">
+    <value>Khu vực mà bạn quan tâm (*)</value>
+  </data>
+  <data name="AreaQuestionRegularExpression" xml:space="preserve">
+    <value>Bạn vui lòng chọn khu vực bạn quan tâm</value>
+  </data>
+  <data name="CategoryQuestionRequired" xml:space="preserve">
+    <value>Bạn vui lòng chọn lĩnh vực</value>
+  </data>
+  <data name="ChooseCategory" xml:space="preserve">
+    <value>--- Chọn lĩnh vực  ---</value>
+  </data>
+  <data name="ChooseCityLabel" xml:space="preserve">
+    <value>Tỉnh/Thành phố</value>
+  </data>
+  <data name="ChooseDistrictLabel" xml:space="preserve">
+    <value>Quận/Huyện</value>
+  </data>
+  <data name="ChooseTypeCategory" xml:space="preserve">
+    <value>--- Chọn loại lĩnh vực ---</value>
+  </data>
+  <data name="ContentLabel" xml:space="preserve">
+    <value>Nội dung (*)</value>
+  </data>
+  <data name="ContentQuestionRequired" xml:space="preserve">
+    <value>Bạn vui lòng nhập nội dung</value>
+  </data>
+  <data name="EmailRegularExpression" xml:space="preserve">
+    <value>Địa chi email bạn nhập không đúng</value>
+  </data>
+  <data name="EmailRequiredError" xml:space="preserve">
+    <value>Bạn vui lòng điền thông tin email</value>
+  </data>
+  <data name="LabelHeaderContentQA" xml:space="preserve">
+    <value>Nội dung câu hỏi</value>
+  </data>
+  <data name="LabelHeaderPersional" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="LabelHeaderTitle" xml:space="preserve">
+    <value>HÃY CHIA SẺ VỚI CHÚNG TÔI NHỮNG THẮC MẮC CỦA BẠN</value>
+  </data>
+  <data name="NameRequiredError" xml:space="preserve">
+    <value>Bạn vui lòng điền thông tin họ tên</value>
+  </data>
+  <data name="PhoneRegularExpression" xml:space="preserve">
+    <value>Số điện thoại là dạng số và tối thiểu 10 kí tự</value>
+  </data>
+  <data name="SecurityCodeLabel" xml:space="preserve">
+    <value>Mã an toàn (*)</value>
+  </data>
+  <data name="TitleHeaderLabel" xml:space="preserve">
+    <value>Tiêu đề câu hỏi (*)</value>
+  </data>
+  <data name="TitleQuestionRequired" xml:space="preserve">
+    <value>Bạn vui lòng nhập tiêu đề câu hỏi</value>
+  </data>
+  <data name="TypeCategoryLabel" xml:space="preserve">
+    <value>Loại lĩnh vực</value>
+  </data>
+  <data name="TypeCategoryRequired" xml:space="preserve">
+    <value>Bạn vui lòng chọn loại lĩnh vực</value>
+  </data>
+  <data name="ButtonSendQuestion" xml:space="preserve">
+    <value>Gửi câu hỏi</value>
+  </data>
+  <data name="CityRequired" xml:space="preserve">
+    <value>Bạn vui lòng chọn Tỉnh/Thành phố</value>
+  </data>
+  <data name="CityLabel" xml:space="preserve">
+    <value>Tỉnh/Thành phố:</value>
+  </data>
+  <data name="CityOtherLabel" xml:space="preserve">
+    <value>Tỉnh/TP:</value>
+  </data>
+  <data name="DistrictLabel" xml:space="preserve">
+    <value>Quận/Huyện:</value>
+  </data>
+  <data name="OrderByLabel" xml:space="preserve">
+    <value>Sắp xếp theo</value>
+  </data>
+  <data name="QuestionRecentListTitle" xml:space="preserve">
+    <value>Diễn đàn, hỏi đáp về bất động sản và các lĩnh vực liên quan</value>
+  </data>
+  <data name="SenderLabel" xml:space="preserve">
+    <value>Người gửi:</value>
+  </data>
+  <data name="TimeSenderLabel" xml:space="preserve">
+    <value>Thời gian gửi:</value>
+  </data>
+  <data name="AnswerLabel" xml:space="preserve">
+    <value>Trả lời:</value>
+  </data>
+  <data name="AnswerQuestionLabel" xml:space="preserve">
+    <value>Trả lời câu hỏi</value>
+  </data>
+  <data name="OrderByStatus" xml:space="preserve">
+    <value>1:Mới nhất,2: Cũ nhất,3:Xem nhiều nhất,4:Trả lời nhiều nhất,5:Câu trả lời mới nhất,6:Câu hỏi chưa trả lời</value>
+  </data>
+  <data name="ViewLabel" xml:space="preserve">
+    <value>Lần xem:</value>
+  </data>
+  <data name="ContentTilte" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="DetailContentLabel" xml:space="preserve">
+    <value>Chi tiết câu hỏi</value>
+  </data>
+  <data name="CauHoiTitle" xml:space="preserve">
+    <value>Câu hỏi</value>
+  </data>
+  <data name="CityTitle" xml:space="preserve">
+    <value>Tỉnh/Thành phố</value>
+  </data>
+  <data name="DangTinTitle" xml:space="preserve">
+    <value>Đăng tin hỏi đáp</value>
+  </data>
+  <data name="KeywordTitle" xml:space="preserve">
+    <value>Từ khóa</value>
+  </data>
+  <data name="KhuVucQuanTamTitle" xml:space="preserve">
+    <value>Khu vực</value>
+  </data>
+  <data name="LinhVucTitle" xml:space="preserve">
+    <value>Lĩnh vực</value>
+  </data>
+  <data name="LoaiLinhVucTitle" xml:space="preserve">
+    <value>Loại lĩnh vực</value>
+  </data>
+  <data name="OrderByTitle" xml:space="preserve">
+    <value>Sắp xếp theo</value>
+  </data>
+  <data name="QuanHuyenTitle" xml:space="preserve">
+    <value>Quận/Huyện</value>
+  </data>
+  <data name="QuanTriHoiDapTitle" xml:space="preserve">
+    <value>Quản trị hỏi đáp</value>
+  </data>
+  <data name="QuestionAnswerSearchTitle" xml:space="preserve">
+    <value>Tìm kiếm hỏi đáp</value>
+  </data>
+  <data name="RemoveAllButton" xml:space="preserve">
+    <value>Xóa tất cả</value>
+  </data>
+  <data name="RemoveAllConfirm" xml:space="preserve">
+    <value>Dữ liệu xóa sẽ không khôi phục lại được, bạn có chắc chắn muốn tiếp tục?</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="StateStatusTitle" xml:space="preserve">
+    <value>Thay đổi trạng thái</value>
+  </data>
+  <data name="StatusTitle" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="AnswerApproveTitle" xml:space="preserve">
+    <value>Câu trả lời/Kiểm duyệt</value>
+  </data>
+  <data name="EmailLienHeTitle" xml:space="preserve">
+    <value>Email liên hệ</value>
+  </data>
+  <data name="LuotXemTitle" xml:space="preserve">
+    <value>Lượt xem</value>
+  </data>
+  <data name="NgayGuiTitle" xml:space="preserve">
+    <value>Ngày gửi</value>
+  </data>
+  <data name="NguoiGuiTitle" xml:space="preserve">
+    <value>Người gửi</value>
+  </data>
+  <data name="NoiDungTitle" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="TraLoiTitle" xml:space="preserve">
+    <value>Trả lời</value>
+  </data>
+  <data name="ShowNumberQuestionSetting" xml:space="preserve">
+    <value>Số câu hỏi được hiển thị?</value>
+  </data>
+  <data name="ClassCustomSetting" xml:space="preserve">
+    <value>Thiết lập class</value>
+  </data>
+  <data name="TitleSetting" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="DangTinButtom" xml:space="preserve">
+    <value>Đăng câu hỏi</value>
+  </data>
+  <data name="LinhVucLabel" xml:space="preserve">
+    <value>Lĩnh vực</value>
+  </data>
+  <data name="LoaiLinhVucLabel" xml:space="preserve">
+    <value>Loại lĩnh vực</value>
+  </data>
+  <data name="MoRongLabel" xml:space="preserve">
+    <value>Mở rộng tiêu chí tìm kiếm</value>
+  </data>
+  <data name="OrderLabel" xml:space="preserve">
+    <value>Sắp xếp theo</value>
+  </data>
+  <data name="QAResultLabel" xml:space="preserve">
+    <value> Câu hỏi tìm thấy</value>
+  </data>
+  <data name="SearchTopLabel" xml:space="preserve">
+    <value>Tìm kiếm hỏi đáp</value>
+  </data>
+  <data name="ThuGonLabel" xml:space="preserve">
+    <value>Thu gọn tiêu chí tìm kiếm</value>
+  </data>
+  <data name="TitleHeader" xml:space="preserve">
+    <value>Diễn đàn hỏi đáp về mắt và các bệnh về mắt</value>
+  </data>
+  <data name="QuestionAnswer" xml:space="preserve">
+    <value>Hỏi đáp</value>
+  </data>
+  <data name="AnswerNull" xml:space="preserve">
+    <value>Bạn cần nhập nội dung trả lời</value>
+  </data>
+  <data name="AnswerResult" xml:space="preserve">
+    <value>Câu trả lời của bạn đã được gửi và đang chờ phê duyệt</value>
+  </data>
+  <data name="CaptchaError" xml:space="preserve">
+    <value>Captcha không đúng</value>
+  </data>
+  <data name="CaptchaNull" xml:space="preserve">
+    <value>Bạn chưa nhập captcha</value>
+  </data>
+  <data name="PostQuestionResult" xml:space="preserve">
+    <value>Câu hỏi của bạn đã được gửi và đang chờ phê duyệt</value>
+  </data>
+</root>

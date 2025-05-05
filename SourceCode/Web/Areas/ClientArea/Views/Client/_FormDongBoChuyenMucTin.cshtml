@@ -1,0 +1,75 @@
+﻿@using mojoPortal.Web.Areas.ClientArea.Models
+
+@model List<DanhMucWeb>
+<div class="modal-dialog" style="min-width: 70%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Đồng bộ chuyên mục tin</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    @if(Model != null && Model.Any()) {
+                        foreach(var item in Model) {
+                        <div class="row">
+                            <div class="col-sm-4">@item.TenDanhMuc</div>
+                            <input type="hidden" class="IdDanhMucDonVi" value="@item.DanhMucId"/>
+                            <input type="hidden" class="IdDonVi" value="@ViewBag.IdDonVi"/>
+                            <div class="col-sm-4">
+                                @Html.DropDownList("DanhMucx", item.listDanhMuc as List<SelectListItem>, "- Chọn thông tin -", new { @class = "form-control" })
+                                
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" onclick="DongBoDanhMucClient(this)" class="btn btn-primary">Đồng bộ</button>
+                                @if(item.IsDaLayDanhMuc) {
+                                    <a class="btn btn-success" href="~/Globalmodule/SSO/LayTinBaiClient.aspx?idCoreClient=@(item.IdCoreClient)">Lấy tin</a>
+                                }
+                            </div>
+                        </div>
+                        <hr />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer center boder-box">
+            <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //$('#DanhMucx').select2()
+
+    function DongBoDanhMucClient(e) {
+        var parentRow = $(e).parent().parent()
+        var IdDonVi = $(parentRow).find('.IdDonVi').val()
+        var IdDanhMucDonVi = $(parentRow).find('.IdDanhMucDonVi').val()
+        var DanhMucxy = $(parentRow).find('#DanhMucx').val()
+
+
+        $.ajax({
+            url: '/ClientArea/Client/SaveClientCategory',
+            method: 'POST',
+            data: {
+                IdDonVi, IdDanhMucDonVi, DanhMucxy
+            },
+            success: function (rs) {
+                if (rs.Status) {
+                    NotifySuccess(rs.Message);
+                    CloseGlobalModal();
+                } else {
+                    NotifyError(rs.Message);
+                    CloseGlobalModal();
+                }
+            }
+        })
+    }
+</script>

@@ -1,0 +1,93 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.GiaoDienArea.Models
+
+@model ThongTinChiTietVM
+
+@{
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.TreeFolderThem));
+    Layout = null;
+
+}
+<link href="/Data/plugins/tree/tree.css" rel="stylesheet" />
+<script src="/Data/plugins/tree/tree.js"></script>
+
+<script src="/Data/plugins/jstree/jstree.min.js"></script>
+
+<div class="modal-dialog" style="width:90%; max-width:100%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Thông tin giao diện</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div id="tree" style="overflow-y: scroll;max-height: 80vh;"></div>
+                </div>
+                <div class="col-sm-8">
+                    <div id="viewfileData" style="overflow-y: scroll;max-height: 80vh;">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer center boder-box">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var sourceData = eval('@groupData');
+    $('#tree').jstree({
+        'core':{
+            'state':{'opened':true},
+            'themes': {
+            'theme': 'apple',
+            'dots': true,
+            'icons': false,
+            'responsive': true
+            },
+            'data':sourceData
+            }
+            }).bind('loaded.jstree', function (event, data) {
+            //$(this).jstree('open_all');
+            }).on('changed.jstree', function (e, data) {
+             var i, j, r = [];
+            for(i = 0, j = data.selected.length; i < j; i++) {
+
+            r.push(data.instance.get_node(data.selected[i]).original.DuongdanCha);
+            var loadeda = data.node.state.loaded;
+
+            var opend = data.node.state.opened;
+            if(loadeda === true && opend === false)
+            {
+                var duoiFile = data.instance.get_node(data.selected[i]).original.DuoiFile;
+                var duongdan =  data.instance.get_node(data.selected[i]).original.DuongdanCha;
+                var datafile =  data.instance.get_node(data.selected[i]).original.text;
+                var viewSetData = document.getElementById('viewfileData');
+                if (duoiFile !== '') {
+                    $.ajax({
+                        url: '/GiaoDienArea/GiaoDien/getDataFile',
+                        type: 'post',
+                        cache: false,
+                        data: { "nameFile": datafile, "duongdan": duongdan },
+                        success: function (datareturn) {
+                            $(viewSetData).html(datareturn);
+                        },
+                        error: function (err) {
+                            CommonJS.alert(err.responseText);
+                        }
+                    });
+                }
+                
+            }
+            }
+         });
+
+</script>

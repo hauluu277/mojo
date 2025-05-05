@@ -1,0 +1,1764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Entities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bentre_BieuMauThongTin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="500" />
+          <Property Name="NoiDungHTML" Type="nvarchar(max)" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="NgayCapNhat" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="core_Category">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NameEN" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ItemCount" Type="int" Nullable="false" />
+          <Property Name="CreatedUtc" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedUtc" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="LangID" Type="int" />
+          <Property Name="IconID" Type="int" />
+          <Property Name="Automatic" Type="bit" />
+          <Property Name="CoreSkinID" Type="int" />
+          <Property Name="CoreSkinDefault" Type="bit" />
+          <Property Name="IsPhongBan" Type="bit" />
+          <Property Name="ShowMenuLeft" Type="bit" />
+          <Property Name="PathIMG" Type="nvarchar(max)" />
+          <Property Name="PathFile" Type="nvarchar(max)" />
+          <Property Name="SubName" Type="nvarchar(max)" />
+          <Property Name="IsTinTuc" Type="bit" />
+          <Property Name="IsLinhVucDieuTra" Type="bit" />
+          <Property Name="Code" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sumary" Type="nvarchar" MaxLength="550" />
+          <Property Name="TargetBlank" Type="bit" />
+          <Property Name="Color" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="core_CategoryUserArticle">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="TypeRole" Type="int" />
+        </EntityType>
+        <EntityType Name="core_CCTC">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ShowLanhDao" Type="bit" />
+          <Property Name="ShowPhongBan" Type="bit" />
+          <Property Name="TitleBoxLanhDao" Type="nvarchar" MaxLength="550" />
+          <Property Name="TitleBoxPhongBan" Type="nvarchar" MaxLength="550" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="EditedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="core_CCTC_Department">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CCTC_ID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="350" />
+          <Property Name="PathIMG" Type="nvarchar(max)" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="OrderBy" Type="int" />
+          <Property Name="LinkDetail" Type="nvarchar" MaxLength="550" />
+          <Property Name="CCTC_Leader_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="core_CCTC_Leader">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CCTC_ID" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="350" />
+          <Property Name="PathIMG" Type="nvarchar(max)" />
+          <Property Name="OrderBy" Type="int" />
+          <Property Name="ChucVu" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="350" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkDetail" Type="nvarchar" MaxLength="550" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="core_Client">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientID" Type="nvarchar" MaxLength="250" />
+          <Property Name="ClientUrl" Type="nvarchar(max)" />
+          <Property Name="ClientCallBack" Type="nvarchar(max)" />
+          <Property Name="ClientSignIn" Type="nvarchar(max)" />
+          <Property Name="ClientSignOut" Type="nvarchar(max)" />
+          <Property Name="ClientName" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="EditedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="core_Menu">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="350" />
+          <Property Name="LinkMenu" Type="nvarchar" MaxLength="550" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" />
+          <Property Name="OrderBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="StyleCss" Type="nvarchar" MaxLength="250" />
+          <Property Name="TypeMenu" Type="int" />
+          <Property Name="Show" Type="bit" />
+          <Property Name="IsDisplayLink" Type="bit" />
+          <Property Name="IsPhongBan" Type="bit" />
+          <Property Name="IsEnglish" Type="bit" />
+          <Property Name="TypeLink" Type="int" />
+          <Property Name="ItemLink" Type="bigint" />
+          <Property Name="IsLogin" Type="bit" />
+          <Property Name="NoClick" Type="bit" />
+          <Property Name="TargetBlank" Type="bit" />
+        </EntityType>
+        <EntityType Name="core_SettingMenu">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="UrlIMG" Type="nvarchar" MaxLength="550" />
+          <Property Name="UrlItem" Type="nvarchar" MaxLength="550" />
+          <Property Name="TypeIMG" Type="int" />
+        </EntityType>
+        <EntityType Name="core_SettingService">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="550" />
+          <Property Name="ServiceUrl" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="EditedBy" Type="int" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="IsNew" Type="bit" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCoQuan" Type="int" />
+          <Property Name="IdMucDo" Type="int" />
+          <Property Name="IdCapDoThuTuc" Type="int" />
+          <Property Name="MaThuTuc" Type="nvarchar" MaxLength="250" />
+          <Property Name="TenThuTuc" Type="nvarchar" MaxLength="550" />
+          <Property Name="IdLinhVuc" Type="int" />
+          <Property Name="CachThucThucHien" Type="nvarchar" MaxLength="250" />
+          <Property Name="IdDoiTuongThucHien" Type="int" />
+          <Property Name="TrinhTuThucHien" Type="ntext" />
+          <Property Name="ThoiHanGianQuyet" Type="ntext" />
+          <Property Name="Phi" Type="ntext" />
+          <Property Name="LePhi" Type="ntext" />
+          <Property Name="ThanhPhanHoSo" Type="ntext" />
+          <Property Name="SoLuongHoSo" Type="int" />
+          <Property Name="YeuCauDieuKien" Type="ntext" />
+          <Property Name="CanCuPhapLy" Type="ntext" />
+          <Property Name="KetQuaThucHien" Type="ntext" />
+          <Property Name="LinkDVC" Type="nvarchar" MaxLength="550" />
+          <Property Name="IsPublish" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="EditByUser" Type="int" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc_BieuMau">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdThuTuc" Type="bigint" />
+          <Property Name="TenMau" Type="nvarchar(max)" />
+          <Property Name="PathFile" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc_ThanhPhanHS">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdThuTuc" Type="bigint" />
+          <Property Name="TenGiayTo" Type="nvarchar(max)" />
+          <Property Name="MauDonToKhai" Type="nvarchar(max)" />
+          <Property Name="SoLuong" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="core_Token">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientID" Type="nvarchar" MaxLength="250" />
+          <Property Name="Token" Type="nvarchar(max)" />
+          <Property Name="DateExpired" Type="datetime" />
+          <Property Name="TokenID" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="EditedBy" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpiredIn" Type="int" />
+        </EntityType>
+        <EntityType Name="core_TokenAD">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="access_token" Type="nvarchar(max)" />
+          <Property Name="token_type" Type="nvarchar" MaxLength="250" />
+          <Property Name="expires_in" Type="int" />
+          <Property Name="refresh_token" Type="nvarchar(max)" />
+          <Property Name="apikey" Type="nvarchar" MaxLength="350" />
+          <Property Name="username" Type="nvarchar" MaxLength="350" />
+          <Property Name="date_created" Type="datetime" />
+          <Property Name="date_expired" Type="datetime" />
+          <Property Name="clientId" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="md_Articles">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModuleID" Type="int" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="450" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="CommentCount" Type="int" Nullable="false" />
+          <Property Name="HitCount" Type="int" Nullable="false" />
+          <Property Name="ArticleGuid" Type="uniqueidentifier" />
+          <Property Name="ModuleGuid" Type="uniqueidentifier" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="UserGuid" Type="uniqueidentifier" />
+          <Property Name="CreatedByUser" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastModUserGuid" Type="uniqueidentifier" />
+          <Property Name="LastModUtc" Type="datetime" />
+          <Property Name="ItemUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaTitle" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaKeywords" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsApproved" Type="bit" />
+          <Property Name="ApprovedGuid" Type="uniqueidentifier" />
+          <Property Name="ApprovedDate" Type="datetime" />
+          <Property Name="AllowComment" Type="bit" />
+          <Property Name="IsHot" Type="bit" />
+          <Property Name="IsHome" Type="bit" />
+          <Property Name="Tag" Type="nvarchar(max)" />
+          <Property Name="FTS" Type="ntext" />
+          <Property Name="LangID" Type="int" />
+          <Property Name="IsPublished" Type="bit" />
+          <Property Name="PublishedGuid" Type="uniqueidentifier" />
+          <Property Name="PublishedDate" Type="datetime" />
+          <Property Name="IncludeInFeed" Type="bit" />
+          <Property Name="CommentByBoss" Type="nvarchar(max)" />
+          <Property Name="AudioUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="PollGuid" Type="uniqueidentifier" />
+          <Property Name="AllowWCAG" Type="bit" />
+          <Property Name="CompiledMeta" Type="nvarchar(max)" />
+          <Property Name="MetaCreator" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaIdentifier" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaPublisher" Type="nvarchar" MaxLength="255" />
+          <Property Name="MetaDate" Type="datetime" />
+          <Property Name="IsHotNew" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="ArticleReference" Type="nvarchar" MaxLength="255" />
+          <Property Name="TitleFTS" Type="nvarchar(max)" />
+          <Property Name="AuthorFTS" Type="nvarchar(max)" />
+          <Property Name="SapoFTS" Type="nvarchar(max)" />
+          <Property Name="CreateDateArticle" Type="datetime" />
+        </EntityType>
+        <EntityType Name="md_BaoCao">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenBaoCao" Type="nvarchar" MaxLength="550" />
+          <Property Name="NamChuKyBaoCao" Type="int" />
+          <Property Name="BieuMau" Type="nvarchar" MaxLength="550" />
+          <Property Name="SoQuyetDinhCongBo" Type="nvarchar" MaxLength="250" />
+          <Property Name="NgayCongBo" Type="datetime" />
+          <Property Name="PathFile" Type="nvarchar(max)" />
+          <Property Name="LinhVucID" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ItemUrl" Type="nvarchar" MaxLength="550" />
+          <Property Name="ItemGuid" Type="uniqueidentifier" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="IsPublish" Type="bit" />
+        </EntityType>
+        <EntityType Name="mp_Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SiteGuid" Type="uniqueidentifier" />
+          <Property Name="RoleGuid" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="mp_Sites">
+          <Key>
+            <PropertyRef Name="SiteID" />
+          </Key>
+          <Property Name="SiteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SiteAlias" Type="nvarchar" MaxLength="50" />
+          <Property Name="SiteName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Skin" Type="nvarchar" MaxLength="100" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+          <Property Name="AllowUserSkins" Type="bit" Nullable="false" />
+          <Property Name="AllowPageSkins" Type="bit" Nullable="false" />
+          <Property Name="AllowHideMenuOnPages" Type="bit" Nullable="false" />
+          <Property Name="AllowNewRegistration" Type="bit" Nullable="false" />
+          <Property Name="UseSecureRegistration" Type="bit" Nullable="false" />
+          <Property Name="UseSSLOnAllPages" Type="bit" Nullable="false" />
+          <Property Name="DefaultPageKeyWords" Type="nvarchar" MaxLength="255" />
+          <Property Name="DefaultPageDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="DefaultPageEncoding" Type="nvarchar" MaxLength="255" />
+          <Property Name="DefaultAdditionalMetaTags" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsServerAdminSite" Type="bit" Nullable="false" />
+          <Property Name="UseLdapAuth" Type="bit" Nullable="false" />
+          <Property Name="AutoCreateLdapUserOnFirstLogin" Type="bit" Nullable="false" />
+          <Property Name="LdapServer" Type="nvarchar" MaxLength="255" />
+          <Property Name="LdapPort" Type="int" Nullable="false" />
+          <Property Name="LdapDomain" Type="nvarchar" MaxLength="255" />
+          <Property Name="LdapRootDN" Type="nvarchar" MaxLength="255" />
+          <Property Name="LdapUserDNKey" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ReallyDeleteUsers" Type="bit" Nullable="false" />
+          <Property Name="UseEmailForLogin" Type="bit" Nullable="false" />
+          <Property Name="AllowUserFullNameChange" Type="bit" Nullable="false" />
+          <Property Name="EditorSkin" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DefaultFriendlyUrlPatternEnum" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AllowPasswordRetrieval" Type="bit" Nullable="false" />
+          <Property Name="AllowPasswordReset" Type="bit" Nullable="false" />
+          <Property Name="RequiresQuestionAndAnswer" Type="bit" Nullable="false" />
+          <Property Name="MaxInvalidPasswordAttempts" Type="int" Nullable="false" />
+          <Property Name="PasswordAttemptWindowMinutes" Type="int" Nullable="false" />
+          <Property Name="RequiresUniqueEmail" Type="bit" Nullable="false" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="MinRequiredPasswordLength" Type="int" Nullable="false" />
+          <Property Name="MinReqNonAlphaChars" Type="int" Nullable="false" />
+          <Property Name="PwdStrengthRegex" Type="nvarchar(max)" />
+          <Property Name="DefaultEmailFromAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="EnableMyPageFeature" Type="bit" Nullable="false" />
+          <Property Name="EditorProvider" Type="nvarchar" MaxLength="255" />
+          <Property Name="CaptchaProvider" Type="nvarchar" MaxLength="255" />
+          <Property Name="DatePickerProvider" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecaptchaPrivateKey" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecaptchaPublicKey" Type="nvarchar" MaxLength="255" />
+          <Property Name="WordpressAPIKey" Type="nvarchar" MaxLength="255" />
+          <Property Name="WindowsLiveAppID" Type="nvarchar" MaxLength="255" />
+          <Property Name="WindowsLiveKey" Type="nvarchar" MaxLength="255" />
+          <Property Name="AllowOpenIDAuth" Type="bit" Nullable="false" />
+          <Property Name="AllowWindowsLiveAuth" Type="bit" Nullable="false" />
+          <Property Name="GmapApiKey" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApiKeyExtra1" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApiKeyExtra2" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApiKeyExtra3" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApiKeyExtra4" Type="nvarchar" MaxLength="255" />
+          <Property Name="ApiKeyExtra5" Type="nvarchar" MaxLength="255" />
+          <Property Name="DisableDbAuth" Type="bit" />
+          <Property Name="ArticleCategoryID" Type="int" />
+          <Property Name="CoreEventCategoryID" Type="int" />
+          <Property Name="CoreLoaiVanBanCategoryID" Type="int" />
+          <Property Name="CoreLinhVucVanBanCategoryID" Type="int" />
+          <Property Name="CoreCoQuanBanHanhVanBanCategoryID" Type="int" />
+          <Property Name="CoreDonviCategoryID" Type="int" />
+          <Property Name="CoreLinhVucHoiDapCategoryID" Type="int" />
+          <Property Name="CoreDuLieuDaPhuongTienCategoryID" Type="int" />
+          <Property Name="CoreRSSCategoryID" Type="int" />
+          <Property Name="CoreHoiDongCategoryID" Type="int" />
+          <Property Name="CoreChuDeCategoryID" Type="int" />
+          <Property Name="IsView" Type="int" />
+          <Property Name="TemplateType" Type="int" />
+          <Property Name="IsTemplate" Type="bit" />
+          <Property Name="UrlSiteMap" Type="nvarchar" MaxLength="250" />
+          <Property Name="TemplateSite" Type="int" />
+          <Property Name="SiteSubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="FanPageIframe" Type="nvarchar(max)" />
+          <Property Name="Footer" Type="ntext" />
+          <Property Name="LinhVucID" Type="int" />
+          <Property Name="NoiDungDieuTra" Type="nvarchar(max)" />
+          <Property Name="Nam" Type="int" />
+          <Property Name="TanSuatDieuTra" Type="nvarchar" MaxLength="250" />
+          <Property Name="PhamViSoLieu" Type="nvarchar" MaxLength="250" />
+          <Property Name="DoiTuongDieuTra" Type="nvarchar" MaxLength="250" />
+          <Property Name="PathIMG" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedByUser" Type="int" />
+          <Property Name="IsTongDieuTra" Type="bit" />
+          <Property Name="IsCuocDieuTra" Type="bit" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="HanGopY" Type="datetime" />
+          <Property Name="TrangThaiDieuTra" Type="int" />
+          <Property Name="FileDuThao" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mp_UserRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="UserGuid" Type="uniqueidentifier" />
+          <Property Name="RoleGuid" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="mp_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LoweredEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="255" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gender" Type="nchar" MaxLength="10" />
+          <Property Name="ProfileApproved" Type="bit" Nullable="false" />
+          <Property Name="RegisterConfirmGuid" Type="uniqueidentifier" />
+          <Property Name="ApprovedForForums" Type="bit" Nullable="false" />
+          <Property Name="Trusted" Type="bit" Nullable="false" />
+          <Property Name="DisplayInMemberList" Type="bit" />
+          <Property Name="WebSiteURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="State" Type="nvarchar" MaxLength="100" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Interests" Type="nvarchar" MaxLength="100" />
+          <Property Name="MSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Yahoo" Type="nvarchar" MaxLength="50" />
+          <Property Name="AIM" Type="nvarchar" MaxLength="50" />
+          <Property Name="ICQ" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalPosts" Type="int" Nullable="false" />
+          <Property Name="AvatarUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="TimeOffsetHours" Type="int" Nullable="false" />
+          <Property Name="Signature" Type="nvarchar(max)" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="UserGuid" Type="uniqueidentifier" />
+          <Property Name="Skin" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" />
+          <Property Name="LastLockoutDate" Type="datetime" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" />
+          <Property Name="FailedPwdAttemptWindowStart" Type="datetime" />
+          <Property Name="FailedPwdAnswerAttemptCount" Type="int" />
+          <Property Name="FailedPwdAnswerWindowStart" Type="datetime" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+          <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="OpenIDURI" Type="nvarchar" MaxLength="255" />
+          <Property Name="WindowsLiveID" Type="nvarchar" MaxLength="36" />
+          <Property Name="SiteGuid" Type="uniqueidentifier" />
+          <Property Name="TotalRevenue" Type="decimal" Precision="15" Scale="4" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Pwd" Type="nvarchar" MaxLength="1000" />
+          <Property Name="MustChangePwd" Type="bit" />
+          <Property Name="NewEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditorPreference" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailChangeGuid" Type="uniqueidentifier" />
+          <Property Name="TimeZoneId" Type="nvarchar" MaxLength="32" />
+          <Property Name="PasswordResetGuid" Type="uniqueidentifier" />
+          <Property Name="RolesChanged" Type="bit" />
+          <Property Name="AuthorBio" Type="nvarchar(max)" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="PwdFormat" Type="int" Nullable="false" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="SiteSync" Type="int" />
+          <Property Name="SiteManager" Type="nvarchar(max)" />
+          <Property Name="AD_MCS" Type="nvarchar" MaxLength="50" />
+          <Property Name="AD_TenDonViCS" Type="nvarchar" MaxLength="350" />
+          <Property Name="AD_PhongBan" Type="nvarchar" MaxLength="50" />
+          <Property Name="AD_TenPhongBan" Type="nvarchar" MaxLength="350" />
+          <Property Name="ChucVu" Type="nvarchar" MaxLength="550" />
+          <Property Name="MaChucVu" Type="nvarchar" MaxLength="350" />
+          <Property Name="IS_VU" Type="bit" />
+          <Property Name="IS_CHICUC" Type="bit" />
+          <Property Name="IS_CUCTTDL" Type="bit" />
+          <Property Name="DepartmentId" Type="int" />
+        </EntityType>
+        <Association Name="FK_Roles_Portals">
+          <End Role="mp_Sites" Type="Self.mp_Sites" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="mp_Roles" Type="Self.mp_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mp_Sites">
+              <PropertyRef Name="SiteID" />
+            </Principal>
+            <Dependent Role="mp_Roles">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EntitiesStoreContainer">
+          <EntitySet Name="bentre_BieuMauThongTin" EntityType="Self.bentre_BieuMauThongTin" Schema="dbo" Table="bentre.BieuMauThongTin" store:Type="Tables" />
+          <EntitySet Name="core_Category" EntityType="Self.core_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_CategoryUserArticle" EntityType="Self.core_CategoryUserArticle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_CCTC" EntityType="Self.core_CCTC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_CCTC_Department" EntityType="Self.core_CCTC_Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_CCTC_Leader" EntityType="Self.core_CCTC_Leader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_Client" EntityType="Self.core_Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_Menu" EntityType="Self.core_Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_SettingMenu" EntityType="Self.core_SettingMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_SettingService" EntityType="Self.core_SettingService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_ThuTuc" EntityType="Self.core_ThuTuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_ThuTuc_BieuMau" EntityType="Self.core_ThuTuc_BieuMau" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_ThuTuc_ThanhPhanHS" EntityType="Self.core_ThuTuc_ThanhPhanHS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_Token" EntityType="Self.core_Token" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_TokenAD" EntityType="Self.core_TokenAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="md_Articles" EntityType="Self.md_Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="md_BaoCao" EntityType="Self.md_BaoCao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mp_Roles" EntityType="Self.mp_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mp_Sites" EntityType="Self.mp_Sites" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mp_UserRoles" EntityType="Self.mp_UserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mp_Users" EntityType="Self.mp_Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Roles_Portals" Association="Self.FK_Roles_Portals">
+            <End Role="mp_Sites" EntitySet="mp_Sites" />
+            <End Role="mp_Roles" EntitySet="mp_Roles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Entities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HinetContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="core_Category" EntityType="Entities.core_Category" />
+          <EntitySet Name="core_CategoryUserArticle" EntityType="Entities.core_CategoryUserArticle" />
+          <EntitySet Name="core_CCTC" EntityType="Entities.core_CCTC" />
+          <EntitySet Name="core_CCTC_Department" EntityType="Entities.core_CCTC_Department" />
+          <EntitySet Name="core_CCTC_Leader" EntityType="Entities.core_CCTC_Leader" />
+          <EntitySet Name="core_Client" EntityType="Entities.core_Client" />
+          <EntitySet Name="md_Articles" EntityType="Entities.md_Articles" />
+          <EntitySet Name="mp_Sites" EntityType="Entities.mp_Sites" />
+          <EntitySet Name="mp_Users" EntityType="Entities.mp_Users" />
+          <EntitySet Name="core_Menu" EntityType="Entities.core_Menu" />
+          <EntitySet Name="core_SettingMenu" EntityType="Entities.core_SettingMenu" />
+          <EntitySet Name="core_SettingService" EntityType="Entities.core_SettingService" />
+          <EntitySet Name="mp_Roles" EntityType="Entities.mp_Roles" />
+          <AssociationSet Name="FK_Roles_Portals" Association="Entities.FK_Roles_Portals">
+            <End Role="mp_Sites" EntitySet="mp_Sites" />
+            <End Role="mp_Roles" EntitySet="mp_Roles" />
+          </AssociationSet>
+          <EntitySet Name="core_Token" EntityType="Entities.core_Token" />
+          <EntitySet Name="mp_UserRoles" EntityType="Entities.mp_UserRoles" />
+          <EntitySet Name="core_TokenAD" EntityType="Entities.core_TokenAD" />
+          <EntitySet Name="md_BaoCao" EntityType="Entities.md_BaoCao" />
+          <EntitySet Name="core_ThuTuc_BieuMau" EntityType="Entities.core_ThuTuc_BieuMau" />
+          <EntitySet Name="core_ThuTuc" EntityType="Entities.core_ThuTuc" />
+          <EntitySet Name="core_ThuTuc_ThanhPhanHS" EntityType="Entities.core_ThuTuc_ThanhPhanHS" />
+          <EntitySet Name="bentre_BieuMauThongTin" EntityType="Entities.bentre_BieuMauThongTin" />
+        </EntityContainer>
+        <EntityType Name="core_Category">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameEN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ItemCount" Type="Int32" Nullable="false" />
+          <Property Name="CreatedUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" Nullable="false" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="LangID" Type="Int32" />
+          <Property Name="IconID" Type="Int32" />
+          <Property Name="Automatic" Type="Boolean" />
+          <Property Name="CoreSkinID" Type="Int32" />
+          <Property Name="CoreSkinDefault" Type="Boolean" />
+          <Property Name="IsPhongBan" Type="Boolean" />
+          <Property Name="ShowMenuLeft" Type="Boolean" />
+          <Property Name="PathIMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PathFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsTinTuc" Type="Boolean" />
+          <Property Name="IsLinhVucDieuTra" Type="Boolean" />
+          <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Sumary" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="TargetBlank" Type="Boolean" />
+          <Property Name="Color" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="core_CategoryUserArticle">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="TypeRole" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_CCTC">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowLanhDao" Type="Boolean" />
+          <Property Name="ShowPhongBan" Type="Boolean" />
+          <Property Name="TitleBoxLanhDao" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="TitleBoxPhongBan" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="EditedBy" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_CCTC_Department">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CCTC_ID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="PathIMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderBy" Type="Int32" />
+          <Property Name="LinkDetail" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="CCTC_Leader_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_CCTC_Leader">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CCTC_ID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="PathIMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderBy" Type="Int32" />
+          <Property Name="ChucVu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LinkDetail" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="core_Client">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ClientUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientCallBack" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientSignIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientSignOut" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="EditedBy" Type="Int32" />
+        </EntityType>
+        <EntityType Name="md_Articles">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModuleID" Type="Int32" Nullable="false" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Summary" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="CommentCount" Type="Int32" Nullable="false" />
+          <Property Name="HitCount" Type="Int32" Nullable="false" />
+          <Property Name="ArticleGuid" Type="Guid" />
+          <Property Name="ModuleGuid" Type="Guid" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserGuid" Type="Guid" />
+          <Property Name="CreatedByUser" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastModUserGuid" Type="Guid" />
+          <Property Name="LastModUtc" Type="DateTime" Precision="3" />
+          <Property Name="ItemUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaKeywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsApproved" Type="Boolean" />
+          <Property Name="ApprovedGuid" Type="Guid" />
+          <Property Name="ApprovedDate" Type="DateTime" Precision="3" />
+          <Property Name="AllowComment" Type="Boolean" />
+          <Property Name="IsHot" Type="Boolean" />
+          <Property Name="IsHome" Type="Boolean" />
+          <Property Name="Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LangID" Type="Int32" />
+          <Property Name="IsPublished" Type="Boolean" />
+          <Property Name="PublishedGuid" Type="Guid" />
+          <Property Name="PublishedDate" Type="DateTime" Precision="3" />
+          <Property Name="IncludeInFeed" Type="Boolean" />
+          <Property Name="CommentByBoss" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AudioUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PollGuid" Type="Guid" />
+          <Property Name="AllowWCAG" Type="Boolean" />
+          <Property Name="CompiledMeta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MetaCreator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaIdentifier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaPublisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MetaDate" Type="DateTime" Precision="3" />
+          <Property Name="IsHotNew" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="ArticleReference" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TitleFTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AuthorFTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SapoFTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDateArticle" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="mp_Sites">
+          <Key>
+            <PropertyRef Name="SiteID" />
+          </Key>
+          <Property Name="SiteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteGuid" Type="Guid" Nullable="false" />
+          <Property Name="SiteAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SiteName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Skin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AllowUserSkins" Type="Boolean" Nullable="false" />
+          <Property Name="AllowPageSkins" Type="Boolean" Nullable="false" />
+          <Property Name="AllowHideMenuOnPages" Type="Boolean" Nullable="false" />
+          <Property Name="AllowNewRegistration" Type="Boolean" Nullable="false" />
+          <Property Name="UseSecureRegistration" Type="Boolean" Nullable="false" />
+          <Property Name="UseSSLOnAllPages" Type="Boolean" Nullable="false" />
+          <Property Name="DefaultPageKeyWords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultPageDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultPageEncoding" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAdditionalMetaTags" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsServerAdminSite" Type="Boolean" Nullable="false" />
+          <Property Name="UseLdapAuth" Type="Boolean" Nullable="false" />
+          <Property Name="AutoCreateLdapUserOnFirstLogin" Type="Boolean" Nullable="false" />
+          <Property Name="LdapServer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LdapPort" Type="Int32" Nullable="false" />
+          <Property Name="LdapDomain" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LdapRootDN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LdapUserDNKey" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ReallyDeleteUsers" Type="Boolean" Nullable="false" />
+          <Property Name="UseEmailForLogin" Type="Boolean" Nullable="false" />
+          <Property Name="AllowUserFullNameChange" Type="Boolean" Nullable="false" />
+          <Property Name="EditorSkin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultFriendlyUrlPatternEnum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AllowPasswordRetrieval" Type="Boolean" Nullable="false" />
+          <Property Name="AllowPasswordReset" Type="Boolean" Nullable="false" />
+          <Property Name="RequiresQuestionAndAnswer" Type="Boolean" Nullable="false" />
+          <Property Name="MaxInvalidPasswordAttempts" Type="Int32" Nullable="false" />
+          <Property Name="PasswordAttemptWindowMinutes" Type="Int32" Nullable="false" />
+          <Property Name="RequiresUniqueEmail" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="MinRequiredPasswordLength" Type="Int32" Nullable="false" />
+          <Property Name="MinReqNonAlphaChars" Type="Int32" Nullable="false" />
+          <Property Name="PwdStrengthRegex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultEmailFromAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EnableMyPageFeature" Type="Boolean" Nullable="false" />
+          <Property Name="EditorProvider" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CaptchaProvider" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DatePickerProvider" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecaptchaPrivateKey" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RecaptchaPublicKey" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WordpressAPIKey" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WindowsLiveAppID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WindowsLiveKey" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AllowOpenIDAuth" Type="Boolean" Nullable="false" />
+          <Property Name="AllowWindowsLiveAuth" Type="Boolean" Nullable="false" />
+          <Property Name="GmapApiKey" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApiKeyExtra1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApiKeyExtra2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApiKeyExtra3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApiKeyExtra4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ApiKeyExtra5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DisableDbAuth" Type="Boolean" />
+          <Property Name="ArticleCategoryID" Type="Int32" />
+          <Property Name="CoreEventCategoryID" Type="Int32" />
+          <Property Name="CoreLoaiVanBanCategoryID" Type="Int32" />
+          <Property Name="CoreLinhVucVanBanCategoryID" Type="Int32" />
+          <Property Name="CoreCoQuanBanHanhVanBanCategoryID" Type="Int32" />
+          <Property Name="CoreDonviCategoryID" Type="Int32" />
+          <Property Name="CoreLinhVucHoiDapCategoryID" Type="Int32" />
+          <Property Name="CoreDuLieuDaPhuongTienCategoryID" Type="Int32" />
+          <Property Name="CoreRSSCategoryID" Type="Int32" />
+          <Property Name="CoreHoiDongCategoryID" Type="Int32" />
+          <Property Name="CoreChuDeCategoryID" Type="Int32" />
+          <Property Name="IsView" Type="Int32" />
+          <Property Name="TemplateType" Type="Int32" />
+          <Property Name="IsTemplate" Type="Boolean" />
+          <Property Name="UrlSiteMap" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TemplateSite" Type="Int32" />
+          <Property Name="SiteSubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FanPageIframe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Footer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinhVucID" Type="Int32" />
+          <Property Name="NoiDungDieuTra" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nam" Type="Int32" />
+          <Property Name="TanSuatDieuTra" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PhamViSoLieu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DoiTuongDieuTra" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PathIMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="IsTongDieuTra" Type="Boolean" />
+          <Property Name="IsCuocDieuTra" Type="Boolean" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="HanGopY" Type="DateTime" Precision="3" />
+          <Property Name="TrangThaiDieuTra" Type="Int32" />
+          <Property Name="FileDuThao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="mp_Roles" Relationship="Entities.FK_Roles_Portals" FromRole="mp_Sites" ToRole="mp_Roles" />
+        </EntityType>
+        <EntityType Name="mp_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoweredEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ProfileApproved" Type="Boolean" Nullable="false" />
+          <Property Name="RegisterConfirmGuid" Type="Guid" />
+          <Property Name="ApprovedForForums" Type="Boolean" Nullable="false" />
+          <Property Name="Trusted" Type="Boolean" Nullable="false" />
+          <Property Name="DisplayInMemberList" Type="Boolean" />
+          <Property Name="WebSiteURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Interests" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Yahoo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AIM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ICQ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalPosts" Type="Int32" Nullable="false" />
+          <Property Name="AvatarUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TimeOffsetHours" Type="Int32" Nullable="false" />
+          <Property Name="Signature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UserGuid" Type="Guid" />
+          <Property Name="Skin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLockoutDate" Type="DateTime" Precision="3" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" />
+          <Property Name="FailedPwdAttemptWindowStart" Type="DateTime" Precision="3" />
+          <Property Name="FailedPwdAnswerAttemptCount" Type="Int32" />
+          <Property Name="FailedPwdAnswerWindowStart" Type="DateTime" Precision="3" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OpenIDURI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WindowsLiveID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="SiteGuid" Type="Guid" />
+          <Property Name="TotalRevenue" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Pwd" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="MustChangePwd" Type="Boolean" />
+          <Property Name="NewEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditorPreference" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmailChangeGuid" Type="Guid" />
+          <Property Name="TimeZoneId" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordResetGuid" Type="Guid" />
+          <Property Name="RolesChanged" Type="Boolean" />
+          <Property Name="AuthorBio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="PwdFormat" Type="Int32" Nullable="false" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="SiteSync" Type="Int32" />
+          <Property Name="SiteManager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AD_MCS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AD_TenDonViCS" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="AD_PhongBan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AD_TenPhongBan" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ChucVu" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="MaChucVu" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="IS_VU" Type="Boolean" />
+          <Property Name="IS_CHICUC" Type="Boolean" />
+          <Property Name="IS_CUCTTDL" Type="Boolean" />
+          <Property Name="DepartmentId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_Menu">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="LinkMenu" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OrderBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="StyleCss" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TypeMenu" Type="Int32" />
+          <Property Name="Show" Type="Boolean" />
+          <Property Name="IsDisplayLink" Type="Boolean" />
+          <Property Name="IsPhongBan" Type="Boolean" />
+          <Property Name="IsEnglish" Type="Boolean" />
+          <Property Name="TypeLink" Type="Int32" />
+          <Property Name="ItemLink" Type="Int64" />
+          <Property Name="IsLogin" Type="Boolean" />
+          <Property Name="NoClick" Type="Boolean" />
+          <Property Name="TargetBlank" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="core_SettingMenu">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="UrlIMG" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="UrlItem" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="TypeIMG" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_SettingService">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="EditedBy" Type="Int32" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsNew" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="mp_Roles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SiteGuid" Type="Guid" />
+          <Property Name="RoleGuid" Type="Guid" />
+          <NavigationProperty Name="mp_Sites" Relationship="Entities.FK_Roles_Portals" FromRole="mp_Roles" ToRole="mp_Sites" />
+        </EntityType>
+        <Association Name="FK_Roles_Portals">
+          <End Type="Entities.mp_Sites" Role="mp_Sites" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Entities.mp_Roles" Role="mp_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mp_Sites">
+              <PropertyRef Name="SiteID" />
+            </Principal>
+            <Dependent Role="mp_Roles">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="core_Token">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateExpired" Type="DateTime" Precision="3" />
+          <Property Name="TokenID" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="EditedBy" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiredIn" Type="Int32" />
+        </EntityType>
+        <EntityType Name="mp_UserRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="UserGuid" Type="Guid" />
+          <Property Name="RoleGuid" Type="Guid" />
+        </EntityType>
+        <EntityType Name="core_TokenAD">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="access_token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="token_type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="expires_in" Type="Int32" />
+          <Property Name="refresh_token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="apikey" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="date_created" Type="DateTime" Precision="3" />
+          <Property Name="date_expired" Type="DateTime" Precision="3" />
+          <Property Name="clientId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="md_BaoCao">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenBaoCao" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="NamChuKyBaoCao" Type="Int32" />
+          <Property Name="BieuMau" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="SoQuyetDinhCongBo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NgayCongBo" Type="DateTime" Precision="3" />
+          <Property Name="PathFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinhVucID" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemUrl" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="ItemGuid" Type="Guid" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="IsPublish" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc_BieuMau">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdThuTuc" Type="Int64" />
+          <Property Name="TenMau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PathFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCoQuan" Type="Int32" />
+          <Property Name="IdMucDo" Type="Int32" />
+          <Property Name="IdCapDoThuTuc" Type="Int32" />
+          <Property Name="MaThuTuc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TenThuTuc" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="IdLinhVuc" Type="Int32" />
+          <Property Name="CachThucThucHien" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IdDoiTuongThucHien" Type="Int32" />
+          <Property Name="TrinhTuThucHien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThoiHanGianQuyet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LePhi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThanhPhanHoSo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuongHoSo" Type="Int32" />
+          <Property Name="YeuCauDieuKien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CanCuPhapLy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KetQuaThucHien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkDVC" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="IsPublish" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByUser" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="EditByUser" Type="Int32" />
+        </EntityType>
+        <EntityType Name="core_ThuTuc_ThanhPhanHS">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdThuTuc" Type="Int64" />
+          <Property Name="TenGiayTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MauDonToKhai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bentre_BieuMauThongTin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDungHTML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EntitiesStoreContainer" CdmEntityContainer="HinetContext">
+          <EntitySetMapping Name="core_Category">
+            <EntityTypeMapping TypeName="Entities.core_Category">
+              <MappingFragment StoreEntitySet="core_Category">
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="TargetBlank" ColumnName="TargetBlank" />
+                <ScalarProperty Name="Sumary" ColumnName="Sumary" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="IsLinhVucDieuTra" ColumnName="IsLinhVucDieuTra" />
+                <ScalarProperty Name="IsTinTuc" ColumnName="IsTinTuc" />
+                <ScalarProperty Name="SubName" ColumnName="SubName" />
+                <ScalarProperty Name="PathFile" ColumnName="PathFile" />
+                <ScalarProperty Name="PathIMG" ColumnName="PathIMG" />
+                <ScalarProperty Name="ShowMenuLeft" ColumnName="ShowMenuLeft" />
+                <ScalarProperty Name="IsPhongBan" ColumnName="IsPhongBan" />
+                <ScalarProperty Name="CoreSkinDefault" ColumnName="CoreSkinDefault" />
+                <ScalarProperty Name="CoreSkinID" ColumnName="CoreSkinID" />
+                <ScalarProperty Name="Automatic" ColumnName="Automatic" />
+                <ScalarProperty Name="IconID" ColumnName="IconID" />
+                <ScalarProperty Name="LangID" ColumnName="LangID" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedUtc" ColumnName="ModifiedUtc" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedUtc" ColumnName="CreatedUtc" />
+                <ScalarProperty Name="ItemCount" ColumnName="ItemCount" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="NameEN" ColumnName="NameEN" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_CategoryUserArticle">
+            <EntityTypeMapping TypeName="Entities.core_CategoryUserArticle">
+              <MappingFragment StoreEntitySet="core_CategoryUserArticle">
+                <ScalarProperty Name="TypeRole" ColumnName="TypeRole" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_CCTC">
+            <EntityTypeMapping TypeName="Entities.core_CCTC">
+              <MappingFragment StoreEntitySet="core_CCTC">
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="TitleBoxPhongBan" ColumnName="TitleBoxPhongBan" />
+                <ScalarProperty Name="TitleBoxLanhDao" ColumnName="TitleBoxLanhDao" />
+                <ScalarProperty Name="ShowPhongBan" ColumnName="ShowPhongBan" />
+                <ScalarProperty Name="ShowLanhDao" ColumnName="ShowLanhDao" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_CCTC_Department">
+            <EntityTypeMapping TypeName="Entities.core_CCTC_Department">
+              <MappingFragment StoreEntitySet="core_CCTC_Department">
+                <ScalarProperty Name="CCTC_Leader_ID" ColumnName="CCTC_Leader_ID" />
+                <ScalarProperty Name="LinkDetail" ColumnName="LinkDetail" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="PathIMG" ColumnName="PathIMG" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CCTC_ID" ColumnName="CCTC_ID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_CCTC_Leader">
+            <EntityTypeMapping TypeName="Entities.core_CCTC_Leader">
+              <MappingFragment StoreEntitySet="core_CCTC_Leader">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LinkDetail" ColumnName="LinkDetail" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="PathIMG" ColumnName="PathIMG" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CCTC_ID" ColumnName="CCTC_ID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_Client">
+            <EntityTypeMapping TypeName="Entities.core_Client">
+              <MappingFragment StoreEntitySet="core_Client">
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ClientSignOut" ColumnName="ClientSignOut" />
+                <ScalarProperty Name="ClientSignIn" ColumnName="ClientSignIn" />
+                <ScalarProperty Name="ClientCallBack" ColumnName="ClientCallBack" />
+                <ScalarProperty Name="ClientUrl" ColumnName="ClientUrl" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="md_Articles">
+            <EntityTypeMapping TypeName="Entities.md_Articles">
+              <MappingFragment StoreEntitySet="md_Articles">
+                <ScalarProperty Name="CreateDateArticle" ColumnName="CreateDateArticle" />
+                <ScalarProperty Name="SapoFTS" ColumnName="SapoFTS" />
+                <ScalarProperty Name="AuthorFTS" ColumnName="AuthorFTS" />
+                <ScalarProperty Name="TitleFTS" ColumnName="TitleFTS" />
+                <ScalarProperty Name="ArticleReference" ColumnName="ArticleReference" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsHotNew" ColumnName="IsHotNew" />
+                <ScalarProperty Name="MetaDate" ColumnName="MetaDate" />
+                <ScalarProperty Name="MetaPublisher" ColumnName="MetaPublisher" />
+                <ScalarProperty Name="MetaIdentifier" ColumnName="MetaIdentifier" />
+                <ScalarProperty Name="MetaCreator" ColumnName="MetaCreator" />
+                <ScalarProperty Name="CompiledMeta" ColumnName="CompiledMeta" />
+                <ScalarProperty Name="AllowWCAG" ColumnName="AllowWCAG" />
+                <ScalarProperty Name="PollGuid" ColumnName="PollGuid" />
+                <ScalarProperty Name="AudioUrl" ColumnName="AudioUrl" />
+                <ScalarProperty Name="CommentByBoss" ColumnName="CommentByBoss" />
+                <ScalarProperty Name="IncludeInFeed" ColumnName="IncludeInFeed" />
+                <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+                <ScalarProperty Name="PublishedGuid" ColumnName="PublishedGuid" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="LangID" ColumnName="LangID" />
+                <ScalarProperty Name="FTS" ColumnName="FTS" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="IsHome" ColumnName="IsHome" />
+                <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+                <ScalarProperty Name="AllowComment" ColumnName="AllowComment" />
+                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+                <ScalarProperty Name="ApprovedGuid" ColumnName="ApprovedGuid" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+                <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="ItemUrl" ColumnName="ItemUrl" />
+                <ScalarProperty Name="LastModUtc" ColumnName="LastModUtc" />
+                <ScalarProperty Name="LastModUserGuid" ColumnName="LastModUserGuid" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ModuleGuid" ColumnName="ModuleGuid" />
+                <ScalarProperty Name="ArticleGuid" ColumnName="ArticleGuid" />
+                <ScalarProperty Name="HitCount" ColumnName="HitCount" />
+                <ScalarProperty Name="CommentCount" ColumnName="CommentCount" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mp_Sites">
+            <EntityTypeMapping TypeName="Entities.mp_Sites">
+              <MappingFragment StoreEntitySet="mp_Sites">
+                <ScalarProperty Name="FileDuThao" ColumnName="FileDuThao" />
+                <ScalarProperty Name="TrangThaiDieuTra" ColumnName="TrangThaiDieuTra" />
+                <ScalarProperty Name="HanGopY" ColumnName="HanGopY" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="IsCuocDieuTra" ColumnName="IsCuocDieuTra" />
+                <ScalarProperty Name="IsTongDieuTra" ColumnName="IsTongDieuTra" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="PathIMG" ColumnName="PathIMG" />
+                <ScalarProperty Name="DoiTuongDieuTra" ColumnName="DoiTuongDieuTra" />
+                <ScalarProperty Name="PhamViSoLieu" ColumnName="PhamViSoLieu" />
+                <ScalarProperty Name="TanSuatDieuTra" ColumnName="TanSuatDieuTra" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="NoiDungDieuTra" ColumnName="NoiDungDieuTra" />
+                <ScalarProperty Name="LinhVucID" ColumnName="LinhVucID" />
+                <ScalarProperty Name="Footer" ColumnName="Footer" />
+                <ScalarProperty Name="FanPageIframe" ColumnName="FanPageIframe" />
+                <ScalarProperty Name="SiteSubTitle" ColumnName="SiteSubTitle" />
+                <ScalarProperty Name="TemplateSite" ColumnName="TemplateSite" />
+                <ScalarProperty Name="UrlSiteMap" ColumnName="UrlSiteMap" />
+                <ScalarProperty Name="IsTemplate" ColumnName="IsTemplate" />
+                <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+                <ScalarProperty Name="IsView" ColumnName="IsView" />
+                <ScalarProperty Name="CoreChuDeCategoryID" ColumnName="CoreChuDeCategoryID" />
+                <ScalarProperty Name="CoreHoiDongCategoryID" ColumnName="CoreHoiDongCategoryID" />
+                <ScalarProperty Name="CoreRSSCategoryID" ColumnName="CoreRSSCategoryID" />
+                <ScalarProperty Name="CoreDuLieuDaPhuongTienCategoryID" ColumnName="CoreDuLieuDaPhuongTienCategoryID" />
+                <ScalarProperty Name="CoreLinhVucHoiDapCategoryID" ColumnName="CoreLinhVucHoiDapCategoryID" />
+                <ScalarProperty Name="CoreDonviCategoryID" ColumnName="CoreDonviCategoryID" />
+                <ScalarProperty Name="CoreCoQuanBanHanhVanBanCategoryID" ColumnName="CoreCoQuanBanHanhVanBanCategoryID" />
+                <ScalarProperty Name="CoreLinhVucVanBanCategoryID" ColumnName="CoreLinhVucVanBanCategoryID" />
+                <ScalarProperty Name="CoreLoaiVanBanCategoryID" ColumnName="CoreLoaiVanBanCategoryID" />
+                <ScalarProperty Name="CoreEventCategoryID" ColumnName="CoreEventCategoryID" />
+                <ScalarProperty Name="ArticleCategoryID" ColumnName="ArticleCategoryID" />
+                <ScalarProperty Name="DisableDbAuth" ColumnName="DisableDbAuth" />
+                <ScalarProperty Name="ApiKeyExtra5" ColumnName="ApiKeyExtra5" />
+                <ScalarProperty Name="ApiKeyExtra4" ColumnName="ApiKeyExtra4" />
+                <ScalarProperty Name="ApiKeyExtra3" ColumnName="ApiKeyExtra3" />
+                <ScalarProperty Name="ApiKeyExtra2" ColumnName="ApiKeyExtra2" />
+                <ScalarProperty Name="ApiKeyExtra1" ColumnName="ApiKeyExtra1" />
+                <ScalarProperty Name="GmapApiKey" ColumnName="GmapApiKey" />
+                <ScalarProperty Name="AllowWindowsLiveAuth" ColumnName="AllowWindowsLiveAuth" />
+                <ScalarProperty Name="AllowOpenIDAuth" ColumnName="AllowOpenIDAuth" />
+                <ScalarProperty Name="WindowsLiveKey" ColumnName="WindowsLiveKey" />
+                <ScalarProperty Name="WindowsLiveAppID" ColumnName="WindowsLiveAppID" />
+                <ScalarProperty Name="WordpressAPIKey" ColumnName="WordpressAPIKey" />
+                <ScalarProperty Name="RecaptchaPublicKey" ColumnName="RecaptchaPublicKey" />
+                <ScalarProperty Name="RecaptchaPrivateKey" ColumnName="RecaptchaPrivateKey" />
+                <ScalarProperty Name="DatePickerProvider" ColumnName="DatePickerProvider" />
+                <ScalarProperty Name="CaptchaProvider" ColumnName="CaptchaProvider" />
+                <ScalarProperty Name="EditorProvider" ColumnName="EditorProvider" />
+                <ScalarProperty Name="EnableMyPageFeature" ColumnName="EnableMyPageFeature" />
+                <ScalarProperty Name="DefaultEmailFromAddress" ColumnName="DefaultEmailFromAddress" />
+                <ScalarProperty Name="PwdStrengthRegex" ColumnName="PwdStrengthRegex" />
+                <ScalarProperty Name="MinReqNonAlphaChars" ColumnName="MinReqNonAlphaChars" />
+                <ScalarProperty Name="MinRequiredPasswordLength" ColumnName="MinRequiredPasswordLength" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="RequiresUniqueEmail" ColumnName="RequiresUniqueEmail" />
+                <ScalarProperty Name="PasswordAttemptWindowMinutes" ColumnName="PasswordAttemptWindowMinutes" />
+                <ScalarProperty Name="MaxInvalidPasswordAttempts" ColumnName="MaxInvalidPasswordAttempts" />
+                <ScalarProperty Name="RequiresQuestionAndAnswer" ColumnName="RequiresQuestionAndAnswer" />
+                <ScalarProperty Name="AllowPasswordReset" ColumnName="AllowPasswordReset" />
+                <ScalarProperty Name="AllowPasswordRetrieval" ColumnName="AllowPasswordRetrieval" />
+                <ScalarProperty Name="DefaultFriendlyUrlPatternEnum" ColumnName="DefaultFriendlyUrlPatternEnum" />
+                <ScalarProperty Name="EditorSkin" ColumnName="EditorSkin" />
+                <ScalarProperty Name="AllowUserFullNameChange" ColumnName="AllowUserFullNameChange" />
+                <ScalarProperty Name="UseEmailForLogin" ColumnName="UseEmailForLogin" />
+                <ScalarProperty Name="ReallyDeleteUsers" ColumnName="ReallyDeleteUsers" />
+                <ScalarProperty Name="LdapUserDNKey" ColumnName="LdapUserDNKey" />
+                <ScalarProperty Name="LdapRootDN" ColumnName="LdapRootDN" />
+                <ScalarProperty Name="LdapDomain" ColumnName="LdapDomain" />
+                <ScalarProperty Name="LdapPort" ColumnName="LdapPort" />
+                <ScalarProperty Name="LdapServer" ColumnName="LdapServer" />
+                <ScalarProperty Name="AutoCreateLdapUserOnFirstLogin" ColumnName="AutoCreateLdapUserOnFirstLogin" />
+                <ScalarProperty Name="UseLdapAuth" ColumnName="UseLdapAuth" />
+                <ScalarProperty Name="IsServerAdminSite" ColumnName="IsServerAdminSite" />
+                <ScalarProperty Name="DefaultAdditionalMetaTags" ColumnName="DefaultAdditionalMetaTags" />
+                <ScalarProperty Name="DefaultPageEncoding" ColumnName="DefaultPageEncoding" />
+                <ScalarProperty Name="DefaultPageDescription" ColumnName="DefaultPageDescription" />
+                <ScalarProperty Name="DefaultPageKeyWords" ColumnName="DefaultPageKeyWords" />
+                <ScalarProperty Name="UseSSLOnAllPages" ColumnName="UseSSLOnAllPages" />
+                <ScalarProperty Name="UseSecureRegistration" ColumnName="UseSecureRegistration" />
+                <ScalarProperty Name="AllowNewRegistration" ColumnName="AllowNewRegistration" />
+                <ScalarProperty Name="AllowHideMenuOnPages" ColumnName="AllowHideMenuOnPages" />
+                <ScalarProperty Name="AllowPageSkins" ColumnName="AllowPageSkins" />
+                <ScalarProperty Name="AllowUserSkins" ColumnName="AllowUserSkins" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Skin" ColumnName="Skin" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="SiteAlias" ColumnName="SiteAlias" />
+                <ScalarProperty Name="SiteGuid" ColumnName="SiteGuid" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mp_Users">
+            <EntityTypeMapping TypeName="Entities.mp_Users">
+              <MappingFragment StoreEntitySet="mp_Users">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="IS_CUCTTDL" ColumnName="IS_CUCTTDL" />
+                <ScalarProperty Name="IS_CHICUC" ColumnName="IS_CHICUC" />
+                <ScalarProperty Name="IS_VU" ColumnName="IS_VU" />
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+                <ScalarProperty Name="AD_TenPhongBan" ColumnName="AD_TenPhongBan" />
+                <ScalarProperty Name="AD_PhongBan" ColumnName="AD_PhongBan" />
+                <ScalarProperty Name="AD_TenDonViCS" ColumnName="AD_TenDonViCS" />
+                <ScalarProperty Name="AD_MCS" ColumnName="AD_MCS" />
+                <ScalarProperty Name="SiteManager" ColumnName="SiteManager" />
+                <ScalarProperty Name="SiteSync" ColumnName="SiteSync" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PwdFormat" ColumnName="PwdFormat" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="AuthorBio" ColumnName="AuthorBio" />
+                <ScalarProperty Name="RolesChanged" ColumnName="RolesChanged" />
+                <ScalarProperty Name="PasswordResetGuid" ColumnName="PasswordResetGuid" />
+                <ScalarProperty Name="TimeZoneId" ColumnName="TimeZoneId" />
+                <ScalarProperty Name="EmailChangeGuid" ColumnName="EmailChangeGuid" />
+                <ScalarProperty Name="EditorPreference" ColumnName="EditorPreference" />
+                <ScalarProperty Name="NewEmail" ColumnName="NewEmail" />
+                <ScalarProperty Name="MustChangePwd" ColumnName="MustChangePwd" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+                <ScalarProperty Name="SiteGuid" ColumnName="SiteGuid" />
+                <ScalarProperty Name="WindowsLiveID" ColumnName="WindowsLiveID" />
+                <ScalarProperty Name="OpenIDURI" ColumnName="OpenIDURI" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="FailedPwdAnswerWindowStart" ColumnName="FailedPwdAnswerWindowStart" />
+                <ScalarProperty Name="FailedPwdAnswerAttemptCount" ColumnName="FailedPwdAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPwdAttemptWindowStart" ColumnName="FailedPwdAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Skin" ColumnName="Skin" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="TimeOffsetHours" ColumnName="TimeOffsetHours" />
+                <ScalarProperty Name="AvatarUrl" ColumnName="AvatarUrl" />
+                <ScalarProperty Name="TotalPosts" ColumnName="TotalPosts" />
+                <ScalarProperty Name="ICQ" ColumnName="ICQ" />
+                <ScalarProperty Name="AIM" ColumnName="AIM" />
+                <ScalarProperty Name="Yahoo" ColumnName="Yahoo" />
+                <ScalarProperty Name="MSN" ColumnName="MSN" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="WebSiteURL" ColumnName="WebSiteURL" />
+                <ScalarProperty Name="DisplayInMemberList" ColumnName="DisplayInMemberList" />
+                <ScalarProperty Name="Trusted" ColumnName="Trusted" />
+                <ScalarProperty Name="ApprovedForForums" ColumnName="ApprovedForForums" />
+                <ScalarProperty Name="RegisterConfirmGuid" ColumnName="RegisterConfirmGuid" />
+                <ScalarProperty Name="ProfileApproved" ColumnName="ProfileApproved" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_Menu">
+            <EntityTypeMapping TypeName="Entities.core_Menu">
+              <MappingFragment StoreEntitySet="core_Menu">
+                <ScalarProperty Name="TargetBlank" ColumnName="TargetBlank" />
+                <ScalarProperty Name="NoClick" ColumnName="NoClick" />
+                <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
+                <ScalarProperty Name="ItemLink" ColumnName="ItemLink" />
+                <ScalarProperty Name="TypeLink" ColumnName="TypeLink" />
+                <ScalarProperty Name="IsEnglish" ColumnName="IsEnglish" />
+                <ScalarProperty Name="IsPhongBan" ColumnName="IsPhongBan" />
+                <ScalarProperty Name="IsDisplayLink" ColumnName="IsDisplayLink" />
+                <ScalarProperty Name="Show" ColumnName="Show" />
+                <ScalarProperty Name="TypeMenu" ColumnName="TypeMenu" />
+                <ScalarProperty Name="StyleCss" ColumnName="StyleCss" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="LinkMenu" ColumnName="LinkMenu" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_SettingMenu">
+            <EntityTypeMapping TypeName="Entities.core_SettingMenu">
+              <MappingFragment StoreEntitySet="core_SettingMenu">
+                <ScalarProperty Name="TypeIMG" ColumnName="TypeIMG" />
+                <ScalarProperty Name="UrlItem" ColumnName="UrlItem" />
+                <ScalarProperty Name="UrlIMG" ColumnName="UrlIMG" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_SettingService">
+            <EntityTypeMapping TypeName="Entities.core_SettingService">
+              <MappingFragment StoreEntitySet="core_SettingService">
+                <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ServiceUrl" ColumnName="ServiceUrl" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mp_Roles">
+            <EntityTypeMapping TypeName="Entities.mp_Roles">
+              <MappingFragment StoreEntitySet="mp_Roles">
+                <ScalarProperty Name="RoleGuid" ColumnName="RoleGuid" />
+                <ScalarProperty Name="SiteGuid" ColumnName="SiteGuid" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_Token">
+            <EntityTypeMapping TypeName="Entities.core_Token">
+              <MappingFragment StoreEntitySet="core_Token">
+                <ScalarProperty Name="ExpiredIn" ColumnName="ExpiredIn" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="TokenID" ColumnName="TokenID" />
+                <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mp_UserRoles">
+            <EntityTypeMapping TypeName="Entities.mp_UserRoles">
+              <MappingFragment StoreEntitySet="mp_UserRoles">
+                <ScalarProperty Name="RoleGuid" ColumnName="RoleGuid" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_TokenAD">
+            <EntityTypeMapping TypeName="Entities.core_TokenAD">
+              <MappingFragment StoreEntitySet="core_TokenAD">
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="date_expired" ColumnName="date_expired" />
+                <ScalarProperty Name="date_created" ColumnName="date_created" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="apikey" ColumnName="apikey" />
+                <ScalarProperty Name="refresh_token" ColumnName="refresh_token" />
+                <ScalarProperty Name="expires_in" ColumnName="expires_in" />
+                <ScalarProperty Name="token_type" ColumnName="token_type" />
+                <ScalarProperty Name="access_token" ColumnName="access_token" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="md_BaoCao">
+            <EntityTypeMapping TypeName="Entities.md_BaoCao">
+              <MappingFragment StoreEntitySet="md_BaoCao">
+                <ScalarProperty Name="IsPublish" ColumnName="IsPublish" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ItemGuid" ColumnName="ItemGuid" />
+                <ScalarProperty Name="ItemUrl" ColumnName="ItemUrl" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LinhVucID" ColumnName="LinhVucID" />
+                <ScalarProperty Name="PathFile" ColumnName="PathFile" />
+                <ScalarProperty Name="NgayCongBo" ColumnName="NgayCongBo" />
+                <ScalarProperty Name="SoQuyetDinhCongBo" ColumnName="SoQuyetDinhCongBo" />
+                <ScalarProperty Name="BieuMau" ColumnName="BieuMau" />
+                <ScalarProperty Name="NamChuKyBaoCao" ColumnName="NamChuKyBaoCao" />
+                <ScalarProperty Name="TenBaoCao" ColumnName="TenBaoCao" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_ThuTuc_BieuMau">
+            <EntityTypeMapping TypeName="Entities.core_ThuTuc_BieuMau">
+              <MappingFragment StoreEntitySet="core_ThuTuc_BieuMau">
+                <ScalarProperty Name="PathFile" ColumnName="PathFile" />
+                <ScalarProperty Name="TenMau" ColumnName="TenMau" />
+                <ScalarProperty Name="IdThuTuc" ColumnName="IdThuTuc" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_ThuTuc">
+            <EntityTypeMapping TypeName="Entities.core_ThuTuc">
+              <MappingFragment StoreEntitySet="core_ThuTuc">
+                <ScalarProperty Name="EditByUser" ColumnName="EditByUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsPublish" ColumnName="IsPublish" />
+                <ScalarProperty Name="LinkDVC" ColumnName="LinkDVC" />
+                <ScalarProperty Name="KetQuaThucHien" ColumnName="KetQuaThucHien" />
+                <ScalarProperty Name="CanCuPhapLy" ColumnName="CanCuPhapLy" />
+                <ScalarProperty Name="YeuCauDieuKien" ColumnName="YeuCauDieuKien" />
+                <ScalarProperty Name="SoLuongHoSo" ColumnName="SoLuongHoSo" />
+                <ScalarProperty Name="ThanhPhanHoSo" ColumnName="ThanhPhanHoSo" />
+                <ScalarProperty Name="LePhi" ColumnName="LePhi" />
+                <ScalarProperty Name="Phi" ColumnName="Phi" />
+                <ScalarProperty Name="ThoiHanGianQuyet" ColumnName="ThoiHanGianQuyet" />
+                <ScalarProperty Name="TrinhTuThucHien" ColumnName="TrinhTuThucHien" />
+                <ScalarProperty Name="IdDoiTuongThucHien" ColumnName="IdDoiTuongThucHien" />
+                <ScalarProperty Name="CachThucThucHien" ColumnName="CachThucThucHien" />
+                <ScalarProperty Name="IdLinhVuc" ColumnName="IdLinhVuc" />
+                <ScalarProperty Name="TenThuTuc" ColumnName="TenThuTuc" />
+                <ScalarProperty Name="MaThuTuc" ColumnName="MaThuTuc" />
+                <ScalarProperty Name="IdCapDoThuTuc" ColumnName="IdCapDoThuTuc" />
+                <ScalarProperty Name="IdMucDo" ColumnName="IdMucDo" />
+                <ScalarProperty Name="IdCoQuan" ColumnName="IdCoQuan" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="core_ThuTuc_ThanhPhanHS">
+            <EntityTypeMapping TypeName="Entities.core_ThuTuc_ThanhPhanHS">
+              <MappingFragment StoreEntitySet="core_ThuTuc_ThanhPhanHS">
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="MauDonToKhai" ColumnName="MauDonToKhai" />
+                <ScalarProperty Name="TenGiayTo" ColumnName="TenGiayTo" />
+                <ScalarProperty Name="IdThuTuc" ColumnName="IdThuTuc" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bentre_BieuMauThongTin">
+            <EntityTypeMapping TypeName="Entities.bentre_BieuMauThongTin">
+              <MappingFragment StoreEntitySet="bentre_BieuMauThongTin">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NoiDungHTML" ColumnName="NoiDungHTML" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="cf60ad86577641daa388194f645a1769" Name="Diagram1" ZoomLevel="22">
+        <EntityTypeShape EntityType="Entities.core_Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_CategoryUserArticle" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_CCTC" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_CCTC_Department" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_CCTC_Leader" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_Client" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.md_Articles" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.mp_Sites" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.mp_Users" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_Menu" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_SettingMenu" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_SettingService" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.mp_Roles" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_Token" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.mp_UserRoles" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_TokenAD" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.md_BaoCao" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_ThuTuc_BieuMau" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_ThuTuc" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.core_ThuTuc_ThanhPhanHS" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities.bentre_BieuMauThongTin" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="Entities.FK_Roles_Portals" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

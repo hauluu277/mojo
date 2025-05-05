@@ -1,0 +1,63 @@
+﻿<style>
+    .row-block {
+        margin: 5px 0px;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse" aria-expanded="false" role="tabpanel">
+    <div class="well">
+
+        @using (Ajax.BeginForm("searchData", "Client",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "ClientArea", id = "frmClient" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row row-block">
+
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Tên ứng dụng</div>
+                    <div class="col-md-8">
+                        <input class="form-control width100" type="text" name="QR_ClientName" />
+                    </div>
+                </div>
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                        <span class="btn-label">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+@*@Scripts.Render("~/bundles/jqueryval")*@
+<script>
+    function SearchSubmit() {
+        $("#frmClient").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-client").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+    }
+</script>

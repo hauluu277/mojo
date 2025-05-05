@@ -1,0 +1,159 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.ClientArea.Models
+@model FormVM
+@{
+
+    var title = "Thêm mới thông tin cổng thành viên";
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật thông tin cổng thành viên";
+    }
+    var dropdownListDanhMuc = ViewBag.DropChuyenMuc as List<SelectListItem>;
+
+}
+@using (
+Ajax.BeginForm("SaveForm", "Client",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmEidtClient", @enctype = "multipart/form-data", area = "ClientArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+    @*@Html.HiddenFor(x => x.ClientID)*@
+
+    <div class="modal-dialog" style="min-width:550px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Id ứng dụng<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.ClientID, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ClientID)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Ứng dụng<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.ClientName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ClientName)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Domain<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.ClientUrl, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ClientUrl)
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Nhóm <span class="red">*</span></label>
+                        <div>
+                            @Html.DropDownListFor(x => x.IdNhomCongThanhVien, ViewBag.dropdownNhomCongThanhVien as List<SelectListItem>, "- Chọn thông tin -", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ClientUrl)
+                        </div>
+                    </div>
+
+                    @*<div class="form-group col-sm-12">
+                        <label class="control-label">Chuyên mục<span class="red">*</span></label>
+                        <div>
+                            @{
+                                var lstDanhMuc = dropdownListDanhMuc.Select(x => new SelectListItem()
+                                {
+                                    Text = x.Text,
+                                    Value = x.Value,
+                                    Selected = Model.ChuyenMucId != null && Model.ChuyenMucId.Contains(x.Value)
+                                }).ToList();
+                                @Html.DropDownList("DanhMucChuyenMuc", lstDanhMuc, "-- Chọn chuyên mục --", new { @class = "form-control select2", @multiple = "multiple" })
+                            }
+                            @Html.ValidationMessageFor(x => x.ChuyenMucId)
+                        </div>
+                    </div>*@
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Tên đăng nhập</label>
+                        @Html.TextBoxFor(x => x.TenDangNhap, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.TenDangNhap)
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Mật khẩu</label>
+                        @Html.TextBoxFor(x => x.MatKhau, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.MatKhau)
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Thời gian lấy tin</label>
+                        @Html.TextBoxFor(x => x.ThoiGianLayTin, new { @class = "form-control", @type = "number" })
+                        @Html.ValidationMessageFor(x => x.ThoiGianLayTin)
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Lấy tin tự động</label>
+                        <input type="checkbox" name="isLayTinTuDong" @(Model.isLayTinTuDong.HasValue && Model.isLayTinTuDong.Value?"checked":"")/>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">API chuyên mục tin</label>
+                        @Html.TextBoxFor(x => x.APIChuyenMucTin, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.APIChuyenMucTin)
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">API danh sách tin</label>
+                        @Html.TextBoxFor(x => x.APIDanhSachTin, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.APIDanhSachTin)
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@*@Scripts.Render("~/bundles/jqueryval")*@
+<script src="/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        $(".date-picker").datepicker({ dateFormat: 'dd/mm/yy' })
+    })
+    function AjaxError(er) {
+        console.log(er.Message);
+    }
+    function SubmitForm() {
+        var checkSubmit = jQuery('#frmEidtClient').valid();
+        if (checkSubmit) {
+
+            $("#frmEidtClient").submit();
+        }
+    }
+    $(document).ready(function () {
+        $('.select2').select2();
+
+    });
+
+    function ajaxSucces(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+            setTimeout(function () {
+                $("#tbl-client").hinetTable("reload");
+            }, 500);
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+</script>

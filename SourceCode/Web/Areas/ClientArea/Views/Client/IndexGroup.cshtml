@@ -1,0 +1,109 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.ClientArea.Models
+@model IndexClientVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+
+
+}
+@functions{
+
+    public string showColunm(int numberColunm)
+    {
+        var totalColunm = Model.colunm;
+        if (totalColunm == 5 || totalColunm == 0)
+        {
+            return string.Empty;
+        }
+        if(totalColunm == 4 && numberColunm < 5)
+        {
+            return string.Empty;
+        }
+        if (totalColunm == 3 && numberColunm < 4)
+        {
+            return string.Empty;
+        }
+        if (totalColunm == 2 && numberColunm < 3)
+        {
+            return string.Empty;
+        }
+        if (totalColunm == 1 && numberColunm < 2)
+        {
+            return string.Empty;
+        }
+        return "hide";
+    }
+}
+<style>
+    .div_backgroup {
+        background: antiquewhite;
+        width: 160px;
+    }
+
+    .pd10 {
+        /*padding: 10px;*/
+    }
+
+    .div_backgroup p, .div_backgroup a {
+        font-weight: bold;
+    }
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Danh sách cổng thông tin thành viên</h2>
+        </div>
+
+        <div class="widge-t-body no-padding">
+            <div id="tbl-client" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30 @showColunm(1)">STT</th>
+                            <th class="text-center @showColunm(2)">Ứng dụng</th>
+                            <th class="text-center @showColunm(3)">APP Id</th>
+                            <th class="text-center @showColunm(4)">Domain</th>
+                            <th class="text-center @showColunm(5)">Danh sách chuyên mục</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.listWithGroup != null && Model.listWithGroup.Any())
+                        {
+                            foreach (var item in Model.listWithGroup)
+                            {
+                                <tr>
+                                    <td colspan="6" style="background: #F4E0B9 ">@item.GroupName</td>
+                                </tr>
+                                if (item.listClients != null && item.listClients.Any() && item.listClients.Count > 0)
+                                {
+                                    foreach (var y in item.listClients)
+                                    {
+                                        <tr>
+                                            <td class="@showColunm(1)">@(item.listClients.IndexOf(y) + 1)</td>
+
+                                            <td class="@showColunm(2)">@y.ClientName</td>
+                                            <td class="@showColunm(3)">@y.ClientID</td>
+                                            <td class="@showColunm(4)">@y.ClientUrl</td>
+                                            <td class="@showColunm(5)">@y.ClientCallBack</td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+
+    $(document).ready(function () {
+    });
+</script>
+
+

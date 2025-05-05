@@ -1,0 +1,101 @@
+﻿@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model NopBieuMauListViewModel
+<style>
+    .row-block {
+        margin: 5px 0px;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+
+    .well {
+        border-radius: 0;
+        border: 0;
+    }
+
+    .panel-collapse {
+        border: 1px solid #ddd;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse in" aria-expanded="false" role="tabpanel">
+    <div class="well">
+        @using (Ajax.BeginForm("SearchDataNopBieuMau", "BieuMauThongTin",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "BieuMauThongTinArea", id = "formSearchNopBieuMauThongTin" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row row-block">
+                <div class="row-block col-sm-12">
+                    <div class="col-md-2 txt-label control-label">Biễu mẫu thông tin</div>
+                    <div class="col-md-4">
+                        @Html.DropDownList("IdBieuMauThongTin", Model.DanhSachBieuMauThongTin, "--- Chọn ---", new { @class = "txt-select2" })
+                    </div>
+                </div>
+
+                <div class="row-block col-sm-12">
+                    <div class="col-md-2 txt-label control-label">Ngày nộp (bắt đầu)</div>
+                    <div class="col-md-4">
+                        <input type="text" name="NgayNopStartFilter" class="form-control date-picker" />
+                    </div>
+
+                    <div class="col-md-2 txt-label control-label">Ngày nộp (kết thúc)</div>
+                    <div class="col-md-4">
+                        <input type="text" name="NgayNopEndFilter" class="form-control date-picker" />
+                    </div>
+                </div>
+
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                        <span class="btn-label">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        Tìm kiếm
+                    </button>
+
+                    <a aria-expanded="false" href="#collapseDiv" data-toggle="collapse" role="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        Đóng
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+<script src="~/Data/Script/jqueryvalidate/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+    function SearchSubmit() {
+        $("#formSearchNopBieuMauThongTin").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-NopBieuMauThongTin").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+        $('.date-picker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showAnim: 'slideDown',
+            todayHighlight: true,
+            yearRange: "-100:+0"
+        });
+    }
+
+    $(function () {
+        pagefunctionSearch();
+    })
+</script>

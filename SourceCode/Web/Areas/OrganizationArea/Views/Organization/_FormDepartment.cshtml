@@ -1,0 +1,98 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.OrganizationArea.Models
+@model DepartmentFormVM
+@{
+
+    var title = "Thêm mới phòng ban";
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật phòng";
+    }
+    var ListLeader = ViewBag.ListLeader as List<SelectListItem>;
+}
+@using (
+Ajax.BeginForm("SaveDepartment", "Organization",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxDepartmentSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmDepartment", area = "OrganizationArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+    @Html.HiddenFor(x => x.CCTC_ID)
+
+    <div class="modal-dialog" style="width:80%; min-width:850px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Họ tên<span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.DropDownList("CCTC_Leader_ID", ListLeader, "--Lĩnh Lãnh đạo--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Name)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Phòng ban<span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Name)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Url</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.LinkDetail, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.LinkDetail)
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Thứ tự hiển thị</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.OrderBy, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.OrderBy)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitFormDepartment()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@*@Scripts.Render("~/bundles/jqueryval")*@
+
+<script>
+   
+    function AjaxError(er) {
+        console.log(er.Message);
+    }
+    function SubmitFormDepartment() {
+        var checkSubmit = jQuery('#frmDepartment').valid();
+        if (checkSubmit) {
+
+            $("#frmDepartment").submit();
+        }
+    }
+
+    function ajaxDepartmentSucces(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+            reloadTableDepartment();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+</script>

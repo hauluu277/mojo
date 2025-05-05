@@ -1,0 +1,77 @@
+﻿@using mojoPortal.Web.Areas.BaoCaoArea.Models
+@model BaoCaoListVM
+
+<style>
+    #content .tit {
+        font-size: 20px;
+        color: #2E83CB;
+        text-transform: uppercase;
+        border-bottom: 2px solid #2E83CB;
+        padding-bottom: 5px;
+    }
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2 class="tit">@Model.Category.Name</h2>
+        </div>
+        <p class="width100">
+            <hr />
+        </p>
+        <div class="widge-t-body no-padding">
+            <div id="tbl-BaoCao" class="hntbl-cover vanban_chung_box">
+                <table class="table table-bordered table-striped table-condensed" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Tên báo cáo</th>
+                            <th>Năm/chu kỳ báo cáo</th>
+                            <th>Biểu mẫu</th>
+                            <th>Số QĐ công bố</th>
+                            <th>Ngày công bố</th>
+                            <th>Đường dẫn toàn văn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.ListBaoCao != null && Model.ListBaoCao.Any())
+                        {
+                            foreach (var item in Model.ListBaoCao)
+                            {
+                                <tr>
+                                    <td>@(Model.ListBaoCao.IndexOf(item) + 1)</td>
+                                    <td>@item.TenBaoCao</td>
+                                    <td>@item.NamChuKyBaoCao</td>
+                                    <td>@item.BieuMau</td>
+                                    <td>@item.SoQuyetDinhCongBo</td>
+                                    <td>@string.Format("{0:dd/MM/yyyy}", item.NgayCongBo)</td>
+                              
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(item.PathFile))
+                                        {
+                                            var listFile = item.PathFile.Split('?');
+                                            foreach (var file in listFile)
+                                            {
+                                                <p>
+                                                    <a href="@file">@item.TenBaoCao</a>
+                                                </p>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="7" class="text-danger">Chưa có báo cáo</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="width100 text-right">
+                    <a href="@Model.Category.Description">Xem tiếp >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

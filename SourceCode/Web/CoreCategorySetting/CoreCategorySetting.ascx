@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CoreCategorySetting.ascx.cs" Inherits="mojoPortal.Web.CoreCategoryUI.CoreCategorySetting" %>
+<asp:DropDownList ID="ddlCoreCategory" runat="server" ></asp:DropDownList>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="eAitaPortal" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.11;Initial Catalog=eAitaPortal;Persist Security Info=True;User ID=adminportal" SettingsObjectName="mojoPortal.Features.Business.Properties.Settings" SettingsPropertyName="eAitaPortalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.mp_Modules" Member="mp_Modules">
+    <Type Name="mp_Module">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModuleDefID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AuthorizedEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CacheTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowTitle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EditUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AvailableForMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowMultipleInstancesOnMyPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CountOfUseOnMyPage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FeatureGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SiteGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EditUserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HideFromUnAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HideFromAuth" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViewRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DraftEditRoles" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IncludeInSearch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.md_QAComments" Member="ud_QAComments">
+    <Type Name="ud_QAComment">
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QAGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.md_QA" Member="md_QAs">
+    <Type Name="md_QA">
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsPublished" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedByEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedByPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnswerUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemUrl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsHot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QACategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoQuanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Is_Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LyDoXoa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ViPhamQuyChe" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DuyetCauHoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DuThaoTraLoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FileDinhKem" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DuyetDuThaoTraLoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LyDoKhongPheDuyetTraLoi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XuatBanDuThaoTraLoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiXoaCauHoi" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NguoiKiemDuyet" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayXoaCauHoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayKiemDuyet" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiXuatBanCauHoi" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayXuatBanCauHoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiTaoDuThaoTraLoi" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayTaoDuThao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiPheDuyetDuThao" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayPheDuyet" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiXuatBanCauTraLoi" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayXuatBanCauTraLoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiepNhanCauHoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FTS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="KhongPheDuyetTraLoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PhongBanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DuyetThongBao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiDuyetThongBao" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayDuyetThongBao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="XuatBanThongBao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiXuatBanThongBao" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NgayXuatBanThongBao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatQuestionByUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayTiepNhan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiTiepNhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusSend" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChuyenDuThao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiChuyenDuThao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayChuyenDuThao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Member="SiteID" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

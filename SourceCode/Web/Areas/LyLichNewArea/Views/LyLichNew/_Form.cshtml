@@ -1,0 +1,120 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.LyLichNewArea.Models
+@model FormVM
+@{
+
+
+
+}
+@using (Ajax.BeginForm("SaveForm", "LyLichNew",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmEidtClient", @enctype = "multipart/form-data", area = "ClientArea" }))
+{
+
+
+    <div class="modal-dialog" style="min-width:550px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm mới Lịch công tác</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <input type="hidden" name="ItemID" value="0"/>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Năm<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.Nam, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.Nam)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Tuần<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.Week, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.Week)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Thứ<span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.Thu, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.Thu)
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Thời gian <span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.ThoiGian, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ThoiGian)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Nội dung <span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.NoiDung, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.NoiDung)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Địa điểm <span class="red">*</span></label>
+                        <div>
+                            @Html.TextBoxFor(x => x.DiaDiem, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.DiaDiem)
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Thành phần tham dự</label>
+                        @Html.TextBoxFor(x => x.ThanhPhanThamDu, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.ThanhPhanThamDu)
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label">Ngày</label>
+                        @Html.TextBoxFor(x => x.StartDate, new { @class = "form-control date-picker" })
+                        @Html.ValidationMessageFor(x => x.StartDate)
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@*@Scripts.Render("~/bundles/jqueryval")*@
+<script src="/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".date-picker").datepicker({ dateFormat: 'dd/mm/yy' })
+    })
+
+    function SubmitForm() {
+        console.log(112121);
+        $("#frmEidtClient").submit();
+        
+    }
+    $(document).ready(function () {
+        $('.select2').select2();
+
+    });
+
+    function ajaxSucces(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+            Window.location.reload()
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+</script>

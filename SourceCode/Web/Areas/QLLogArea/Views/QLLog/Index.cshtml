@@ -1,0 +1,243 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.QLLogArea.Models
+@using mojoPortal.Model.Data
+@using mojoPortal.Business
+@model IndexVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListData.ListItem));
+    var items = ViewBag.ConfigUser as List<core_CauHinhHienThiLog>;
+    var user = ViewBag.user as SiteUser;
+    var dataItem = Html.Raw(JsonConvert.SerializeObject(items));
+}
+
+
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Quản lý Log hệ thống</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i><span>Tìm kiếm</span>
+                </a>
+                <a href="javascript:void(0)" onclick="onModalConfig()" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-cog"></i> <span>Cấu hình</span>
+                </a>
+            </div>
+        </div>
+        @Html.Partial("_SearchPartial")
+        <div class="widge-t-body">
+            <div id="tbl-QLLog" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            @if (items != null)
+                            {
+                                <th class="width30">STT</th>
+                                if (items.Any(x => x.MaTruongHienThi.Contains("DiaChiIP") && x.IsShow == true))
+                                {
+                                    <th>Địa chỉ IP</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("LoaiLog") && x.IsShow == true))
+                                {
+                                    <th>Kiểu Log</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("HanhDongThaoTac") && x.IsShow == true))
+                                {
+                                    <th>Hành động thao tác</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("DuongDanThaoTac") && x.IsShow == true))
+                                {
+                                    <th>Đường dẫn thao tác</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("NguoiThaoTac") && x.IsShow == true))
+                                {
+                                    <th>Người thao tác</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("NoiDung") && x.IsShow == true))
+                                {
+                                    <th>Nội dung</th>
+                                }
+                                if (items.Any(x => x.MaTruongHienThi.Contains("ThoiGian") && x.IsShow == true))
+                                {
+                                    <th>Thời gian</th>
+                                }
+                            }
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.ListData.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.ListData.Count" />
+<script>
+    var groupData = eval(@groupData);
+    var configData = eval(@dataItem);
+    console.log(configData);
+    function pagingConfig() {
+        var conf = [];
+        conf = [
+            {
+                tdClass: "center width-30",
+                isSort: false,
+                nameModel: "",
+                isCounter: true,
+                content: function (data) {
+                    return "<input type='checkbox' value='" + data.ItemID + "'/>"
+                }
+            },
+        ];
+
+        //config hiển thị
+        for (var i = 0; i < configData.length; i++) {
+            var data = configData[i];
+            if (data.MaTruongHienThi == "DiaChiIP" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'DiaChiIP',
+                    content: function (data) {
+                        return data.DiaChiIP
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "LoaiLog" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'Type',
+                    content: function (data) {
+                        return data.Type
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "HanhDongThaoTac" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'HanhDongThaoTac',
+                    content: function (data) {
+                        return data.HanhDongThaoTac
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "NoiDung" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'NoiDung',
+                    content: function (data) {
+                        return data.NoiDung
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "DuongDanThaoTac" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'DuongDanThaoTac',
+                    content: function (data) {
+                        return data.DuongDanThaoTac
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "NguoiThaoTac" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'CreatedBy',
+                    content: function (data) {
+                        return data.CreatedBy
+                    }
+                };
+                conf.push(obj);
+            }
+            if (data.MaTruongHienThi == "ThoiGian" && data.IsShow == true) {
+                var obj = {
+                    isSort: true,
+                    nameModel: 'CreatedDate',
+                    content: function (data) {
+                        return toDate(data.CreatedDate)
+                    }
+                };
+                conf.push(obj);
+            }
+        }
+
+        var getData = function (pageIndex, sortQuery, pageSize) {
+            $.ajax({
+                url: '/QLLogArea/QLLog/GetData',
+                type: 'post',
+                cache: false,
+                data: {
+                    "pageIndex": pageIndex,
+                    "sortQuery": sortQuery,
+                    "pageSize": pageSize
+                },
+                success: function (data) {
+                    $("#tbl-QLLog").hinetTable("data", {
+                        pageSize: pageSize != -1 ? pageSize : data.Count,
+                        pageIndex: pageIndex,
+                        pagecount: data.TotalPage,
+                        recordCount: data.Count,
+                        listItem: data.ListItem,
+                        showCheckBox: false,
+                    });
+                },
+                error: function (err) {
+                    CommonJS.alert(xhr.responseText);
+                }
+            });
+
+        }
+
+        var tableData = $("#tbl-QLLog").hinetTable("init", {
+            pageSizeList: { size: [20, 50, 100, -1], label: ['20', '50', '100', 'Tất cả'] },
+            pagecount: $('#total-page').val(),
+            recordCount: $('#total-record').val(),
+            getData: getData,
+            listItem: groupData,
+            config: conf
+        });
+
+    }
+    function onModalConfig() {
+        OpenFormModal('get', '/QLLogArea/QLLog/FormConfig');
+    }
+    function onAjaxSubmitSuccess(result) {
+        if (result.Status) {
+            notifySuccess(result.Message);
+            closeEditModal();
+            onEndAjax();
+            reloadTable();
+        } else {
+            notifyError(result.Message);
+        }
+    }
+    function toDate(date) {
+        if (date) {
+            var arr = date.split('-');
+            if (arr.length > 2) {
+                var year = arr[0];
+                var month = arr[1];
+                var day = arr[2].substring(0, 2);
+                return `${day}/${month}/${year}`;
+            }
+        }
+        return "";
+    }
+    function reloadTable() {
+        $("#tbl-QLLog").hinetTable("reload");
+    }
+
+    $(document).ready(function () {
+        pagingConfig();
+    })
+</script>
+@*<script src="~/Scripts/modules/QLLog/QLLog.js"></script>*@

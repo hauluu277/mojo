@@ -1,0 +1,38 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+<script src="/ClientScript/ckeditor462/ckeditor.js"></script>
+<h2>Cập nhật thông tin Footer</h2>
+@using (Ajax.BeginForm("SaveFooter", "Common", new { @area = "CommonArea" }, new AjaxOptions()
+{
+    HttpMethod = "POST",
+    OnFailure = "failureAjax",
+    OnSuccess = "successAjaxCreate",
+}, new { id = "updateForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-sm-12 form-group">
+        <label>Footer</label>
+        <textarea id="Footer" name="Footer" class="form-control" rows="5">@ViewBag.Footer</textarea>
+    </div>
+    <div class="col-sm-12 form-group">
+        <input type="hidden" name="SiteID" value="@ViewBag.SiteID" />
+        <button type="submit" class="btn btn-success">Cập nhật</button>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        CKEDITOR.replace("Footer");
+    })
+    function successAjaxCreate(rs) {
+        if (rs.Status) {
+            NotiSuccess(rs.Message);
+        } else {
+
+            NotiError(rs.Message);
+        }
+    }
+</script>

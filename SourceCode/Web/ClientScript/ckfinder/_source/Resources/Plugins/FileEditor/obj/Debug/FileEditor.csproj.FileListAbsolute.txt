@@ -1,0 +1,9 @@
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\bin\Debug\CKFinder_FileEditor.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\bin\Debug\CKFinder_FileEditor.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\bin\Debug\CKFinder.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\bin\Debug\CKFinder.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\obj\Debug\FileEditor.csprojAssemblyReference.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\obj\Debug\FileEditor.csproj.CoreCompileInputs.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\obj\Debug\FileEditor.csproj.CopyComplete
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\obj\Debug\CKFinder_FileEditor.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\FileEditor\obj\Debug\CKFinder_FileEditor.pdb

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleCategorySetting.ascx.cs" Inherits="ArticleFeature.UI.ArticleCategorySetting" %>
+<asp:ListBox ID="lbArticleCategory" runat="server" SelectionMode="Multiple" Width="300" Height="150"></asp:ListBox>

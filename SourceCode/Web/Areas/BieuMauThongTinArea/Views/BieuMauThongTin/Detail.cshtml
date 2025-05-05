@@ -1,0 +1,555 @@
+﻿@using Newtonsoft.Json
+@using System.Text.RegularExpressions;
+@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model BieuMauThongTinConfigViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+}
+
+@{
+
+    var strNoiDungBieuMau = Model.InfoBieuMau.NoiDungHTML;
+
+    List<string> listKeysBieuMau = new List<string>();
+    List<string> listTenTieuChi = new List<string>();
+    List<string> listKeysChuaCauHinhTen = new List<string>();
+    List<string> listKeyDiemChuaCauHinhCongThuc = new List<string>();
+
+    List<string> listKeysBieuMauDuplicate = new List<string>();
+    List<string> listTenTieuChiDuplicate = new List<string>();
+
+    List<string> listKeyBieuMauChuaCauHinh = new List<string>();
+
+
+    var rootHtml = Model.InfoBieuMau.NoiDungHTML;
+    if (string.IsNullOrEmpty(rootHtml))
+    {
+        rootHtml = string.Empty;
+    }
+
+    var matches_Checkbox = Model.RegCheckBox.Matches(rootHtml);
+    var regCheckBoxCount = matches_Checkbox.Count;
+    for (int i = 0; i < regCheckBoxCount; i++)
+    {
+        string name = matches_Checkbox[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring = "<input type='checkbox'  name='" + name + "' />";
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<span class='red'>*<input type='checkbox' value='" + name + "' id='ckb_" + name + "' class='cbk_key'>*</span>";
+        htmlstring += "<i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+
+        rootHtml = rootHtml.Replace(matches_Checkbox[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+
+
+    }
+
+
+
+    var matches_Score = Model.RegScore.Matches(rootHtml);
+    var regScoreCount = matches_Score.Count;
+    for (int i = 0; i < regScoreCount; i++)
+    {
+        string name = matches_Score[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        htmlstring = "<span style='color:red'>Cấu hình điểm</span>";
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        if (checkConfig != null)
+        {
+            var isHasCongThuc = !string.IsNullOrEmpty(checkConfig.CongThuc);
+            if (isHasCongThuc)
+            {
+                htmlstring += "<br/><i style='color:red'><b>Công thức</b>:" + checkConfig.CongThuc + "</i>";
+            }
+            if (checkConfig.GioiHanTren != null)
+            {
+                htmlstring += "<br/><i style='color:blue'><b>Giới hạn cận trên</b>:" + checkConfig.GioiHanTren + "</i>";
+            }
+        }
+        htmlstring += "<br><span class='label-show-score' data-value='" + name + "'></span>";
+
+        var domId = name + "@" + Model.InfoBieuMau.Id;
+        htmlstring += "<span id='" + domId + "'></span>";
+        rootHtml = rootHtml.Replace(matches_Score[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+
+        if (checkConfig != null && string.IsNullOrEmpty(checkConfig.CongThuc))
+        {
+            if (!string.IsNullOrEmpty(checkConfig.Ten))
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Ten + " (Key: " + checkConfig.Key + ")");
+            }
+            else
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Ten);
+            }
+        }
+    }
+
+
+    var matches_ScoreTongThe = Model.RegScoreTongThe.Matches(rootHtml);
+    var regScoreTongThe = matches_ScoreTongThe.Count;
+    for (int i = 0; i < regScoreTongThe; i++)
+    {
+        string name = matches_ScoreTongThe[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        htmlstring = "<span style='color:red'>Cấu hình điểm tổng thể</span>";
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        if (checkConfig != null)
+        {
+            var isHasCongThuc = !string.IsNullOrEmpty(checkConfig.CongThuc);
+            if (isHasCongThuc)
+            {
+                htmlstring += "<br/><i style='color:red'><b>Công thức</b>:" + checkConfig.CongThuc + "</i>";
+            }
+            if (checkConfig.GioiHanTren != null)
+            {
+                htmlstring += "<br/><i style='color:blue'><b>Giới hạn cận trên</b>:" + checkConfig.GioiHanTren + "</i>";
+            }
+        }
+
+        var domId = name + "@" + Model.InfoBieuMau.Id;
+        htmlstring += "<span id='" + domId + "'></span>";
+        rootHtml = rootHtml.Replace(matches_ScoreTongThe[i].Value, htmlstring);
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+
+
+        if (checkConfig != null && string.IsNullOrEmpty(checkConfig.CongThuc))
+        {
+            if (!string.IsNullOrEmpty(checkConfig.Ten))
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Ten + " (Key: " + checkConfig.Key + ")");
+            }
+            else
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Key);
+            }
+        }
+
+
+    }
+
+    var matches_DiemCuoiCung = Model.RegScoreCuoiCung.Matches(rootHtml);
+    var regScoreCuoiCung = matches_DiemCuoiCung.Count;
+    for (int i = 0; i < regScoreCuoiCung; i++)
+    {
+        string name = string.Empty;
+        name = matches_DiemCuoiCung[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        htmlstring = "<span style='color:red'>Cấu hình điểm cuối</span>";
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        if (checkConfig != null)
+        {
+            var isHasCongThuc = !string.IsNullOrEmpty(checkConfig.CongThuc);
+            if (isHasCongThuc)
+            {
+                htmlstring += "<br/><i style='color:red'><b>Công thức</b>:" + checkConfig.CongThuc + "</i>";
+            }
+            if (checkConfig.GioiHanTren != null)
+            {
+                htmlstring += "<br/><i style='color:blue'><b>Giới hạn cận trên</b>:" + checkConfig.GioiHanTren + "</i>";
+            }
+
+        }
+
+        var domId = name + "@" + Model.InfoBieuMau.Id;
+        htmlstring += "<span id='" + domId + "'></span>";
+        htmlstring += "<br><span class='label-show-score' data-value='" + name + "'></span>";
+
+
+
+        rootHtml = rootHtml.Replace(matches_DiemCuoiCung[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+
+        if (checkConfig != null && string.IsNullOrEmpty(checkConfig.CongThuc))
+        {
+            if (!string.IsNullOrEmpty(checkConfig.Ten))
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Ten + " (Key: " + checkConfig.Key + ")");
+            }
+            else
+            {
+                listKeyDiemChuaCauHinhCongThuc.Add(checkConfig.Key);
+            }
+        }
+    }
+
+    var matches_RadioButton = Model.RegRadio.Matches(rootHtml);
+    var regRadioCount = matches_RadioButton.Count;
+    for (int i = 0; i < regRadioCount; i++)
+    {
+        string name = matches_RadioButton[i].Value.Replace("[[", "").Replace("]]", "");
+        var temp = name.Split('.');
+        var group = temp[0];
+        var value = temp[1];
+        var htmlstring = string.Empty;
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring = "<input type='radio'  name='" + group + "' value='" + value + "'/>";
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<input type='checkbox' value='" + name + "' id='ckb_" + name + "' class='cbk_key'>";
+        htmlstring += "<i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+
+        rootHtml = rootHtml.Replace(matches_RadioButton[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+    }
+
+    var matches_Tyle = Model.RegTyLe.Matches(rootHtml);
+    var regTyLeCount = matches_Tyle.Count;
+    for (int i = 0; i < regTyLeCount; i++)
+    {
+        string name = matches_Tyle[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        htmlstring += "<span style='color:red'>Cấu hình tỷ lệ</span>";
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+
+        if (checkConfig != null)
+        {
+            var isHasCongThuc = !string.IsNullOrEmpty(checkConfig.CongThuc);
+            if (isHasCongThuc)
+            {
+                htmlstring += "<br/><i style='color:red'><b>Công thức</b>:" + checkConfig.CongThuc + "</i>";
+            }
+            if (checkConfig.GioiHanTren != null)
+            {
+                htmlstring += "<br/><i style='color:blue'><b>Giới hạn cận trên</b>:" + checkConfig.GioiHanTren + "</i>";
+            }
+        }
+
+        htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        htmlstring += "<input type='hidden' value='" + name + "' name='hidden_key_field'/>";
+
+        var domId = name + "@" + Model.InfoBieuMau.Id;
+        htmlstring += "<span id='" + domId + "'></span>";
+
+        rootHtml = rootHtml.Replace(matches_Tyle[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+    }
+
+    var matches_Area = Model.RegArea.Matches(rootHtml);
+    var regAreaCount = matches_Area.Count;
+    for (int i = 0; i < regAreaCount; i++)
+    {
+        string name = matches_Area[i].Value.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+        var checkConfig = Model.ListTieuChi.Where(x => x.Key == name).FirstOrDefault();
+        htmlstring = "<textarea rows=3 name='" + name + "' style='width:100%; resize:vertical '></textarea>";
+        htmlstring += "<a href='javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        rootHtml = rootHtml.Replace(matches_Area[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+    }
+
+    var matches = Model.Reg.Matches(rootHtml);
+    var regCount = matches.Count;
+    for (int i = 0; i < regCount; i++)
+    {
+        string key = matches[i].Value;
+        string name = key.Replace("[[", "").Replace("]]", "");
+        var htmlstring = string.Empty;
+
+        if (!name.Contains("ISTABLE_"))
+        {
+            var width = name.Length * 14;
+            var fieldCof = Model.ListTieuChi.Where(x => x.Ten.Equals(name)).FirstOrDefault();
+            var widcss = "";
+            htmlstring = "<input type='number' style='" + widcss + "' name='" + name + "' class='width-size'/>";
+        }
+        var checkConfig = Model.ListTieuChi.Where(x => x.Ten == name).FirstOrDefault();
+        htmlstring += "<a href = 'javascript:void(0)' onclick = settingfield('" + name + "'," + Model.InfoBieuMau.Id + ")><i class='fa fa-cog " + (checkConfig != null ? "configed" : "") + "' aria-hidden='true'></i></a>";
+        htmlstring += "<input type='checkbox' value='" + name + "' id='ckb_" + name + "' class='cbk_key'>";
+
+        var matchUpload = Model.RegUpload.Match(key);
+        if (matchUpload.Length > 0)
+        {
+            htmlstring += "<br><i style='color:blue' data-value='" + name + "'>" + name + "</i>";
+        }
+        else
+        {
+            htmlstring += "<br><i style='color:blue' class='label-show-name' data-value='" + name + "'>" + name + "</i>";
+        }
+        htmlstring += "<input type='hidden' value='" + name + "' name='hidden_key_field'/>";
+        var domId = name + "@" + Model.InfoBieuMau.Id;
+        htmlstring += "<span id='" + domId + "'></span>";
+        rootHtml = rootHtml.Replace(matches[i].Value, htmlstring);
+
+        listKeysBieuMau.Add(name);
+
+        if (checkConfig == null)
+        {
+            listKeyBieuMauChuaCauHinh.Add(name);
+        }
+        else if (!string.IsNullOrEmpty(checkConfig.Ten))
+        {
+            listTenTieuChi.Add(checkConfig.Ten);
+        }
+        else if (string.IsNullOrEmpty(checkConfig.Ten) && !matchUpload.Success)
+        {
+            listKeysChuaCauHinhTen.Add(checkConfig.Key);
+        }
+    }
+
+    //danh sách key bị trùng
+    listKeysBieuMauDuplicate = listKeysBieuMau.GroupBy(x => x)
+        .Where(x => x.Count() > 1)
+        .Select(x => x.Key).ToList();
+
+    //danh sách key bị trùng tên
+    listTenTieuChiDuplicate = listTenTieuChi.GroupBy(x => x)
+        .Where(x => x.Count() > 1)
+        .Select(x => x.Key).ToList();
+}
+
+<input type="hidden" name="UploadFileNames" id="input-file-upload-names" />
+<div class="clearfix"></div>
+<div class="overflow-hidden">
+    <div class="col-sm-12">
+        <div class="widget-box">
+            <div class="widget-header widget-header-flat">
+                @*<h4 class="widget-title smaller">
+                    <b><i class="fa fa-info-circle"></i>&nbsp;THÔNG TIN NHÓM TIÊU CHÍ</b>
+                </h4>*@
+            </div>
+
+            @{
+                var isHasError = false;
+
+                if (listKeysBieuMauDuplicate.Any()
+                    || listKeysChuaCauHinhTen.Any()
+                    || listKeyDiemChuaCauHinhCongThuc.Any()
+                    || listTenTieuChiDuplicate.Any()
+                    || listKeyBieuMauChuaCauHinh.Any())
+                {
+                    isHasError = true;
+                }
+            }
+
+            @*@if (isHasError)
+            {
+                <div class="widget-header widget-header-flat" style="margin: 10px 0">
+                    <h4 class="widget-title smaller text-danger">
+                        <b><i class="fa fa-key"></i> LỖI KEY CẤU HÌNH </b>
+                    </h4>
+                    <button class="btn btn-sm btn-info" onclick="$('#block--error').toggleClass('hide')">
+                        <i class="fa fa-eye"></i>&nbsp;Xem chi tiết
+                    </button>
+                </div>
+
+                <div class="widget-body hide overflow-hidden" id="block--error">
+                    @if (listKeysBieuMauDuplicate.Count > 0)
+                    {
+                        <div class="col-sm-12">
+                            <h2 class="text-danger" style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                                <i class="fa  fa-exclamation-triangle"></i>&nbsp;Trong file upload của bạn có key bị trùng! Vui lòng xem lại các key sau:
+                            </h2>
+                            @foreach (var item in listKeysBieuMauDuplicate)
+                            {
+                                <a title="Key bị trùng">
+                                    <b class="text-danger">@item</b>
+                                </a>
+                                <br />
+                            }
+                        </div>
+                    }
+
+                    @if (listKeysChuaCauHinhTen.Count > 0)
+                    {
+                        <div class="col-sm-12">
+                            <h2 class="text-info" style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                                <i class="fa fa-th-list"></i>&nbsp;CÁC TIÊU CHÍ CHƯA ĐƯỢC ĐẶT TÊN:
+                            </h2>
+                            @foreach (var item in listKeysChuaCauHinhTen)
+                            {
+                                <div class="col-sm-3 text-right">
+                                    <div title="Key chưa được đặt tên"
+                                         class="block--unname-key">
+                                        <span>@item</span>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+
+
+                    @if (listKeyDiemChuaCauHinhCongThuc.Count > 0)
+                    {
+                        <div class="col-sm-12">
+                            <h2 class="text-info" style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                                <i class="fa fa-fax"></i>&nbsp;CÁC TIÊU CHÍ CHƯA ĐƯỢC CẤU HÌNH CÔNG THỨC
+                            </h2>
+                            @foreach (var item in listKeyDiemChuaCauHinhCongThuc)
+                            {
+                                <a title="Key bị trùng">
+                                    <b class="text-danger">
+                                        <i>@item</i> <a title="Tạo key config" href="javascript:settingfield('@item',@Model.InfoBieuMau.Id)"><i class='fa fa-plus' style="font-size: 21px;color: #57889c"></i></a>
+                                    </b>
+                                </a>
+                                <br />
+                            }
+                        </div>
+                    }
+
+                    @if (listTenTieuChiDuplicate.Count > 0)
+                    {
+                        <div class="col-sm-12">
+                            <h2 class="text-danger" style="font-size: 20px; font-weight: bold;text-transform: uppercase">
+                                <i class="fa  fa-exclamation-triangle"></i>&nbsp;Trong file upload của bạn có tiêu chí bị trùng tên! Vui lòng xem lại các tiêu chí sau:
+                            </h2>
+                            @foreach (var item in listTenTieuChiDuplicate)
+                            {
+                                <a title="Tên tiêu chí bị trùng">
+                                    <b class="text-danger">@item</b>
+                                </a>
+                                <br />
+                            }
+                        </div>
+                    }
+
+
+                    @if (listKeyBieuMauChuaCauHinh.Count > 0)
+                    {
+                        <div class="col-sm-12">
+                            <h2 class="text-danger" style="font-size: 20px; font-weight: bold; text-transform: uppercase">
+                                <i class="fa  fa-exclamation-triangle"></i>&nbsp;Danh sách các key mới chưa được thiết lập tên và cấu hình
+                            </h2>
+                            @foreach (var itm in listKeyBieuMauChuaCauHinh)
+                            {
+                                <div class="col-sm-3">
+                                    <div class="block--unconfig-key">
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <label>
+                                                    <strong>@itm</strong>
+                                                </label>
+                                            </div>
+
+                                            <div class="col-sm-3 text-right">
+                                                <a class="btn btn-sm btn-primary" title="Tạo key config" href="javascript:settingfield('@itm',@Model.InfoBieuMau.Id)">
+                                                    <i class='fa fa-plus'></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            }*@
+
+            <div class="widget-header widget-header-flat">
+                <h4 class="widget-title smaller">
+                    <strong>
+                        <i class="fa fa-file-word-o"></i> NỘI DUNG BIỂU MẪU
+                    </strong>
+                </h4>
+            </div>
+
+            <div class="widget-body" style="overflow:hidden">
+                <div id="div-docx" style="margin:auto" class="col-sm-12">
+                    <div class="form-group overflow-hidden" style="margin:20px 0">
+                        @*<label class="control-label col-sm-2">
+                            <strong>
+                                <i class="fa fa-search"></i>&nbsp;Tìm kiếm nội dung biểu mẫu
+                            </strong>
+                        </label>*@
+                        @*<div class="col-sm-10">
+                            <input type="text" id="input--template-search" class="form-control" placeholder="Nhập từ khóa" />
+                        </div>*@
+                    </div>
+
+                    <div id="block--noidung-bieumau">
+                        @Html.Raw(rootHtml)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var settingfield = function (key, idBieuMau) {
+        OpenFormModal('get', '/BieuMauThongTinArea/BieuMauThongTin/SettingField', {
+            key: key,
+            idBieuMau: idBieuMau,
+        });
+    }
+</script>

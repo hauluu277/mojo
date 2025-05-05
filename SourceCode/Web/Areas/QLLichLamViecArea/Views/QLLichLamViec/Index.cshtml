@@ -1,0 +1,85 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Service.Business
+@using mojoportal.Service.CommonBusiness
+@using mojoPortal.Service.CommonModel.LichCongTac
+@model PageListResultBO<LichLamViecDto>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    ViewBag.Title = "Quản lý lịch công tác";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListItem));
+}
+
+
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Quản lý lịch công tác</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+                </a>
+                <a href="javascript:void(0)" onclick="onCreate(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                </a>
+            </div>
+        </div>
+        @Html.Partial("_SearchPartial")
+        <div class="widge-t-body">
+            <div id="tbl-ThuTuc" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Thời gian</th>
+                            <th>Nội dung</th>
+                            <th>Địa điểm</th>
+                            <th>Thành phần tham dự</th>
+                            <th>Duyệt</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.Count" />
+<script>
+    var groupData = eval(@groupData);
+</script>
+<script src="~/Scripts/modules/lichcongtac/lichcongtac_index.js"></script>
+<script>
+    function CreateUnit() {
+        $.ajax({
+            type: "get",
+            url: "/QLLichLamViecArea/QLLichLamViec/Create",
+            success: function (rs) {
+                $("#globalModal").html(rs);
+                $("#globalModal").modal("show");
+            }, error: function (er) {
+                console.log(er);
+            }
+        })
+    }
+    $(document).ready(function () {
+
+        $(".date-picker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true, yearRange: "-50:+20",
+            showWeek: false, weekHeader: "Tuần",
+            language: 'vi',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (date) {
+
+            }
+        });
+    })
+</script>

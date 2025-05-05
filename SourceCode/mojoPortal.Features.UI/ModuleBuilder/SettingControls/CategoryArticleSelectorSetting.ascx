@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryArticleSelectorSetting.ascx.cs" Inherits="ModuleBuilder.SettingControls.CategoryArticleSelectorSetting" %>
+<asp:ListBox ID="lboxCategoryBuilder" runat="server" SelectionMode="Multiple"></asp:ListBox>

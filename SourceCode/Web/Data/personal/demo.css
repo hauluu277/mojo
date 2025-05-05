@@ -1,0 +1,1311 @@
+body {
+    font-family: Arial;
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url( Inconsolata-VariableFont_wdth,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.noidung {
+    width: 1000px;
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+.anh {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon1 {
+    object-fit: contain;
+    width: 20px;
+    opacity: 0.5;
+    float: right;
+    margin-top: 28px;
+}
+
+.icon2 {
+    object-fit: contain;
+    width: 20px;
+    float: right;
+}
+
+.icon3 {
+    object-fit: contain;
+    width: 20px;
+    opacity: 0.5;
+    margin: 0em 0em 0em 33em;
+}
+
+.icon4 {
+    object-fit: contain;
+    width: 8px;
+    opacity: 0.5;
+    margin: 0em 0em 0em 24em;
+}
+
+
+
+.textanh {
+    font-size: 18px;
+    color: #0067b8;
+    font-weight: bold;
+    text-align:left;
+}
+
+.left {
+    float: left;
+    width: 25%;
+    background-color: #eee;
+    padding: 20px;
+}
+
+hr.new {
+    border-top: 1px dotted black;
+}
+
+.list {
+    width: 100%;
+    float: left;
+}
+
+    .list ul li {
+        width: 100%;
+        float: left;
+        border-bottom: 1px dotted;
+        line-height: 40px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .list ul li:last-child {
+            border: none;
+        }
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+}
+
+.right {
+    float: left;
+    width: calc(75% - 25px);
+    margin-left: 25px;
+}
+
+.topmain {
+    width: 100%;
+    color: #eee;
+    display: flex;
+}
+
+.phong {
+    font-size: 18px;
+    margin: 0em 0em 0em 0em;
+    padding: 0.2em;
+    color: #0067b8;
+    font-weight: bold;
+}
+
+.pgs {
+    font-size: 0.9em;
+    margin: 0em 0em 0em 0em;
+    padding: 0.4em 0em 0em 0em;
+}
+
+.tieude {
+    background-color: #eee;
+    padding: 16px 30px;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 18px;
+}
+
+    .tieude span {
+        float: right;
+    }
+.lienket span{float:right;}
+
+ul.thongtin {
+    width: 100%;
+    float: left;
+    text-align: left;
+    list-style: square;
+}
+
+
+.email {
+    color: blue;
+}
+
+table {
+    line-height: 32px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#cars {
+    border: none;
+    background-color: rgb(246 247 243);
+    margin: 0em 0em 0em 3.2em;
+}
+
+#cars1 {
+    border: none;
+    background-color: rgb(246 247 243);
+    margin: 0em 0em 0em 40em;
+}
+
+#cars2 {
+    border: none;
+    background-color: rgb(246 247 243);
+    margin: 0em 0em 0em 39em;
+}
+
+#cars3 {
+    border: none;
+    background-color: white;
+    margin: 0em 0em 0em 19em;
+}
+
+@media only screen and (min-width: 1200px)and (max-width: 1250px) {
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 3.9em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 34em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 33em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 10px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 24em;
+    }
+}
+
+@media only screen and (min-width: 1050px)and (max-width: 1200px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1.85em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 27.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 26.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 10px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 14.8em;
+    }
+
+    .left {
+        min-height: 39em;
+    }
+}
+
+@media only screen and (min-width: 850px)and (max-width: 1000px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0.3em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 21em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 20em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 10px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 5.5em;
+    }
+
+    ul.menu {
+        font-size: 0.7em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.6em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+    .anh1 {
+        margin-top: 2em;
+        width: 7em;
+    }
+
+    .textanh {
+        font-size: 0.5em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    .left {
+        min-height: 38em;
+    }
+}
+
+@media only screen and (min-width: 1000px)and (max-width: 1040px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1.9em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 25.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 24.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 12em;
+    }
+
+    ul.menu {
+        font-size: 0.7em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.7em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+    .anh1 {
+        margin-top: 2em;
+        width: 7em;
+    }
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    .left {
+        min-height: 38em;
+    }
+}
+
+@media only screen and (min-width: 750px)and (max-width: 800px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1.9em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 15.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 14.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 12.3em;
+    }
+
+    ul.menu {
+        font-size: 0.7em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.5em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+
+    ul.thongtin {
+        width: 100%;
+        float: left;
+        line-height: 20px;
+    }
+
+    .anh1 {
+        margin-top: 1em;
+        width: 6em;
+    }
+
+    .textanh {
+        font-size: 0.5em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    ul.menu {
+        font-size: 0.5em;
+    }
+
+    .right {
+        width: 73%;
+    }
+
+    .left {
+        min-height: 32em;
+    }
+}
+
+@media only screen and (min-width: 650px)and (max-width: 700px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1.55em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 17em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 16em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 6.5px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 4em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.5em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 5.5em;
+    }
+
+    .textanh {
+        font-size: 0.4em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    ul.menu {
+        font-size: 0.45em;
+    }
+
+    .right {
+        width: 73%;
+        margin-left: 1em;
+    }
+
+    .left {
+        min-height: 31em;
+    }
+
+    .tieude {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 530px)and (max-width: 560px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 19em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 18em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 6.5px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.45em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4em;
+    }
+
+    .textanh {
+        font-size: 0.1em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.4em;
+    }
+
+    .right {
+        width: 73%;
+        margin-left: 0.7em;
+    }
+
+    .left {
+        min-height: 26em;
+    }
+
+    .tieude {
+        font-size: 0.6em;
+    }
+
+    .phong {
+        font-size: 0.9em;
+    }
+
+    .pgs {
+        padding: 0.7em 0em 0em 0em;
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 630px)and (max-width: 650px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0.6em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 25em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 24em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 7.2em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.45em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+    .textanh {
+        margin-top: 1em;
+        font-size: 0.2em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.45em;
+    }
+
+    .right {
+        width: 73%;
+        margin-left: 0.7em;
+    }
+
+    .left {
+        min-height: 27.5em;
+    }
+
+    .tieude {
+        font-size: 0.6em;
+    }
+
+    .phong {
+        font-size: 0.9em;
+    }
+
+    .pgs {
+        padding: 0.7em 0em 0em 0em;
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 710px)and (max-width: 740px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 1em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 20em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 19em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 9em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.5em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 5.5em;
+    }
+
+    .textanh {
+        font-size: 0.4em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    ul.menu {
+        font-size: 0.5em;
+    }
+
+    .right {
+        width: 73%;
+        margin-left: 1em;
+    }
+
+    .left {
+        min-height: 31em;
+    }
+
+    .tieude {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 380px)and (max-width: 419px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 15em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 14em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 21em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 7.5px;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.35em;
+    }
+
+    .right {
+        float: none;
+        width: 90%;
+        margin-left: 0.7em;
+    }
+
+
+
+    .left {
+        margin-left: 15%;
+        width: 70%;
+        float: none;
+        min-height: 10em;
+    }
+
+    .tieude {
+        font-size: 0.65em;
+    }
+
+    .phong {
+        font-size: 0.9em;
+    }
+
+    .pgs {
+        padding: 0.4em 0em 0em 0em;
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 810px)and (max-width: 840px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0.7em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 17.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 16.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0.6em;
+    }
+
+    ul.menu {
+        font-size: 0.6em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.6em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+    .anh1 {
+        margin-top: 2em;
+        width: 7em;
+    }
+
+    .textanh {
+        font-size: 0.5em;
+        color: blue;
+        margin-bottom: 2.5em;
+    }
+
+    .left {
+        min-height: 38em;
+    }
+}
+
+@media only screen and (min-width: 319px)and (max-width: 340px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 7.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 6.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 7em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 7.5px;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.35em;
+    }
+
+    .right {
+        float: none;
+        width: 85%;
+        margin-left: 0.7em;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .left {
+        margin-left: 15%;
+        width: 70%;
+        float: none;
+        min-height: 10em;
+    }
+
+    .tieude {
+        font-size: 0.65em;
+    }
+
+    .phong {
+        font-size: 0.7em;
+    }
+
+    .pgs {
+        padding: 0.4em 0em 0em 0em;
+        font-size: 0.55em;
+    }
+}
+
+@media only screen and (min-width: 565px)and (max-width: 620px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon1 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0em;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 21em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 20px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 20em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 8px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 2em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 0.45em;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4em;
+    }
+
+    .textanh {
+        font-size: 0.1em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.5em;
+    }
+
+    .right {
+        width: 73%;
+        margin-left: 0.7em;
+    }
+
+    .left {
+        min-height: 26em;
+    }
+
+    .tieude {
+        font-size: 0.6em;
+    }
+
+    .phong {
+        font-size: 0.9em;
+    }
+
+    .pgs {
+        padding: 0.7em 0em 0em 0em;
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 345px)and (max-width: 365px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 12em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 11em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 6.5px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 11.5em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 7.5px;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.35em;
+    }
+
+    .right {
+        float: none;
+        width: 90%;
+        margin-left: 0.7em;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .left {
+        margin-left: 15%;
+        width: 70%;
+        float: none;
+        min-height: 10em;
+    }
+
+    .tieude {
+        font-size: 0.65em;
+    }
+
+    .phong {
+        font-size: 0.7em;
+    }
+
+    .pgs {
+        padding: 0.4em 0em 0em 0em;
+        font-size: 0.55em;
+    }
+}
+
+@media only screen and (min-width: 365px)and (max-width: 379px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 13em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 12em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 6.5px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 15.5em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 7.5px;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.35em;
+    }
+
+    .right {
+        float: none;
+        width: 90%;
+        margin-left: 0.7em;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .left {
+        margin-left: 15%;
+        width: 70%;
+        float: none;
+        min-height: 10em;
+    }
+
+    .tieude {
+        font-size: 0.65em;
+    }
+
+    .phong {
+        font-size: 0.7em;
+    }
+
+    .pgs {
+        padding: 0.4em 0em 0em 0em;
+        font-size: 0.55em;
+    }
+}
+
+@media only screen and (min-width: 275px)and (max-width: 285px) {
+    .noidung {
+        width: 80%;
+    }
+
+    .icon2 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 6.5em;
+    }
+
+    .icon3 {
+        object-fit: contain;
+        width: 15px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 5.5em;
+    }
+
+    .icon4 {
+        object-fit: contain;
+        width: 6.5px;
+        opacity: 0.5;
+        margin: 0em 0em 0em 0em;
+    }
+
+    table {
+        line-height: 1.5em;
+        font-weight: 600;
+        font-size: 7.5px;
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+
+    .anh1 {
+        margin-top: 1em;
+        width: 4.5em;
+    }
+
+
+    .textanh {
+        font-size: 0.7em;
+        color: blue;
+        margin-bottom: 4em;
+    }
+
+    ul.menu {
+        font-size: 0.35em;
+    }
+
+    .right {
+        float: none;
+        width: 90%;
+        margin-left: 0.7em;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .left {
+        margin-left: 15%;
+        width: 70%;
+        float: none;
+        min-height: 10em;
+    }
+
+    .tieude {
+        font-size: 0.65em;
+    }
+
+    .phong {
+        font-size: 0.7em;
+    }
+
+    .pgs {
+        padding: 0.4em 0em 0em 0em;
+        font-size: 0.5em;
+    }
+}
+
+.anh img {
+    width: 100%;
+}
+
+.quatrinh ul.thongtin li {
+    width: 100%;
+    float: left;
+    line-height: 40px;
+}
+
+.thongtin {
+    width: 100%;
+    float: left;
+}
+
+ul.thongtin li {
+    width: 100%;
+    float: left;
+    line-height: 40px;
+}

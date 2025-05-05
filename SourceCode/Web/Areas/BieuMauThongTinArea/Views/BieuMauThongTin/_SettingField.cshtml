@@ -1,0 +1,300 @@
+﻿
+@using System.Diagnostics.Eventing.Reader
+@model mojoPortal.Web.Areas.BieuMauThongTinArea.Data.SettingFieldVM
+<style>
+    .select2-selection__rendered, .select2-results__option {
+        word-wrap: break-word;
+        text-overflow: inherit;
+        white-space: normal;
+    }
+
+    #saveSettingFieldForm .row {
+        margin-bottom: 20px;
+    }
+
+    #saveSettingFieldForm fieldset {
+        font-family: sans-serif;
+        border: 2px solid #1F497D;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        min-height: 375px;
+    }
+
+        #saveSettingFieldForm fieldset legend {
+            background: #0078d4;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 0 0 5px #ddd;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+    .table-tieuchi-tonghop .col-order {
+        width: 10% !important;
+    }
+
+    @@media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 100% !important;
+        }
+    }
+</style>
+<div class="modal-dialog" style="max-width:auto;width:80%">
+    @using (Ajax.BeginForm("SaveSettingField", "bieumauthongtin", new { @area = "bieumauthongtinArea" }, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "AjaxFormError",
+        OnSuccess = "AjaxFormSuccess",
+    }, new { id = "saveSettingFieldForm", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("Id", Model.TieuChi.Id)
+        @Html.Hidden("IdBieuMau", Model.TieuChi.IdBieuMau)
+        @Html.Hidden("Key", Model.TieuChi.Key)
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="center">
+                    <h4 class="modal-title">Cấu hình tiêu chí <span style="color: yellow;text-transform:none; overflow-wrap: break-word; font-size: 19px">[[@Model.TieuChi.Key]]</span></h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <legend>THÔNG TIN CHUNG</legend>
+                                <div class="fieldset-body">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Tên đại diện</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextArea("Ten", Model.TieuChi.Ten, new { @class = "form-control", @rows = "3" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Tiêu chí cha</label>
+                                        <div class="col-sm-8">
+                                            @Html.Raw(!string.IsNullOrEmpty(Model.TenCha) ? "<strong class='text-primary'>" + Model.TenCha + "</strong>" : "<strong class='text-danger'><i>Chưa cập nhật</i></strong>")
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <legend>THÔNG TIN NHẬP LIỆU</legend>
+                                <div class="fieldset-body">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Tiêu chí bắt buộc</label>
+                                        <div class="col-sm-8">
+                                            <input id="Required" name="Required" type="checkbox" value="true" @(Model.TieuChi.Required == true ? "checked" : "")>
+                                        </div>
+                                    </div>
+                                    @*<div class="form-group">
+                                            <label class="control-label col-sm-4">Kiểu dữ liệu</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownList("DataType", ViewBag.dropDownDATATYPE as List<SelectListItem>, "---Chọn---", new { @class = "form-control" })
+                                            </div>
+                                        </div>*@
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Là trường ComboBox</label>
+                                        <div class="col-sm-8">
+                                            <input id="IsComboBox" name="IsComboBox" type="checkbox" value="true" @(Model.TieuChi.IsComboBox == true ? "checked" : "")>
+                                        </div>
+                                    </div>
+                                    @*<div class="form-group" id="selectDM">
+                                            <label class="control-label col-sm-4">Danh mục dữ liệu ComboBox</label>
+                                            <div class="col-sm-8">
+                                                @Html.DropDownList("IdDanhMuc", Model.ListNhomDanhMuc, "---Chọn---", new { @class = "form-control", @onchange = "onChangeNhomDanhMucTieuChi(this)" })
+                                                <input id="IsMultiple" name="IsMultiple" type="checkbox" value="true" @(Model.TieuChi.IsMultiple == true ? "checked" : "")>
+                                                <label>cho phép chọn nhiều</label>
+                                            </div>
+                                        </div>*@
+
+                                    @*<div class="form-group @(Model.TieuChi.IsComboBox == true ? "" : "hide")" id="dataDM">
+                                            <label class="control-label col-sm-4">Dữ liệu danh mục</label>
+                                            <div class="col-sm-8" id="listDM">
+                                                @if (Model.ListDuLieuDanhMuc != null && Model.ListDuLieuDanhMuc.Any())
+                                                {
+                                                    <ul>
+                                                        @foreach (var itemDanhMuc in Model.ListDuLieuDanhMuc)
+                                                        {
+                                                            <li>
+                                                                <strong>@itemDanhMuc.Name</strong>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                }
+                                                else
+                                                {
+                                                    <small class="text-danger">KHÔNG CÓ DỮ LIỆU</small>
+                                                }
+                                            </div>
+                                        </div>*@
+
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <legend>THÔNG TIN TÍNH ĐIỂM</legend>
+                                <div class="fieldset-body">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Công thức tính</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextArea("CongThuc", Model.TieuChi.CongThuc, new { @class = "form-control", @rows = "5" })
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                            <label class="control-label col-sm-4">Là điểm đại diện cho nhóm tiêu chí</label>
+                                            <div class="col-sm-8">
+                                                <input id="IsDaiDienChoNhomTieuChi" name="IsDaiDienChoNhomTieuChi" type="checkbox" value="true" @(Model.TieuChi.IsDaiDienChoNhomTieuChi == true ? "checked" : "")>
+                                            </div>
+                                        </div>*@
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Giới hạn dữ liệu - cận dưới</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBox("GioiHanDuoi", Model.TieuChi.GioiHanDuoi, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Giới hạn dữ liệu - cận trên</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBox("GioiHanTren", Model.TieuChi.GioiHanTren, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <legend>THÔNG TIN KHÁC</legend>
+                                <div class="fieldset-body">
+                                    @*<div class="form-group">
+                                            <label class="control-label col-sm-4">Tiêu chí sẽ bị khoá khi chọn tiêu chí này</label>
+                                            <div class="col-sm-8">
+                                                @Html.ListBoxFor(x => x.KeysEnabled, Model.LISTENABLED, new { @multiple = "multiple", @class = "form-control" })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">Tiêu chí sẽ được chọn khi chọn tiêu chí này</label>
+                                            <div class="col-sm-8">
+                                                @Html.ListBoxFor(x => x.KeysDisabled, Model.LISTDISABLED, new { @multiple = "multiple", @class = "form-control" })
+                                            </div>
+                                        </div>*@
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">Số thứ tự</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBox("SoThuTu", Model.TieuChi.SoThuTu, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                            <label class="control-label col-sm-4">Thứ tự hiển thị</label>
+                                            <div class="col-sm-8">
+                                                @Html.TextBox("ThuTuHienThi", Model.TieuChi.ThuTuHienThi, new { @class = "form-control" })
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer center">
+                <button type="button" id="btnSave" class="btn btn-primary">
+                    <i class="fa fa-save"></i>&nbsp;Lưu
+                </button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-times"></i>&nbsp;Đóng
+                </button>
+            </div>
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/jquery/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ($("#IsComboBox").is(":checked")) {
+            $("#selectDM").css("display", "block");
+        } else {
+            $("#selectDM").css("display", "none");
+        }
+        $("#saveSettingFieldForm select").select2({
+            placeholder: "---Chọn---"
+        });
+
+        $('#TenTieuChi').on('keyup', function () {
+            $('#TenDaiDien').val($(this).val());
+        });
+
+        $('#btnSave').on('click', function () {
+            $('#saveSettingFieldForm').submit();
+        })
+    });
+
+    $("#IsComboBox").change(function () {
+        if ($("#IsComboBox").is(":checked")) {
+            $("#selectDM").css("display", "block");
+            $('#dataDM').removeClass('hide');
+        } else {
+            $("#selectDM").css("display", "none");
+            $('#dataDM').addClass('hide');
+        }
+    });
+
+    function AjaxFormSuccess(rs) {
+        if (rs.Status) {
+            NotifySuccess("Cấu hình trường dữ liệu thành công");
+            CloseGlobalModal();
+        } else {
+            NotiError('Thất bại', rs.Message);
+        }
+    }
+
+
+    //function OnCloseLog() {
+    //    $("#MasterModal").empty();
+    //    $("#MasterModal").modal("hide");
+    //}
+
+    //function onChangeNhomDanhMucTieuChi(item) {
+    //    var valueNhomDanhMuc = item.value;
+    //    if (valueNhomDanhMuc) {
+    //        var callBack = function (result) {
+    //            if (result.length > 0) {
+    //                var html = "<ul>";
+    //                for (var i = 0; i < result.length; i++) {
+    //                    html += "<li><b>" + result[i].Name + "</b></li>";
+    //                }
+    //                html += "</ul>";
+    //                $('#listDM').html(html);
+    //            } else {
+    //                $('#listDM').html("<small class='text-danger'>KHÔNG CÓ DỮ LIỆU</small>");
+    //            }
+    //        }
+
+    //        onCallAjax('/CdsNhomTieuChiArea/CdsNhomTieuChi/DanhSachDuLieuDanhMuc/', { id: valueNhomDanhMuc }, 'post', callBack);
+    //    } else {
+    //        $('#dataDM').addClass('hide');
+    //    }
+    //}
+</script>

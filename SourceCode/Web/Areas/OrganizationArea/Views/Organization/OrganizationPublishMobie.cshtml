@@ -1,0 +1,82 @@
+﻿@using mojoPortal.Web.Areas.OrganizationArea.Models
+@model OrganizationPublishVM
+<div class="width100" style="margin-bottom: 20px;">
+
+    <h1 style="text-align: center; margin: 40px 0">@Model.core_CCTC.TitleBoxLanhDao</h1>
+    @if (Model.ListLeader != null && Model.ListLeader.Any())
+    {
+        <div class="col-sm-12">
+            @if (Model.ListLeader.Count > 1)
+            {
+
+                foreach (var item in Model.ListLeader)
+                {
+                    <div class="col-sm-12" style="width: 100%; float: left; border-bottom: 1px dotted; margin-bottom: 20px;">
+                        <div style="text-align: center;padding: 10px; border-radius: 5px;box-shadow: 0 0 10px 0 #ccc">
+                            @if (!string.IsNullOrEmpty(item.PathIMG))
+                            {
+                                <a href="@item.LinkDetail">
+                                    <img alt="" src="@item.PathIMG" style="width: 100%; margin-bottom: 15px; height: 180px; width: auto" />
+                                </a>
+                            }
+                            else
+                            {
+                                <div style="width: 100%; margin-bottom: 20px; height: 180px; width: auto " />
+                            }
+                          
+                                <p style="font-weight: bold; text-transform: uppercase; margin-bottom:5px">@item.ChucVu :</p>
+                                <p style="font-weight: bold; text-transform:uppercase"><a style="color: #333333;" href="@item.LinkDetail">@item.Title</a></p>
+                        </div>
+                        @if (Model.ListDepartment != null && Model.ListDepartment.Any())
+                        {
+                            var ListDepartment = Model.ListDepartment.Where(x => x.CCTC_Leader_ID == item.ItemID);
+                            <div class="department">
+                                <h4 style="text-align: center; width: 100%; float: left; margin-top: 25px">
+                                    @Model.core_CCTC.TitleBoxPhongBan
+                                </h4>
+                                <ul style="width:100%; float: left">
+                                    @foreach (var itemdp in ListDepartment)
+                                    {
+                                        <li class="name-department"><a href="@itemdp.LinkDetail"> @itemdp.Name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+
+    }
+    else
+    {
+
+        <h4 style="text-align: center; margin: 10px 0; color: #ce1127;width: 100%;float: left;">
+            (ĐANG CẬP NHẬT)
+        </h4>
+    }
+</div>
+
+<style>
+
+    .name-department a {
+        color: #333333;
+    }
+    .name-department {
+        font-weight: bold;
+        margin-bottom: 10px;
+
+    }
+
+    .department {
+    }
+
+        .department ul {
+            float: left;
+        }
+
+            .department ul li {
+                font-size: 15px;
+                padding: 10px;
+            }
+</style>

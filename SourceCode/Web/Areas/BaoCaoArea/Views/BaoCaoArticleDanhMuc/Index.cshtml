@@ -1,0 +1,164 @@
+﻿@using mojoPortal.Service.CommonModel.BaoCao
+@using Newtonsoft.Json
+@model List<BaoCaoDanhMucResultBieuDoBO>
+
+@{
+    var listData = Html.Raw(JsonConvert.SerializeObject(Model));
+}
+<style>
+    #chartdiv {
+        width: 100%;
+        height: 500px;
+    }
+
+    table tbody tr td {
+        cursor: pointer;
+        text-align: center;
+    }
+</style>
+
+<div id="content">
+    <div class="row">
+        <div class="col-sm-12">
+            
+        </div>
+        <div class="col-sm-12">
+            <h3 class="legend-title m-20">Bảng báo cáo bài viết theo chuyên mục tin</h3>
+            <div id="collapseDiv" class="panel-collapse collapsable" aria-expanded="false" role="tabpanel">
+                <div class="well">
+                    <form>
+                        <div class="row row-block">
+                            <div class="col-md-6 row-block">
+                                <div class="col-md-2 txt-label control-label">Từ ngày</div>
+                                <div class="col-md-10">
+                                    <input class="form-control width100 date-picker" type="text" name="TuNgayFillter" id="TuNgayFillter" placeholder="Từ ngày" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 row-block">
+                                <div class="col-md-2 txt-label control-label">Đến ngày</div>
+                                <div class="col-md-10">
+                                    <input class="form-control width100 date-picker" type="text" name="DenNgayFillter" id="DenNgayFillter" placeholder="Đến ngày" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 center" style="margin-top: 20px;">
+                                <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                                    <span class="btn-label">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    Tìm kiếm
+                                </button>
+
+                                <button onclick="xuatexcel()" class="btn btn-success">Kết xuất</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="hntbl-cover">
+
+                <div id="box-bang">
+                    <table id="myTableAll" class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <th>@item.NameCate</th>
+                                    }
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <td onclick="DanhSachBaiViet('@item.ItemCateId')">@item.CountArticle</td>
+                                    }
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="legend-title m-20">Biểu đồ báo cáo bài viết theo chuyên mục tin</h3>
+            <div id="box-chart">
+               @Html.Partial("_RenderChart",Model)
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog"></div>
+<script>
+
+    $(".date-picker").datepicker({ dateFormat: 'dd/mm/yy' })
+
+    function SearchSubmit() {
+        var TuNgay = $('#TuNgayFillter').val()
+        var DenNgay = $('#DenNgayFillter').val()
+
+        $.ajax({
+            url: `/BaoCaoArea/BaoCaoArticleDanhMuc/RenderBang?TuNgay=${TuNgay}&DenNgay=${DenNgay}`,
+            method: 'POST',
+            success: function (rs) {
+                $('#box-bang').html(rs)
+            }
+        })
+        $.ajax({
+            url: `/BaoCaoArea/BaoCaoArticleDanhMuc/RenderChart?TuNgay=${TuNgay}&DenNgay=${DenNgay}`,
+            method: 'POST',
+            success: function (rs) {
+                $('#box-chart').html(rs)
+            }
+        })
+    }
+
+    function XuatExcelAll(id) {
+
+        var table = document.getElementById(`${id}`);
+
+        var cells = table.getElementsByTagName("td");
+        for (var i = 0; i < cells.length; i++) {
+            var cell = cells[i];
+            cell.setAttribute("style", "border: 1px solid black;");
+        }
+
+        var html = table.outerHTML.replace(/ /g, "%20");
+
+        var downloadLink = document.createElement("a");
+        document.body.appendChild(downloadLink);
+        downloadLink.href = "data:application/vnd.ms-excel," + html;
+        downloadLink.download = "DanhSachChiTiet.xls";
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+    }
+
+    function xuatexcel() {
+        XuatExcelAll("myTableAll");
+    }
+    function DanhSachBaiViet(MaDonVi) {
+        $.ajax({
+            url: '/BaoCaoArea/BaoCaoArticleDanhMuc/DanhSachArticleTheoDonVi?IdTinTuc=' + MaDonVi,
+            method: 'GET',
+            success: function (rs) {
+                $("#myModal").html(rs);
+                $("#myModal").modal("show");
+            }
+        })
+    }
+</script>

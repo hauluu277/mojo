@@ -1,0 +1,457 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.ThuTucArea.Models
+@model ThuTucFormVM
+@{
+    var title = "Thêm mới thủ tục hành chính";
+
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật thủ tục hành chính";
+
+    }
+
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #fileList {
+        margin-left: 18%;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmReport .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+@using (
+Ajax.BeginForm("SaveForm", "ThuTuc",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ccc", OnFailure = "AjaxError" },
+new { @class = "", id = "frmReport", area = "ThuTucArea" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.ItemID)
+
+    <div class="modal-dialog" style="width:1100px;max-width:100%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <h3 class="legend-title">Thông tin thủ tục hành chính</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Cấp thủ tục<span class="red">*</span></label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.IdCapDoThuTuc, Model.ListCapThuTuc, new { @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.IdCapDoThuTuc)
+                        </div>
+                        <label class="control-label col-sm-2">Cơ quan thực hiện<span class="red">*</span></label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.IdCoQuan, Model.ListCoQuanThucHien, "--Chọn--", new { @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.IdCoQuan)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Mã thủ tục<span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.MaThuTuc, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.MaThuTuc)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tên thủ tục<span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.TenThuTuc, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.TenThuTuc)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Lĩnh vực<span class="red">*</span></label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.IdLinhVuc, Model.ListLinhVuc, "--Chọn--", new { @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.IdLinhVuc)
+                        </div>
+                        <label class="control-label col-sm-2">Mức độ DVC</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.IdMucDo, Model.ListMucDoDVC, "--Chọn--", new { @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.IdMucDo)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Cách thức thực hiện</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.CachThucThucHien, Model.ListCachThucThucHien, new { @multiple = "multiple", @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.CachThucThucHien)
+                        </div>
+                        <label class="control-label col-sm-2">Đối tượng thực hiện</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(x => x.IdDoiTuongThucHien, Model.ListDoiTuongThucHien, "--Chọn--", new { @class = "select2" })
+                            @Html.ValidationMessageFor(x => x.IdDoiTuongThucHien)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Trình tự thực hiện</label>
+
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.TrinhTuThucHien, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.TrinhTuThucHien)
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Thời hạn giải quyết</label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.ThoiHanGianQuyet, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ThoiHanGianQuyet)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Phí</label>
+                        <div class="col-sm-4">
+                            @Html.TextAreaFor(x => x.Phi, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Phi)
+                        </div>
+                        <label class="control-label col-sm-2">Lệ phí</label>
+                        <div class="col-sm-4">
+                            @Html.TextAreaFor(x => x.LePhi, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.LePhi)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label  col-sm-2" for="IsPublished">Thành phần hồ sơ</label>
+                        <div class="col-sm-10">
+
+                            @Html.TextAreaFor(x => x.ThanhPhanHoSo, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ThanhPhanHoSo)
+                            @*<table class="table table-border" id="tblThanhPhanHS">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên giấy tờ</th>
+                                            <th>Mẫu đơn, tờ khai</th>
+                                            <th>Số lượng</th>
+                                            <th>
+                                                <button class="btn btn-primary btn-xs" type="button" onclick="CreateHoSo()">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </button>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model.ListThuTucThanhPhanHS != null && Model.ListThuTucThanhPhanHS.Any())
+                                        {
+                                            foreach (var item in Model.ListThuTucThanhPhanHS)
+                                            {
+                                                <tr>
+                                                    <td>@item.TenGiayTo</td>
+                                                    <td>@item.MauDonToKhai</td>
+                                                    <td>@item.SoLuong</td>
+                                                    <td class="text-center">
+                                                        <div class='btn-group gr-nghiphep'>
+                                                            <a href="javascript:void(0)" onclick="onDeleteThanhPhanHoSo(@item.ItemID, this)" class="btn-remove hvr-radial-out" data-id="@item.ItemID" data-object-name="@item.TenGiayTo" title="Xóa"><i class="fa fa-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <textarea class="form-control" name="TenGiayTo"></textarea>
+                                                </td>
+                                                <td>
+                                                    <textarea class="form-control" name="MauDonToKhai"></textarea>
+                                                </td>
+                                                <td>
+                                                    <textarea class="form-control" name="SoLuong"></textarea>
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class='btn-group gr-nghiphep'>
+                                                        <a href="javascript:void(0)" onclick="onDeleteThanhPhanHoSo(0,this)" class="btn-remove hvr-radial-out" title="Xóa"><i class="fa fa-trash"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>*@
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Yêu cầu điều kiện </label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.YeuCauDieuKien, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.YeuCauDieuKien)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Căn cứ pháp lý </label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.CanCuPhapLy, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CanCuPhapLy)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Biểu mẫu đính kèm</label>
+                        <div class="col-sm-10">
+                            <table class="table table-border" id="tblBieuMau">
+                                <thead>
+                                    <tr>
+                                        <th>Tên biểu mẫu</th>
+                                        <th>File biểu mẫu</th>
+                                        <th>Lượt tải về</th>
+                                        <th>
+                                            <button class="btn btn-primary btn-xs" type="button" onclick="CreateBieuMau()">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.ListThuTucBieuMau != null && Model.ListThuTucBieuMau.Any())
+                                    {
+                                        foreach (var item in Model.ListThuTucBieuMau)
+                                        {
+                                            <tr>
+                                                <td>@item.TenMau</td>
+                                                <td>
+                                                    @if (!string.IsNullOrEmpty(item.PathFile))
+                                                    {
+                                                        <a href="@item.PathFile" download>tải xuống</a>
+                                                    }
+                                                </td>
+                                                <td>@item.TotalDownload</td>
+                                                <td class="text-center">
+                                                    <div class='btn-group gr-nghiphep'>
+                                                        <a href="javascript:void(0)" onclick="onDeleteBieuMau(0,this)" class="btn-remove hvr-radial-out" data-id="@item.ItemId" data-object-name="@item.TenMau" title="Xóa"><i class="fa fa-trash"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="TenMau" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="PathFile" class="form-control" style="width:calc(100% - 100px)" />
+                                                <button type="button" class="btn btn-primary btn-sm" onclick="UploadBieuMau(this)"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <div class='btn-group gr-nghiphep'>
+                                                    <a href="javascript:void(0)" onclick="onDeleteBieuMau(0,this)" class="btn-remove hvr-radial-out" title="Xóa"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Số lượng hồ sơ</label>
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(x => x.SoLuongHoSo, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.SoLuongHoSo)
+                        </div>
+
+                        <label class="control-label col-sm-2">Xuất bản</label>
+                        <div class="col-sm-4">
+                            <input type="checkbox" id="IsPublish" name="IsPublish" @(Model.IsPublish == true ? "checked" : string.Empty) />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Kết quả thực hiện</label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.KetQuaThucHien, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.KetQuaThucHien)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Url Dịch vụ công <span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.LinkDVC, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.LinkDVC)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@Scripts.Render("~/bundles/jqueryval")
+@*<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery/AdditionValidation.js"></script>
+    <script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>*@
+<script src="~/ClientScript/ckeditor462/ckeditor.js"></script>
+<script>
+    function CreateHoSo() {
+        CallAjax("get", "/ThuTucArea/ThuTuc/AddThanhPhanHS", null, function (rs) {
+            $("#tblThanhPhanHS tbody").append(rs);
+        })
+    }
+
+    function CreateBieuMau() {
+        CallAjax("get", "/ThuTucArea/ThuTuc/AddBieuMau", null, function (rs) {
+            $("#tblBieuMau tbody").append(rs);
+        })
+    }
+
+
+    var arrFileList = [];
+    function UploadBieuMau(obj) {
+        var finder = new CKFinder();
+        finder.inpopup = true;
+        finder.defaultlanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupfeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectmultiple = true;
+        finder.startuppath = "Files:/";
+        finder.baseurl = "/File/";
+        finder.resourcetype = 'File';
+        finder.selectActionFunction = function (fileurl, data, allfiles) {
+            console.log(obj);
+            $(obj).prev().val(fileurl);
+        };
+        finder.popup();
+    }
+
+    function removeFileAtachment(fileName) {
+        if (confirm("Xóa file đính kèm đã chọn ?")) {
+
+            $("#tblFileList li[data-id='" + fileName + "']").remove();
+            $.each(arrFileList, function (i) {
+                if (arrFileList[i] == i) {
+                    arrFileList.splice(i, 0);
+                    $("#PathFile").val(arrFileList.join("?"));
+                    return false;
+                }
+            });
+        }
+    }
+
+
+
+    function GetUrlImage() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=PathFile]").val(fileUrl);
+            //$("#viewVideo").empty();
+            //$("#viewVideo").append("<img src='" + fileUrl + "' width='200'/>");
+            //$("#PathFile").change();
+        };
+        finder.popup();
+    }
+
+    function SubmitForm() {
+        GetValueCkeditor("TrinhTuThucHien");
+        GetValueCkeditor("ThoiHanGianQuyet");
+        GetValueCkeditor("YeuCauDieuKien");
+        GetValueCkeditor("CanCuPhapLy");
+        GetValueCkeditor("KetQuaThucHien");
+        GetValueCkeditor("ThanhPhanHoSo");
+
+
+
+        var oke = jQuery('#frmReport').valid();
+        if (oke) {
+            $("#frmReport").submit();
+        }
+    }
+    $(document).ready(function () {
+        $(".txt-picker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true, yearRange: "-50:+20",
+            showWeek: false, weekHeader: "Tuần",
+            language: 'vi',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (date) {
+
+            }
+        });
+
+
+        LoadCkeditor("TrinhTuThucHien");
+        LoadCkeditor("ThoiHanGianQuyet");
+        LoadCkeditor("YeuCauDieuKien");
+        LoadCkeditor("CanCuPhapLy");
+        LoadCkeditor("KetQuaThucHien");
+        LoadCkeditor("ThanhPhanHoSo");
+
+
+
+        var cachThucThucHien = '@Model.CachThucThucHien';
+        console.log(cachThucThucHien);
+        if (cachThucThucHien) {
+            var split = cachThucThucHien.split(',');
+            for (var i = 0; i < split.length; i++) {
+                if (split[i]) {
+                    $("#CachThucThucHien option[value=" + split[i] + "]").attr("selected", true);
+                }
+            }
+        }
+
+        $(".select2").select2();
+
+    });
+
+
+
+
+    function ccc(rs) {
+        if (rs.Status == true) {
+            reloadTable();
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+
+
+</script>

@@ -1,0 +1,154 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.DanhMucArea.Models
+@model DanhMucVM
+@{
+    ViewBag.Title = "Quản lý chuyên mục liên kết";
+
+    var title = "Thêm mới chuyên mục liên kết";
+
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật chuyên mục liên kết";
+
+    }
+
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #fileList {
+        margin-left: 18%;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmReport .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+@using (
+Ajax.BeginForm("SaveForm", "DanhMuc",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ccc", OnFailure = "AjaxError" },
+new { @class = "", id = "frmReport", area = "DanhMucArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+
+    <div class="modal-dialog" style="width:1000px;max-width:100%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <h3 class="legend-title">Thông tin chuyên mục liên kết</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tiêu đề<span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Title)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Đường dẫn<span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.UrlLink, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.UrlLink)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Mô tả</label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.Sapo, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Sapo)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Thứ tự hiển thị</label>
+                        <div class="col-sm-4">
+
+                            @Html.TextBoxFor(x => x.OrderBy, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(x => x.OrderBy)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label  col-sm-2" for="IsPublished">Hiển thị</label>
+                        <div class="col-sm-4">
+                            <input type="checkbox" id="IsPublish" name="IsPublish" @(Model.IsPublish == true ? "checked" : Model.ItemID == 0 ? "checked" : "") />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+
+
+<script>
+
+    function SubmitForm() {
+        debugger;
+        var oke = jQuery('#frmReport').valid();
+        if (oke) {
+            $("#frmReport").submit();
+        }
+    }
+    $(document).ready(function () {
+        $(".select2").select2();
+        $(".txt-picker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true, yearRange: "-50:+20",
+            showWeek: false, weekHeader: "Tuần",
+            language: 'vi',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (date) {
+
+            }
+        });
+    });
+
+    function ccc(rs) {
+        if (rs.Status == true) {
+            reloadTable();
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+
+
+</script>

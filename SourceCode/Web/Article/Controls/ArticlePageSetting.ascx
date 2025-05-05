@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlePageSetting.ascx.cs" Inherits="ArticleFeature.UI.ArticlePageSetting" %>
+<asp:ListBox ID="lbArticlePage" runat="server" Width="300" Height="150"></asp:ListBox>

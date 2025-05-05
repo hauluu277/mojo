@@ -1,0 +1,93 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.SettingServiceArea.Models
+@model FormSettingServiceVM
+@{
+
+    var title = "Thêm mới webservice/api";
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật webservice/api";
+    }
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+@using (
+Ajax.BeginForm("SaveForm", "SettingService",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmSettingService", area = "SettingServiceArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+    @Html.HiddenFor(x => x.SiteID)
+
+    <div class="modal-dialog" style="width:80%; min-width:850px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Tên webservice/api<span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Name)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Url webservice <span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.TextAreaFor(x => x.ServiceUrl, new { @class = "form-control", @rowspan = "3" })
+                            @Html.ValidationMessageFor(x => x.ServiceUrl)
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                        <label class="control-label  col-sm-3" for="IsNew">kích hoạt</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" id="IsNew" name="IsNew" value="true" @(Model.IsNew == true ? "checked" : string.Empty) />
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@*@Scripts.Render("~/bundles/jqueryval")*@
+
+<script>
+    function AjaxError(er) {
+        console.log(er.Message);
+    }
+    function SubmitForm() {
+        var checkSubmit = jQuery('#frmSettingService').valid();
+        if (checkSubmit) {
+
+            $("#frmSettingService").submit();
+        }
+    }
+    $(document).ready(function () {
+
+    });
+
+    function ajaxSucces(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal2();
+            ReloadService();
+            reloadTable();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+</script>

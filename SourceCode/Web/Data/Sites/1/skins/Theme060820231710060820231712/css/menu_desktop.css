@@ -1,0 +1,373 @@
+
+.mg10 {
+    margin: 10px;
+}
+
+.pd0 {
+    padding: 0;
+}
+
+.menu1 {
+    background-color: #0078d7;
+    height: 50px;
+}
+
+.main-menu {
+    position: relative;
+    padding: 0;
+    float: left;
+}
+
+    .main-menu > li > a {
+        padding: 6px 9px;
+        color: white;
+        font-family: 'Roboto Slab', serif !important;
+        font-weight: normal;
+        text-transform: none;
+        font-size: 18px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+        .main-menu > li > a:hover {
+            color: #9dbdfb;
+            transition: all 0.3s;
+        }
+
+    .main-menu > li {
+        float: left;
+        list-style: none;
+        height: 52px;
+        /* padding-top: 13px !important;*/
+    }
+
+        .main-menu > li:hover > a,
+        .main-menu > li > a:hover,
+        .main-menu > li > a:focus {
+            /*            color: #ff7c7c !important;*/
+            transition: all 0.3s;
+        }
+
+        .main-menu > li > a:hover {
+            /*  text-decoration: underline !important;*/
+        }
+
+.menu-quantrinhatruong, .menu-lich-thongbao {
+    left: 0;
+}
+
+.menu-gt-truong, .menu-daotao, .menu-khoahoc-congnghe, .menu-hoptacquocte,
+.menu-quantrinhatruong, .menu-lich-thongbao {
+    position: absolute;
+    background-color: white;
+}
+
+#lich-thongbao ul li a {
+    font-size: 17px !important;
+}
+
+.menu-gt-truong .ul-content > li > a, .menu-daotao .ul-content > li > a, .menu-khoahoc-congnghe .ul-content > li > a,
+#hoptacquocte .ul-content > li > a, #quantrinhatruong .ul-content > li > a, #lich-thongbao .ul-content > li > a {
+    padding-left: 0px !important;
+}
+
+.menu-gt-truong {
+    /*width: 100%;*/
+    height: auto;
+    z-index: 99;
+    left: 0;
+}
+
+.menu-daotao {
+    height: auto;
+    padding-bottom: 15px;
+    z-index: 99;
+}
+
+.menu-hoptacquocte {
+    z-index: 995;
+    left: 0;
+}
+
+    .menu-hoptacquocte .imgMenu, .menu-quantrinhatruong .imgMenu, .menu-lich-thongbao .imgMenu {
+        padding-left: 15px;
+    }
+
+.menu-quantrinhatruong {
+    z-index: 996;
+}
+
+.menu-tuyensinh {
+    z-index: 997;
+}
+
+.menu-lich-thongbao {
+    z-index: 998;
+}
+
+.menu-khoahoc-congnghe {
+    height: auto;
+    padding-bottom: 15px;
+    z-index: 99;
+}
+
+.cot2 {
+    width: 20% !important;
+}
+
+    .cot2 img {
+        width: 87%;
+    }
+
+.menu-hoptacquocte > ul.menu-content > li > a:hover {
+    text-decoration: none !important;
+}
+
+.menu-lich-thongbao .menu-content, .menu-hoptacquocte .menu-content,
+.menu-quantrinhatruong .menu-content {
+    margin-top: 0;
+    padding-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+    #hoptacquocte .ul-content > li > a, .menu-quantrinhatruong .menu-content li a, .menu-lich-thongbao .menu-content li a {
+        color: #0078d7 !important;
+        font-size: 16px;
+    }
+
+
+    .menu-lich-thongbao .menu-content li, .menu-hoptacquocte .menu-content li,
+    .menu-quantrinhatruong .menu-content li {
+        height: auto !important;
+    }
+
+    .menu-lich-thongbao .menu-content ul li:hover, .menu-hoptacquocte .menu-content ul li:hover,
+    .menu-quantrinhatruong .menu-content ul li:hover {
+        /*background-color: #22a6d1;*/
+        /*border-bottom: 1.5px solid #22a6d1 !important;*/
+        transition: all 0.3s;
+    }
+
+        .menu-lich-thongbao .menu-content ul li:hover a,
+        .menu-quantrinhatruong .menu-content ul li:hover a,
+        .menu-hoptacquocte .menu-content ul li:hover a {
+            color: #d50600 !important;
+            text-decoration: none !important;
+        }
+
+#hoptacquocte .ul-content > li > a:hover, #quantrinhatruong .ul-content > li > a:hover, #lich-thongbao .ul-content > li > a:hover {
+    color: #cd2122 !important;
+    text-decoration: underline !important;
+}
+
+
+.menu-lich-thongbao .menu-content ul li, .menu-hoptacquocte .menu-content ul li,
+.menu-quantrinhatruong .menu-content ul li {
+    height: 45px;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid #afdcff;
+    background-color: white;
+}
+
+    .menu-lich-thongbao .menu-content ul li:last-child, .menu-hoptacquocte .menu-content ul li:last-child,
+    .menu-quantrinhatruong .menu-content ul li:last-child {
+        border-bottom: 0;
+    }
+
+ul.main-menu > li:hover > div {
+    display: block;
+}
+
+#gioithieu:hover .menu-gt-truong {
+    display: block;
+}
+
+#lich-thongbao:hover .menu-lich-thongbao {
+    display: block;
+}
+
+.menu-daotao {
+    left: 0;
+}
+
+#daotao:hover .menu-daotao {
+    display: block;
+}
+
+.menu-khoahoc-congnghe {
+    left: 0;
+}
+
+#khoahoc-congnghe:hover .menu-khoahoc-congnghe {
+    display: block;
+}
+
+#hoptacquocte:hover .menu-hoptacquocte {
+    display: block;
+}
+
+.menu-tuyensinh {
+    left: 0;
+}
+
+#tuyensinh:hover .menu-tuyensinh {
+    display: block;
+}
+
+.menu-daotao .menu-content {
+    margin-top: 15px;
+}
+
+#quantrinhatruong:hover .menu-quantrinhatruong {
+    display: block;
+}
+
+.menu-left h4 {
+    color: #0078d7;
+}
+
+.menu-content {
+    /*  margin-top: 15px; */
+}
+
+    .menu-content a {
+        color: white;
+    }
+
+.cot {
+    margin-top: 15px;
+    width: 25%;
+    float: left;
+    padding: 5px;
+}
+
+.ul-content li {
+    list-style: none;
+    line-height: 1.9;
+}
+
+    .ul-content li ul {
+        padding-left: 10px;
+    }
+
+        .ul-content li ul li {
+            line-height: 2.2;
+        }
+
+.fa-angle-double-right:before {
+    font-size: 11px;
+}
+
+.ul-content {
+    padding: 10px;
+}
+
+    .ul-content > li > a {
+        color: #0078d7;
+        font-size: 15px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    .ul-content li a:hover {
+        transition: all 0.3s;
+        color: blue;
+    }
+
+    .ul-content li ul li a:hover {
+        color: blue;
+    }
+
+.cotdt {
+    width: 20%;
+    float: left;
+    padding: 5px;
+}
+
+.menu-content {
+    counter-reset: my-sec-counter;
+}
+/* .cot >.ul-content > li > a::before,.cotdt >.ul-content > li > a::before{
+       counter-increment: my-sec-counter;
+    content: counter(my-sec-counter) ". ";
+ } */
+.menu-con > li > .content-icon-menu-con > a {
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    text-transform: none;
+    color: #333 !important;
+    padding: 0px !important;
+}
+
+
+
+#gioithieu .pd3 {
+    width: 22%;
+}
+
+#gioithieu .pd4 {
+    width: 28%;
+    padding: 0px;
+}
+
+    #gioithieu .pd4 img {
+        width: 100%;
+        height: 318px;
+    }
+
+.icon-menu-con {
+    width: 3%;
+    float: left;
+    padding-left: 0 !important;
+}
+
+.content-icon-menu-con {
+    width: 92%;
+    float: left;
+    margin-left: 7px;
+    text-align: left;
+}
+/*.main-menu > li.menu_active {
+    background: rgb(34, 166, 209) !important;
+}*/
+
+.main-menu > li.menu_active > a {
+}
+
+.ul-content > li.menu_active > a {
+    color: #e12523 !important;
+    text-decoration: underline;
+}
+
+.menu-con div.menu_active > a {
+    color: #e12523 !important;
+}
+
+.main-menu > li:hover > a {
+    color: #000 !important;
+    transition: all 0.3s;
+}
+
+.main-menu > li:focus > a {
+    color: #fb6a65;
+}
+
+.cot5 {
+    width: 20% !important;
+}
+
+
+.show-error {
+    display: block;
+}
+
+.is-error {
+    float: left;
+    color: red;
+    font-style: italic;
+    display: none;
+}

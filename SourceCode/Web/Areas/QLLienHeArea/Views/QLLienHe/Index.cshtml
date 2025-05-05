@@ -1,0 +1,65 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.QLLienHeArea.Models
+@model IndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    ViewBag.Title = "Quản lý liên hệ";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListData.ListItem));
+}
+
+
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Quản lý liên hệ</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+                </a>
+            </div>
+        </div>
+        @Html.Partial("_SearchPartial")
+        <div class="widge-t-body">
+            <div id="tbl-QLLienHe" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Email</th>
+                            <th>Tiêu đề</th>
+                            <th>Người gửi</th>
+                            <th>Nội dung</th>
+                            <th>Thời gian phản hồi</th>
+                            <th>Trạng thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.ListData.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.ListData.Count" />
+<script>
+    var groupData = eval(@groupData);
+</script>
+<script src="~/Scripts/modules/QLLienHe/QLLienHe.js"></script>
+<script>
+    function CreateUnit() {
+        $.ajax({
+            type: "get",
+            url: "/QLLienHeArea/QLLienHe/Index",
+            success: function (rs) {
+                $("#globalModal").html(rs);
+                $("#globalModal").modal("show");
+            }, error: function (er) {
+                console.log(er);
+            }
+        })
+    }
+</script>

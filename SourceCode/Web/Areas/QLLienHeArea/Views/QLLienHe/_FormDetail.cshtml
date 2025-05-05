@@ -1,0 +1,93 @@
+﻿@using mojoPortal.Model.Data
+@{
+    ViewBag.Title = "Thông tin chi tiêt";
+    var data = ViewBag.data as mp_ContactFormMessage;
+}
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmConfig .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        padding-right: 10px !important;
+    }
+</style>
+<div class="modal-dialog" style="width:1000px;max-width:100%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Nội dung liên hệ</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <h3 class="legend-title">Thông tin chi tiết</h3>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" style="padding-top: 0px">Người gửi:</label>
+                    <div class="col-sm-10">
+                        @data.Url
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" style="padding-top: 0px">Email người gửi:</label>
+                    <div class="col-sm-10">
+                        @data.Email
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" style="padding-top: 0px">Tiêu đề:</label>
+                    <div class="col-sm-10">
+                        @data.Subject
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" style="padding-top: 0px">Nội dung:</label>
+                    <div class="col-sm-10">
+                        @Html.Raw(data.Message)
+                    </div>
+                </div>
+                @if (data.TrangThai == 1)
+                {
+                    <br />
+                    <div class="form-group">&nbsp;</div>
+                    <br />
+
+                    <h3 class="legend-title">Thông tin phản hồi</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" style="padding-top: 0px">Thời gian phản hồi:</label>
+                        <div class="col-sm-10">
+                            @string.Format("{0:dd/MM/yyyy HH:mm}", data.ThoiGianPhanHoi)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" style="padding-top: 0px">Nội dung phản hồi:</label>
+                        <div class="col-sm-10">
+                            @Html.Raw(data.NoiDungPhanHoi)
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="modal-footer center boder-box">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.ClientArea.Models
+@model IndexClientVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListData.ListItem));
+}
+<style>
+    .div_backgroup {
+        background: antiquewhite;
+        width: 160px;
+    }
+
+    .pd10 {
+        /*padding: 10px;*/
+    }
+
+    .div_backgroup p, .div_backgroup a {
+        font-weight: bold;
+    }
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Danh sách cổng thông tin thành viên</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+                </a>
+                <a href="javascript:void(0)" onclick="onEdit(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                </a>
+            </div>
+        </div>
+        @Html.Partial("_SearchPartial")
+        <div class="widge-t-body no-padding">
+            <div id="tbl-client" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Thao tác</th>
+                            <th class="text-center">Cổng thành viên</th>
+                            <th class="text-center">Mã cổng thành viên</th>
+                            <th class="text-center">Domain</th>
+                            <th class="text-center">Danh sách chuyên mục</th>
+                            @*<th class="text-center">ClientSignIn</th>
+                            <th class="text-center">ClientSignOut</th>*@
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.ListData.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.ListData.Count" />
+
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    var groupData = eval(@groupData);
+    $(document).ready(function () {
+    });
+</script>
+<script src="~/Scripts/modules/sso/client.js"></script>

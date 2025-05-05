@@ -1,0 +1,44 @@
+@{
+    ViewBag.Title = "Quản lý lịch công tác";
+    Layout = "~/Views/Shared/_LayoutAce.cshtml";
+    ViewBag.ModuleName = "Quản lý Quản lý lịch công tác";
+    ViewBag.PageName = "Thông tin Quản lý lịch công tác";
+    ViewBag.ModuleCode = "QL_LichCongTac_detail";
+}
+@using Hinet.Model.IdentityEntities
+@using Hinet.Model.Entities
+@using Hinet.Web.Areas.QL_LichCongTacArea.Models
+
+@model DetailVM
+@section ActionBarRight{
+    <a href="/QL_LichCongTacArea/QL_LichCongTac/Index" class="btn btn-primary btn-sm"><i class="fa fa-reply" aria-hidden="true"></i> Quay lại</a>
+}
+
+<div class="row">
+     <div class="col-sm-12">
+           <table class="table-info">
+           	
+<tr><td>Nhân sự</td><td>@Model.objInfo.IdUser</td></tr>
+<tr><td>Ngày làm việc</td><td>@Model.objInfo.NgayLamViec</td></tr>
+<tr><td>Giờ bắt đầu</td><td>@Model.objInfo.GioBatDau</td></tr>
+<tr><td>Giờ kết thúc</td><td>@Model.objInfo.GioKetThuc</td></tr>
+<tr><td>Ghi chú</td><td>@Model.objInfo.GhiChu</td></tr>
+<tr><td></td><td>@Model.objInfo.CreatedDate</td></tr>
+<tr><td></td><td>@Model.objInfo.CreatedBy</td></tr>
+<tr><td></td><td>@Model.objInfo.CreatedID</td></tr>
+<tr><td></td><td>@Model.objInfo.UpdatedDate</td></tr>
+<tr><td></td><td>@Model.objInfo.UpdatedBy</td></tr>
+<tr><td></td><td>@Model.objInfo.UpdatedID</td></tr>
+<tr><td></td><td>@Model.objInfo.IsDelete</td></tr>
+<tr><td></td><td>@Model.objInfo.DeleteTime</td></tr>
+<tr><td></td><td>@Model.objInfo.DeleteId</td></tr>
+
+           </table>
+     </div>
+    
+</div>
+
+<script>
+
+</script>
+@Scripts.Render("~/bundles/jqueryval")

@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Quản lý lịch công tác";
+    Layout = "~/Views/Shared/_LayoutAce.cshtml";
+    ViewBag.ModuleName = "Quản lý lịch công tác";
+    ViewBag.PageName = "Danh sách lịch công tác";
+    ViewBag.ModuleCode = "QL_LichCongTac_lichcongtac";
+}
+
+@using Hinet.Service.QL_LichCongTacService.Dto
+@model ShowLichCongTacIndexDto
+
+<div class="listvanban__box__thaotac wf100">
+    <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+        <a class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-previous" style="background: #0781c7 !important">
+            <i class="fa fa-angle-double-left"></i> <span>Tuần trước</span>
+        </a>
+        <a class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-next" style="background: #0781c7 !important ">
+            <span>Tuần tiếp theo</span> <i class="fa fa-angle-double-right"></i>
+        </a>
+    </div>
+</div>
+<div id="boxRender">
+    @Html.Partial("_LichCongTacPartial", Model)
+</div>
+
+
+<script>
+    function toDateObj(date) {
+        try {
+            var dateParts = date.split("/");
+            var day = dateParts[0];
+            var month = dateParts[1] - 1;
+            var year = dateParts[2];
+            return new Date(year, month, day);
+        } catch (err) {
+            return null;
+        }
+    }
+
+    Date.prototype.addDays = function (days) {
+        var date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    }
+
+    Date.prototype.ToStringVN = function () {
+        var date = new Date(this.valueOf());
+        var year = date.getFullYear();
+
+        var month = (1 + date.getMonth()).toString();
+        month = month.length > 1 ? month : '0' + month;
+
+        var day = date.getDate().toString();
+        day = day.length > 1 ? day : '0' + day;
+
+        return day + '/' + month + '/' + year;
+    }
+
+    var sdate = toDateObj('@Model.sDate.ToString("dd/MM/yyyy")');
+
+    $("#btn--add-next").click(function () {
+        console.log("next");
+        sdate = sdate.addDays(7);
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+        AjaxCall('/QL_LichCongTacArea/QL_LichCongTac/LichCongTacView', 'post', data, function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+
+    })
+
+    function reloadTablePersonal() {
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+        AjaxCall('/QL_LichCongTacArea/QL_LichCongTac/LichCongTacView', 'post', data, function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+    }
+    $("#btn--add-previous").click(function () {
+        sdate = sdate.addDays(-7);
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+        AjaxCall('/QL_LichCongTacArea/QL_LichCongTac/LichCongTacView', 'post', data, function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+    })
+</script>

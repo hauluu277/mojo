@@ -1,0 +1,88 @@
+﻿@using mojoPortal.Service.CommonModel.LichLamViec
+@model ShowLichCongTacIndexDto
+<style>
+    .table.table-bordered thead tr td {
+        background-color: #0781c7;
+        color: #fff;
+    }
+
+    .title-h3 {
+        width: 100%;
+        float: left;
+        text-align: left;
+        background: rgb(5, 104, 51);
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    #btn--add-previous, #btn--add-next {
+        background-color: #cccc;
+        color: #c62d2f;
+    }
+
+    #boxRender {
+        width: 100%;
+        float: left;
+    }
+
+    .color-red {
+        color: #c62d2f;
+    }
+</style>
+@if (Model != null)
+{
+    <div>
+        <h3 class="title-h3">Lịch công tác từ ngày @string.Format("{0:dd/MM/yyyy}", Model.sDate) - @string.Format("{0:dd/MM/yyyy}", Model.eDate)</h3>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>Ngày công tác</th>
+                    <th>Thời gian</th>
+                    <th>Nội dung</th>
+                    <th>Địa điểm</th>
+                    <th>Thành phần tham dự</th>
+                </tr>
+                @if (Model.ListInforLich != null && Model.ListInforLich.Any())
+                {
+                    foreach (var item in Model.NgayTrongTuan)
+                    {
+                        var listLich = Model.ListInforLich.Where(x => x.NgayLamViec == item.dateTime).ToList();
+                        var rowSpan = listLich.Count();
+
+                        var indexFirst = true;
+                        foreach (var itemLich in listLich)
+                        {
+                            <tr>
+                                @if (indexFirst)
+                                {
+                                    indexFirst = false;
+                                    <td width="120px" class="text-center color-red" rowspan="@rowSpan">@item.TenHienThi <br> @string.Format("{0:dd/MM/yyyy}", item.dateTime)</td>
+                                }
+                                <td width="100px" class="text-center">@string.Format("{0:HH:mm}", itemLich.ThoiGianLamViec)</td>
+                                <td>@itemLich.NoiDung</td>
+                                <td width="250px">@itemLich.DiaDiem</td>
+                                <td width="150px">
+                                    @foreach (var user in itemLich.ListThanhPhanThamDu)
+                                    {
+                                        <p>@user</p>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="color-red text-center">Tuần này chưa có dữ liệu lịch công tác</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+

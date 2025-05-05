@@ -1,0 +1,63 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model BieuMauThongTinListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    var groupData = Model.DanhSachBieuMauThongTin.ListItem;
+}
+
+<style>
+    .bieumau-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 10px 10px;
+    }
+
+        .bieumau-container .bieumau-item {
+            width: 200px;
+            height: 150px;
+            text-align:center;
+            padding: 10px;
+            word-wrap: break-word;
+            border:2px solid #00872f;
+            border-radius:5px;
+            margin: 10px;
+        }
+
+    .bieumau-item-text {
+        margin-top:20px;
+        display:flex;
+        text-align:center;
+        justify-content:center;
+        align-items:center;
+    }
+</style>
+
+<div id="content">
+    @if (groupData.Any())
+    {
+        <div class="bieumau-container">
+            @foreach (var itemData in groupData)
+            {
+                <a class="bieumau-item" href="~/GlobalModule/BieuMauThongTin/KeKhai.aspx?idBieuMau=@itemData.Id">
+                    <div>
+                        <b>
+                            @((groupData.IndexOf(itemData) + 1) + ")") @itemData.Ten.ToUpper()
+                        </b>
+                    </div>
+                    <b class="bieumau-item-text">
+                        <i class="fa fa-edit"></i>&nbsp;Thực hiện
+                    </b>
+                </a>
+            }
+        </div>
+    }
+    else
+    {
+        <center class="text-center text-danger">
+            <i class="fa fa-times"></i>&nbsp;KHÔNG CÓ BIỂU MẪU THÔNG TIN
+        </center>
+    }
+</div>

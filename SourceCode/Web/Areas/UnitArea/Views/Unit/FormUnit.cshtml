@@ -1,0 +1,224 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.UnitArea.Models
+@model UnitFormVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+    ViewBag.Title = "Quản lý đơn vị/Tổ chức xã hội";
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+<style>
+    .content__main_table {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .listvanban__box_admin {
+        padding: 10px !important;
+        border: 1px solid #ccc !important;
+        background: #fff;
+    }
+
+    .wf100 {
+        width: 100%;
+        float: left;
+    }
+
+    #listvanban h2, .listvanban__box_admin h2 {
+        margin-top: 0;
+        font-size: 18px;
+        letter-spacing: .5px;
+        margin-bottom: 0;
+        background-color: #cfe7fa;
+        padding: 12px;
+        border-radius: 3px;
+        color: #1a9cef;
+    }
+
+    .table_admin .listvanban__box__thaotac {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+    .listvanban__box__thaotac {
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .listvanban__box__thaotac__row {
+        display: flex;
+    }
+
+    .pd0, #button-menu {
+        padding: 0;
+    }
+
+    .listvanban__box__thaotac__btn {
+        background-color: #308ee0;
+        border-radius: 3px;
+        color: #fff;
+        padding: 5px 20px;
+        margin-right: 5px;
+    }
+
+    .listvanban__box__thaotac__btn {
+        background-color: #308ee0;
+        border-radius: 3px;
+        color: #fff;
+        padding: 5px 20px;
+        margin-right: 5px;
+    }
+
+    header, footer, #content, .content__main_table .widge-t-body, #collapseDiv {
+        float: left;
+        width: 100%;
+    }
+
+    .widge-t-body {
+        background: #fff;
+    }
+
+    .select2 {
+        width: 100% !important;
+        max-width: 100%;
+    }
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Thêm mới đơn vị phòng ban/Tổ chức XH</h2>
+        </div>
+        @Html.HiddenFor(x => x.ItemID)
+        @using (
+        Ajax.BeginForm("SaveForm", "Unit",
+        new AjaxOptions { HttpMethod = "POST", OnSuccess = "AjaxSuccsess", OnFailure = "AjaxError" },
+        new { @class = "", enctype = "multipart/form-data", id = "frmUnit", area = "UnitArea" }))
+        {
+            <div class="widge-t-body no-padding">
+                <div class="form-horizontal">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Thông tin đơn vị phòng ban/Tổ chức XH</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Tiêu đề <span class="red">*</span></label>
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.Title)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Quyền chỉnh sửa</label>
+                                <div class="col-sm-10">
+                                    @Html.DropDownListFor(x => x.AllowUserEdit, Model.ListUser, "--Quyền chỉnh sửa--", new { @class = "select2 form-control", @multiple = "mutiple" })
+                                    @Html.ValidationMessageFor(x => x.AllowUserEdit)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Đường dẫn <span class="red">*</span></label>
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(x => x.ItemUrl, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.ItemUrl)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Loại <span class="red">*</span></label>
+                                <div class="col-sm-4">
+                                    @Html.DropDownListFor(x => x.Type, Model.ListType, new { @class = "select2 form-control" })
+                                    @Html.ValidationMessageFor(x => x.Type)
+                                </div>
+                                <label class="control-label col-sm-2">Thứ tự</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(x => x.OrderBy, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.OrderBy)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label  col-sm-2" for="IsPublished">Xuất bản</label>
+                                <div class="col-sm-4">
+                                    <input type="checkbox"  name="IsPublished" id="IsPublished">
+                                </div>
+                                <label class="control-label col-sm-2" for="IsShowQuestion">Hiển thị câu hỏi</label>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="IsShowQuestion" id="IsShowQuestion">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Nội dung đơn vị phòng ban/Tổ chức XH
+                        </div>
+                        <div class="panel-body">
+                            <div style="width:100%;float:left;border:1px solid #ccc;padding:10px;">
+                                <div style="width:50%;float:left">
+                                    <div class="col-sm-12 form-group">
+                                        <label class="col-sm-4">Tiêu đề</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <label class="col-sm-4">Loại nội dung</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <label class="col-sm-4">Thứ tự</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <label class="col-sm-4">Xuất bản</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width:50%;float:left">
+                                    <textarea id="NoiDung" class="form-control ckeditor_control"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer center boder-box">
+                <button type="submit" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Quay lại</span>
+                </button>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".select2").select2();
+        LoadCkeditor("NoiDung");
+    })
+
+
+
+    function checkSubmid() {
+        return false;
+    }
+    function CreateUnit() {
+        $.ajax({
+            type: "get",
+            url: "/UnitArea/Unit/CreateUnit",
+            success: function (rs) {
+                $("#myModal").html(rs);
+                $("#myModal").modal("show");
+            }, error: function (er) {
+                console.log(er);
+            }
+        })
+    }
+
+
+
+</script>

@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+}
+
+
+
+
+<div class="listvanban__box__thaotac wf100">
+    <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+        <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+            <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+        </a>
+        <a href="javascript:void(0)" onclick="onEdit(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+            <i class="fa fa-plus"></i> <span>Thêm mới</span>
+        </a>
+    </div>
+</div>
+
+
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Danh sách lịch công tác</h2>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    function onEdit(id) {
+        OpenFormModal('get', '/LyLichNewArea/LyLichNew/FormClient', { id: id });
+    }
+</script>

@@ -1,0 +1,188 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model BieuMauThongTinListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.DanhSachBieuMauThongTin.ListItem));
+}
+
+
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Quản lý biểu mẫu thông tin</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i> <span>Tìm kiếm</span>
+                </a>
+                <a href="javascript:void(0)" onclick="onEdit(0)" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                </a>
+            </div>
+        </div>
+
+        @Html.Partial("_SearchBieuMauThongTin")
+
+        <div class="widge-t-body">
+            <div id="tbl-BieuMauThongTin" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Tên biểu mẫu</th>
+                            @*<th>Ngày tạo</th>*@
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.DanhSachBieuMauThongTin.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.DanhSachBieuMauThongTin.Count" />
+<script>
+    var groupData = eval(@groupData);
+
+    function pagingConfig() {
+        var conf = [];
+        conf = [
+            {
+                tdClass: "center width-30",
+                isSort: false,
+                nameModel: "",
+                isCounter: true,
+                content: function (data) {
+                    return "<input type='checkbox' value='" + data.ItemID + "'/>"
+                }
+            },
+            {
+                isSort: true,
+                nameModel: 'Ten',
+                content: function (data) {
+                    return data.Ten;
+                }
+            },
+            
+            //{
+            //    isSort: true,
+            //    nameModel: 'NgayTao',
+            //    content: function (data) {
+            //        return toDate2(data.NgayTao)
+            //    }
+            //},
+            {
+                isSort: true,
+                tdClass: 'text-center',
+                nameModel: 'IsShow',
+                content: function (data) {
+                    return data.IsShow ? "Hiển thị": "Ẩn";
+                }
+            },
+            {
+                isSort: false,
+                nameModel: 'ThaoTac',
+                content: function (data) {
+                    var html = "";
+                    html += "<div class='btn-group gr-nghiphep'>";
+                    html += '<a href="javascript:onEdit(' + data.Id + ')" class="btn-edit hvr-radial-out" data-id="10595" title="Chỉnh sửa"><i class="fa fa-pencil-square fa-lg"></i></a>';
+
+                    html += '<a href="javascript:void(0)" onclick="onDelete(' + data.Id + ', this)" class="btn-remove hvr-radial-out" data-id="' + data.Id + '" data-object-name="' + data.Ten + '" title="Xóa"><i class="fa fa-trash"></i></a>';
+
+                    html += '<a href="/GlobalModule/bieumauthongtin/Detail.aspx?id=' + data.Id + '" class="btn-remove hvr-radial-out" data-id="' + data.Id + '" data-object-name="' + data.Ten + '" title="Chi tiết"><i class="fa fa-cog"></i></a>';
+                    html += "</div>";
+                    return html;
+                }
+            },
+        ];
+
+        var getData = function (pageIndex, sortQuery, pageSize) {
+            $.ajax({
+                url: '/BieuMauThongTinArea/BieuMauThongTin/GetData',
+                type: 'post',
+                cache: false,
+                data: {
+                    "pageIndex": pageIndex,
+                    "sortQuery": sortQuery,
+                    "pageSize": pageSize
+                },
+                success: function (data) {
+                    $("#tbl-BieuMauThongTin").hinetTable("data", {
+                        pageSize: pageSize != -1 ? pageSize : data.Count,
+                        pageIndex: pageIndex,
+                        pagecount: data.TotalPage,
+                        recordCount: data.Count,
+                        listItem: data.ListItem,
+                    });
+                },
+                error: function (err) {
+                    CommonJS.alert(xhr.responseText);
+                }
+            });
+
+        }
+
+        var tableData = $("#tbl-BieuMauThongTin").hinetTable("init", {
+            pageSizeList: { size: [20, 50, 100, -1], label: ['20', '50', '100', 'Tất cả'] },
+            pagecount: $('#total-page').val(),
+            recordCount: $('#total-record').val(),
+            getData: getData,
+            listItem: groupData,
+            config: conf
+        });
+
+    }
+
+    var reloadTable = function () {
+        $("#tbl-BieuMauThongTin").hinetTable("reload");
+    }
+
+    var toDate2 = function (date) {
+        if (date) {
+            var arr = date.split('-');
+            if (arr.length > 2) {
+                var year = arr[0];
+                var month = arr[1];
+                var day = arr[2].substring(0, 2);
+                return `${day}/${month}/${year}`;
+            }
+        }
+        return "";
+    }
+
+    var onEdit = function (id) {
+        OpenFormModal('get', '/BieuMauThongTinArea/BieuMauThongTin/EditBieuMauThongTin', { id: id });
+    }
+
+    var onDelete = function (id, obj) {
+        var name = $(obj).attr("data-object-name");
+        if (confirm("Xác nhận xóa biểu mẫu thông tin '" + name + "'?")) {
+            $.ajax({
+                type: "post",
+                url: "/BieuMauThongTinArea/BieuMauThongTin/Delete",
+                data: { id: id },
+                success: function (result) {
+                    if (result.Status) {
+                        NotifySuccess(result.Message);
+                        reloadTable();
+                    } else {
+                        NotifyError(result.Message);
+                    }
+                }, error: function (er) {
+                    console.log(er.Message);
+                }
+            })
+        }
+    }
+
+    $(document).ready(function () {
+        pagingConfig();
+    })
+
+</script>

@@ -1,0 +1,79 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.GiaoDienArea.Models
+@model DaTaFileVM
+
+<script src="~/Data/plugins/EditorCodeMirror/codemirror.min.js"></script>
+<link href="~/Data/plugins/EditorCodeMirror/codemirror.min.css" rel="stylesheet" />
+<style>
+    .CodeMirror {
+        height: 70vh;
+    }
+</style>
+<div>
+
+    @if (Model.isImg != true)
+    {
+        <div style="text-align:center;margin-bottom:15px">
+            <button id="save" type="button" onclick="saveData()">Lưu dữ liệu</button>
+        </div>
+    }
+    <textarea style="height:70vh" id="EditorDataFile" @(Model.isImg == true ? "hidden" : "")>@Html.Raw(Model.Data)</textarea>
+    @if (Model.isImg == true)
+    {
+        <img src="@Model.Data" />
+    }
+
+
+
+</div>
+
+<script>
+
+        var editor = CodeMirror.fromTextArea(document.getElementById('EditorDataFile'), {
+            mode: "javascript",
+            lineNumbers: true,
+        });
+        editor.save();
+
+    function saveData() {
+        var datasave = editor.getValue();
+        $.ajax({
+            url: '/GiaoDienArea/GiaoDien/saveFileData',
+            type: 'post',
+            cache: false,
+            async: true,
+            data: { "datasave": datasave, "pathFile": "@Model.pathFileData" },
+            success: function (rs) {
+                debugger
+                NotifySuccess(rs.Message);
+                ReloadTree();
+            },
+            error: function (err) {
+                NotifyError(err.Message);
+            }
+        });
+    }
+
+    function ReloadTree() {
+        var nameFile = '@Model.nameFile';
+        var Duongdan = '@Model.duongdan';
+            $.ajax({
+                url: '/GiaoDienArea/GiaoDien/getDataFile',
+                type: 'post',
+                cache: false,
+                async: true,
+                data: { "nameFile": nameFile, "duongdan": Duongdan },
+                success: function (datareturn) {
+                   $("#viewfileData").html(datareturn);
+                },
+                error: function (err) {
+                  /* CommonJS.alert(err.responseText);*/
+                }
+            });
+    }
+    if ('@Model.isImg' === 'True') {
+        $(".CodeMirror ").css("display", "none");
+    }
+
+</script>
+

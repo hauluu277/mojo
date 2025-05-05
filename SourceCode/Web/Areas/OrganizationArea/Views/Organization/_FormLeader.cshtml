@@ -1,0 +1,136 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.OrganizationArea.Models
+@model LeaderFormVM
+@{
+
+    var title = "Thêm mới lãnh đạo";
+    if (Model.ItemID > 0)
+    {
+        title = "Cập nhật lãnh đạo";
+    }
+}
+@using (
+Ajax.BeginForm("SaveLeader", "Organization",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxLeaderSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmLeader", area = "OrganizationArea" }))
+{
+    @Html.HiddenFor(x => x.ItemID)
+    @Html.HiddenFor(x => x.CCTC_ID)
+
+    <div class="modal-dialog" style="width:80%; min-width:850px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@title</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Họ tên<span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Title)
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Chức vụ <span class="red">*</span></label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.ChucVu, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ChucVu)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Hình ảnh</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.PathIMG, new { @class = "form-control", @style = "width:calc(100% - 100px)" })
+                            &nbsp;
+                            <button type="button" class="btn btn-default" onclick="GetUrlImage()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Email</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Số điện thoại</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Phone)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Url</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.LinkDetail, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.LinkDetail)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Thứ tự hiển thị</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(x => x.OrderBy, new { @class = "form-control",@type="number" })
+                            @Html.ValidationMessageFor(x => x.OrderBy)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitFormLeader()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@*@Scripts.Render("~/bundles/jqueryval")*@
+
+<script>
+    function GetUrlImage() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("#PathIMG").val(fileUrl);
+            //$("#viewVideo").empty();
+            //$("#viewVideo").append("<img src='" + fileUrl + "' width='200'/>");
+            //$("#PathFile").change();
+        };
+        finder.popup();
+    }
+    function AjaxError(er) {
+        console.log(er.Message);
+    }
+    function SubmitFormLeader() {
+        var checkSubmit = jQuery('#frmLeader').valid();
+        if (checkSubmit) {
+
+            $("#frmLeader").submit();
+        }
+    }
+
+    function ajaxLeaderSucces(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+            reloadTableLeader();
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+
+
+</script>

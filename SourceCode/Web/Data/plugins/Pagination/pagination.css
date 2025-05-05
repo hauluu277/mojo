@@ -1,0 +1,208 @@
+.pagination {
+    position: relative;
+    z-index: 1;
+    margin: 20px auto;
+    padding: 0;
+    text-align: center;
+    overflow: inherit;
+    width: 100%;
+    height: auto !important;
+}
+
+.pagination .list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pagination .list,
+.pagination {
+    list-style-type: none;
+}
+
+.pagination .center,
+.pagination .right {
+    position: absolute;
+    z-index: 2;
+}
+
+.pagination .center {
+    left: 50%;
+}
+
+.pagination .right {
+    right: 0;
+}
+
+.pagination .page {
+      float: left;
+    display: inline;
+    width: auto;
+    height: auto;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #FAFAFA;
+    color: #696969;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.pagination .page:hover {
+    background-color: #F1F1F1;
+    color: #3C3C3C;
+}
+
+.pagination .first,
+.pagination .first:hover {
+    margin-left: 0;
+}
+
+.pagination .last,
+.pagination .last:hover {
+    margin-right: 0;
+}
+
+.pagination .pages,
+.pagination .pages:hover,
+.pagination .ellipsis,
+.pagination .ellipsis:hover {
+    font-weight: normal;
+    cursor: text;
+}
+
+.pagination .ellipsis,
+.pagination .ellipsis:hover {
+    background-color: #FFF;
+}
+
+.pagination .prev,
+.pagination .prev:hover,
+.pagination .next,
+.pagination .next:hover {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.pagination .current,
+.pagination .current:hover {
+    font-style: normal;
+    background-color: #FFF;
+    color: #666;
+    cursor: text;
+}
+
+.disabled .pages,
+.disabled .pages:hover,
+.disabled .page,
+.disabled .page:hover,
+.disabled .ellipsis,
+.disabled .ellipsis:hover,
+.disabled .prev,
+.disabled .prev:hover,
+.disabled .next,
+.disabled .next:hover,
+.pagination .disabled,
+.pagination .disabled:hover {
+    background-color: #F1F1F1;
+    cursor: not-allowed;
+}
+
+    .pagination .text,
+    .pagination a.text:link,
+    .pagination a.text:visited,
+    .pagination a.text:hover {
+    padding: 8px;
+    height: auto;
+    line-height: 28px;
+    color: #696969;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    position: initial;
+    overflow: inherit;
+    transition: initial;
+    }
+
+.pagination .ellipsis .text {
+    border: 1px solid #FFF;
+}
+
+.disabled .pages .text,
+.disabled .pages:hover .text,
+.disabled .page .text,
+.disabled .page:hover .text,
+.disabled .ellipsis .text,
+.disabled .ellipsis:hover .text,
+.disabled .prev .text,
+.disabled .prev:hover .text,
+.disabled .next .text,
+.disabled .next:hover .text,
+.pagination .disabled .text,
+.pagination .disabled:hover .text {
+    color: #CCC;
+}
+
+.index {
+    font-style: normal;
+    background-color: transparent;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    visibility: visible;
+}
+.pagination .page a{
+padding:6px;	
+	
+}
+
+.reference-right{
+	width:25%;
+	float:left;
+	
+}
+.reference-right ul{
+	list-style:none;
+	
+}
+
+.reference-right span{
+	    cursor: pointer;
+    background: red;
+    font-weight: bold;
+    width: 38px;
+    float: left;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 16px;
+	
+}
+
+.reference-right ul li{
+	float: left;
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid #eeee;
+	
+}
+.poiter{
+	cursor:pointer;
+}

@@ -1,0 +1,137 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.UnitArea.Models
+@model UnitIndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+    ViewBag.Title = "Quản lý đơn vị";
+    //var groupData = Html.Raw(JsonConvert.SerializeObject(Model.PageData));
+}
+<style>
+    .content__main_table {
+        float: left;
+        width: 100%;
+    }
+
+    .listvanban__box_admin {
+        padding: 10px !important;
+        border: 1px solid #ccc !important;
+        background: #fff;
+    }
+
+    .wf100 {
+        width: 100%;
+        float: left;
+    }
+
+    #listvanban h2, .listvanban__box_admin h2 {
+        margin-top: 0;
+        font-size: 18px;
+        letter-spacing: .5px;
+        margin-bottom: 0;
+        background-color: #cfe7fa;
+        padding: 12px;
+        border-radius: 3px;
+        color: #1a9cef;
+    }
+
+    .table_admin .listvanban__box__thaotac {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+    .listvanban__box__thaotac {
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .listvanban__box__thaotac__row {
+        display: flex;
+    }
+
+    .pd0, #button-menu {
+        padding: 0;
+    }
+
+    .listvanban__box__thaotac__btn {
+        background-color: #308ee0;
+        border-radius: 3px;
+        color: #fff;
+        padding: 5px 20px;
+        margin-right: 5px;
+    }
+
+    .listvanban__box__thaotac__btn {
+        background-color: #308ee0;
+        border-radius: 3px;
+        color: #fff;
+        padding: 5px 20px;
+        margin-right: 5px;
+    }
+
+    header, footer, #content, .content__main_table .widge-t-body, #collapseDiv {
+        float: left;
+        width: 100%;
+    }
+
+    .widge-t-body {
+        background: #fff;
+    }
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Quản lý đơn vị phòng ban/Tổ chức XH</h2>
+        </div>
+        <div class="listvanban__box__thaotac wf100">
+            <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+                <a href="#collapseDiv" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom collapsed" aria-controls="collapsePanel" data-toggle="collapse" role="button">
+                    <i class="fa fa-search"></i>  <span>Tìm kiếm</span>
+                </a>
+                <a href="javascript:void(0)" onclick="CreateUnit()" class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-new">
+                    <i class="fa fa-plus"></i> <span>Thêm mới</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="widge-t-body no-padding">
+            <div id="tbl-qldonvi" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Tên</th>
+                            <th>Mã</th>
+                            <th>Giá trị</th>
+                            <th>Thứ tự hiển thị</th>
+                            <th>Ghi chú</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<script>
+        var groupData = eval(@groupData);
+    </script>*@
+@*<script src="~/Scripts/modules/unit/unit_index.js"></script>*@
+<div id="myModal" class="modal fade" role="dialog"></div>
+<script>
+    function CreateUnit() {
+        $.ajax({
+            type: "get",
+            url: "/UnitArea/Unit/FormUnit",
+            success: function (rs) {
+                $("#content_unit").html(rs);
+                //$("#myModal").html(rs);
+                //$("#myModal").modal("show");
+            }, error: function (er) {
+                console.log(er);
+            }
+        })
+    }
+</script>

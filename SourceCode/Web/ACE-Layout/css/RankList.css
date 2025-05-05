@@ -1,0 +1,211 @@
+﻿body {
+    width: 100%;
+}
+/*list rank tiltle*/
+.list-rank-Header {
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 100px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+    /*Màu xanh*/
+    .list-rank-Header.list-rank-Header-green .header-cover-2 {
+        border-color: #247980;
+        background: linear-gradient(to right,#a5d5af,#45927e);
+    }
+
+    .list-rank-Header.list-rank-Header-green .header-cover-1 {
+        border-color: #247980;
+        background: linear-gradient(to right,#a5d5af,#45927e);
+    }
+
+    .list-rank-Header.list-rank-Header-green .header-cover-main {
+        border-color: #247980;
+        background: linear-gradient(to right,#a5d5af,#45927e);
+    }
+/*Màu xanh*/
+.header-cover-2 {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #a55151;
+    border-radius: 15px;
+    background: linear-gradient(to right,#ff985b,#ee6c52);
+    position: absolute;
+    left: calc(50% - 30px);
+    margin: auto;
+    text-align: center;
+    z-index: -2;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: 70%;
+}
+
+.header-cover-1 {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #a55151;
+    border-radius: 20px;
+    background: linear-gradient(to right,#ff985b,#ee6c52);
+    height: 50px;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    box-shadow: #7f8c8d;
+    z-index: -1;
+}
+
+.header-cover-main {
+    position: relative;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #a55151;
+    border-radius: 10px;
+    background: linear-gradient(to right,#ff985b,#ee6c52);
+    color: white;
+    padding: 10px;
+}
+/*END list rank tiltle*/
+
+/*Rank lst Danh sách chờ*/
+.rankItem {
+    position: relative;
+    border-top: 10px solid #ecf0f1;
+    border-bottom: 10px solid #ecf0f1;
+    width: 100%;
+    float: left;
+    font-size: medium;
+    font-family: Arial;
+    margin: 5px 0;
+}
+
+.rankItem-green {
+    border-bottom-color: #16a085;
+}
+
+.rankItem-yellow {
+    border-bottom-color: #f0932b;
+}
+
+.rankItem-grey {
+    border-bottom-color: #7f8c8d;
+}
+
+
+.rankItem .rankItem-body {
+    position: relative;
+    width: 100%;
+}
+
+.rankItem.rankItem-green .rankItem-body .rankItem-left {
+    background-color: #16a085;
+    color: white;
+}
+
+.rankItem.rankItem-green .rankItem-body .rankItem-right {
+    color: #16a085;
+}
+
+.rankItem.rankItem-grey .rankItem-body .rankItem-left {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.rankItem.rankItem-grey .rankItem-body .rankItem-right {
+    color: #7f8c8d;
+}
+
+.rankItem.rankItem-yellow .rankItem-body .rankItem-left {
+    background-color: #f0932b;
+    color: white;
+}
+
+.rankItem.rankItem-yellow .rankItem-body .rankItem-right {
+    color: #f0932b;
+}
+
+.rankItem .rankItem-body .rankItem-left {
+    padding: 3px;
+    position: relative;
+    width: 20%;
+    display: inline;
+    background-color: #16a085;
+    float: left;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.rankItem .rankItem-body .rankItem-right {
+    position: relative;
+    width: 80%;
+    display: inline;
+    background-color: #ecf0f1;
+    float: left;
+    padding: 3px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+    .rankItem .rankItem-body .rankItem-right::before {
+        position: absolute;
+        left: -30px;
+        top: 0;
+        border-left: 30px solid transparent;
+        border-top: 50px solid #ecf0f1;
+        width: 0;
+        height: 0;
+        content: '';
+    }
+
+    .rankItem .rankItem-body .rankItem-right .item-label {
+    }
+
+    .rankItem .rankItem-body .rankItem-right .item-value {
+        float: right;
+        padding-right: 5px;
+    }
+
+/* END Rank lst Danh sách chờ*/
+
+
+/*rank main*/
+.rankItem-main {
+    border: 8px solid #499682;
+    border-radius: 15px;
+    color: white;
+    background: #8cc4a1;
+    padding: 15px 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+}
+
+.ChangeOnAction {
+    background-color: #feca57;
+}
+
+.rankItem-main .rankItem-label {
+    font-size: 30px;
+}
+
+.rankItem-main .rankItem-value {
+    font-size: 70px;
+}

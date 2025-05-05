@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB50DFC3-1D68-4C45-8082-9584A0E840B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mojoPortal.Model</RootNamespace>
+    <AssemblyName>mojoPortal.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditableEntity.cs" />
+    <Compile Include="Data\bentre_KeKhaiBieuMau.cs" />
+    <Compile Include="Data\bentre_NopBieuMau.cs" />
+    <Compile Include="Data\bentre_TieuChiBieuMau.cs" />
+    <Compile Include="Data\bentre_BieuMauThongTin.cs" />
+    <Compile Include="Data\core_Category.cs" />
+    <Compile Include="Data\core_CategoryUserArticle.cs" />
+    <Compile Include="Data\core_CauHinhHienThiLog.cs" />
+    <Compile Include="Data\core_CCTC.cs" />
+    <Compile Include="Data\core_CCTC_Department.cs" />
+    <Compile Include="Data\core_CCTC_Leader.cs" />
+    <Compile Include="Data\core_Client.cs" />
+    <Compile Include="Data\core_ClientCategory.cs" />
+    <Compile Include="Data\core_DanhMuc.cs" />
+    <Compile Include="Data\core_GiaoDien.cs" />
+    <Compile Include="Data\core_LichLamViec.cs" />
+    <Compile Include="Data\core_LogHeThong.cs" />
+    <Compile Include="Data\core_Menu.cs" />
+    <Compile Include="Data\core_SettingMenu.cs" />
+    <Compile Include="Data\core_SettingService.cs" />
+    <Compile Include="Data\core_SettingSSO.cs" />
+    <Compile Include="Data\core_ThongKeTruyCap.cs" />
+    <Compile Include="Data\core_ThuTuc.cs" />
+    <Compile Include="Data\core_ThuTuc_BieuMau.cs" />
+    <Compile Include="Data\core_ThuTuc_ThanhPhanHS.cs" />
+    <Compile Include="Data\core_Token.cs" />
+    <Compile Include="Data\core_TokenAD.cs" />
+    <Compile Include="Data\md_ArticleCategory.cs" />
+    <Compile Include="Data\md_Articles.cs" />
+    <Compile Include="Data\md_BaoCao.cs" />
+    <Compile Include="Data\mp_ContactFormMessage.cs" />
+    <Compile Include="Data\md_LichCongTacNew.cs" />
+    <Compile Include="Data\mp_Roles.cs" />
+    <Compile Include="Data\mp_Sites.cs" />
+    <Compile Include="Data\mp_UserRoles.cs" />
+    <Compile Include="Data\mp_Users.cs" />
+    <Compile Include="Data\tbldata.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="HinetContext.cs" />
+    <Compile Include="Migrations\202307030324288_add-tbl-data.cs" />
+    <Compile Include="Migrations\202307030324288_add-tbl-data.Designer.cs">
+      <DependentUpon>202307030324288_add-tbl-data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307030338152_add-tbl-data2.cs" />
+    <Compile Include="Migrations\202307030338152_add-tbl-data2.Designer.cs">
+      <DependentUpon>202307030338152_add-tbl-data2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307030339515_add-remove-tbl-data.cs" />
+    <Compile Include="Migrations\202307030339515_add-remove-tbl-data.Designer.cs">
+      <DependentUpon>202307030339515_add-remove-tbl-data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307070135492_addtbl.cs" />
+    <Compile Include="Migrations\202307070135492_addtbl.designer.cs">
+      <DependentUpon>202307070135492_addtbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307070212067_createCauHinh.cs" />
+    <Compile Include="Migrations\202307070212067_createCauHinh.designer.cs">
+      <DependentUpon>202307070212067_createCauHinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307070238064_Add_Table_BenTreBieuMauThongTin.cs" />
+    <Compile Include="Migrations\202307070238064_Add_Table_BenTreBieuMauThongTin.designer.cs">
+      <DependentUpon>202307070238064_Add_Table_BenTreBieuMauThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307070843134_Add_Col_Keys.cs" />
+    <Compile Include="Migrations\202307070843134_Add_Col_Keys.designer.cs">
+      <DependentUpon>202307070843134_Add_Col_Keys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307070954567_updatethongtincauhinh.cs" />
+    <Compile Include="Migrations\202307070954567_updatethongtincauhinh.designer.cs">
+      <DependentUpon>202307070954567_updatethongtincauhinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307071017224_Add_Table_bentreTieuChiBieuMau.cs" />
+    <Compile Include="Migrations\202307071017224_Add_Table_bentreTieuChiBieuMau.designer.cs">
+      <DependentUpon>202307071017224_Add_Table_bentreTieuChiBieuMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307071032356_Add_Col_CongThuc.cs" />
+    <Compile Include="Migrations\202307071032356_Add_Col_CongThuc.designer.cs">
+      <DependentUpon>202307071032356_Add_Col_CongThuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307071041219_Add_Col_GioiHanTren.cs" />
+    <Compile Include="Migrations\202307071041219_Add_Col_GioiHanTren.designer.cs">
+      <DependentUpon>202307071041219_Add_Col_GioiHanTren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307071056317_Add_Cols_ToTieuChiBieuMau.cs" />
+    <Compile Include="Migrations\202307071056317_Add_Cols_ToTieuChiBieuMau.designer.cs">
+      <DependentUpon>202307071056317_Add_Cols_ToTieuChiBieuMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307090326484_update-tbl-thutuc-bieumau.cs" />
+    <Compile Include="Migrations\202307090326484_update-tbl-thutuc-bieumau.designer.cs">
+      <DependentUpon>202307090326484_update-tbl-thutuc-bieumau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307100159190_addChuyenMucIdInTableCore_client.cs" />
+    <Compile Include="Migrations\202307100159190_addChuyenMucIdInTableCore_client.designer.cs">
+      <DependentUpon>202307100159190_addChuyenMucIdInTableCore_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307100327551_update-tbl-artile.cs" />
+    <Compile Include="Migrations\202307100327551_update-tbl-artile.designer.cs">
+      <DependentUpon>202307100327551_update-tbl-artile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307100340255_addClientIdInTablemd_Articles.cs" />
+    <Compile Include="Migrations\202307100340255_addClientIdInTablemd_Articles.designer.cs">
+      <DependentUpon>202307100340255_addClientIdInTablemd_Articles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307100733334_Add_Tables.cs" />
+    <Compile Include="Migrations\202307100733334_Add_Tables.designer.cs">
+      <DependentUpon>202307100733334_Add_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307100847182_Add_Col_NgayNop.cs" />
+    <Compile Include="Migrations\202307100847182_Add_Col_NgayNop.designer.cs">
+      <DependentUpon>202307100847182_Add_Col_NgayNop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307101126032_Add_Col_NgayNop_2.cs" />
+    <Compile Include="Migrations\202307101126032_Add_Col_NgayNop_2.designer.cs">
+      <DependentUpon>202307101126032_Add_Col_NgayNop_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307110446217_add-new-field-article.cs" />
+    <Compile Include="Migrations\202307110446217_add-new-field-article.designer.cs">
+      <DependentUpon>202307110446217_add-new-field-article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307111021452_Add_Path_BieuMauThongTin.cs" />
+    <Compile Include="Migrations\202307111021452_Add_Path_BieuMauThongTin.designer.cs">
+      <DependentUpon>202307111021452_Add_Path_BieuMauThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307111104235_Add_Col_IsShow.cs" />
+    <Compile Include="Migrations\202307111104235_Add_Col_IsShow.designer.cs">
+      <DependentUpon>202307111104235_Add_Col_IsShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307130449090_add-column-IdNhomCongThanhVien-core_Client.cs" />
+    <Compile Include="Migrations\202307130449090_add-column-IdNhomCongThanhVien-core_Client.designer.cs">
+      <DependentUpon>202307130449090_add-column-IdNhomCongThanhVien-core_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307240654330_add-tbl-core_SettingSSO.cs" />
+    <Compile Include="Migrations\202307240654330_add-tbl-core_SettingSSO.designer.cs">
+      <DependentUpon>202307240654330_add-tbl-core_SettingSSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308010317197_add-column-coreClient.cs" />
+    <Compile Include="Migrations\202308010317197_add-column-coreClient.designer.cs">
+      <DependentUpon>202308010317197_add-column-coreClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308010620112_add-table-core_clientCategory.cs" />
+    <Compile Include="Migrations\202308010620112_add-table-core_clientCategory.designer.cs">
+      <DependentUpon>202308010620112_add-table-core_clientCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308020255583_add-table-md_LichCongTacNew.cs" />
+    <Compile Include="Migrations\202308020255583_add-table-md_LichCongTacNew.designer.cs">
+      <DependentUpon>202308020255583_add-table-md_LichCongTacNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308070440190_add-tbl-core_LichLamViec.cs" />
+    <Compile Include="Migrations\202308070440190_add-tbl-core_LichLamViec.Designer.cs">
+      <DependentUpon>202308070440190_add-tbl-core_LichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308070749396_update-tblcore_LichLamViec.cs" />
+    <Compile Include="Migrations\202308070749396_update-tblcore_LichLamViec.Designer.cs">
+      <DependentUpon>202308070749396_update-tblcore_LichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308260743415_add-tbl-core_DanhMuc.cs" />
+    <Compile Include="Migrations\202308260743415_add-tbl-core_DanhMuc.Designer.cs">
+      <DependentUpon>202308260743415_add-tbl-core_DanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308261138170_update-tbl-core_SettingSSO.cs" />
+    <Compile Include="Migrations\202308261138170_update-tbl-core_SettingSSO.Designer.cs">
+      <DependentUpon>202308261138170_update-tbl-core_SettingSSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308261203319_update-tbl-core_ThongKeTruyCap.cs" />
+    <Compile Include="Migrations\202308261203319_update-tbl-core_ThongKeTruyCap.Designer.cs">
+      <DependentUpon>202308261203319_update-tbl-core_ThongKeTruyCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202307030324288_add-tbl-data.resx">
+      <DependentUpon>202307030324288_add-tbl-data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307030338152_add-tbl-data2.resx">
+      <DependentUpon>202307030338152_add-tbl-data2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307030339515_add-remove-tbl-data.resx">
+      <DependentUpon>202307030339515_add-remove-tbl-data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307070135492_addtbl.resx">
+      <DependentUpon>202307070135492_addtbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307070212067_createCauHinh.resx">
+      <DependentUpon>202307070212067_createCauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307070238064_Add_Table_BenTreBieuMauThongTin.resx">
+      <DependentUpon>202307070238064_Add_Table_BenTreBieuMauThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307070843134_Add_Col_Keys.resx">
+      <DependentUpon>202307070843134_Add_Col_Keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307070954567_updatethongtincauhinh.resx">
+      <DependentUpon>202307070954567_updatethongtincauhinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307071017224_Add_Table_bentreTieuChiBieuMau.resx">
+      <DependentUpon>202307071017224_Add_Table_bentreTieuChiBieuMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307071032356_Add_Col_CongThuc.resx">
+      <DependentUpon>202307071032356_Add_Col_CongThuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307071041219_Add_Col_GioiHanTren.resx">
+      <DependentUpon>202307071041219_Add_Col_GioiHanTren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307071056317_Add_Cols_ToTieuChiBieuMau.resx">
+      <DependentUpon>202307071056317_Add_Cols_ToTieuChiBieuMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307090326484_update-tbl-thutuc-bieumau.resx">
+      <DependentUpon>202307090326484_update-tbl-thutuc-bieumau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307100159190_addChuyenMucIdInTableCore_client.resx">
+      <DependentUpon>202307100159190_addChuyenMucIdInTableCore_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307100327551_update-tbl-artile.resx">
+      <DependentUpon>202307100327551_update-tbl-artile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307100340255_addClientIdInTablemd_Articles.resx">
+      <DependentUpon>202307100340255_addClientIdInTablemd_Articles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307100733334_Add_Tables.resx">
+      <DependentUpon>202307100733334_Add_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307100847182_Add_Col_NgayNop.resx">
+      <DependentUpon>202307100847182_Add_Col_NgayNop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307101126032_Add_Col_NgayNop_2.resx">
+      <DependentUpon>202307101126032_Add_Col_NgayNop_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307110446217_add-new-field-article.resx">
+      <DependentUpon>202307110446217_add-new-field-article.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307111021452_Add_Path_BieuMauThongTin.resx">
+      <DependentUpon>202307111021452_Add_Path_BieuMauThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307111104235_Add_Col_IsShow.resx">
+      <DependentUpon>202307111104235_Add_Col_IsShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307130449090_add-column-IdNhomCongThanhVien-core_Client.resx">
+      <DependentUpon>202307130449090_add-column-IdNhomCongThanhVien-core_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307240654330_add-tbl-core_SettingSSO.resx">
+      <DependentUpon>202307240654330_add-tbl-core_SettingSSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308010317197_add-column-coreClient.resx">
+      <DependentUpon>202308010317197_add-column-coreClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308010620112_add-table-core_clientCategory.resx">
+      <DependentUpon>202308010620112_add-table-core_clientCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308020255583_add-table-md_LichCongTacNew.resx">
+      <DependentUpon>202308020255583_add-table-md_LichCongTacNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308070440190_add-tbl-core_LichLamViec.resx">
+      <DependentUpon>202308070440190_add-tbl-core_LichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308070749396_update-tblcore_LichLamViec.resx">
+      <DependentUpon>202308070749396_update-tblcore_LichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308260743415_add-tbl-core_DanhMuc.resx">
+      <DependentUpon>202308260743415_add-tbl-core_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308261138170_update-tbl-core_SettingSSO.resx">
+      <DependentUpon>202308261138170_update-tbl-core_SettingSSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308261203319_update-tbl-core_ThongKeTruyCap.resx">
+      <DependentUpon>202308261203319_update-tbl-core_ThongKeTruyCap.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

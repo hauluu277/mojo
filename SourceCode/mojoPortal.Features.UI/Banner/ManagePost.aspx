@@ -1,0 +1,23 @@
+﻿<%@ Page Language="C#" AutoEventWireup="false" CodeBehind="ManagePost.aspx.cs" Inherits="BannerFeature.UI.ManagePost" %>
+
+<%@ Register Src="~/Banner/Controls/PostList.ascx" TagPrefix="portal" TagName="PostList" %>
+
+
+<asp:content contentplaceholderid="mainContent" id="MPContent" runat="server">
+<portal:ModulePanel ID="pnlContainer" runat="server" CssClass="admin">
+    <portal:ModuleTitleControl EditText="Add" EditUrl="~/article/editpost.aspx" runat="server" ID="TitleControl" />
+    <portal:mojoPanel ID="mp1" runat="server" ArtisteerCssClass="art-Post" RenderArtisteerBlockContentDivs="true">
+        <mp:CornerRounderTop ID="ctop1" runat="server" EnableViewState="false" />
+        <asp:Panel ID="pnlWrapper" runat="server" CssClass="art-Post-inner panelwrapper managepost">
+            <portal:mojoPanel ID="MojoPanel1" runat="server" ArtisteerCssClass="art-PostContent">
+               <portal:ModuleTitleControl runat="server" id="ModuleTitleControl1" />
+                <portal:PostList runat="server" id="PostList" />
+            </portal:mojoPanel>
+            <div class="cleared">
+            </div>
+        </asp:Panel>
+        <mp:CornerRounderBottom ID="cbottom1" runat="server" EnableViewState="false" />
+    </portal:mojoPanel>
+</portal:ModulePanel>
+    
+	</asp:content>

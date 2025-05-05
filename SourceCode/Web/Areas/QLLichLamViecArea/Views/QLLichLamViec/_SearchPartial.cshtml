@@ -1,0 +1,79 @@
+﻿<div id="collapseDiv" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+    <div class="well SearchBox">
+
+        @using (Ajax.BeginForm("searchData", "QLLichLamViec", new { Area = "QLLichLamViecArea" },
+            new AjaxOptions()
+            {
+                HttpMethod = "POST",
+                OnFailure = "AjaxFormError",
+                OnSuccess = "AjaxSearchSuccess",
+            }, new {id="frmSearch" }))
+
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row row-block">
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label">Lãnh đạo</div>
+                    <div class="col-md-8">
+                        @Html.DropDownList("IdLanhDaoFilter", ViewBag.ListLanhDao as List<SelectListItem>, "--Vui lòng chọn--", new { @class = "form-control select2" })
+                    </div>
+                </div>
+
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label">Ngày làm việc</div>
+                    <div class="col-md-8">
+                        <input class="form-control width100 date-picker" type="text" name="NgayLamViecFilter" />
+                    </div>
+                </div>
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchForm()" class="btn btn-labeled btn-primary btn-sm">
+
+                        Tìm kiếm
+                    </button>
+                    <a aria-expanded="false" href="#collapseDiv" data-toggle="collapse" role="button" class="btn btn-labeled btn-danger btn-sm">
+
+                        Đóng
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+<script>
+    function SearchForm() {
+
+            // Get form
+        var form = $('#frmSearch')[0];
+
+            // Create an FormData object
+            var data = new FormData(form);
+            $.ajax({
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/QLLichLamViecArea/QLLichLamViec/searchData",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (rs) {
+                        $("#tbl-ThuTuc").hinetTable("data", {
+                            pageIndex: 1,
+                            pagecount: rs.TotalPage,
+                            recordCount: rs.Count,
+                            listItem: rs.ListItem,
+                        });
+                },
+                error: function (e) {
+
+                    console.log("ERROR : ", e);
+
+                }
+            });
+    }
+
+</script>
+

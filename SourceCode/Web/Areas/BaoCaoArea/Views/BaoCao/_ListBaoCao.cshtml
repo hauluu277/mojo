@@ -1,0 +1,58 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BaoCaoArea.Models
+@using mojoPortal.Model.Data;
+@model List<md_BaoCao>
+
+@{
+    var count = 0;
+}
+
+
+<p class="red">Tổng số báo cáo: @Model.Count()</p>
+
+<div class="width100">
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên báo cáo</th>
+                <th>Năm, kỳ báo cáo</th>
+                <th>Biểu mẫu</th>
+                <th>Số quyết định công bố</th>
+                <th>Ngày công bố</th>
+                <th>Đường dẫn toàn văn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.TenBaoCao</td>
+                    <td>@item.NamChuKyBaoCao</td>
+                    <td>@item.BieuMau</td>
+                    <td>@item.SoQuyetDinhCongBo</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.NgayCongBo)</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.PathFile))
+                        {
+                            var listFile = item.PathFile.Split('?');
+                            for (var i = 0; i < listFile.Count(); i++)
+                            {
+                                <p>
+                                    <a href="@listFile[i]">
+                                        @listFile[i].Split('/').LastOrDefault()
+                                    </a>
+                                </p>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

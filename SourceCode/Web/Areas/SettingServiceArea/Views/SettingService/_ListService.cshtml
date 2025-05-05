@@ -1,0 +1,84 @@
+﻿@using mojoPortal.Model.Entities
+@model List<core_SettingService>
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>WebService/API</th>
+            <th>Url WebService/API</th>
+            @*<th>Kích hoạt</th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@(Model.IndexOf(item) + 1)</td>
+                        <td>
+                            @item.Name
+
+                        </td>
+                        <td>@item.ServiceUrl</td>
+
+                        @*<td style=" text-align: center;">
+                                @if (item.IsNew == true)
+                                {
+                                    <i class="fa fa-check-square" aria-hidden="true" style="color: #00c484"></i>
+                                }
+                                else
+                                {
+                                    <i></i>
+                                }
+
+                            </td>*@
+                        <td>
+                            <div class='btn-group gr-nghiphep'>
+                                <a href="javascript:FormSetting(@item.ItemID)" class="btn-edit hvr-radial-out" data-id="10595" title="Chỉnh sửa"><i class="fa fa-pencil-square fa-lg"></i></a>
+                                <a href="javascript:void(0)" onclick="onDelete(@item.ItemID)" class="btn-remove hvr-radial-out" data-id="' + data.SiteID + '" data-object-name="' + data.SiteName + '" title="Xóa"><i class="fa fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-danger font-weight-bold">Chưa có dữ liệu</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+<script>
+    //function onDelete(ItemID) {
+    //    Ajax("/SettingServiceArea/SettingService/Delete", "HttpPost", { "ItemID": ItemID },
+    //        function (rs) {
+    //            NotifySuccess(rs.Message, 'Thành công');
+    //        }
+    //    )
+    //}
+    function onDelete(ItemID) {
+        if (confirm("Xác nhận xóa đối tượng này?")) {
+            $.ajax({
+                type: "POST",//or POST
+                url: '/SettingServiceArea/SettingService/Delete', data: { id: ItemID }, success: function (rs) {
+                    // process on data
+                    if (rs.Status) {
+                        NotifySuccess("Xoá service thành công !");
+                        reloadTable();
+                        ReloadService();
+                    } else {
+                        NotiError("Không thể thực hiện thao tác này!");
+                    }
+
+                }
+            });
+        }
+    }
+</script>

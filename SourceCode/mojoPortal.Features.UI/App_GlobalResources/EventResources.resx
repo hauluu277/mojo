@@ -1,0 +1,1404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BlogAllowComments" xml:space="preserve">
+    <value>Cho phép bình luận?</value>
+  </data>
+  <data name="BlogArchivesLabel" xml:space="preserve">
+    <value>Archives</value>
+  </data>
+  <data name="BlogArchivesPrefixLabel" xml:space="preserve">
+    <value>Posts From </value>
+  </data>
+  <data name="BlogAuthorEmailSetting" xml:space="preserve">
+    <value>Email tác giả</value>
+  </data>
+  <data name="BlogAuthorEmailSettingRegexWarning" xml:space="preserve">
+    <value>Bạn cần phải nhập địa chỉ e-mail</value>
+  </data>
+  <data name="BlogAuthorSetting" xml:space="preserve">
+    <value>Author Override</value>
+  </data>
+  <data name="BlogBeginDateRequiredHelp" xml:space="preserve">
+    <value>Bạn cần phải nhập ngày bắt đầu</value>
+  </data>
+  <data name="BlogCategoriesLabel" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="BlogCategoriesPrefixLabel" xml:space="preserve">
+    <value>Posts in Category: </value>
+  </data>
+  <data name="BlogCommentCommentLabel" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="BlogCommentCountLabel" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="BlogCommentPostCommentButton" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="BlogCommentRemeberMeLabel" xml:space="preserve">
+    <value>Ghi nhớ?</value>
+  </data>
+  <data name="BlogCommentsClosedMessage" xml:space="preserve">
+    <value>Comments are closed on this post.</value>
+  </data>
+  <data name="BlogCommentsNotAllowed" xml:space="preserve">
+    <value>Không cho phép</value>
+  </data>
+  <data name="BlogCommentSolveQuestionMessage" xml:space="preserve">
+    <value>Solve This To Prove You are a Real Person, not a SPAM script.</value>
+  </data>
+  <data name="BlogCommentsUnlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="BlogCommentTitleLabel" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="BlogCommentUrlLabel" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="BlogCommentUserNameLabel" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="BlogCopyrightSetting" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="BlogDeleteCategoryWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa danh mục này? Tất cả các bài trong danh mục và phụ lục này sẽ bị xóa. Hãy cẩn thận!</value>
+  </data>
+  <data name="BlogDeleteCommentWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa bình luận này?</value>
+  </data>
+  <data name="BlogDeletePostWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa blog này?</value>
+  </data>
+  <data name="BlogDescriptionSetting" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="BlogDisableFeedSetting" xml:space="preserve">
+    <value>Disable Outbound Feed?</value>
+  </data>
+  <data name="BlogDraftInstructions" xml:space="preserve">
+    <value>Set a future start date or un-check "Is Published" to create an unpublished draft.</value>
+  </data>
+  <data name="BlogDraftsHeading" xml:space="preserve">
+    <value>Bài viết chưa được công bố</value>
+  </data>
+  <data name="BlogDraftsLink" xml:space="preserve">
+    <value>Chỉnh sửa dự thảo</value>
+  </data>
+  <data name="BlogEditAllowedCommentsForDaysPrefix" xml:space="preserve">
+    <value>Cho phép bình luận cho</value>
+  </data>
+  <data name="BlogEditCancelButton" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="BlogEditCategoriesLabel" xml:space="preserve">
+    <value>Chỉnh sửa chuyên mục</value>
+  </data>
+  <data name="BlogEditCategoryLabel" xml:space="preserve">
+    <value>Chuyên mục</value>
+  </data>
+  <data name="BlogEditCommentsDaysLabel" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="BlogEditDeleteButton" xml:space="preserve">
+    <value>Xóa mục này</value>
+  </data>
+  <data name="BlogEditDescriptionLabel" xml:space="preserve">
+    <value>Môt tả</value>
+  </data>
+  <data name="BlogEditEntryLabel" xml:space="preserve">
+    <value>Blog Entry</value>
+  </data>
+  <data name="BlogEditEntryLink" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="BlogEditIncludeInFeedLabel" xml:space="preserve">
+    <value>Include In Feed?</value>
+  </data>
+  <data name="BlogEditItemUrlLabel" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="BlogEditLocationLabel" xml:space="preserve">
+    <value>Enter a Location to Show a Google Map</value>
+  </data>
+  <data name="BlogEditorHeightSetting" xml:space="preserve">
+    <value>Editor Height</value>
+  </data>
+  <data name="BlogEditSelectedCategoriesLabel" xml:space="preserve">
+    <value>Chọn chuyên mục</value>
+  </data>
+  <data name="BlogEditStartDateLabel" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="BlogEditTitleLabel" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="BlogEditUpdateButton" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="BlogEntriesToShowSetting" xml:space="preserve">
+    <value>Entries To Show/Page Size</value>
+  </data>
+  <data name="BlogEntriesToShowSettingRegexWarning" xml:space="preserve">
+    <value>You must enter an integer for Entries. The Default setting is 10</value>
+  </data>
+  <data name="BlogEntryCountLabel" xml:space="preserve">
+    <value>Entries</value>
+  </data>
+  <data name="BlogExcerptLengthSetting" xml:space="preserve">
+    <value>Excerpt Length</value>
+  </data>
+  <data name="BlogExcerptSuffixSetting" xml:space="preserve">
+    <value>Excerpt Suffix</value>
+  </data>
+  <data name="ArticleFeatureName" xml:space="preserve">
+    <value>Bài viết</value>
+  </data>
+  <data name="BlogFeedbackLabel" xml:space="preserve">
+    <value>Phản hồi</value>
+  </data>
+  <data name="BlogFeedburnerFeedUrl" xml:space="preserve">
+    <value>Feedburner Feed Url</value>
+  </data>
+  <data name="BlogModuleAddToGoogleLink" xml:space="preserve">
+    <value>Thêm vào google</value>
+  </data>
+  <data name="BlogModuleAddToMyMSNLink" xml:space="preserve">
+    <value>Thêm vài MSN của tôi</value>
+  </data>
+  <data name="BlogModuleAddToMyYahooLink" xml:space="preserve">
+    <value>Thêm vào Yahoo của tôi</value>
+  </data>
+  <data name="BlogModuleAddToWindowsLiveLink" xml:space="preserve">
+    <value>Thêm vào Windows Live</value>
+  </data>
+  <data name="BlogMoreLinkText" xml:space="preserve">
+    <value>Xem chi tiết liên kết văn bản</value>
+  </data>
+  <data name="BlogNavigationOnRightSetting" xml:space="preserve">
+    <value>Navigation on Right?</value>
+  </data>
+  <data name="BlogNextPostLink" xml:space="preserve">
+    <value>&gt;&gt; Bài viết tiếp theo</value>
+  </data>
+  <data name="BlogPreviousPostLink" xml:space="preserve">
+    <value>Bài viết trước &lt;&lt;</value>
+  </data>
+  <data name="BlogRSSCacheTimeSetting" xml:space="preserve">
+    <value>RSS Feed Cache Time In Minutes</value>
+  </data>
+  <data name="BlogRSSCacheTimeSettingRegexWarning" xml:space="preserve">
+    <value>You must enter an integer for Cache Time. The Default setting is 120</value>
+  </data>
+  <data name="BlogRSSLinkTitle" xml:space="preserve">
+    <value>RSS Feed</value>
+  </data>
+  <data name="BlogShowAddFeedLinksSetting" xml:space="preserve">
+    <value>Hiện Thêm nguồn liên kết cấp dữ liệu ?</value>
+  </data>
+  <data name="BlogShowArchiveSetting" xml:space="preserve">
+    <value>Show Archives?</value>
+  </data>
+  <data name="BlogShowCalendarSetting" xml:space="preserve">
+    <value>Hiển thị lịch?</value>
+  </data>
+  <data name="BlogShowCategoriesSetting" xml:space="preserve">
+    <value>Hiển thị chuyên mục?</value>
+  </data>
+  <data name="BlogShowFeedLinksSetting" xml:space="preserve">
+    <value>Xem nguồn cấp dữ liệu liên kết?</value>
+  </data>
+  <data name="BlogShowStatisticsSetting" xml:space="preserve">
+    <value>Hiển thị thống kê?</value>
+  </data>
+  <data name="BlogStatisticsLabel" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="BlogToBePublishedLabel" xml:space="preserve">
+    <value>To Be Published</value>
+  </data>
+  <data name="BlogUrlConflictWithPhysicalPageError" xml:space="preserve">
+    <value>Please enter a different Url. The entered Url conflicts with an existing page.</value>
+  </data>
+  <data name="BlogUseCommentSpamBlocker" xml:space="preserve">
+    <value>Enable Comment SPAM Blocking:</value>
+  </data>
+  <data name="BlogUseExcerptSetting" xml:space="preserve">
+    <value>Use Excerpt?</value>
+  </data>
+  <data name="BlogUseLinkForHeading" xml:space="preserve">
+    <value>Render Title As Link</value>
+  </data>
+  <data name="BlogAddCategoriesLabel" xml:space="preserve">
+    <value>Thêm danh mục</value>
+  </data>
+  <data name="BlogAddCategoryButton" xml:space="preserve">
+    <value>Thêm danh mục</value>
+  </data>
+  <data name="BlogAddCategoryButtonAccessKey" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BlogAddPostLabel" xml:space="preserve">
+    <value>Thêm bài viết</value>
+  </data>
+  <data name="BlogCommentPostCommentButtonAccessKey" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BlogEditCancelButtonAccessKey" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BlogEditDeleteButtonAccessKey" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BlogEditUpdateButtonAccessKey" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonDisabledPleaseWait" xml:space="preserve">
+    <value>Please Wait...</value>
+  </data>
+  <data name="DeleteImageAltText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditImageAltText" xml:space="preserve">
+    <value>Chỉnh sửa bài viết này</value>
+  </data>
+  <data name="PageUrlInUseBlogErrorMessage" xml:space="preserve">
+    <value>The Url is already in use. You cannot use the same Url for different pages.</value>
+  </data>
+  <data name="PodcastLink" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="WebSiteUrlRegexWarning" xml:space="preserve">
+    <value>must be an url starting with http:// or https://</value>
+  </data>
+  <data name="ContentNotifyOnComment" xml:space="preserve">
+    <value>Notify me when someone posts a comment</value>
+  </data>
+  <data name="EnableContentRatingSetting" xml:space="preserve">
+    <value>Enable Content Rating?</value>
+  </data>
+  <data name="EnableRatingCommentsSetting" xml:space="preserve">
+    <value>Enable Rating Comments?</value>
+  </data>
+  <data name="GoogleMapEnableDirectionsSetting" xml:space="preserve">
+    <value>Enable Driving Directions</value>
+  </data>
+  <data name="GoogleMapEnableLocalSearchSetting" xml:space="preserve">
+    <value>Show Local Search</value>
+  </data>
+  <data name="GoogleMapEnableMapTypeSetting" xml:space="preserve">
+    <value>Show Satellite and Hybrid Map Options</value>
+  </data>
+  <data name="GoogleMapEnableZoomSetting" xml:space="preserve">
+    <value>Show Zoom Tool</value>
+  </data>
+  <data name="GoogleMapHeightSetting" xml:space="preserve">
+    <value>Map Height</value>
+  </data>
+  <data name="GoogleMapInitialMapTypeSetting" xml:space="preserve">
+    <value>Initial Map Type</value>
+  </data>
+  <data name="GoogleMapInitialZoomSetting" xml:space="preserve">
+    <value>Map Zoom Level</value>
+  </data>
+  <data name="GoogleMapShowInfoWindowSetting" xml:space="preserve">
+    <value>Show Location Info Ballon</value>
+  </data>
+  <data name="GoogleMapWidthSetting" xml:space="preserve">
+    <value>Map Width</value>
+  </data>
+  <data name="OdiogoFeedIDSetting" xml:space="preserve">
+    <value>Odiogo Feed ID</value>
+  </data>
+  <data name="OdiogoPodcastUrlSetting" xml:space="preserve">
+    <value>Odiogo Podcast Url</value>
+  </data>
+  <data name="ContentTab" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ExcerptTab" xml:space="preserve">
+    <value>Excerpt</value>
+  </data>
+  <data name="MetaDescriptionLabel" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywordsLabel" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="MetaTab" xml:space="preserve">
+    <value>Page Meta Data</value>
+  </data>
+  <data name="UseExcerptInFeedSetting" xml:space="preserve">
+    <value>Use Excerpt In Feed?</value>
+  </data>
+  <data name="ShowPostAuthorSetting" xml:space="preserve">
+    <value>Show Post Author Name?</value>
+  </data>
+  <data name="PostAuthorFormat" xml:space="preserve">
+    <value>Posted by</value>
+  </data>
+  <data name="AllowWebSiteUrlForComments" xml:space="preserve">
+    <value>Show Web Site Url in Comments?</value>
+  </data>
+  <data name="TitleRequiredWarning" xml:space="preserve">
+    <value>Title is required.</value>
+  </data>
+  <data name="RequireAuthenticationForComments" xml:space="preserve">
+    <value>Require Authentication For Comments?</value>
+  </data>
+  <data name="CommentsRequireAuthenticationMessage" xml:space="preserve">
+    <value>Bạn phải đăng nhập vào trang web này để gửi bình luận.</value>
+  </data>
+  <data name="FriendlyUrlRegexWarning" xml:space="preserve">
+    <value>Url must start with ~/ and must contain no white spaces.</value>
+  </data>
+  <data name="RSSAddCommentsLink" xml:space="preserve">
+    <value>Add Comments Link To RSS Feed?</value>
+  </data>
+  <data name="RSSAddSignature" xml:space="preserve">
+    <value>Add Signature To RSS Feed?</value>
+  </data>
+  <data name="GoogleMapIncludeWithExcerptSetting" xml:space="preserve">
+    <value>Show Map With Excerpt?</value>
+  </data>
+  <data name="ArchiveDateGridHeader" xml:space="preserve">
+    <value>Archived</value>
+  </data>
+  <data name="BlogEnableVersioningSetting" xml:space="preserve">
+    <value>Giữ Lịch sử Phiên bản?</value>
+  </data>
+  <data name="BlogVersionPageSizeSetting" xml:space="preserve">
+    <value>Version History Page Size</value>
+  </data>
+  <data name="CompareHistoryToCurrentLink" xml:space="preserve">
+    <value>So sánh với hiện tại.</value>
+  </data>
+  <data name="CreatedDateGridHeader" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="CurrentVersionHeadingFormat" xml:space="preserve">
+    <value>Current Version Created {0}</value>
+  </data>
+  <data name="DeleteAllHistoryButton" xml:space="preserve">
+    <value>Delete All History</value>
+  </data>
+  <data name="DeleteAllHistoryWarning" xml:space="preserve">
+    <value>Are you sure you want to delete all history for this content?</value>
+  </data>
+  <data name="DeleteHistoryButton" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteHistoryItemWarning" xml:space="preserve">
+    <value>Are you sure you want to delete this history item?</value>
+  </data>
+  <data name="DialogCloseLink" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RestoreToEditorButton" xml:space="preserve">
+    <value>Restore To Editor</value>
+  </data>
+  <data name="VersionAsOfHeadingFormat" xml:space="preserve">
+    <value>Version as of {0}</value>
+  </data>
+  <data name="BlogUseTagCloudForCategoriesSetting" xml:space="preserve">
+    <value>Use Tag Cloud For Categories?</value>
+  </data>
+  <data name="BlogSearchName" xml:space="preserve">
+    <value>Blogs</value>
+  </data>
+  <data name="ArchiveMetaDescriptionFormat" xml:space="preserve">
+    <value>{0} Archives From {1}</value>
+  </data>
+  <data name="CategoryMetaDescriptionFormat" xml:space="preserve">
+    <value>Items tagged under {1} from {0}</value>
+  </data>
+  <data name="EditPostPageTitle" xml:space="preserve">
+    <value>Biên tập bài viết</value>
+  </data>
+  <data name="BlogCommentForDaysDefault" xml:space="preserve">
+    <value>Default Comment Allowed Days</value>
+  </data>
+  <data name="HideDetailsFromUnauthencticated" xml:space="preserve">
+    <value>Ẩn tất cả bài viết từ những người dùng không được thẩm định?</value>
+  </data>
+  <data name="MustSignInToViewFullPost" xml:space="preserve">
+    <value>You must sign in to see the full article.</value>
+  </data>
+  <data name="DisqusSiteShortName" xml:space="preserve">
+    <value>Disqus Site Short Name</value>
+  </data>
+  <data name="CommentSystemSetting" xml:space="preserve">
+    <value>Hệ thống bình luận</value>
+  </data>
+  <data name="IntenseDebateAccountId" xml:space="preserve">
+    <value>IntenseDebate Account Id</value>
+  </data>
+  <data name="MapGetDirectionsButton" xml:space="preserve">
+    <value>Get Directions From</value>
+  </data>
+  <data name="AddMetaButton" xml:space="preserve">
+    <value>Add Meta Element</value>
+  </data>
+  <data name="AddMetaLinkButton" xml:space="preserve">
+    <value>Add Meta Link</value>
+  </data>
+  <data name="ContentMetaContentRequired" xml:space="preserve">
+    <value>Nội dung bắt buộc.</value>
+  </data>
+  <data name="ContentMetaDeleteWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa phần tử meta này?</value>
+  </data>
+  <data name="ContentMetaDirLabel" xml:space="preserve">
+    <value>Thư mục</value>
+  </data>
+  <data name="ContentMetaGridCancelButton" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="ContentMetaGridDeleteButton" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ContentMetaGridEditButton" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="ContentMetaGridMoveDownButton" xml:space="preserve">
+    <value>Chuyển xuống</value>
+  </data>
+  <data name="ContentMetaGridMoveUpButton" xml:space="preserve">
+    <value>Chuyển lên</value>
+  </data>
+  <data name="ContentMetaGridUpdateButton" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="ContentMetaLangCodeLabel" xml:space="preserve">
+    <value>Lang</value>
+  </data>
+  <data name="ContentMetaLinkDeleteWarning" xml:space="preserve">
+    <value>Are you sure you want to delete this meta link?</value>
+  </data>
+  <data name="ContentMetaLinkHrefRequired" xml:space="preserve">
+    <value>Href is required.</value>
+  </data>
+  <data name="ContentMetaLinkRelRequired" xml:space="preserve">
+    <value>Rel is required.</value>
+  </data>
+  <data name="ContentMetaMetaContentLabel" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ContentMetaMetaHrefLabel" xml:space="preserve">
+    <value>Href</value>
+  </data>
+  <data name="ContentMetaNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ContentMetaNameRequired" xml:space="preserve">
+    <value>Name is required.</value>
+  </data>
+  <data name="ContentMetaRelLabel" xml:space="preserve">
+    <value>Rel</value>
+  </data>
+  <data name="ContentMetaSchemeLabel" xml:space="preserve">
+    <value>Scheme</value>
+  </data>
+  <data name="ContentMetHrefLangLabel" xml:space="preserve">
+    <value>HrefLang</value>
+  </data>
+  <data name="MetaAdditionalLabel" xml:space="preserve">
+    <value>Additional Meta Tags</value>
+  </data>
+  <data name="VersionHistory" xml:space="preserve">
+    <value>Version History</value>
+  </data>
+  <data name="BlogDateTimeFormat" xml:space="preserve">
+    <value>Định dạnh Ngày/ Thời gian</value>
+  </data>
+  <data name="IsPublishedLabel" xml:space="preserve">
+    <value>Công khai bài viết?</value>
+  </data>
+  <data name="BlogShowTitleOnlySetting" xml:space="preserve">
+    <value>Chỉ hiển thị tiêu đề trong danh sách</value>
+  </data>
+  <data name="SaveAndPreviewButton" xml:space="preserve">
+    <value>Lưu và xem trước</value>
+  </data>
+  <data name="ArticleShowPagerInListSetting" xml:space="preserve">
+    <value>Hiển thị phân trang?</value>
+  </data>
+  <data name="CustomCssClassSetting" xml:space="preserve">
+    <value>Custom CSS Class</value>
+  </data>
+  <data name="CustomCssClassSettingRegexWarning" xml:space="preserve">
+    <value>Invalid Custom CSS Class</value>
+  </data>
+  <data name="ParseDateFailureMessage" xml:space="preserve">
+    <value>Could not parse the begin date.</value>
+  </data>
+  <data name="UseFacebookLikeButton" xml:space="preserve">
+    <value>Hiển thị nút thích của Facebook</value>
+  </data>
+  <data name="PostList" xml:space="preserve">
+    <value>Post List</value>
+  </data>
+  <data name="FacebookLikeButtonHeight" xml:space="preserve">
+    <value>Chiều cao nút Thích Facebook</value>
+  </data>
+  <data name="FacebookLikeButtonShowFaces" xml:space="preserve">
+    <value>Hiện khuôn mặt trong nút Thích Facebook?</value>
+  </data>
+  <data name="FacebookLikeButtonTheme" xml:space="preserve">
+    <value>Chủ đề nút Thích Facebook</value>
+  </data>
+  <data name="FacebookLikeButtonWidth" xml:space="preserve">
+    <value>Chiều rộng nút Thích Facebook</value>
+  </data>
+  <data name="CommentSystemSettings" xml:space="preserve">
+    <value>Hệ thống bình luận</value>
+  </data>
+  <data name="ExcerptModeSettings" xml:space="preserve">
+    <value>Excerpt Mode Settings</value>
+  </data>
+  <data name="FeedSettings" xml:space="preserve">
+    <value>Cài đặt nguồn cấp tin</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>Cài đặt chung</value>
+  </data>
+  <data name="ListViewSettings" xml:space="preserve">
+    <value>List View Settings</value>
+  </data>
+  <data name="MapSettings" xml:space="preserve">
+    <value>Map Settings</value>
+  </data>
+  <data name="MiscellaneousSettings" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="NavigationSettings" xml:space="preserve">
+    <value>Navigation Settings</value>
+  </data>
+  <data name="SocialSettings" xml:space="preserve">
+    <value>Social Settings</value>
+  </data>
+  <data name="ShowTweetThisLink" xml:space="preserve">
+    <value>Show Tweet This Link?</value>
+  </data>
+  <data name="ArticleEditItemImageUrlLabel" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="ImageUrlErrorFileExtension" xml:space="preserve">
+    <value>This File Extension is not allow.</value>
+  </data>
+  <data name="ImageUrlErrorFileSize" xml:space="preserve">
+    <value>File Size must be lesser than </value>
+  </data>
+  <data name="ImageSettings" xml:space="preserve">
+    <value>Cài đặt hình ảnh</value>
+  </data>
+  <data name="ImageShowSetting" xml:space="preserve">
+    <value>Hiển thị hình ảnh?</value>
+  </data>
+  <data name="ImageUrlErrorLabel" xml:space="preserve">
+    <value>Allowed Extension: </value>
+  </data>
+  <data name="ImageUrlErrorLabelFileSize" xml:space="preserve">
+    <value>File Size Allow: </value>
+  </data>
+  <data name="OtherArticlesPagingSetting" xml:space="preserve">
+    <value>Use Paging?</value>
+  </data>
+  <data name="OtherArticlesSettings" xml:space="preserve">
+    <value>Other Articles Settings</value>
+  </data>
+  <data name="OtherArticlesShowSetting" xml:space="preserve">
+    <value>Show Other Articles?</value>
+  </data>
+  <data name="AdminManagePostLabel" xml:space="preserve">
+    <value>Manage Post</value>
+  </data>
+  <data name="ArticleDeleteLinkText" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+  </data>
+  <data name="AutoScrollCircularSetting" xml:space="preserve">
+    <value>Circular?</value>
+  </data>
+  <data name="AutoScrollHeightWrapperSetting" xml:space="preserve">
+    <value>Wrapper Height</value>
+  </data>
+  <data name="AutoScrollSetting" xml:space="preserve">
+    <value>Use Autoscroll?</value>
+  </data>
+  <data name="AutoScrollSpeedSetting" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
+  <data name="AutoScrollVerticalSetting" xml:space="preserve">
+    <value>Dọc?</value>
+  </data>
+  <data name="AutoScrollWidthWrapperSetting" xml:space="preserve">
+    <value>Wrapper Width</value>
+  </data>
+  <data name="OtherArticlesMoreLinkSetting" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="OtherArticlesShowMoreLinkSetting" xml:space="preserve">
+    <value>Show More Link?</value>
+  </data>
+  <data name="AutoScrollSettings" xml:space="preserve">
+    <value>Autoscroll Settings</value>
+  </data>
+  <data name="AutoScrollTimeSetting" xml:space="preserve">
+    <value>Time wait for next item (millisecond)</value>
+  </data>
+  <data name="MaxNumberOfCharactersInTitleSetting" xml:space="preserve">
+    <value>Title Max Characters</value>
+  </data>
+  <data name="OtherArticlesPageSizeSetting" xml:space="preserve">
+    <value>Other Articles Page Size </value>
+  </data>
+  <data name="TooltipDelaySettings" xml:space="preserve">
+    <value>Tooltip Delay</value>
+  </data>
+  <data name="TooltipEffectSettings" xml:space="preserve">
+    <value>Tooltip Effect</value>
+  </data>
+  <data name="TooltipMaxCharSettings" xml:space="preserve">
+    <value>Tooltip Content Max Characters</value>
+  </data>
+  <data name="TooltipSettings" xml:space="preserve">
+    <value>Tooltip Settings</value>
+  </data>
+  <data name="UseTooltipCssSettings" xml:space="preserve">
+    <value>Set Css for Tooltip</value>
+  </data>
+  <data name="UseTooltipSettings" xml:space="preserve">
+    <value>Use Tooltip Style?</value>
+  </data>
+  <data name="ArticleSearchName" xml:space="preserve">
+    <value>Bài viết</value>
+  </data>
+  <data name="ArticleView" xml:space="preserve">
+    <value>Xem chi tiết</value>
+  </data>
+  <data name="AutoScrollEasingSetting" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="AutoScrollItemsSetting" xml:space="preserve">
+    <value>Items Scroll</value>
+  </data>
+  <data name="OtherArticleLabel" xml:space="preserve">
+    <value>Other Articles</value>
+  </data>
+  <data name="ArticleLoaderFeatureName" xml:space="preserve">
+    <value>Article Loader</value>
+  </data>
+  <data name="ArticleLoaderModuleList" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="ArticleLoaderSelectorSetting" xml:space="preserve">
+    <value>Chọn tin bài hiển thị</value>
+  </data>
+  <data name="ArticleLoaderSettings" xml:space="preserve">
+    <value>Cài đặt lưu tin bài</value>
+  </data>
+  <data name="CategoryChooseLabel" xml:space="preserve">
+    <value>Choose a Category</value>
+  </data>
+  <data name="DropDownListChooseAll" xml:space="preserve">
+    <value>Chọn tất cả</value>
+  </data>
+  <data name="ModuleChooseLabel" xml:space="preserve">
+    <value>Choose a Module</value>
+  </data>
+  <data name="ShowBannerCenterSetting" xml:space="preserve">
+    <value>Hiển thị bảng quảng cáo ở giữa?</value>
+  </data>
+  <data name="ShowBottomPanelSetting" xml:space="preserve">
+    <value>Hiển thị bảng điều chỉnh phía dưới?</value>
+  </data>
+  <data name="ShowCenterPanelSetting" xml:space="preserve">
+    <value>Hiển thị bảng điều chỉnh phía trung tâm?</value>
+  </data>
+  <data name="ShowLeftPanelSetting" xml:space="preserve">
+    <value>Show Left Panel?</value>
+  </data>
+  <data name="ShowRightPanelSetting" xml:space="preserve">
+    <value>Show Right Panel?</value>
+  </data>
+  <data name="ShowTopPanelSetting" xml:space="preserve">
+    <value>Show Top Panel?</value>
+  </data>
+  <data name="ArticleMostViewFeatureName" xml:space="preserve">
+    <value>Article Most View</value>
+  </data>
+  <data name="HitCount" xml:space="preserve">
+    <value>Lượt truy cập:</value>
+  </data>
+  <data name="ArticleMenuFeatureName" xml:space="preserve">
+    <value>Article Menu</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="OtherArticleSetting" xml:space="preserve">
+    <value>Other Article Label</value>
+  </data>
+  <data name="IsHotLabel" xml:space="preserve">
+    <value>Tin hot?</value>
+  </data>
+  <data name="IsRandomizeLabel" xml:space="preserve">
+    <value>Is Randomize?</value>
+  </data>
+  <data name="UseModuleMenuSetting" xml:space="preserve">
+    <value>Use Module Menu?</value>
+  </data>
+  <data name="ArticleModuleSelectorSetting" xml:space="preserve">
+    <value>Chọn mô-đun lưu tin bài</value>
+  </data>
+  <data name="UseArtisteerSetting" xml:space="preserve">
+    <value>Use Artisteer?</value>
+  </data>
+  <data name="ArticleModuleLoaderSettings" xml:space="preserve">
+    <value>Cài đặt mô-đun lưu tin bài</value>
+  </data>
+  <data name="AccordionModeSetting" xml:space="preserve">
+    <value>Use Accordion Mode?</value>
+  </data>
+  <data name="AccordionMouseHoverSetting" xml:space="preserve">
+    <value>Use Mouse Hover?</value>
+  </data>
+  <data name="UseAccordionSetting" xml:space="preserve">
+    <value>Use Accordion Mode?</value>
+  </data>
+  <data name="ArticleSearchFeatureName" xml:space="preserve">
+    <value>Tìm kiếm bài viết</value>
+  </data>
+  <data name="ArticleSearchAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ArticleSearchContent" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="ArticleSearchTitle" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="ButtonSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ChooseArticle" xml:space="preserve">
+    <value>Choose Article</value>
+  </data>
+  <data name="ChooseCategories" xml:space="preserve">
+    <value>Choose Category</value>
+  </data>
+  <data name="ChooseSearchType" xml:space="preserve">
+    <value>Choose Search Type</value>
+  </data>
+  <data name="InputSearchTerm" xml:space="preserve">
+    <value>Input Search Term</value>
+  </data>
+  <data name="TitleSuffixSetting" xml:space="preserve">
+    <value>Title Suffix</value>
+  </data>
+  <data name="AddFacebookLikeToFeed" xml:space="preserve">
+    <value>Add Facebook Like To Feed?</value>
+  </data>
+  <data name="AddTweetThisToFeed" xml:space="preserve">
+    <value>Add Tweet This To Feed?</value>
+  </data>
+  <data name="ArticleModSettings" xml:space="preserve">
+    <value>Article Mod Settings</value>
+  </data>
+  <data name="UseHotArticleSetting" xml:space="preserve">
+    <value>Hiển thị tin bài hot?</value>
+  </data>
+  <data name="ExpandTextSettings" xml:space="preserve">
+    <value>Expand Text</value>
+  </data>
+  <data name="UseExpandModeSetting" xml:space="preserve">
+    <value>Use Expand Mode</value>
+  </data>
+  <data name="SearchButtonTextSettings" xml:space="preserve">
+    <value>Nút tìm kiếm văn bản</value>
+  </data>
+  <data name="SearchLabelTextSettings" xml:space="preserve">
+    <value>Search Label Text</value>
+  </data>
+  <data name="OtherArticlesMoreLinkTextSetting" xml:space="preserve">
+    <value>More Link Text</value>
+  </data>
+  <data name="CustomViewListCssClassSetting" xml:space="preserve">
+    <value>Custom ViewList Css Class</value>
+  </data>
+  <data name="ImageDialogSetting" xml:space="preserve">
+    <value>Sử dụng hộp thoại hình ảnh?</value>
+  </data>
+  <data name="SearchWatermarkTextSettings" xml:space="preserve">
+    <value>Tìm kiếm văn bản Watermark</value>
+  </data>
+  <data name="ButtonBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NewCategoryLabel" xml:space="preserve">
+    <value>New Category</value>
+  </data>
+  <data name="ParentCategoryChoose" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="ParentLabel" xml:space="preserve">
+    <value>Parent Category </value>
+  </data>
+  <data name="SortOrderLabel" xml:space="preserve">
+    <value>Sort Order</value>
+  </data>
+  <data name="ViewCategory" xml:space="preserve">
+    <value>View Category Content</value>
+  </data>
+  <data name="ShowNumberModuleSetting" xml:space="preserve">
+    <value>Show Number Module</value>
+  </data>
+  <data name="PanelSettings" xml:space="preserve">
+    <value>Panel Settings</value>
+  </data>
+  <data name="ShowImageInViewPostSetting" xml:space="preserve">
+    <value>Show Image In ViewPost?</value>
+  </data>
+  <data name="UseTreeViewSetting" xml:space="preserve">
+    <value>Use TreeView?</value>
+  </data>
+  <data name="ResultCssSetting" xml:space="preserve">
+    <value>Result Css</value>
+  </data>
+  <data name="ShowHeaderSetting" xml:space="preserve">
+    <value>Show Header?</value>
+  </data>
+  <data name="AttachmentLabel" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="DownloadLink" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="UseAttachmentDownloadIconSetting" xml:space="preserve">
+    <value>Use Download Icon?</value>
+  </data>
+  <data name="UseAttachmentSetting" xml:space="preserve">
+    <value>Use Attachment?</value>
+  </data>
+  <data name="UseFacebookShareButton" xml:space="preserve">
+    <value>Hiển thị nút chia sẻ của Facebook?</value>
+  </data>
+  <data name="FacebookShareButtonType" xml:space="preserve">
+    <value>FB Button Type (icon, button...)</value>
+  </data>
+  <data name="UseGoogleBookmarkButton" xml:space="preserve">
+    <value>Use Google Bookmark Button?</value>
+  </data>
+  <data name="NoCategory" xml:space="preserve">
+    <value>No Category</value>
+  </data>
+  <data name="ArticleCurrentImageLabel" xml:space="preserve">
+    <value>Ảnh hiện tại</value>
+  </data>
+  <data name="PageIndexLabel" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PageTotalLabel" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="ShowAttachmentLabelSetting" xml:space="preserve">
+    <value>Show Attachment Label?</value>
+  </data>
+  <data name="PostComment" xml:space="preserve">
+    <value>Post Comment</value>
+  </data>
+  <data name="UseMostViewArticleSetting" xml:space="preserve">
+    <value>Hiển thị số lượt xem bài viết nhiều nhất?</value>
+  </data>
+  <data name="UseTabArticleSetting" xml:space="preserve">
+    <value>Sử dụng Tab tin bài?</value>
+  </data>
+  <data name="UseSlideArticleSetting" xml:space="preserve">
+    <value>Use Slide Article?</value>
+  </data>
+  <data name="SlideTimeTransitionSetting" xml:space="preserve">
+    <value>Slide Time Transition</value>
+  </data>
+  <data name="GoTopSetting" xml:space="preserve">
+    <value>Go Top Text</value>
+  </data>
+  <data name="MainSlideExcerptSetting" xml:space="preserve">
+    <value>Main Slide Excerpt</value>
+  </data>
+  <data name="SocialInMainArticleSetting" xml:space="preserve">
+    <value>Social In Main Article?</value>
+  </data>
+  <data name="CommentReply" xml:space="preserve">
+    <value>Re: </value>
+  </data>
+  <data name="MaxNumberOfCharactersInDetailOthersSetting" xml:space="preserve">
+    <value>Number Char In Detail Others</value>
+  </data>
+  <data name="MaxNumberOfCharactersInMainOthersSetting" xml:space="preserve">
+    <value>Number Char In Main Others</value>
+  </data>
+  <data name="ShowEditInPostSetting" xml:space="preserve">
+    <value>Show Edit In Post?</value>
+  </data>
+  <data name="UseReverseSetting" xml:space="preserve">
+    <value>Use Reverse?</value>
+  </data>
+  <data name="NumberCategoriesLimitSetting" xml:space="preserve">
+    <value>Số chuyên mục tối đa</value>
+  </data>
+  <data name="EmailNewPostSetting" xml:space="preserve">
+    <value>Email New Post</value>
+  </data>
+  <data name="SubjectEmailNewPost" xml:space="preserve">
+    <value>New post</value>
+  </data>
+  <data name="SubjectEmailNewPostBody" xml:space="preserve">
+    <value>{5}Notice:{6}{5}Member {0} of {1} has posted new article "{2}".{6}{5}He/she wants to post this article to main site. Click {3}here{4} to publish. (Please login first){6}{5}Webmaster.{6}</value>
+  </data>
+  <data name="ArticleSyncSetting" xml:space="preserve">
+    <value>Đồng bộ bài viết</value>
+  </data>
+  <data name="ArticleSyncSettings" xml:space="preserve">
+    <value>Cài đặt đồng bộ bài viết</value>
+  </data>
+  <data name="SyncPost" xml:space="preserve">
+    <value>Use Sync Post?</value>
+  </data>
+  <data name="SyncPostPublishedSetting" xml:space="preserve">
+    <value>Show Published Checkbox?</value>
+  </data>
+  <data name="SyncPostTab" xml:space="preserve">
+    <value>Sync Post</value>
+  </data>
+  <data name="EmptyModule" xml:space="preserve">
+    <value>No Module</value>
+  </data>
+  <data name="SubjectEmailNewPostBodyNoSync" xml:space="preserve">
+    <value>{3}Notice:{4}{3}Member {0} of {1} has posted new article "{2}".{4}{3}Webmaster.{4}</value>
+  </data>
+  <data name="SubjectEmailNewRegisterBody" xml:space="preserve">
+    <value>{3}Notice:{4}{3}{0} has just registered. Click {1}here{2} to view information and approve. (Please login first){4}{3}Webmaster{4}</value>
+  </data>
+  <data name="MainSlideTitleMaxCharSetting" xml:space="preserve">
+    <value>Main Slide Title Max Char</value>
+  </data>
+  <data name="PostAuthorOccFormat" xml:space="preserve">
+    <value>Occupation</value>
+  </data>
+  <data name="PostAuthorSignFormat" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+  <data name="PostAuthorWebFormat" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="PostAuthorYahooFormat" xml:space="preserve">
+    <value>YM!</value>
+  </data>
+  <data name="ShowAuthorOccupationSetting" xml:space="preserve">
+    <value>Hiển thị nghề nghiệp tác giả?</value>
+  </data>
+  <data name="ShowAuthorSignatureSetting" xml:space="preserve">
+    <value>Hiển thị chữ ký tác giả?</value>
+  </data>
+  <data name="ShowAuthorWebsiteUrlSetting" xml:space="preserve">
+    <value>Show Author Website Url?</value>
+  </data>
+  <data name="ShowAuthorYahooSetting" xml:space="preserve">
+    <value>Hiển thị yahoo của tác giả?</value>
+  </data>
+  <data name="RolePostSetting" xml:space="preserve">
+    <value>Quyền biên tập và xuất bản sự kiện</value>
+  </data>
+  <data name="RolePublishedSetting" xml:space="preserve">
+    <value>Quyền công khai bài viết</value>
+  </data>
+  <data name="RoleSettings" xml:space="preserve">
+    <value>Cài đặt quyền</value>
+  </data>
+  <data name="NewPropertyLabel" xml:space="preserve">
+    <value>Property Name</value>
+  </data>
+  <data name="NewUnitLabel" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Decrease" xml:space="preserve">
+    <value>Decrease</value>
+  </data>
+  <data name="EmptyGridView" xml:space="preserve">
+    <value>Empty GridView</value>
+  </data>
+  <data name="Increase" xml:space="preserve">
+    <value>Increase</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="PropertyManage" xml:space="preserve">
+    <value>Manage Property</value>
+  </data>
+  <data name="RolePropertySetting" xml:space="preserve">
+    <value>Role Property</value>
+  </data>
+  <data name="ArticleOverrideUrl" xml:space="preserve">
+    <value>Override Url</value>
+  </data>
+  <data name="ArticleTag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="UseOverrideUrlSetting" xml:space="preserve">
+    <value>Use Override Url?</value>
+  </data>
+  <data name="ButtonFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="LabelFinishInfo" xml:space="preserve">
+    <value>Thank you for posting!</value>
+  </data>
+  <data name="LabelFinishInfo1" xml:space="preserve">
+    <value>We will review and publish your post as soon as possible.</value>
+  </data>
+  <data name="LabelFinishPage" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="BlogSummaryLabel" xml:space="preserve">
+    <value>Tóm tắt</value>
+  </data>
+  <data name="AddNewArticleLabel" xml:space="preserve">
+    <value>Tin tức mới</value>
+  </data>
+  <data name="ListArticleLabel" xml:space="preserve">
+    <value>Danh sách tin bài</value>
+  </data>
+  <data name="SettingArticleLabel" xml:space="preserve">
+    <value>Cài đặt mô-đun</value>
+  </data>
+  <data name="ArticleEditEndDateLabel" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="ArticleEditItemUrlLabel" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="ArticleEditStartDateLabel" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="ArticleEditTitleLabel" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="ArticleSummaryLabel" xml:space="preserve">
+    <value>Tóm tắt</value>
+  </data>
+  <data name="IsAllowCommentLabel" xml:space="preserve">
+    <value>Cho phép bình luận</value>
+  </data>
+  <data name="IsApprovedLabel" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ArticleEditEntryLabel" xml:space="preserve">
+    <value>Thông tin sự kiện</value>
+  </data>
+  <data name="ArticleDraftInstructions" xml:space="preserve">
+    <value>Article draft instructions</value>
+  </data>
+  <data name="ArticleEditCategoryLabel" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="ArticleEditAuthorLabel" xml:space="preserve">
+    <value>Tác giả</value>
+  </data>
+  <data name="CategoryRequired" xml:space="preserve">
+    <value>Category is require</value>
+  </data>
+  <data name="ArticleDeletePostWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa bài viết này?</value>
+  </data>
+  <data name="ArticleStatus" xml:space="preserve">
+    <value>-1:Tất cả trạng thái,1:Công khai,0:Không công khai</value>
+  </data>
+  <data name="ArticleEditStatusLabel" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="ArticleEditKeywordLabel" xml:space="preserve">
+    <value>Tìm kiếm theo từ khóa</value>
+  </data>
+  <data name="ArticleEditSearchPropertyLabel" xml:space="preserve">
+    <value>Lựa chọn tìm kiếm</value>
+  </data>
+  <data name="ArticleSearchButton" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="DeleteConfirmWarning" xml:space="preserve">
+    <value>Delete this item, are you sure?</value>
+  </data>
+  <data name="HeaderArticleApprove" xml:space="preserve">
+    <value>Approve state</value>
+  </data>
+  <data name="HeaderArticleCategory" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="HeaderArticleTitle" xml:space="preserve">
+    <value>Tiêu đề bài viết</value>
+  </data>
+  <data name="ButtonDeleteAll" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="ButtonAddNew" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="DeleteAllConfirmWarning" xml:space="preserve">
+    <value>Delete this items, are you sure?</value>
+  </data>
+  <data name="ButtonViewAll" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="ArticleCoreCategorySetting" xml:space="preserve">
+    <value>Chọn chuyên mục tin bài</value>
+  </data>
+  <data name="ArticleDateTimeFormat" xml:space="preserve">
+    <value>Định dạng ngày</value>
+  </data>
+  <data name="ArticleFeedbackLabel" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="ShowBlogMoreLinkText" xml:space="preserve">
+    <value>Hiển thị Link Tiêu đề</value>
+  </data>
+  <data name="ArticleCategoryConfigSetting" xml:space="preserve">
+    <value>Danh mục tin tức</value>
+  </data>
+  <data name="ShowArticleDisplaySetting" xml:space="preserve">
+    <value>Hiển thị tin bài khác</value>
+  </data>
+  <data name="ShowArticleHotDisplaySetting" xml:space="preserve">
+    <value>Số tin tức khác được hiển thị</value>
+  </data>
+  <data name="ShowDescriptionDisplaySetting" xml:space="preserve">
+    <value>Hiển thị tóm tắt nội dung?</value>
+  </data>
+  <data name="ShowNewsDisplaySetting" xml:space="preserve">
+    <value>Hiển thị số tiêu đề bài viết</value>
+  </data>
+  <data name="UseClassOrtherSetting" xml:space="preserve">
+    <value>Sử dụng lớp Css khác?</value>
+  </data>
+  <data name="IsHomeLabel" xml:space="preserve">
+    <value>Đưa bài biết lên trang chủ?</value>
+  </data>
+  <data name="ShowArticleDetailDisplaySetting" xml:space="preserve">
+    <value>Số tin bài khác được phép hiển thị trong chi tiết bài viết</value>
+  </data>
+  <data name="ShowArticleHotTabSetting" xml:space="preserve">
+    <value>Số tin bài đọc nhiều được phép hiển thị</value>
+  </data>
+  <data name="DatePost" xml:space="preserve">
+    <value>Date post</value>
+  </data>
+  <data name="DetailLabel" xml:space="preserve">
+    <value>See more</value>
+  </data>
+  <data name="EditLabel" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="OrtherArticle" xml:space="preserve">
+    <value>Article Orther</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="RoleApprovedSetting" xml:space="preserve">
+    <value>Quyền kiểm duyệt nội dung sự kiện</value>
+  </data>
+  <data name="CommentByBosLabel" xml:space="preserve">
+    <value>Nhận xét của lãnh đạo</value>
+  </data>
+  <data name="EventApproveStatus" xml:space="preserve">
+    <value>-1:Approve Status,2: Non approve,1:Approved,0:UnApproved</value>
+  </data>
+  <data name="EventPublishStatus" xml:space="preserve">
+    <value>-1:Publish Status,2:Non publish,1:Published,0:UnPublished</value>
+  </data>
+  <data name="EventChangeStatus_ApproveRole" xml:space="preserve">
+    <value>1:Approved,2: UnApproved,3:Published,4:UnPublished</value>
+  </data>
+  <data name="EventChangeStatus_PublishRole" xml:space="preserve">
+    <value>3:Published</value>
+  </data>
+  <data name="EventHighlightsTitle" xml:space="preserve">
+    <value>Event Highlights</value>
+  </data>
+  <data name="ArticlesOfEvents" xml:space="preserve">
+    <value>Articles of events</value>
+  </data>
+  <data name="EventInformationTilte" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="EventButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="EventChooseStatus" xml:space="preserve">
+    <value>Choose state</value>
+  </data>
+  <data name="EventStatusApproveLabel" xml:space="preserve">
+    <value>State censorship</value>
+  </data>
+  <data name="EventStatusPublishLabel" xml:space="preserve">
+    <value>Publisher status</value>
+  </data>
+  <data name="ShowNumberEventHotSetting" xml:space="preserve">
+    <value>Number of remarkable events are allowed to display?</value>
+  </data>
+  <data name="TitleSetting" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="BigEventLabel" xml:space="preserve">
+    <value>Big Event?</value>
+  </data>
+  <data name="DatetimeTitle" xml:space="preserve">
+    <value>Datetime</value>
+  </data>
+  <data name="PlaceLabel" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="PlaceTitle" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="PublishedTilte" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="SummaryTitle" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="EventUrlSetting" xml:space="preserve">
+    <value>Đường dẫn sự kiện</value>
+  </data>
+</root>

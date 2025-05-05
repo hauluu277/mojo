@@ -1,0 +1,38 @@
+﻿
+@using mojoPortal.Service.CommonModel.BaoCao
+<style>
+    #chartdiv {
+        width: 100%;
+        height: 500px;
+    }
+
+    table tbody tr td {
+        cursor: pointer;
+        text-align: center;
+    }
+</style>
+@model List<BaoCaoDanhMucResultBieuDoBO>
+<table id="myTableAll" class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <th>@item.NameCate</th>
+                }
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <td onclick="DanhSachBaiViet('@item.ItemCateId')">@item.CountArticle</td>
+                }
+            }
+        </tr>
+    </tbody>
+</table>

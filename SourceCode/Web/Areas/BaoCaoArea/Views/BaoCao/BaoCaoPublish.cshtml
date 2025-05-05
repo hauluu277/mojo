@@ -1,0 +1,43 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BaoCaoArea.Models
+@model BaoCaoIndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+    ViewBag.Title = "Quản lý công khai ngân sách";
+    var groupData = Html.Raw(JsonConvert.SerializeObject(Model.ListData.ListItem));
+}
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>@ViewBag.CategoryName</h2>
+        </div>
+
+        @Html.Partial("_SearchPublish")
+        <div class="widge-t-body no-padding">
+            <div id="tbl-BaoCao" class="hntbl-cover vanban_chung_box">
+                <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="width30">STT</th>
+                            <th>Tiêu đề</th>
+                            <th>Năm/chu kỳ báo cáo</th>
+                            <th>Biểu mẫu</th>
+                            <th>Số QĐ công bố</th>
+                            <th>Ngày công bố</th>
+                            <th>Đường dẫn toàn văn</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pd0 hienthi_vanban customize-hinet-table"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="total-page" value="@Model.ListData.TotalPage" />
+<input type="hidden" id="total-record" value="@Model.ListData.Count" />
+<script>
+    var groupData = eval(@groupData);
+</script>
+<script src="~/Scripts/modules/report/report_publish.js"></script>
+

@@ -1,0 +1,105 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.QLLienHeArea.Models
+@using mojoPortal.Model.Data
+
+
+@model ReplyVM
+@{
+    var data = ViewBag.data as mp_ContactFormMessage;
+    ViewBag.Title = "Phản hồi liên hệ";
+    var rep = "Trả lời: " + data.Subject;
+}
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmConfig .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        padding-right: 10px !important;
+    }
+</style>
+@using (
+Ajax.BeginForm("SavePhanHoi", "QLLienHe",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ccc", OnFailure = "AjaxError" },
+new { @class = "", id = "frmPhanHoi", area = "QLLienHeArea" }))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="RowGuid" value="@data.RowGuid" />
+    <div class="modal-dialog" style="width:1000px;max-width:100%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Phản hồi liên hệ</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <h3 class="legend-title">Phản hồi liên hệ</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tiêu đề <span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="TieuDe" value="@rep" class="form-control" />
+                            @Html.ValidationMessageFor(x => x.TieuDe)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Nội dung <span class="red">*</span></label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Message)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer center boder-box">
+                <button type="button" onclick="SubmitForm()" class="btn btn-primary">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đóng</span>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery/AdditionValidation.js"></script>
+<script src="/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/ClientScript/ckeditor462/ckeditor.js"></script>
+<script>
+    LoadCkeditor("Message");
+    function SubmitForm() {
+        GetValueCkeditor("Message");
+
+        var oke = jQuery('#frmPhanHoi').valid();
+        if (oke) {
+            $("#frmPhanHoi").submit();
+        }
+    }
+    function ccc(rs) {
+        if (rs.Status == true) {
+            NotifySuccess(rs.Message);
+            CloseGlobalModal();
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000)
+        } else {
+            NotifyError(rs.Message);
+        }
+    }
+</script>

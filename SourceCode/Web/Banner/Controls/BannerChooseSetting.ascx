@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BannerChooseSetting.ascx.cs" Inherits="BannerFeature.UI.BannerChooseSetting" %>
+<asp:RadioButtonList ID="rdblSetting" runat="server"></asp:RadioButtonList>

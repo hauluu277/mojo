@@ -1,0 +1,42 @@
+﻿
+
+.Banner-School__logo {
+    /* background-image: url('../ImgQuanTracTuDong/banner-header.png'); */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.logo-footer {
+    width: 30px;
+    float: left;
+    margin-top: -5px;
+}
+.logo-footer-text {
+    float: left;
+}
+.header-bottom .col-sm-6 {
+    padding: 0px !important;
+}
+
+
+.header-bottom {
+    width: 100%;
+    float: left;
+    padding: 5px 0px;
+}
+    .header-bottom > div > div.col-sm-6.class-left-mn > span:nth-child(6) > a {
+        color: #027cff !important;
+    }
+    .header-bottom .time-header-bottom {
+        float: right;
+        width: auto;
+        font-family: Roboto-Medium;
+        color: #333333;
+        font-size: 12px;
+    }
+    .header-bottom .thongbao-header-bottom {
+        font-size: 14px;
+        font-family: Roboto-Medium;
+        color: #333333;
+        float: left;
+        width: auto;
+    }

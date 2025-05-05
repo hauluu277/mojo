@@ -1,0 +1,133 @@
+﻿@using mojoportal.Service.CommonBusiness
+@using mojoPortal.Model.Data
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.CategoryArea.Models
+
+@model FormPhanQuyenCategoryModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    var data = Html.Raw(JsonConvert.SerializeObject(Model));
+
+}
+@functions{
+
+    string setChecked(int itemId)
+    {
+        if (Model.ListUserSelected != null && Model.ListUserSelected.Any(x => x.UserID == itemId))
+        {
+            return "checked";
+        }
+        return string.Empty;
+    }
+}
+
+<style>
+    .aaaaa {
+        width: 100%;
+        max-width: 65%;
+    }
+</style>
+
+<div class="modal-dialog aaaaa">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="center">
+                <h4 class="modal-title"> Phân quyền danh mục chuyên mục</h4>
+            </div>
+        </div>
+
+        <div class="modal-body">
+
+            <div style="text-align: left">
+                <h3>Danh mục: @ViewBag.NameCate</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="padding:10px">
+                    <input type="text" id="txtSearchName" style="width:320px" placeholder="Tìm theo Họ tên, Email..." class="form-control live-search" />
+                </div>
+            </div>
+
+            <div id="tbl-NguoiDung" class="hntbl-cover table-scroll">
+                <div class="table-wrap">
+                    <table id="fid_table" class="hinet-table table table-striped table-hover" cellspacing="0" width="100%" style="border-collapse: collapse; table-layout: fixed; ">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%"></th>
+                                <th style="width: 10%">STT</th>
+                                <th>Họ tên</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ListUser != null && Model.ListUser.Any())
+                            {
+                                foreach (var item in Model.ListUser)
+                                {
+                                    <tr data-search-term="@string.Format("{0} {1}",item.Name.ToLower(),item.Email.ToLower())">
+                                        <td class="text-center"><input type="checkbox" name="checkboxh" class="checkboxh" @setChecked(item.UserID) data-id="@item.UserID" /></td>
+                                        <td style="text-align: center">@(Model.ListUser.IndexOf(item) + 1)</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Email</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer center">
+            <button type="button" onclick="HoanThanhThemNguoiDung()">Hoàn thành</button>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function ($) {
+        $('#txtSearchName').on('keyup', function () {
+            var searchTerm = $(this).val().toLowerCase();
+
+            $('#fid_table tbody tr').each(function () {
+
+                if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+    $('.aaaaa').css('width','65%')
+
+    })
+
+    function HoanThanhThemNguoiDung() {
+
+        var listArrIdUser = []
+        var listChecked = $('input[name="checkboxh"]:checked').each(function () {
+            listArrIdUser.push(this.getAttribute('data-id'))
+        })
+
+
+        $.ajax({
+            url: '/CategoryArea/Category/ThemQuyenNguoiDungChoCategory',
+            method: 'POST',
+            data: {
+                idCate: '@ViewBag.IdCate',
+                listIdNguoiDung: listArrIdUser
+            },
+            success: function (rs) {
+
+                $("#menuModal").modal("hide");
+                NotifySuccess(rs.Message);
+            }
+        })
+
+    }
+</script>

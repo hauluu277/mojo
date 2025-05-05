@@ -1,0 +1,309 @@
+﻿@using mojoPortal.Web.Areas.CategoryArea.Models
+@using mojoPortal.Business.WebHelpers
+@model FormCategoryModel
+@*@Scripts.Render("~/bundles/jquery")*@
+<script src="/ClientScript/ckfinder/ckfinder.js"></script>
+<link href="/Scripts/plugins/color-picker/jquery.minicolors.css" rel="stylesheet" />
+<script src="/Scripts/plugins/color-picker/jquery.minicolors.min.js"></script>
+<div class="modal-dialog">
+    @using (Ajax.BeginForm("SaveForm", "Category", new { @area = "CategoryArea" }, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failureAjax",
+        OnSuccess = "successAjaxCreate",
+    }, new { id = "frmCategory" }))
+    {
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="center">
+                    <h4 class="modal-title">@(Model.Category.ItemID > 0 ? "Cập nhật danh mục" : "Thêm mới danh mục ")</h4>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="form-horizontal">
+
+
+                    @*<h1>Danh sách người dùng:</h1>
+        <ul>
+            @foreach (var user in Model)
+            {
+                <li>@user.UserID</li>
+
+            }
+        </ul>*@
+
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Danh mục<span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control required has-errored" name="Name" id="txtCategoryName" value="@Model.Category.Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Mã danh mục</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="Code" id="txtCode" value="@Model.Category.Code">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Tên phụ</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="SubName" id="txtSubName" value="@Model.Category.SubName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Mô tả</label>
+                        <div class="col-sm-8">
+                            <textarea rows="3" type="text" class="form-control" name="Sumary">@Model.Category.Sumary</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Danh mục cha</label>
+                        <div class="col-sm-8">
+                            @Html.DropDownList("ParentID", Model.ListParent, "--Danh mục cha--", new { @class = "width100 form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Đường dẫn(Link)</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="Description" style="float:left;width:80%;" value="@Model.Category.Description">
+                            &nbsp;
+                            <button type="button" class="btn btn-default" onclick="GetUrlLink()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Đường dẫn(Ảnh)</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="PathIMG" style="float:left;width:80%;" value="@Model.Category.PathIMG">
+                            &nbsp;
+                            <button type="button" class="btn btn-default" onclick="GetUrlImage()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Đường dẫn(File)</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="PathFile" style="float:left;width:80%;" value="@Model.Category.PathFile">
+                            &nbsp;
+                            <button type="button" class="btn btn-default" onclick="GetUrlFile()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Hiển thị chuyên mục con?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="ShowCategoryChild" @(Model.Category.ShowCategoryChild == true ? "checked" : string.Empty)>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Hiển thị tab mới?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="TargetBlank" @(Model.Category.TargetBlank == true ? "checked" : string.Empty)>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Color</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control color" data-format="rgb" name="Color" value="@Model.Category.Color">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Thứ tự hiển thị</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="Priority" value="@Model.OrderBy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer center">
+                <input type="hidden" name="CategoryID" value="@Model.Category.ItemID" />
+                <input type="hidden" name="SiteID" value="@Model.SiteID" />
+                <button type="button" id="btnSubmitCategory" class="btn btn-primary" onclick="checkSubmid()">Hoàn thành</button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    }
+</div>
+@*@Scripts.Render("~/bundles/jqueryval")*@
+<script>
+    $(document).ready(function () {
+        $("#ParentID").val(@(Model.ParentID.HasValue && Model.ParentID >0?Model.ParentID.ToString():string.Empty));
+        SetupFormError("frmCategory");
+
+        $(".color").minicolors({
+            control: $(this).attr('data-control') || 'hue',
+            defaultValue: $(this).attr('data-defaultValue') || '',
+            format: 'rgb',
+            keywords: $(this).attr('data-keywords') || '',
+            inline: $(this).attr('data-inline') === 'true',
+            letterCase: $(this).attr('data-letterCase') || 'lowercase',
+            opacity: $(this).attr('data-opacity'),
+            position: $(this).attr('data-position') || 'bottom',
+            swatches: $(this).attr('data-swatches') ? $(this).attr('data-swatches').split('|') : [],
+            change: function (value, opacity) {
+                if (!value) return;
+                if (opacity) value += ', ' + opacity;
+                if (typeof console === 'object') {
+                    console.log(value);
+                }
+            },
+            theme: 'bootstrap'
+        });
+
+
+        $("input[name=Name]").change(function () {
+            $.ajax({
+                type: "POST",
+                url: "/CommonArea/Common/GetUrlItem",
+                data: { name: $(this).val() },
+
+                success: function (rs) {
+                    $("input[name=Description]").val(rs);
+                },
+                error: function () {
+                    NotifyError("Không thể thực hiện thao tác này");
+                },
+            });
+        });
+    });
+
+    function GetUrlLink() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=Description]").val(fileUrl);
+            $("input[name=Description]").change();
+        };
+        finder.popup();
+    }
+
+
+    function GetUrlImage() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Images:/";
+        finder.BaseUrl = "/Images/";
+        finder.resourceType = 'Images';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=PathIMG]").val(fileUrl);
+            $("input[name=PathIMG]").change();
+        };
+        finder.popup();
+    }
+
+    function GetUrlFile() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=PathFile]").val(fileUrl);
+            $("input[name=PathFile]").change();
+        };
+        finder.popup();
+    }
+
+
+
+    var itemId = parseInt(eval('@Model.Category.ItemID'));
+    var parentId = parseInt(eval('@Model.ParentID'));
+
+    function successAjaxCreate(rs) {
+        if (rs.Status) {
+            $("#menuModal").modal("hide");
+            $("#menuModal").empty();
+            NotifySuccess("Cập nhật thành công");
+            if (itemId > 0)
+            {
+                //console.log(rs.Name);
+                //console.log(itemId);
+                   var node1 = $('#tree1').tree('getNodeById', itemId);
+                   $('#tree1').tree('updateNode', node1, rs.Name);
+            }
+            else
+            {
+                if (parentId > 0)
+                {
+               var node1 = $('#tree1').tree('getNodeById', parentId);
+                $('#tree1').tree(
+                'addNodeAfter',
+                {
+                    name: rs.Name,
+                    id: rs.ItemID
+                },
+                node1);
+                }
+                else
+                {
+                 $('#tree1').tree(
+                'appendNode',
+                {
+                    name: rs.Name,
+                    id: rs.ItemID
+                 });
+                }
+            }
+
+
+            //$('#tree1').tree('removeNode', node1);
+            //setTimeout(function () {
+            //    location.reload();
+            //}, 500);
+        } else {
+
+            NotifyError(rs.Message);
+        }
+    }
+    function failureAjax(er) {
+        //alert(er);
+        console.log(er);
+    }
+    function checkSubmid() {
+        var err = FormInvalid('frmCategory');
+        if (err) {
+            //$("#frmCategory").submit();
+            $("#btnSubmit").attr("disabled", "disabled");
+
+            var dataString;
+            var contentType1 = false;
+            var action = $("#frmCategory").attr("action");
+            dataString = new FormData($("#frmCategory").get(0));
+            contentType1 = false;
+            processData = false;
+            $.ajax({
+                type: "POST",
+                url: action,
+                data: dataString,
+                dataType: "json", //change to your own, else read my note above on enabling the JsonValueProviderFactory in MVC
+                contentType: false,
+                processData: false,
+                success: successAjaxCreate,
+                error: failureAjax,
+            });
+
+        } else {
+            NotifyError("Vui lòng hoàn thành form theo hướng dẫn!");
+        }
+        return false;
+    }
+</script>

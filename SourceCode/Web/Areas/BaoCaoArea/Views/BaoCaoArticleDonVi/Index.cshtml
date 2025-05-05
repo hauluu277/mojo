@@ -1,0 +1,135 @@
+﻿@using mojoPortal.Service.CommonModel.BaoCao
+@using Newtonsoft.Json
+@model List<BaoCaoArticleDonViBO>
+
+@{
+    var listData = Html.Raw(JsonConvert.SerializeObject(Model));
+}
+<style>
+    #chartdiv {
+        width: 100%;
+        height: 500px;
+    }
+
+    table tbody tr td {
+        cursor: pointer
+    }
+</style>
+<div id="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="legend-title m-20">Bảng thống kê bài viết cổng thành viên</h3>
+
+
+            <div id="collapseDiv" class="panel-collapse collapsable" aria-expanded="false" role="tabpanel">
+                <div class="well">
+                    <form>
+                        <div class="row row-block">
+                            <div class="col-md-6 row-block">
+                                <div class="col-md-2 txt-label control-label">Từ ngày</div>
+                                <div class="col-md-10">
+                                    <input class="form-control width100 date-picker" type="text" name="TuNgayFillter" id="TuNgayFillter" placeholder="Từ ngày" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 row-block">
+                                <div class="col-md-2 txt-label control-label">Đến ngày</div>
+                                <div class="col-md-10">
+                                    <input class="form-control width100 date-picker" type="text" name="DenNgayFillter" id="DenNgayFillter" placeholder="Đến ngày" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 center" style="margin-top: 20px;">
+                                <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                                    <span class="btn-label">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="hntbl-cover">
+                <div id="box-bang">
+                    <table class="hinet-table table table-striped table-hover" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <th>@item.TenDonVi</th>
+                                    }
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <td onclick="DanhSachBaiViet('@item.MaDonVi')">@item.SoLuongArticle</td>
+                                    }
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="legend-title m-20">Biểu đồ thống kê bài viết cổng thành viên</h3>
+            <div id="box-chart">
+                @Html.Partial("_RenderChart", Model)
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog"></div>
+<script>
+    function DanhSachBaiViet(MaDonVi) {
+        $.ajax({
+            url: '/BaoCaoArea/BaoCaoArticleDonVi/DanhSachArticleTheoDonVi?clientId=' + MaDonVi,
+            method: 'GET',
+            success: function (rs) {
+                $("#myModal").html(rs);
+                $("#myModal").modal("show");
+            }
+        })
+    }
+</script>
+<script>
+    $(".date-picker").datepicker({ dateFormat: 'dd/mm/yy' })
+
+    function SearchSubmit() {
+        var TuNgay = $('#TuNgayFillter').val()
+        var DenNgay = $('#DenNgayFillter').val()
+
+        $.ajax({
+            url: `/BaoCaoArea/BaoCaoArticleDonVi/RenderBang?TuNgay=${TuNgay}&DenNgay=${DenNgay}`,
+            method: 'POST',
+            success: function (rs) {
+                $('#box-bang').html(rs)
+            }
+        })
+        $.ajax({
+            url: `/BaoCaoArea/BaoCaoArticleDonVi/RenderChart?TuNgay=${TuNgay}&DenNgay=${DenNgay}`,
+            method: 'POST',
+            success: function (rs) {
+                $('#box-chart').html(rs)
+            }
+        })
+    }
+</script>

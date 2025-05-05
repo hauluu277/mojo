@@ -1,0 +1,60 @@
+﻿#ui_notifIt {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    -o-box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    -wekbit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 2000
+}
+
+    #ui_notifIt:hover {
+        opacity: 1 !important
+    }
+
+    #ui_notifIt p {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        color:#fff !important;
+    }
+
+.ui_notifIt_success {
+    background-color: #62b23f;
+    color: #fff !important;
+}
+
+.ui_notifIt_error {
+    background-color: #ff4500;
+    color: #fff !important;
+}
+
+.ui_notifIt_warning {
+    background-color: #ffa500;
+    color: #fff !important;
+}
+
+.ui_notifIt_info {
+    background-color: #00bfff;
+    color: #fff !important;
+}
+
+.ui_notifIt_default {
+    background-color: #eee;
+    color: #444
+}
+
+.close-noti {
+    position: absolute;
+    right: 5px;
+    top: 5px
+}

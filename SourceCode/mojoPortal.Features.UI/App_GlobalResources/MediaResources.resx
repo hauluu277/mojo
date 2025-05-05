@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CreatedByUserLabel" xml:space="preserve">
+    <value>Người tạo:</value>
+  </data>
+  <data name="FileFormatUploadError" xml:space="preserve">
+    <value>upload file incorret format</value>
+  </data>
+  <data name="FilePathLabel" xml:space="preserve">
+    <value>Avatar:</value>
+  </data>
+  <data name="GroupMediaAddNewTitle" xml:space="preserve">
+    <value> Add new multimedia categories</value>
+  </data>
+  <data name="GroupMediaButtonBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="GroupMediaButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GroupMediaButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GroupMediaEditTitle" xml:space="preserve">
+    <value>Edit multimedia data categories</value>
+  </data>
+  <data name="Invalidfile" xml:space="preserve">
+    <value>Invalid file</value>
+  </data>
+  <data name="lblPublishLabel" xml:space="preserve">
+    <value>Publish?</value>
+  </data>
+  <data name="MultiMediaData" xml:space="preserve">
+    <value>Multimedia Data</value>
+  </data>
+  <data name="NameGroupMediaLabel" xml:space="preserve">
+    <value>Group categories:</value>
+  </data>
+  <data name="UploadFileDuplicates" xml:space="preserve">
+    <value>Upload file duplicates</value>
+  </data>
+  <data name="CreateByUserLable" xml:space="preserve">
+    <value>Creator:</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>File name:</value>
+  </data>
+  <data name="GroupMultiMediaLabel" xml:space="preserve">
+    <value>Categories:</value>
+  </data>
+  <data name="GroupMultiMediaTitle" xml:space="preserve">
+    <value>Mutimedia categories</value>
+  </data>
+  <data name="MediaAlbumAddNewTitle" xml:space="preserve">
+    <value>Add new multimedia data</value>
+  </data>
+  <data name="MediaAlbumDescriptionLable" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="MediaAlbumEditTitle" xml:space="preserve">
+    <value>Edit data multimedia</value>
+  </data>
+  <data name="MediaAlbumFeaturedLable" xml:space="preserve">
+    <value>Featured:</value>
+  </data>
+  <data name="MediaAlbumFeaturedTitle" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="MediaButtonSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="MediaStatus" xml:space="preserve">
+    <value>-1:All status,1:Publish,0:UnPublish</value>
+  </data>
+  <data name="MultimediaTypeLabel" xml:space="preserve">
+    <value>Multimedia categories:</value>
+  </data>
+  <data name="MultimediaTypeTitle" xml:space="preserve">
+    <value>Multimedia categories</value>
+  </data>
+  <data name="PublishTitle" xml:space="preserve">
+    <value>Publish?</value>
+  </data>
+  <data name="SearchCriteria" xml:space="preserve">
+    <value>Search criteria</value>
+  </data>
+  <data name="TotalViewsTitle" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="UrlLable" xml:space="preserve">
+    <value>Path (URL):</value>
+  </data>
+  <data name="ButtonAddNewGroupMedia" xml:space="preserve">
+    <value>Add new multimedia categories</value>
+  </data>
+  <data name="ButtonAddNewMedia" xml:space="preserve">
+    <value>Add new multimedia data</value>
+  </data>
+  <data name="ButtonRemoveAll" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="ChooseFileLabel" xml:space="preserve">
+    <value>Choose video:</value>
+  </data>
+  <data name="ConfirmDeleteWarning" xml:space="preserve">
+    <value>You sure you want to delete</value>
+  </data>
+  <data name="KeywordLabel" xml:space="preserve">
+    <value>Keyword:</value>
+  </data>
+  <data name="ManageDataMultiMedia" xml:space="preserve">
+    <value>Data Management Multimedia</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>No data found</value>
+  </data>
+  <data name="PublishedTitle" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="UnPublishTitle" xml:space="preserve">
+    <value>Unpublish</value>
+  </data>
+  <data name="FileNameTitle" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="MediaSettingPageSize" xml:space="preserve">
+    <value>Numbers of displays</value>
+  </data>
+  <data name="MediaShowPagerInListSetting" xml:space="preserve">
+    <value>Paging display</value>
+  </data>
+  <data name="ImageVideoLabel" xml:space="preserve">
+    <value>Choose image:</value>
+  </data>
+  <data name="TypeDataLabel" xml:space="preserve">
+    <value>Type Data:</value>
+  </data>
+  <data name="TypeDataStatus" xml:space="preserve">
+    <value>1:Image,2:Video,3:Embed link video</value>
+  </data>
+  <data name="TypeImageLabel" xml:space="preserve">
+    <value>Image:</value>
+  </data>
+  <data name="TypeVideoLabel" xml:space="preserve">
+    <value>Video:</value>
+  </data>
+  <data name="CategoriesLable" xml:space="preserve">
+    <value>Categories:</value>
+  </data>
+  <data name="CategoryMultiMediaTitle" xml:space="preserve">
+    <value>Category multi media data</value>
+  </data>
+  <data name="CategoryStatus" xml:space="preserve">
+    <value>All category</value>
+  </data>
+  <data name="FeaturedStatus" xml:space="preserve">
+    <value>-1:All status,1:Featured,0:Dont Featured</value>
+  </data>
+  <data name="GroupMediaStatus" xml:space="preserve">
+    <value>All categories of data</value>
+  </data>
+  <data name="MultiMediaDataTitle" xml:space="preserve">
+    <value>Multi media data</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please wait.........</value>
+  </data>
+  <data name="AddNewCategoriesTitle" xml:space="preserve">
+    <value>Add new categories of data</value>
+  </data>
+  <data name="AddNewMultilMediaTitle" xml:space="preserve">
+    <value>The new data add multimedia</value>
+  </data>
+  <data name="EditCategoriesTitle" xml:space="preserve">
+    <value>Edit categories data</value>
+  </data>
+  <data name="EditMutilMediaTitle" xml:space="preserve">
+    <value>Edit multimedia data</value>
+  </data>
+  <data name="MediaSettingShowLink" xml:space="preserve">
+    <value>Path display</value>
+  </data>
+  <data name="ManageCategoriesTitle" xml:space="preserve">
+    <value>Manage categories</value>
+  </data>
+  <data name="ManageMediaDataTitle" xml:space="preserve">
+    <value>Manage data</value>
+  </data>
+  <data name="OrderLabel" xml:space="preserve">
+    <value>Order:</value>
+  </data>
+  <data name="ImageLabel" xml:space="preserve">
+    <value>Image:</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="MoveCategoryBottom" xml:space="preserve">
+    <value>Move category down</value>
+  </data>
+  <data name="MoveCategoryTop" xml:space="preserve">
+    <value>Move category up</value>
+  </data>
+  <data name="MoveDataBottom" xml:space="preserve">
+    <value>Moving data to</value>
+  </data>
+  <data name="MoveDataTop" xml:space="preserve">
+    <value>Move data down</value>
+  </data>
+  <data name="MoveTitle" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="StoredLabel" xml:space="preserve">
+    <value>Sorted by:</value>
+  </data>
+  <data name="StoredStatus" xml:space="preserve">
+    <value>0:Default,1:Most Viewed,2:Highlights</value>
+  </data>
+  <data name="DowloadTitle" xml:space="preserve">
+    <value>Dowload</value>
+  </data>
+  <data name="EmbedCodeLabel" xml:space="preserve">
+    <value>The embed code:</value>
+  </data>
+  <data name="NodeEmbedCode" xml:space="preserve">
+    <value>Note: links to video embed code to width = 675 và height = 350</value>
+  </data>
+  <data name="ModuleCssCustomeSetting" xml:space="preserve">
+    <value>CSS Style set</value>
+  </data>
+  <data name="MediaSettingPageSize1" xml:space="preserve">
+    <value>Count Display</value>
+  </data>
+  <data name="MediaSettingPageSizeModule" xml:space="preserve">
+    <value>Count Display module</value>
+  </data>
+  <data name="NameTitleSetting" xml:space="preserve">
+    <value>Title header</value>
+  </data>
+  <data name="ImageOfLibraryLabel" xml:space="preserve">
+    <value>Images belong to the library</value>
+  </data>
+  <data name="LibraryOrtherLabel" xml:space="preserve">
+    <value>Other photo gallery</value>
+  </data>
+  <data name="SloganSchoolSetting" xml:space="preserve">
+    <value>Slogan School</value>
+  </data>
+  <data name="TextLinkVideoSetting" xml:space="preserve">
+    <value>Links video</value>
+  </data>
+</root>

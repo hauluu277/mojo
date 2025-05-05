@@ -1,0 +1,76 @@
+﻿
+<style>
+    .row-block {
+        margin: 5px 0px;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+
+    .well {
+        border-radius: 0;
+        border: 0;
+    }
+
+    .panel-collapse {
+        border: 1px solid #ddd;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse in" aria-expanded="false" role="tabpanel">
+    <div class="well">
+        @using (Ajax.BeginForm("SearchData", "BieuMauThongTin",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "BieuMauThongTinArea", id = "formSearchBieuMauThongTin" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row row-block">
+                <div class="col-md-6 row-block">
+                    <div class="col-md-4 txt-label control-label">Tên biểu mẫu</div>
+                    <div class="col-md-8">
+                        <input class="form-control width100" type="text" name="TenBieuMauFilter" />
+                    </div>
+                </div>
+                <div class="col-md-12 center" style=" margin-top:20px;">
+                    <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                        <span class="btn-label">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        Tìm kiếm
+                    </button>
+
+                    <a aria-expanded="false" href="#collapseDiv" data-toggle="collapse" role="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        Đóng
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+<script src="~/Data/Script/jqueryvalidate/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+    function SearchSubmit() {
+        $("#formSearchBieuMauThongTin").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-BieuMauThongTin").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+    }
+</script>

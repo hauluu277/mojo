@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="LinkCategorySetting.ascx.cs" Inherits="LinkFeature.UI.LinkCategorySetting" %>
+<asp:ListBox ID="lbLinkCategory" runat="server" SelectionMode="Multiple" Width="300" Height="150"></asp:ListBox>

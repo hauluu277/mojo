@@ -1,0 +1,950 @@
+﻿/// Author:                     Joe Audette
+/// Created:                    2004-08-22
+///	Last Modified:              2013-02-18
+/// 
+/// The use and distribution terms for this software are covered by the 
+/// Common Public License 1.0 (http://opensource.org/licenses/cpl.php)
+/// which can be found in the file CPL.TXT at the root of this distribution.
+/// By using this software in any fashion, you are agreeing to be bound by 
+/// the terms of this license.
+///
+/// You must not remove this notice, or any other, from this software. 
+
+using System;
+using System.Collections;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Globalization;
+using System.Text;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using log4net;
+using mojoPortal.Business;
+using mojoPortal.Business.WebHelpers;
+using mojoPortal.Web.Framework;
+using mojoPortal.Web.UI;
+using mojoPortal.SearchIndex;
+using Resources;
+using System.Collections.Generic;
+
+namespace mojoPortal.Web.AdminUI
+{
+
+    public partial class PageModuleManager : NonCmsBasePage
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(PageModuleManager));
+
+        private bool canEdit = false;
+        private bool isSiteEditor = false;
+        private int siteID = -1;
+        private bool pageHasAltContent1 = false;
+        private bool pageHasAltContent2 = false;
+        protected string EditSettingsImage = WebConfigSettings.EditPropertiesImage;
+        protected string DeleteLinkImage = WebConfigSettings.DeleteLinkImage;
+        private int globalContentCount = 0;
+        private ArrayList allModules = new ArrayList();
+        #region OnInit
+
+        protected override void OnPreInit(EventArgs e)
+        {
+            // this page needs to use the same skin as the page in case there are extra content place holders
+            //SetMasterInBasePage = false;
+            AllowSkinOverride = true;
+
+            base.OnPreInit(e);
+
+            if (
+                    (siteSettings.AllowPageSkins)
+                    && (CurrentPage != null)
+                    && (CurrentPage.Skin.Length > 0)
+                    )
+            {
+                if (Global.RegisteredVirtualThemes)
+                {
+                    this.Theme = "pageskin-" + siteSettings.SiteId.ToInvariantString() + CurrentPage.Skin;
+                }
+                else
+                {
+                    this.Theme = "pageskin";
+                }
+            }
+        }
+
+        override protected void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            this.Load += new EventHandler(this.Page_Load);
+
+            this.btnCreateNewContent.Click += new EventHandler(this.btnCreateNewContent_Click);
+
+            this.LeftUpBtn.Click += new ImageClickEventHandler(LeftUpBtn_Click);
+            this.LeftDownBtn.Click += new ImageClickEventHandler(LeftDownBtn_Click);
+            this.ContentUpBtn.Click += new ImageClickEventHandler(ContentUpBtn_Click);
+            this.ContentDownBtn.Click += new ImageClickEventHandler(ContentDownBtn_Click);
+            this.RightUpBtn.Click += new ImageClickEventHandler(RightUpBtn_Click);
+            this.RightDownBtn.Click += new ImageClickEventHandler(RightDownBtn_Click);
+
+            this.btnTopUp.Click += new ImageClickEventHandler(btnTopUp_Click);
+            this.btnTopDown.Click += new ImageClickEventHandler(btnTopDown_Click);
+            this.btnBottomUp.Click += new ImageClickEventHandler(btnBottomUp_Click);
+            this.btnBottomDown.Click += new ImageClickEventHandler(btnBottomDown_Click);
+
+
+            this.LeftDeleteBtn.Click += new ImageClickEventHandler(this.DeleteBtn_Click);
+            this.ContentDeleteBtn.Click += new ImageClickEventHandler(this.DeleteBtn_Click);
+            this.RightDeleteBtn.Click += new ImageClickEventHandler(this.DeleteBtn_Click);
+            this.btnTopDelete.Click += new ImageClickEventHandler(this.DeleteBtn_Click);
+            this.btnBottomDelete.Click += new ImageClickEventHandler(this.DeleteBtn_Click);
+
+
+            this.LeftRightBtn.Click += new ImageClickEventHandler(LeftRightBtn_Click);
+            this.ContentLeftBtn.Click += new ImageClickEventHandler(ContentLeftBtn_Click);
+            this.ContentRightBtn.Click += new ImageClickEventHandler(ContentRightBtn_Click);
+            this.RightLeftBtn.Click += new ImageClickEventHandler(RightLeftBtn_Click);
+
+            this.btnTopCenter.Click += new ImageClickEventHandler(btnTopCenter_Click);
+            this.btnBottomCenter.Click += new ImageClickEventHandler(btnBottomCenter_Click);
+            //this.btnMoveAlt1ToAlt2.Click += new ImageClickEventHandler(btnMoveAlt1ToAlt2_Click);
+            //this.btnMoveAlt2ToAlt1.Click += new ImageClickEventHandler(btnMoveAlt2ToAlt1_Click);
+
+
+            this.ContentDownToNextButton.Click += new ImageClickEventHandler(ContentDownToNextButton_Click);
+            this.ContentUpToNextButton.Click += new ImageClickEventHandler(ContentUpToNextButton_Click);
+
+            SuppressPageMenu();
+
+        }
+        #endregion
+
+        private void Page_Load(object sender, EventArgs e)
+        {
+            if (!Request.IsAuthenticated)
+            {
+                SiteUtils.RedirectToLoginPage(this);
+                return;
+            }
+
+            SecurityHelper.DisableBrowserCache();
+
+            LoadSettings();
+            //siteSettings = CacheHelper.GetCurrentSiteSettings();
+
+            if (WebUser.IsAdminOrContentAdmin || isSiteEditor || WebUser.IsInRoles(CurrentPage.EditRoles))
+            {
+                canEdit = true;
+            }
+
+            if (CurrentPage.EditRoles == "Admins;")
+            {
+                if (!WebUser.IsAdmin)
+                {
+                    canEdit = false;
+                }
+            }
+
+            if ((!canEdit) || (siteID != CurrentPage.SiteId))
+            {
+                SiteUtils.RedirectToAccessDeniedPage(this);
+                return;
+            }
+
+            PopulateLabels();
+            //SetupExistingContentScript();
+
+            if (!Page.IsPostBack)
+            {
+                PopulateControls();
+            }
+        }
+
+
+        private void PopulateControls()
+        {
+            //lblPageName.Text = CurrentPage.PageName;
+            heading.Text = string.Format(CultureInfo.InvariantCulture, Resource.ContentForPageFormat, CurrentPage.PageName);
+
+            if (siteID > -1)
+            {
+                BindFeatureList();
+                BindPanes();
+            }
+
+        }
+
+        private void BindPanes()
+        {
+            leftPane.Items.Clear();
+            contentPane.Items.Clear();
+            rightPane.Items.Clear();
+            topPane.Items.Clear();
+            bottomPane.Items.Clear();
+
+            BindPaneModules(leftPane, "leftPane");
+            BindPaneModules(contentPane, "contentPane");
+            BindPaneModules(rightPane, "rightPane");
+            BindPaneModules(topPane, "topPane");
+            BindPaneModules(bottomPane, "bottomPane");
+
+        }
+
+        private void BindFeatureList()
+        {
+            using (IDataReader reader = ModuleDefinition.GetUserModules(siteSettings.SiteId))
+            {
+                ListItem listItem;
+                while (reader.Read())
+                {
+                    string allowedRoles = reader["AuthorizedRoles"].ToString();
+                    if (WebUser.IsInRoles(allowedRoles))
+                    {
+                        listItem = new ListItem(
+                            ResourceHelper.GetResourceString(
+                            reader["ResourceFile"].ToString(),
+                            reader["FeatureName"].ToString()),
+                            reader["ModuleDefID"].ToString());
+
+                        moduleType.Items.Add(listItem);
+                    }
+
+                }
+
+            }
+
+        }
+
+        private ArrayList GetModule4Site()
+        {
+            ArrayList listModules = new ArrayList();
+            using (IDataReader reader = DefaultModulePage.GetDefaultModuleInPage4Site(this.siteID))
+            {
+                while (reader.Read())
+                {
+                    DefaultModulePage m = new DefaultModulePage();
+                    m.ItemID = Convert.ToInt32(reader["ItemID"]);
+                    m.ModuleId = Convert.ToInt32(reader["ModuleID"]);
+                    m.PaneName = reader["PaneName"].ToString();
+                    m.ModuleTitle = reader["DefautlTitle"].ToString();
+                    m.ModuleOrder = Convert.ToInt32(reader["ModuleOrder"]);
+                    m.SiteId = Convert.ToInt32(reader["SiteID"]);
+                    listModules.Add(m);
+                }
+            }
+            return listModules;
+        }
+        private ArrayList GetPaneModules(string pane)
+        {
+            ArrayList paneModules = new ArrayList();
+            foreach (DefaultModulePage module in allModules)
+            {
+                if (StringHelper.IsCaseInsensitiveMatch(module.PaneName, pane))
+                {
+                    paneModules.Add(module);
+                }
+            }
+
+            return paneModules;
+        }
+
+        private void BindPaneModules(ListControl listControl, string pane)
+        {
+
+            foreach (DefaultModulePage module in allModules)
+            {
+                if (StringHelper.IsCaseInsensitiveMatch(module.PaneName, pane))
+                {
+                    ListItem listItem = new ListItem(module.ModuleTitle.Coalesce(Resource.ContentNoTitle), module.ItemID.ToInvariantString());
+                    listControl.Items.Add(listItem);
+                }
+            }
+
+        }
+
+
+        private void OrderModules(ArrayList list)
+        {
+            int i = 1;
+            list.Sort();
+
+            foreach (DefaultModulePage m in list)
+            {
+                // number the items 1, 3, 5, etc. to provide an empty order
+                // number when moving items up and down in the list.
+                m.ModuleOrder = i;
+                i += 2;
+            }
+        }
+
+        void btnAddExisting_Click(object sender, ImageClickEventArgs e)
+        {
+            int moduleId = -1;
+            if (int.TryParse(hdnModuleID.Value, out moduleId))
+            {
+                Module m = new Module(moduleId);
+                if (m.SiteId == siteSettings.SiteId)
+                {
+                    Module.Publish(
+                        CurrentPage.PageGuid,
+                        m.ModuleGuid,
+                        m.ModuleId,
+                        CurrentPage.PageId,
+                        ddPaneNames.SelectedValue,
+                        999,
+                        DateTime.UtcNow,
+                        DateTime.MinValue);
+
+                    //globalContentCount = Module.GetGlobalCount(siteSettings.SiteId, -1, pageID);
+
+                    lnkGlobalContent.Visible = ((globalContentCount > 0) && !WebConfigSettings.DisableGlobalContent);
+
+                    CurrentPage.RefreshModules();
+
+                    ArrayList modules = GetPaneModules(m.PaneName);
+                    OrderModules(modules);
+
+                    //foreach (Module item in modules)
+                    //{
+                    //    Module.UpdateModuleOrder(pageID, item.ModuleId, item.ModuleOrder, m.PaneName);
+                    //}
+
+                    CurrentPage.RefreshModules();
+
+                    if (m.IncludeInSearch)
+                    {
+                        mojoPortal.SearchIndex.IndexHelper.RebuildPageIndexAsync(CurrentPage);
+                    }
+
+                    BindPanes();
+                    upLayout.Update();
+                }
+
+
+            }
+
+        }
+
+        private void btnCreateNewContent_Click(Object sender, EventArgs e)
+        {
+            Page.Validate("pagelayout");
+            if (!Page.IsValid) { return; }
+
+            int moduleID = int.Parse(moduleType.SelectedItem.Value);
+
+            DefaultModulePage dmp = new DefaultModulePage();
+            dmp.SiteId = siteSettings.SiteId;
+            dmp.ModuleId = moduleID;
+            dmp.ModuleTitle = moduleTitle.Text;
+            dmp.PaneName = ddPaneNames.SelectedValue;
+            dmp.Save();
+
+            allModules = DefaultModulePage.RefreshDefaultModules(dmp.SiteId);
+
+            ArrayList modules = GetPaneModules(dmp.PaneName);
+            OrderModules(modules);
+
+            foreach (DefaultModulePage item in modules)
+            {
+                DefaultModulePage.UpdateDefaultModuleOrder(dmp.ItemID, item.ModuleOrder, dmp.PaneName);
+            }
+
+            allModules = DefaultModulePage.RefreshDefaultModules(dmp.SiteId);
+            BindPanes();
+            upLayout.Update();
+        }
+
+        #region Move Up or Down
+        void RightUpBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(rightPane, pane, direction);
+
+        }
+        void RightDownBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(rightPane, pane, direction);
+
+        }
+        void btnTopUp_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(topPane, pane, direction);
+        }
+
+        void btnTopDown_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(topPane, pane, direction);
+
+        }
+        void btnBottomUp_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(bottomPane, pane, direction);
+        }
+        void btnBottomDown_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(bottomPane, pane, direction);
+
+        }
+        void ContentUpBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(contentPane, pane, direction);
+        }
+        void ContentDownBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(contentPane, pane, direction);
+
+        }
+
+        void LeftUpBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(leftPane, pane, direction);
+
+        }
+        void LeftDownBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string direction = ((ImageButton)sender).CommandName;
+            string pane = ((ImageButton)sender).CommandArgument;
+            MoveUpDown(leftPane, pane, direction);
+        }
+
+        private void MoveUpDown(ListBox listbox, string pane, string direction)
+        {
+            ArrayList modules = GetPaneModules(pane);
+            DefaultModulePage dmp = null;
+            if (listbox.SelectedIndex != -1)
+            {
+                int delta;
+                int selection = -1;
+
+                // Determine the delta to apply in the order number for the module
+                // within the list.  +3 moves down one item; -3 moves up one item
+
+                if (direction == "down")
+                {
+                    delta = 3;
+                    if (listbox.SelectedIndex < listbox.Items.Count - 1)
+                        selection = listbox.SelectedIndex + 1;
+                }
+                else
+                {
+                    delta = -3;
+                    if (listbox.SelectedIndex > 0)
+                        selection = listbox.SelectedIndex - 1;
+                }
+
+
+                dmp = (DefaultModulePage)modules[listbox.SelectedIndex];
+                dmp.ModuleOrder += delta;
+
+                OrderModules(modules);
+
+                //foreach (Module item in modules)
+                //{
+                //    Module.UpdateModuleOrder(pageID, item.ModuleId, item.ModuleOrder, pane);
+                //}
+                foreach (DefaultModulePage item in modules)
+                {
+                    DefaultModulePage.UpdateDefaultModuleOrder(item.ItemID, item.ModuleOrder, pane);
+                }
+            }
+
+            allModules = DefaultModulePage.RefreshDefaultModules(siteSettings.SiteId);
+            //CurrentPage.RefreshModules();
+            BindPanes();
+            if (dmp != null)
+            {
+                SelectDefaultModule(dmp, pane);
+            }
+            upLayout.Update();
+        }
+
+        #endregion
+
+        #region Move To Pane
+
+
+        void LeftRightBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "leftPane";
+            string targetPane = "contentPane";
+            MoveContent(leftPane, sourcePane, targetPane);
+
+        }
+
+
+        void ContentLeftBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "contentPane";
+            string targetPane = "leftPane";
+            MoveContent(contentPane, sourcePane, targetPane);
+
+        }
+
+        void ContentRightBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "contentPane";
+            string targetPane = "rightPane";
+            MoveContent(contentPane, sourcePane, targetPane);
+
+        }
+
+
+        void RightLeftBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "rightPane";
+            string targetPane = "contentPane";
+            MoveContent(rightPane, sourcePane, targetPane);
+
+        }
+
+
+
+        void ContentDownToNextButton_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "contentPane";
+            string targetPane = "bottomPane";
+            MoveContent(contentPane, sourcePane, targetPane);
+
+        }
+
+        void ContentUpToNextButton_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "contentPane";
+            string targetPane = "topPane";
+            MoveContent(contentPane, sourcePane, targetPane);
+
+        }
+        void btnTopCenter_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "topPane";
+            string targetPane = "contentPane";
+            MoveContent(topPane, sourcePane, targetPane);
+
+        }
+
+        void btnBottomCenter_Click(object sender, ImageClickEventArgs e)
+        {
+            string sourcePane = "bottomPane";
+            string targetPane = "contentPane";
+            MoveContent(bottomPane, sourcePane, targetPane);
+
+        }
+
+
+
+
+        private void MoveContent(ListBox listBox, string sourcePane, string targetPane)
+        {
+
+            if (listBox.SelectedIndex != -1)
+            {
+                ArrayList sourceList = GetPaneModules(sourcePane);
+
+                //Module m = (Module)sourceList[listBox.SelectedIndex];
+                //Module.UpdateModuleOrder(pageID, m.ModuleId, 998, targetPane);
+
+                DefaultModulePage m = (DefaultModulePage)sourceList[listBox.SelectedIndex];
+
+                DefaultModulePage.UpdateDefaultModuleOrder(m.ItemID, 998, targetPane);
+
+                allModules = DefaultModulePage.RefreshDefaultModules(siteSettings.SiteId);
+
+                ArrayList modulesSource = GetPaneModules(sourcePane);
+                OrderModules(modulesSource);
+
+                foreach (DefaultModulePage item in modulesSource)
+                {
+                    DefaultModulePage.UpdateDefaultModuleOrder(m.ItemID, item.ModuleOrder, sourcePane);
+                }
+
+                ArrayList modulesTarget = GetPaneModules(targetPane);
+                OrderModules(modulesTarget);
+
+                foreach (DefaultModulePage item in modulesTarget)
+                {
+                    DefaultModulePage.UpdateDefaultModuleOrder(m.ItemID, item.ModuleOrder, targetPane);
+                }
+
+                BindPanes();
+                SelectDefaultModule(m, targetPane);
+                upLayout.Update();
+            }
+        }
+
+
+        #endregion
+
+        private void SelectModule(Module m, string paneName)
+        {
+            ListBox listbox = null;
+            switch (paneName.ToLower())
+            {
+                case "leftpane":
+                    listbox = leftPane;
+                    break;
+
+                case "rightpane":
+                    listbox = rightPane;
+                    break;
+
+                case "contentpane":
+                    listbox = contentPane;
+                    break;
+
+                case "toppane":
+                    listbox = topPane;
+                    break;
+
+                case "bottompane":
+                    listbox = bottomPane;
+                    break;
+
+            }
+
+            if (listbox != null)
+            {
+                ListItem item = listbox.Items.FindByValue(m.ModuleId.ToInvariantString());
+                if (item != null)
+                {
+                    listbox.ClearSelection();
+                    item.Selected = true;
+                }
+            }
+        }
+
+        private void SelectDefaultModule(DefaultModulePage m, string paneName)
+        {
+            ListBox listbox = null;
+            switch (paneName.ToLower())
+            {
+                case "leftpane":
+                    listbox = leftPane;
+                    break;
+
+                case "rightpane":
+                    listbox = rightPane;
+                    break;
+
+                case "contentpane":
+                    listbox = contentPane;
+                    break;
+
+                case "toppane":
+                    listbox = topPane;
+                    break;
+
+                case "bottompane":
+                    listbox = bottomPane;
+                    break;
+
+            }
+
+            if (listbox != null)
+            {
+                ListItem item = listbox.Items.FindByValue(m.ItemID.ToInvariantString());
+                if (item != null)
+                {
+                    listbox.ClearSelection();
+                    item.Selected = true;
+                }
+            }
+        }
+
+        private void DeleteBtn_Click(Object sender, ImageClickEventArgs e)
+        {
+            if (sender == null) return;
+
+            string pane = ((ImageButton)sender).CommandArgument;
+            ListBox listbox = (ListBox)this.MPContent.FindControl(pane);
+
+            if (listbox.SelectedIndex != -1)
+            {
+
+                int mid = Int32.Parse(listbox.SelectedItem.Value);
+
+                DefaultModulePage m = new DefaultModulePage(mid);
+
+                if (WebConfigSettings.LogIpAddressForContentDeletions)
+                {
+                    string userName = string.Empty;
+                    SiteUser currentUser = SiteUtils.GetCurrentSiteUser();
+                    if (currentUser != null)
+                    {
+                        userName = currentUser.Name;
+                    }
+
+                    log.Info("user " + userName + " removed default module " + m.ModuleTitle + " from site " + siteSettings.SiteId + " from ip address " + SiteUtils.GetIP4Address());
+
+                }
+
+                DefaultModulePage.DeleteDefaultModule(mid);
+                //mojoPortal.SearchIndex.IndexHelper.RebuildPageIndexAsync(new PageSettings(siteSettings.SiteId, pageID));
+
+            }
+
+            //globalContentCount = Module.GetGlobalCount(siteSettings.SiteId, -1, pageID);
+            lnkGlobalContent.Visible = ((globalContentCount > 0) && !WebConfigSettings.DisableGlobalContent);
+            allModules = DefaultModulePage.RefreshDefaultModules(siteSettings.SiteId);
+            BindPanes();
+            upLayout.Update();
+        }
+
+        protected Collection<DictionaryEntry> PaneList()
+        {
+            Collection<DictionaryEntry> paneList = new Collection<DictionaryEntry>();
+            paneList.Add(new DictionaryEntry(Resource.ContentManagerCenterColumnLabel, "contentpane"));
+            paneList.Add(new DictionaryEntry(Resource.ContentManagerLeftColumnLabel, "leftpane"));
+            paneList.Add(new DictionaryEntry(Resource.ContentManagerRightColumnLabel, "rightpane"));
+            paneList.Add(new DictionaryEntry(Resource.ContentManagerTopColumnLabel, "toppane"));
+            paneList.Add(new DictionaryEntry(Resource.ContentManagerBottomColumnLabel, "bottompane"));
+            return paneList;
+        }
+
+
+
+        private void PopulateLabels()
+        {
+            Title = SiteUtils.FormatPageTitle(siteSettings, Resource.PageLayoutPageTitle);
+
+            btnCreateNewContent.Text = Resource.ContentManagerCreateNewContentButton;
+            btnCreateNewContent.ToolTip = Resource.ContentManagerCreateNewContentButton;
+
+            SiteUtils.SetButtonAccessKey
+                (btnCreateNewContent, AccessKeys.ContentManagerCreateNewContentButtonAccessKey);
+
+            LeftUpBtn.AlternateText = Resource.PageLayoutLeftUpAlternateText;
+            LeftUpBtn.ToolTip = Resource.PageLayoutLeftUpAlternateText;
+
+            LeftRightBtn.AlternateText = Resource.PageLayoutLeftRightAlternateText;
+            LeftRightBtn.ToolTip = Resource.PageLayoutLeftRightAlternateText;
+
+            LeftDownBtn.AlternateText = Resource.PageLayoutLeftDownAlternateText;
+            LeftDownBtn.ToolTip = Resource.PageLayoutLeftDownAlternateText;
+
+
+            LeftDeleteBtn.AlternateText = Resource.PageLayoutLeftDeleteAlternateText;
+            LeftDeleteBtn.ToolTip = Resource.PageLayoutLeftDeleteAlternateText;
+            LeftDeleteBtn.ImageUrl = ImageSiteRoot + "/Data/SiteImages/" + DeleteLinkImage;
+            UIHelper.AddConfirmationDialog(LeftDeleteBtn, Resource.PageLayoutRemoveContentWarning);
+
+            ContentUpBtn.AlternateText = Resource.PageLayoutContentUpAlternateText;
+            ContentUpBtn.ToolTip = Resource.PageLayoutContentUpAlternateText;
+
+            ContentLeftBtn.AlternateText = Resource.PageLayoutContentLeftAlternateText;
+            ContentLeftBtn.ToolTip = Resource.PageLayoutContentLeftAlternateText;
+
+            ContentRightBtn.AlternateText = Resource.PageLayoutContentRightAlternateText;
+            ContentRightBtn.ToolTip = Resource.PageLayoutContentRightAlternateText;
+
+            ContentDownBtn.AlternateText = Resource.PageLayoutContentDownAlternateText;
+            ContentDownBtn.ToolTip = Resource.PageLayoutContentDownAlternateText;
+
+            ContentDeleteBtn.AlternateText = Resource.PageLayoutContentDeleteAlternateText;
+            ContentDeleteBtn.ToolTip = Resource.PageLayoutContentDeleteAlternateText;
+            ContentDeleteBtn.ImageUrl = ImageSiteRoot + "/Data/SiteImages/" + DeleteLinkImage;
+            UIHelper.AddConfirmationDialog(ContentDeleteBtn, Resource.PageLayoutRemoveContentWarning);
+
+            RightUpBtn.AlternateText = Resource.PageLayoutRightUpAlternateText;
+            RightUpBtn.ToolTip = Resource.PageLayoutRightUpAlternateText;
+
+            RightLeftBtn.AlternateText = Resource.PageLayoutRightLeftAlternateText;
+            RightLeftBtn.ToolTip = Resource.PageLayoutRightLeftAlternateText;
+
+            RightDownBtn.AlternateText = Resource.PageLayoutRightDownAlternateText;
+            RightDownBtn.ToolTip = Resource.PageLayoutRightDownAlternateText;
+
+            RightDeleteBtn.AlternateText = Resource.PageLayoutRightDeleteAlternateText;
+            RightDeleteBtn.ToolTip = Resource.PageLayoutRightDeleteAlternateText;
+            RightDeleteBtn.ImageUrl = ImageSiteRoot + "/Data/SiteImages/" + DeleteLinkImage;
+            UIHelper.AddConfirmationDialog(RightDeleteBtn, Resource.PageLayoutRemoveContentWarning);
+
+            litAltLayoutNotice.Text = Resource.PageLayoutAltPanelInfo;
+
+            if (!Page.IsPostBack)
+            {
+                if (WebConfigSettings.PrePopulateDefaultContentTitle)
+                {
+                    moduleTitle.Text = Resource.PageLayoutDefaultNewModuleName;
+                }
+            }
+
+            if (!Page.IsPostBack)
+            {
+                ddPaneNames.DataSource = PaneList();
+                ddPaneNames.DataBind();
+            }
+
+            ContentDownToNextButton.AlternateText = Resource.PageLayoutMoveCenterToAlt2Button;
+            ContentDownToNextButton.ToolTip = Resource.PageLayoutMoveCenterToAlt2Button;
+            ContentUpToNextButton.AlternateText = Resource.PageLayoutMoveCenterToAlt1Button;
+            ContentUpToNextButton.ToolTip = Resource.PageLayoutMoveCenterToAlt1Button;
+
+            btnTopCenter.AlternateText = Resource.PageLayoutMoveAltToCenterButton;
+            btnTopCenter.ToolTip = Resource.PageLayoutMoveAltToCenterButton;
+
+            btnBottomUp.AlternateText = Resource.PageLayoutAlt2MoveUpButton;
+            btnBottomUp.ToolTip = Resource.PageLayoutAlt2MoveUpButton;
+
+            btnTopUp.AlternateText = Resource.PageLayoutAlt1MoveUpButton;
+            btnTopUp.ToolTip = Resource.PageLayoutAlt1MoveUpButton;
+
+            btnTopDown.AlternateText = Resource.PageLayoutAlt1MoveDownButton;
+            btnTopDown.ToolTip = Resource.PageLayoutAlt1MoveDownButton;
+
+            //btnMoveAlt1ToAlt2.AlternateText = Resource.PageLayoutMoveAlt1ToAlt2Button;
+            //btnMoveAlt1ToAlt2.ToolTip = Resource.PageLayoutMoveAlt1ToAlt2Button;
+
+            btnTopDelete.AlternateText = Resource.PageLayoutAlt1DeleteButton;
+            btnTopDelete.ToolTip = Resource.PageLayoutAlt1DeleteButton;
+            btnTopDelete.ImageUrl = ImageSiteRoot + "/Data/SiteImages/" + DeleteLinkImage;
+            UIHelper.AddConfirmationDialog(btnTopDelete, Resource.PageLayoutRemoveContentWarning);
+            //btnMoveAlt2ToAlt1.AlternateText = Resource.PageLayoutMoveAlt2ToAlt1Button;
+            //btnMoveAlt2ToAlt1.ToolTip = Resource.PageLayoutMoveAlt2ToAlt1Button;
+
+            btnBottomCenter.AlternateText = Resource.PageLayoutMoveAltToCenterButton;
+            btnBottomCenter.ToolTip = Resource.PageLayoutMoveAltToCenterButton;
+
+            btnBottomUp.AlternateText = Resource.PageLayoutAlt2MoveUpButton;
+            btnBottomUp.ToolTip = Resource.PageLayoutAlt2MoveUpButton;
+
+            btnBottomDown.AlternateText = Resource.PageLayoutAlt2MoveDownButton;
+            btnBottomDown.ToolTip = Resource.PageLayoutAlt2MoveDownButton;
+
+            btnBottomDelete.AlternateText = Resource.PageLayoutAlt2DeleteButton;
+            btnBottomDelete.ToolTip = Resource.PageLayoutAlt2DeleteButton;
+            btnBottomDelete.ImageUrl = ImageSiteRoot + "/Data/SiteImages/" + DeleteLinkImage;
+            UIHelper.AddConfirmationDialog(btnBottomDelete, Resource.PageLayoutRemoveContentWarning);
+
+            lnkGlobalContent.Text = Resource.AddExistingContent;
+            lnkGlobalContent.ToolTip = Resource.AddExistingContent;
+            lnkGlobalContent.Visible = ((globalContentCount > 0) && !WebConfigSettings.DisableGlobalContent);
+            //lnkGlobalContent.NavigateUrl = SiteRoot + "/Dialog/GlobalContentDialog.aspx?pageid=" + pageID.ToInvariantString();
+
+            reqModuleTitle.ErrorMessage = Resource.TitleRequiredWarning;
+            reqModuleTitle.Enabled = WebConfigSettings.RequireContentTitle;
+
+            cvModuleTitle.ValueToCompare = Resource.PageLayoutDefaultNewModuleName;
+            cvModuleTitle.ErrorMessage = Resource.DefaultContentTitleWarning;
+            cvModuleTitle.Enabled = WebConfigSettings.RequireChangeDefaultContentTitle;
+
+        }
+
+        private void SetupExistingContentScript()
+        {
+
+
+            StringBuilder script = new StringBuilder();
+
+            script.Append("\n<script type='text/javascript'>");
+
+            script.Append("$('#" + lnkGlobalContent.ClientID + "').colorbox({width:\"80%\", height:\"80%\", iframe:true});");
+
+            script.Append("function AddModule(moduleId) {");
+
+            //script.Append("GB_hide();");
+            //script.Append("alert(moduleId);");
+
+            script.Append("var hdnUI = document.getElementById('" + this.hdnModuleID.ClientID + "'); ");
+            script.Append("hdnUI.value = moduleId; ");
+
+
+            //script.Append("var btn = document.getElementById('" + this.btnAddExisting.ClientID + "');  ");
+            //script.Append("btn.click(); ");
+
+            script.Append("$.colorbox.close(); ");
+
+            script.Append("}");
+            script.Append("</script>");
+
+
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "SelectContentHandler", script.ToString(), false);
+
+        }
+
+        private void LoadSettings()
+        {
+            siteID = WebUtils.ParseInt32FromQueryString("siteid", -1);
+            isSiteEditor = SiteUtils.UserIsSiteEditor();
+            pageHasAltContent1 = this.ContainsPlaceHolder("topContent");
+            pageHasAltContent2 = this.ContainsPlaceHolder("bottomContent");
+
+            allModules = GetModule4Site();
+
+            if (siteID > -1)
+            {
+                pnlContent.Visible = true;
+
+                //lnkEditSettings.NavigateUrl = SiteRoot + "/Admin/PageSettings.aspx?pageid=" + pageID.ToString();
+
+                if (CurrentPage != null)
+                {
+                    if (CurrentPage.BodyCssClass.Length > 0) { AddClassToBody(CurrentPage.BodyCssClass); }
+                }
+
+            }
+
+            AddClassToBody("administration");
+            AddClassToBody("pagelayout");
+
+            //globalContentCount = Module.GetGlobalCount(siteSettings.SiteId, -1, pageID);
+
+            try
+            {
+                // this keeps the action from changing during ajax postback in folder based sites
+                SiteUtils.SetFormAction(Page, Request.RawUrl);
+            }
+            catch (MissingMethodException)
+            {
+                //this method was introduced in .NET 3.5 SP1
+            }
+
+            if (ScriptController != null)
+            {
+                ScriptController.RegisterAsyncPostBackControl(btnCreateNewContent);
+
+                ScriptController.RegisterAsyncPostBackControl(LeftUpBtn);
+                ScriptController.RegisterAsyncPostBackControl(LeftDownBtn);
+                ScriptController.RegisterAsyncPostBackControl(ContentUpBtn);
+                ScriptController.RegisterAsyncPostBackControl(ContentDownBtn);
+                ScriptController.RegisterAsyncPostBackControl(RightUpBtn);
+                ScriptController.RegisterAsyncPostBackControl(RightDownBtn);
+                ScriptController.RegisterAsyncPostBackControl(btnTopUp);
+                ScriptController.RegisterAsyncPostBackControl(btnTopDown);
+                ScriptController.RegisterAsyncPostBackControl(btnBottomUp);
+                ScriptController.RegisterAsyncPostBackControl(btnBottomDown);
+
+
+
+                ScriptController.RegisterAsyncPostBackControl(LeftDeleteBtn);
+                ScriptController.RegisterAsyncPostBackControl(ContentDeleteBtn);
+                ScriptController.RegisterAsyncPostBackControl(RightDeleteBtn);
+                ScriptController.RegisterAsyncPostBackControl(btnTopDelete);
+                ScriptController.RegisterAsyncPostBackControl(btnBottomDelete);
+                ScriptController.RegisterAsyncPostBackControl(LeftRightBtn);
+                ScriptController.RegisterAsyncPostBackControl(ContentLeftBtn);
+                ScriptController.RegisterAsyncPostBackControl(ContentRightBtn);
+                ScriptController.RegisterAsyncPostBackControl(RightLeftBtn);
+                ScriptController.RegisterAsyncPostBackControl(btnTopCenter);
+                ScriptController.RegisterAsyncPostBackControl(btnBottomCenter);
+                //ScriptController.RegisterAsyncPostBackControl(btnMoveAlt2ToAlt1);
+            }
+
+
+        }
+
+    }
+}

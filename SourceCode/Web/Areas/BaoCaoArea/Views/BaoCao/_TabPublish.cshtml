@@ -1,0 +1,106 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BaoCaoArea.Models
+@model BaoCaoIndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    ViewBag.Title = "Quản lý công khai ngân sách";
+    var listCategory = Model.ListCategory;
+    var listBaoCao = Model.ListBaoCao;
+}
+
+<style>
+    .container {
+        width: 100%;
+    }
+</style>
+
+<div id="content">
+    <div class="container">
+        <a href="javascript:ExportXML()" class="btn-xml">Dữ liệu XML</a>
+        <ul class="nav nav-tabs tab-bootstrap" id="ulCategory">
+            @foreach (var item in listCategory)
+            {
+                var id = item.Description.Replace("~", "").Replace("/", "");
+                if (listCategory.IndexOf(item) == 0)
+                {
+                    <li class="active"><a data-toggle="tab" href="#@id" data-id="@item.ItemID">@item.Name</a></li>
+                }
+                else
+                {
+                    <li><a data-toggle="tab" href="#@id" data-id="@item.ItemID">@item.Name</a></li>
+                }
+            }
+        </ul>
+
+        <div class="tab-content">
+            @foreach (var category in listCategory)
+            {
+                var id = category.Description.Replace("~", "").Replace("/", "");
+                var listBaoCaoCurrent = listBaoCao.Where(x => x.LinhVucID == category.ItemID).OrderByDescending(x => x.NgayCongBo).ToList();
+
+
+                <div id="@id" class='tab-pane fade @(listCategory.IndexOf(category) == 0?"in active":"")'>
+                    <div class="form-group width100 mtop-20">
+                        <div class="col-sm-8 text-green font-bold no-padding font-robotoc font-size16">
+                            @category.Sumary
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="col-sm-4 label-text text-right">Năm </label>
+                            <div class="col-sm-8">
+                                @Html.DropDownList("YearFilter", ViewBag.ListYear as List<SelectListItem>, new { @id = "YearFilter_" + category.ItemID, @onchange = "LoadForYear(" + category.ItemID + ")", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="lv_@category.ItemID">
+                        @Html.Partial("_ListBaoCao", listBaoCaoCurrent)
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function ExportXML() {
+        var idLinhVuc = $("#ulCategory li.active a").attr("data-id");
+        var year = $("#YearFilter_" + idLinhVuc).val();
+        window.location.href = "/ckns.aspx?year=" + year + "&cateid=" + idLinhVuc;
+    }
+    function LoadForYear(idLinhVuc) {
+        var year = $("#YearFilter_" + idLinhVuc).val();
+        var param = {
+            linhVucFillter: idLinhVuc, yearFillter: year
+        }
+
+        CallAjax("post", "/BaoCaoArea/BaoCao/SearchBaoCao", JSON.stringify(param), function (rs) {
+            $("#lv_" + idLinhVuc).html(rs);
+        })
+    }
+
+
+
+    function displayTime() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        var currentTime = hours + ":" + minutes + ":" + seconds;
+
+        document.getElementById("clock").textContent = currentTime;
+    }
+
+
+    setInterval(displayTime, 1000);
+
+    //<h4>Thời gian:</h4>
+    //                <div id="clock"></div>
+
+</script>

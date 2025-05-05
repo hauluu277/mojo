@@ -1,0 +1,145 @@
+﻿
+@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model BieuMauThongTinEditViewModel
+<style>
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #fileList {
+        margin-left: 18%;
+    }
+
+    .acb {
+        width: 50%;
+    }
+
+    .acb1 {
+        width: -50%;
+    }
+
+    #frmReport .col-sm-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+@using (Ajax.BeginForm("SaveBieuMauThongTin", "BieuMauThongTin",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "onSuccess", OnFailure = "AjaxError" },
+new { @class = "", id = "frmBieuMauThongTin", area = "BieuMauThongTinArea", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    @(Model.Id > 0 ? "CẬP NHẬT BIỂU MẪU THÔNG TIN": "THÊM MỚI BIỂU MẪU THÔNG TIN")
+                </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Tên biểu mẫu <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(x => x.Ten, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Ten)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Trạng thái hiển thị <span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.RadioButtonFor(model => model.IsShow, true) Hiện&nbsp;
+                            @Html.RadioButtonFor(model => model.IsShow, false) Ẩn
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">File biểu mẫu </label>
+                        @if (!string.IsNullOrEmpty(Model.Path))
+                        {
+                            <div class="col-sm-5">
+                                <input type="file" name="fileBieuMau" id="fileBieuMau" class="form-control" />
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="/Uploads/@Model.Path" download="@Model.Ten" class="text-info">
+                                    <i class="fa fa-download"></i>&nbsp;Tải về
+                                </a>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-sm-8">
+                                <input type="file" name="fileBieuMau" id="fileBieuMau" class="form-control" />
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="modal-footer center">
+                    <button type="button" onclick="onSubmit()" class="btn btn-primary">
+                        <i class="fa fa-save"></i>&nbsp;Lưu
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <i class="fa fa-times" aria-hidden="true"></i> <span>Đóng</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Scripts/jquery/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery/AdditionValidation.js"></script>
+<script>
+    var onSubmit = function () {
+        var isValid = jQuery('#frmBieuMauThongTin').valid();
+        if (isValid) {
+
+            var formData = new FormData();
+            var inputFile = document.getElementById('fileBieuMau');
+            if (inputFile.files.length > 0) {
+                formData.append("fileBieuMau", inputFile.files[0]);
+            }
+            formData.append("Ten", $("#Ten").val());
+            formData.append("Id", '@Model.Id');
+            formData.append("IsShow", $('[name="IsShow"]:checked').val());
+            $.ajax({
+                url: '/BieuMauThongTinArea/BieuMauThongTin/SaveBieuMauThongTin',
+                type: 'post',
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if (result.Status == true) {
+                        reloadTable();
+                        NotifySuccess(result.Message);
+                        CloseGlobalModal();
+                    } else {
+                        NotifyError(result.Message);
+                    }
+                },
+                error: function (xhr, error, status) {
+                    console.log(error, status);
+                }
+            });
+        }
+    }
+
+    var onSuccess = function (result) {
+        if (result.Status == true) {
+            reloadTable();
+            NotifySuccess(result.Message);
+            CloseGlobalModal();
+        } else {
+            NotifyError(result.Message);
+        }
+    }
+</script>

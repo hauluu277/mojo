@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="GallerySelectItemSetting.ascx.cs" Inherits="GalleryFeature.UI.GallerySelectItemSetting" %>
+<asp:ListBox ID="lboxGallery" runat="server" Height="250"></asp:ListBox>

@@ -1,0 +1,126 @@
+﻿<style>
+    .row-block {
+        margin: 5px 0px;
+        display: flex;
+    }
+
+    .txt-label {
+        padding-top: 7px;
+    }
+
+    .width100 {
+        width: 100% !important;
+    }
+</style>
+<div id="collapseDiv" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+    <div class="well">
+
+    @using (Ajax.BeginForm("searchData", "QLLienHe",
+    new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failure",
+        OnSuccess = "searchSuccess",
+    }, new { area = "QLLienHeArea", id = "frmSearchLienHe" }))
+        {
+            @Html.AntiForgeryToken()
+        <div class="row row-block">
+            <div class="col-md-6 row-block">
+                <div class="col-md-4 txt-label control-label">Tiêu đề</div>
+                <div class="col-md-8">
+                    <input class="form-control width100" type="text" name="SubjectFilter" placeholder="Nhập tiêu đề để tra cứu" />
+                </div>
+            </div>
+
+            <div class="col-md-6 row-block">
+                <div class="col-md-4 txt-label control-label">Email</div>
+                <div class="col-md-8">
+                    <input class="form-control width100" type="text" name="EmailFilter" placeholder="Nhập email để tra cứu" />
+                </div>
+            </div>
+
+            <div class="col-md-6 row-block">
+                <div class="col-md-4 txt-label control-label">Tên người gửi</div>
+                <div class="col-md-8">
+                    <input class="form-control width100" type="text" name="TenFilter" placeholder="Nhập tên người gửi để tra cứu" />
+                </div>
+            </div>
+            <div class="col-md-6 row-block">
+                <div class="col-md-4 txt-label control-label">Trạng thái phản hồi</div>
+                <div class="col-md-8">
+                    <select name="TrangThaiPhanHoiFilter" class="form-control">
+                        <option value="">-Chọn-</option>
+                        <option value="0">Chưa phản hồi</option>
+                        <option value="1">Đã phản hồi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12 center" style=" margin-top:20px;">
+                <button id="btnSearch" type="button" onclick="SearchSubmit()" class="btn btn-labeled btn-primary">
+                    <span class="btn-label">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    Tìm kiếm
+                </button>
+
+                <button type="button" onclick="HuyTimKiem()" role="button" class="btn btn-labeled btn-danger">
+                    <span class="btn-label"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    Hủy tìm kiếm
+                </button>
+            </div>
+        </div>
+
+        }
+    </div>
+</div>
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    function HuyTimKiem() {
+        $("input[name=SubjectFilter]").val('');
+        $("input[name=EmailFilter]").val('');
+        $("input[name=TenFilter]").val('');
+        $("select[name=TrangThaiPhanHoiFilter]").val('');
+
+        $("#frmSearchLienHe").submit();
+    }
+    function SearchSubmit() {
+        $("#frmSearchLienHe").submit();
+    }
+    function searchSuccess(rs) {
+        $("#tbl-QLLienHe").hinetTable("data", {
+            pageIndex: 1,
+            pagecount: rs.TotalPage,
+            recordCount: rs.Count,
+            listItem: rs.ListItem,
+        });
+    }
+    function pagefunctionSearch() {
+        $(".txt-select2").select2();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\bin\Debug\CKFinder_Watermark.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\bin\Debug\CKFinder_Watermark.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\bin\Debug\CKFinder.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\bin\Debug\CKFinder.pdb
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\obj\Debug\Watermark.csprojAssemblyReference.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\obj\Debug\Watermark.csproj.CoreCompileInputs.cache
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\obj\Debug\Watermark.csproj.CopyComplete
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\obj\Debug\CKFinder_Watermark.dll
+E:\2019\DHSP_THAINGUYEN\01.SourceCode\Deverloping\Web\ClientScript\ckfinder\_source\Resources\Plugins\Watermark\obj\Debug\CKFinder_Watermark.pdb

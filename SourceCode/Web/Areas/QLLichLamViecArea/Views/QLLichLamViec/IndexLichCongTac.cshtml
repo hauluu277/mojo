@@ -1,0 +1,113 @@
+﻿@using mojoPortal.Service.CommonModel.LichLamViec
+@using Newtonsoft.Json
+@model ShowLichCongTacIndexDto
+
+@{
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+    ViewBag.Title = "Lịch công tác";
+}
+<style>
+    .bg-body {
+        margin-top: 0;
+    }
+</style>
+
+<div class="listvanban__box__thaotac wf100">
+    <div class="rowthaotac__left listvanban__box__thaotac__row col-sm-6 pd0">
+        <a class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-previous">
+            <i class="fa fa-angle-double-left"></i> <span>Tuần trước</span>
+        </a>
+        <a class="btn listvanban__box__thaotac__btn hvr-sweep-to-bottom" id="btn--add-next">
+            <span>Tuần tiếp theo</span> <i class="fa fa-angle-double-right"></i>
+        </a>
+    </div>
+</div>
+<div id="boxRender">
+    @Html.Partial("_LichCongTacPartial", Model)
+</div>
+
+
+<script>
+    function toDateObj(date) {
+        try {
+            var dateParts = date.split("/");
+            var day = dateParts[0];
+            var month = dateParts[1] - 1;
+            var year = dateParts[2];
+            return new Date(year, month, day);
+        } catch (err) {
+            return null;
+        }
+    }
+
+    Date.prototype.addDays = function (days) {
+        var date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    }
+
+    Date.prototype.ToStringVN = function () {
+        var date = new Date(this.valueOf());
+        var year = date.getFullYear();
+
+        var month = (1 + date.getMonth()).toString();
+        month = month.length > 1 ? month : '0' + month;
+
+        var day = date.getDate().toString();
+        day = day.length > 1 ? day : '0' + day;
+
+        return day + '/' + month + '/' + year;
+    }
+
+    var sdate = toDateObj('@Model.sDate.ToString("dd/MM/yyyy")');
+
+    $("#btn--add-next").click(function () {
+        console.log("next");
+        sdate = sdate.addDays(7);
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+
+
+        CallAjax('post', '/QLLichLamViecArea/QLLichLamViec/LichCongTacView', JSON.stringify(data), function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+
+    })
+
+    function reloadTablePersonal() {
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+
+        CallAjax('post', '/QLLichLamViecArea/QLLichLamViec/LichCongTacView', JSON.stringify(data), function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+    }
+    $("#btn--add-previous").click(function () {
+        sdate = sdate.addDays(-7);
+        var fromdate = sdate;
+        var todate = fromdate.addDays(6);
+
+        var data = {
+            startDate: fromdate.ToStringVN(),
+            endDate: todate.ToStringVN()
+        };
+        CallAjax('post', '/QLLichLamViecArea/QLLichLamViec/LichCongTacView', JSON.stringify(data), function (rs) {
+            sdate = fromdate;
+            $("#boxRender").html(rs);
+        })
+    })
+</script>

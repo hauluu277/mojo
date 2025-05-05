@@ -1,0 +1,294 @@
+﻿@using Newtonsoft.Json
+@using CommonHelper.ObjectExtend
+@using System.Text.RegularExpressions
+@using mojoPortal.Web.Areas.BieuMauThongTinArea.Data
+@model BieuMauThongTinKeKhaiViewModel
+@{
+    ViewBag.Title = "Kê khai biểu mẫu thông tin";
+    Layout = "~/Views/Shared/_LayoutAjaxEmpty.cshtml";
+}
+
+<style>
+    #formNopKeKhaiBieuMauThongTin fieldset {
+        font-family: sans-serif;
+        border: 2px solid #1F497D;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+        #formNopKeKhaiBieuMauThongTin fieldset legend {
+            background: #0078d4;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 0 0 5px #ddd;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+</style>
+
+@using (Ajax.BeginForm("NopKeKhaiBieuMauThongTin", "BieuMauThongTin",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "onSuccess", OnFailure = "AjaxError" },
+new { @class = "", id = "formNopKeKhaiBieuMauThongTin", area = "BieuMauThongTinArea", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="IdBieuMauThongTin" value="@Model.InfoBieuMau.Id" />
+
+    var strNoiDungBieuMau = Model.InfoBieuMau.NoiDungHTML;
+    var contentToShow = strNoiDungBieuMau;
+    string contentToFindMatches = strNoiDungBieuMau;
+
+
+    var matches = Model.Reg.Matches(contentToFindMatches);
+    var matches_Checkbox = Model.RegCheckBox.Matches(contentToFindMatches);
+    var matches_Area = Model.RegArea.Matches(contentToFindMatches);
+    var matches_Upload = Model.RegUpload.Matches(contentToFindMatches);
+    var matches_Score = Model.RegScore.Matches(contentToFindMatches);
+    var matches_ScoreTongThe = Model.RegScoreTongThe.Matches(contentToFindMatches);
+    var matches_ScoreCuoiCung = Model.RegScoreCuoiCung.Matches(contentToFindMatches);
+    var matches_Tyle = Model.RegTyLe.Matches(contentToFindMatches);
+    var matches_TaiBieuMau = Model.RegTaiBieuMau.Matches(contentToFindMatches);
+
+    //danh sách các phần hiển thị checkbox
+    var countMatches_CheckBox = matches_Checkbox.Count;
+    for (int i = 0; i < countMatches_CheckBox; i++)
+    {
+        var configContent = matches_Checkbox[i].Value;
+        var configKey = configContent.Replace("[[", string.Empty).Replace("]]", string.Empty);
+
+
+        var solieu = Model.ListTieuChi.Where(x => x.Key == configKey).FirstOrEmpty();
+        var isChecked = false;
+        string elementContent = "<input type='checkbox' " + (isChecked ? "checked" : "") + " name='" + configKey + "'/>";
+        contentToShow = contentToShow.Replace(configContent, elementContent);
+    }
+
+    //danh sách các phần nội dung để hiển thị điểm
+    var groupMatchesToShowScore = new Dictionary<int, MatchCollection>()
+    {
+        {1, matches_Score },
+        {2, matches_ScoreTongThe },
+        {3, matches_ScoreCuoiCung }
+    };
+
+    foreach (var pairMatchScore in groupMatchesToShowScore)
+    {
+        var groupMatcheScore = pairMatchScore.Value;
+        var countMatcheScore = groupMatcheScore.Count;
+        for (int i = 0; i < countMatcheScore; i++)
+        {
+            var configContent = groupMatcheScore[i].Value;
+            var configKey = configContent.Replace("[[", string.Empty).Replace("]]", string.Empty);
+
+            //var entityDataKeKhai = Model.ListSoLieuKeKhai.Where(x => x.CdsKey == configKey).FirstOrEmpty();
+            var elementDomID = configKey.Replace(".", "_") + "@" + Model.InfoBieuMau.Id;
+            var elementText = "";
+
+            string elementContent = "<span style='color:blue;font-weight:bold' id='" + elementDomID + "'>" + elementText + "</span>";
+            //hiển thị tiêu chí liên quan
+            //elementContent += "&nbsp;<span onclick='toggleListTieuChiLienQuan(" + "\"" + configKey + "\"" + "," + itemNhomTieuChi.Id + "," + Model.IdBoChiSo + "," + Model.EntityTruCotSo.Id + "," + Model.IdDonVi + ", " + Model.EntityDotKeKhai.Id + ")'><i class='text-primary fa fa-info-circle icon-tieuchi-lienquan' title='Hiển thị danh sách tiêu chí liên quan'></i></span>";
+            contentToShow = contentToShow.Replace(configContent, elementContent);
+        }
+    };
+
+    var countMatches_Tyle = matches_Tyle.Count;
+    for (int i = 0; i < countMatches_Tyle; i++)
+    {
+        var configContent = matches_Tyle[i].Value;
+        var configKey = configContent.Replace("[[", string.Empty).Replace("]]", string.Empty);
+
+        //var entityDataKeKhai = Model.ListSoLieuKeKhai.Where(x => x.CdsKey == configKey).FirstOrEmpty();
+        var elementDomID = configKey.Replace(".", "_") + "@" + Model.InfoBieuMau.Id;
+        var elementText = "%";
+
+        string elementContent = "<span style='color:blue;font-weight:bold' id='" + elementDomID + "'>" + elementText + "</span>";
+
+        //hiển thị tiêu chí liên quan
+        //elementContent += "&nbsp;<span onclick='toggleListTieuChiLienQuan(" + "\"" + configKey + "\"" + "," + itemNhomTieuChi.Id + "," + Model.IdBoChiSo + "," + Model.EntityTruCotSo.Id + "," + Model.IdDonVi + "," + Model.EntityDotKeKhai.Id + ")'><i class='text-primary fa fa-info-circle icon-tieuchi-lienquan' title='Hiển thị danh sách tiêu chí liên quan'></i></span>";
+        contentToShow = contentToShow.Replace(configContent, elementContent);
+    }
+
+    var countMatches_Area = matches_Area.Count;
+    for (int i = 0; i < countMatches_Area; i++)
+    {
+        string configContent = matches_Area[i].Value;
+        string configKey = configContent.Replace("[[", string.Empty).Replace("]]", string.Empty);
+
+        //var entityDataKeKhai = Model.ListSoLieuKeKhai.Where(x => x.CdsKey == configKey).FirstOrEmpty();
+        var elementText = "";
+
+        var elementDomID = configKey + "@" + Model.InfoBieuMau.Id;
+        string elementContent = "<textarea class='form-control' rows='3' id='" + elementDomID + "' name='" + elementDomID + "' style='width:100%;resize:vertical'>" + elementText + "</textarea>";
+        contentToShow = contentToShow.Replace(configContent, elementContent);
+    }
+
+    var countMatches = matches.Count;
+    for (int i = 0; i < countMatches; i++)
+    {
+        var configContent = matches[i].Value;
+        var configKey = configContent.Replace("[[", string.Empty).Replace("]]", string.Empty);
+
+        var entityConfigTieuChi = Model.ListTieuChi.Where(x => x.Key == configKey)
+            .FirstOrEmpty();
+        //var entitySoLieuKeKhai = Model.ListSoLieuKeKhai.Where(x => x.CdsKey == configKey && x.NhomTieuChiId == itemNhomTieuChi.Id).FirstOrEmpty();
+
+        var elementContent = string.Empty;
+        if (configKey.StartsWith("upload."))
+        {
+            elementContent = "";
+        }
+        else
+        {
+            if (entityConfigTieuChi != null)
+            {
+                var DataType = string.Empty;
+                //if (!string.IsNullOrEmpty(entityConfigTieuChi.CodeDataType))
+                //{
+                //    DataType = "is" + entityConfigTieuChi.CodeDataType;
+                //}
+
+                var isRequired = entityConfigTieuChi.Required == true;
+                var isDropdownList = entityConfigTieuChi.IsComboBox == true;
+                //bool isMultipleDropdownList = entityConfigTieuChi.IsMultiple == true;
+
+                //var isDisabled = entityConfigTieuChi.IsDisableAutoCompute == true;
+                var isDisabled = false;
+                if (isRequired)
+                {
+                    elementContent += "<span class='red'>*</span>";
+                }
+                if (isDropdownList)
+                {
+                    //string elementDomID = configKey + "@" + itemNhomTieuChi.Id;
+                    //elementContent += "</span><span class='form-group' >";
+                    //elementContent += "<select onkeydown='return false'  " + (isMultipleDropdownList ? "multiple" : "") + " id='" + elementDomID + "' name='" + elementDomID + "' class='txt-combobox select2 " + (isRequired ? " required " : "") + "'>";
+
+                    //if (entityConfigTieuChi.ListDataDropdownList != null)
+                    //{
+                    //    if (isRequired == false && isMultipleDropdownList == false)
+                    //    {
+                    //        elementContent += "<option value='' " + (string.IsNullOrEmpty(entitySoLieuKeKhai.CdsValue) ? " selected " : "") + " >--- Chọn ---</option>";
+                    //    }
+
+                    //    foreach (var dropdownOption in entityConfigTieuChi.ListDataDropdownList)
+                    //    {
+                    //        var isSelected = "";
+                    //        if (entitySoLieuKeKhai != null && entitySoLieuKeKhai.IdDataComboBox > 0 && entitySoLieuKeKhai.IdDataComboBox.Value == dropdownOption.Id)
+                    //        {
+                    //            isSelected = "selected";
+                    //        }
+                    //        elementContent += "<option value='" + dropdownOption.Id + "' " + isSelected + " >" + dropdownOption.Name + "</option>";
+                    //    }
+                    //}
+                    //elementContent += "</select><i data-toggle='tooltip' class='error' ></i></span>";
+                }
+                else
+                {
+                    var elementDomID = configKey + "@" + Model.InfoBieuMau.Id;
+                    var elementText = "";
+
+                    elementContent += "<span class='form-group'>";
+                    elementContent += "<input type='text' id='" + elementDomID + "' class='form-control input-line " + DataType + " width-dynamic " + (isRequired ? " required " : "") + "' name='" + elementDomID + "' value='" + elementText + "' " + (isDisabled ? " disabled " : "") + " />";
+                    elementContent += "<i data-toggle='tooltip' class='error' ></i>";
+                    elementContent += "</span>";
+                }
+
+            }
+            else
+            {
+                string elementDomID = configKey + "@" + Model.InfoBieuMau.Id;
+                string elementText = "";
+
+                elementContent += "</span><input type='text' class='form-control input-line width-dynamic' name='" + elementDomID
+                    + "' data-max='undefine' data-min='undefine' value='" + elementText + "'/>";
+            }
+        }
+        contentToShow = contentToShow.Replace(configContent, elementContent);
+    }
+    <fieldset>
+        <legend>THÔNG TIN NGƯỜI KHAI</legend>
+        <div class="form-horizontal">
+            <div class="col-sm-6">
+                <div class="row col-sm-12">
+                    <div class="form-group">
+                        <label for="Hoten">Họ tên <span class="text-danger">(*)</span></label>
+                        <input type="text" class="form-control required" id="Hoten" name="Hoten">
+                        <span class="error text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email <span class="text-danger">(*)</span></label>
+                        <input type="text" class="form-control required" id="Email" name="Email">
+                        <span class="error text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="row col-sm-12">
+                    <div class="form-group">
+                        <label for="DienThoai">Điện thoại <span class="text-danger">(*)</span></label>
+                        <input type="text" class="form-control required" id="DienThoai" name="DienThoai">
+                        <span class="error text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DiaChi">Địa chỉ</label>
+                        <textarea class="form-control" name="DiaChi" id="DiaChi"></textarea>
+                        <span class="error text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>NỘI DUNG KHAI BÁO</legend>
+        <div>
+            @Html.Raw(contentToShow)
+        </div>
+    </fieldset>
+    <center>
+        <button type="button" class="btn btn-primary btn-md" id="btn-gui-kekhai" onclick="onGuiKeKhai()">
+            <i class="fa fa-save"></i>&nbsp;Gửi kê khai
+        </button>
+    </center>
+}
+
+<script src="~/Data/Script/jqueryvalidate/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery/validateProvider.js"></script>
+<script>
+    $(function () {
+        /* $('#btn-gui-kekhai').on('click', alert('123'));*/
+    })
+
+    var onGuiKeKhai = function () {
+        var isValid = validateForm('formNopKeKhaiBieuMauThongTin')
+        if (!isValid) {
+            NotifyError('Vui lòng nhập đầy đủ thông tin');
+            return false;
+        }
+        var result = confirm("Bạn có muốn khai báo kê khai");
+        if (result) {
+            var formKeKhai = $('#formNopKeKhaiBieuMauThongTin');
+            formKeKhai.submit();
+        }
+    }
+
+    var onSuccess = function (result) {
+        if (result.Status == true) {
+            NotifySuccess(result.Message);
+
+            setTimeout(function () {
+                location.reload();
+            }, 1000)
+        } else {
+            NotifyError(result.Message);
+        }
+    }
+</script>
+

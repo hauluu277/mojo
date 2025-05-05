@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="VideoSelectItemSetting.ascx.cs" Inherits="VideoFeature.UI.VideoSelectItemSetting" %>
+<asp:ListBox ID="lboxGallery" runat="server" Height="300"></asp:ListBox>

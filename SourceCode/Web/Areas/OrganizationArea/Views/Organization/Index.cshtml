@@ -1,0 +1,94 @@
+﻿@using Newtonsoft.Json
+@using mojoPortal.Web.Areas.OrganizationArea.Models
+@model OrganizationFormVM
+@{
+    Layout = "~/Views/Shared/_LayoutAjax.cshtml";
+}
+<style>
+</style>
+<div id="content">
+    <div class="content__main_table table_admin">
+        <div class="wf100 titleDanhsach listvanban__box_admin">
+            <h2>Cập nhật thông tin cơ cấu tổ chức</h2>
+        </div>
+        @using (
+Ajax.BeginForm("SaveOrganization", "Organization",
+new AjaxOptions { HttpMethod = "POST", OnSuccess = "ajaxSucces", OnFailure = "AjaxError" },
+new { @class = "", id = "frmOrganization", area = "OrganizationArea" }))
+        {
+            @Html.HiddenFor(x=>x.ItemID)
+        <div class="widge-t-body no-padding">
+            <div class="form-organization form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Tiêu đề khối thông tin lãnh đạo<span class="red">*</span></label>
+                    <div class="col-sm-9">
+                        @Html.TextAreaFor(x => x.TitleBoxLanhDao, new { @class = "form-control", @rowspan = "3" })
+                        @Html.ValidationMessageFor(x => x.TitleBoxLanhDao)
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Tiêu đề khối thông tin phòng ban <span class="red">*</span></label>
+                    <div class="col-sm-9">
+                        @Html.TextAreaFor(x => x.TitleBoxPhongBan, new { @class = "form-control", @rowspan = "3" })
+                        @Html.ValidationMessageFor(x => x.TitleBoxPhongBan)
+                    </div>
+                </div>
+            </div>
+            @if (Model.ItemID > 0)
+            {
+                <div class="col-sm-12 text-right" style="padding: 0;margin: 10px 0;">
+                    <button class="btn btn-primary" type="button" onclick="FormLeader(0)">Thêm mới lãnh đạo</button>
+                </div>
+                <div class="form-leader" id="tblLeader">
+                    @Html.Partial("_TableLeader",Model.ListLeader)
+                </div>
+                <div class="col-sm-12 text-right" style="padding: 0;margin: 10px 0;">
+                    <button class="btn btn-primary" type="button" onclick="FormDepartment(0)">Thêm mới phòng ban</button>
+                </div>
+                <div class="form-department" id="tblDepartment">
+                    @Html.Partial("_TableDepartment",Model.ListDepartment)
+                </div>
+            }
+            <div class="col-sm-12 text-center form-group">
+                <button class="btn-success btn" type="button" onclick="SubmitOrganization()">Cập nhật</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    function SubmitOrganization() {
+        var checkSubmit = jQuery('#frmOrganization').valid();
+        if (checkSubmit) {
+            $("#frmOrganization").submit();
+        }
+    }
+    function FormLeader(id) {
+        OpenGlobalModal("get", "/OrganizationArea/Organization/FormLeader", { cctcId:@Model.ItemID, id: id }, true);
+    }
+        function FormDepartment(id) {
+            OpenGlobalModal("get", "/OrganizationArea/Organization/FormDepartment", { cctcId:@Model.ItemID, id: id }, true);
+    }
+
+    function ajaxSucces(rs) {
+        if (rs.Status) {
+            NotifySuccess("Cập nhật thông tin cơ cấu tổ chức thành công");
+        } else {
+            NotifyError("Không thể thực hiện thao tác này");
+        }
+    }
+
+    function reloadTableLeader() {
+        CallAjaxLoading("get", "/OrganizationArea/Organization/TableLeader?cctcId=@Model.ItemID", null, true, function (rs) {
+            $("#tblLeader").html(rs);
+        });
+    }
+    function reloadTableDepartment() {
+        CallAjaxLoading("get", "/OrganizationArea/Organization/TableDepartment?cctcId=@Model.ItemID", null, true, function (rs) {
+            $("#tblDepartment").html(rs);
+        });
+    }
+</script>
+<script src="~/Scripts/modules/organization/organization_index.js"></script>

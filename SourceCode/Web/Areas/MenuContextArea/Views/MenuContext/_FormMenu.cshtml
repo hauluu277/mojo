@@ -1,0 +1,308 @@
+﻿@using mojoPortal.Web.Areas.MenuContextArea.Models
+@using mojoPortal.Business.WebHelpers
+@model FormMenuModel
+@{
+    string typeMenu = "Chính";
+    if (Model.TypeMenu == MenuConstant.MenuTop)
+    {
+        typeMenu = "Trên cùng";
+    }
+}
+<link href="/Data/plugins/select2/select2.min.css" rel="stylesheet" />
+<script src="/Data/plugins/select2/select2.min.js"></script>
+
+<style type="text/css">
+    .select2-container {
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        vertical-align: middle;
+        width: 100% !important;
+    }
+</style>
+<div class="modal-dialog">
+    @using (Ajax.BeginForm("SaveForm", "MenuContext", new { @area = "MenuContextArea" }, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnFailure = "failureAjax",
+        OnSuccess = "successAjaxCreate",
+    }, new { id = "frmMenuContext" }))
+    {
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="center">
+                    <h4 class="modal-title">@(Model.Menu.ItemID > 0 ? "Cập nhật Menu " + typeMenu : "Thêm mới Menu " + typeMenu)</h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Tên menu<span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control require has-errored" name="Name" value="@Model.Menu.Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Menu cha</label>
+                        <div class="col-sm-8">
+                            @Html.DropDownList("ParentIDMenu", Model.ListParent, "--Menu cha--", new { @class = "width100 form-control select2" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Loại menu<span class="red">*</span></label>
+                        <div class="col-sm-8">
+                            @Html.DropDownList("TypeLink", Model.ListTypeLink, "--Loại menu--", new { @class = "width100 form-control select2" })
+                        </div>
+                    </div>
+                    <div class="width100" id="type_item_menu">
+                        @if (Model.Menu.ItemID > 0)
+                        {
+                            if (Model.Menu.TypeLink == MenuTypeLinkConstant.Category)
+                            {
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4">Chọn Chuyên mục<span class="red">*</span></label>
+                                    <div class="col-sm-8">
+                                        @Html.DropDownList("ItemLink", new SelectList(Model.ListItemLink, "Value", "Text", Model.Menu.ItemLink), "--Chọn chuyên mục--", new { @class = "width100 form-control select2" })
+                                    </div>
+                                </div>
+                            }
+                            else if (Model.Menu.TypeLink == MenuTypeLinkConstant.Page)
+                            {
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4">Chọn Page<span class="red">*</span></label>
+                                    <div class="col-sm-8">
+                                        @Html.DropDownList("ItemLink", new SelectList(Model.ListItemLink, "Value", "Text", Model.Menu.ItemLink), "--Chọn Page--", new { @class = "width100 form-control select2" })
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4">Đường dẫn(Link)</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control"  style="float:left;width:80%;" name="LinkMenu" id="LinkMenu" value="@Model.Menu.LinkMenu">
+                                        &nbsp;
+                                        <button type="button" class="btn btn-default" onclick="GetUrlLink()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+                        else
+                        {
+                            <div class="form-group">
+                                <label class="control-label col-sm-4">Đường dẫn(Link)</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" style="float:left;width:80%;" name="LinkMenu" id="LinkMenu" value="@Model.Menu.LinkMenu">
+                                    &nbsp;
+                                    <button type="button" class="btn btn-default" onclick="GetUrlLink()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Hình ảnh</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="ImageUrl" style="float:left;width:80%;" value="@Model.Menu.ImageUrl">
+                            &nbsp;
+                            <button type="button" class="btn btn-default" onclick="GetUrlImage()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Thiết lập Class?</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="StyleCss" value="@Model.Menu.StyleCss">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Cho phép hiển thị?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="Show" @(Model.Menu.Show == true ? "checked" : "") />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Hiển thị tab mới?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="TargetBlank" @(Model.Menu.TargetBlank == true ? "checked" : "") />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Yêu cầu đăng nhập?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="IsLogin" @(Model.Menu.IsLogin == true ? "checked" : "") />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Không cho phép click?</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" name="NoClick" @(Model.Menu.NoClick == true ? "checked" : "") />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Thứ tự hiển thị</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="OrderBy" value="@Model.Menu.OrderBy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer center">
+                <input type="hidden" name="MenuID" value="@Model.Menu.ItemID" />
+                <input type="hidden" name="TypeMenu" value="@Model.TypeMenu" />
+                <input type="hidden" name="SiteID" value="@Model.SiteID" />
+                <input type="hidden" value="@Model.Menu.IsEnglish" name="IsEnglish" />
+                <button type="button" id="btnSubmitMenu" class="btn btn-primary" onclick="checkSubmid()">Hoàn thành</button>
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    }
+</div>
+@*<script src="/Data/Script/jqueryvalidate/jquery.unobtrusive-ajax.min.js"></script>*@
+<script src="/Data/Script/CommonValidation.js"></script>
+<script src="/ClientScript/ckfinder/ckfinder.js"></script>
+<script>
+    function GetUrlLink() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Files:/";
+        finder.BaseUrl = "/Files/";
+        finder.resourceType = 'Files';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=LinkMenu]").val(fileUrl);
+            $("input[name=LinkMenu]").change();
+        };
+        finder.popup();
+    }
+
+    function loadSelect2() {
+        $(".select2").select2();
+    }
+    $(document).ready(function () {
+        loadSelect2();
+        $("#TypeLink").change(function () {
+            var typeItem = $(this).val();
+            var urlItem = $("#LinkMenu").val();
+            CallAjaxLoading("get", "/MenuContextArea/MenuContext/GetTypeLink", {siteId:'@Model.SiteID', typeItem: typeItem, url:urlItem, menuId: '@Model.Menu.ItemID' }, true, function (rs) {
+                $("#type_item_menu").html(rs);
+                loadSelect2();
+            });
+        });
+        $("input[name=Name]").change(function () {
+            $.ajax({
+                type: "POST",
+                url: "/CommonArea/Common/GetUrlItem",
+                data: { name: $(this).val() },
+
+                success: function (rs) {
+                    $("input[name=LinkMenu]").val(rs);
+                },
+                error: function () {
+                    NotifyError("Không thể thực hiện thao tác này");
+                },
+            });
+        });
+    });
+    function GetUrlImage() {
+        var finder = new CKFinder();
+        finder.inPopup = true;
+        finder.defaultLanguage = 'vi';
+        finder.language = 'vi';
+        finder.popupFeatures = "width=900,height=900,menubar=yes,toolbar=no,modal=yes";
+        finder.selectMultiple = true;
+        finder.startupPath = "Images:/";
+        finder.BaseUrl = "/Images/";
+        finder.resourceType = 'Images';
+        finder.selectActionFunction = function (fileUrl, data, allFiles) {
+            $("input[name=ImageUrl]").val(fileUrl);
+            $("input[name=ImageUrl]").change();
+        };
+        finder.popup();
+    }
+    SetupFormError("frmMenuContext");
+    function successAjaxCreate(rs) {
+        if (rs.Status) {
+            $("#menuModal").modal("hide");
+            $("#menuModal").empty();
+            NotifySuccess("Cập nhật thành công");
+
+            var itemId = parseInt(eval('@Model.Menu.ItemID'));
+            var parentId = parseInt(eval('@Model.ParentID'));
+            if (itemId > 0) {
+                //console.log(rs.Name);
+                //console.log(itemId);
+                var node1 = $('#@Model.TreeId').tree('getNodeById', itemId);
+                $('#@Model.TreeId').tree('updateNode', node1, rs.Name);
+            }
+            else {
+                if (parentId > 0) {
+                    var node1 = $('#@Model.TreeId').tree('getNodeById', parentId);
+                    $('#@Model.TreeId').tree(
+                        'addNodeAfter',
+                        {
+                            name: rs.Name,
+                            id: rs.ItemID
+                        },
+                        node1);
+                }
+                else {
+                    $('#@Model.TreeId').tree(
+                        'appendNode',
+                        {
+                            name: rs.Name,
+                            id: rs.ItemID
+                        });
+                }
+            }
+
+            //setTimeout(function () {
+            //    location.reload();
+            //}, 500);
+        } else {
+
+            NotifyError(rs.Message);
+            console.log(rs.MessageError);
+        }
+    }
+    function failureAjax(er) {
+        console.log(er);
+    }
+    function checkSubmid() {
+        var err = FormInvalid('frmMenuContext');
+        if (err) {
+            //$("#frmMenuContext").submit();
+            $("#btnSubmit").attr("disabled", "disabled");
+
+            var dataString;
+            var contentType1 = false;
+            var action = $("#frmMenuContext").attr("action");
+            dataString = new FormData($("#frmMenuContext").get(0));
+            contentType1 = false;
+            processData = false;
+            $.ajax({
+                type: "POST",
+                url: action,
+                data: dataString,
+                dataType: "json", //change to your own, else read my note above on enabling the JsonValueProviderFactory in MVC
+                contentType: false,
+                processData: false,
+                success: successAjaxCreate,
+                error: failureAjax,
+            });
+
+        } else {
+            NotifyError("Vui lòng hoàn thành form theo hướng dẫn!");
+        }
+        return false;
+    }
+</script>
