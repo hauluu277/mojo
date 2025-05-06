@@ -1,5 +1,4 @@
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.csproj.AssemblyReference.cache
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.csproj.CoreCompileInputs.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Features.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Web.dll.config
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Web.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Web.pdb
@@ -50,7 +49,6 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\Microsoft.WindowsF
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Business.WebHelpers.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoportal.CoreHelpers.dll
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Features.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Model.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Net.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\mojoPortal.Service.dll
@@ -153,6 +151,8 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\sv\ZedGraph.resour
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\tr\ZedGraph.resources.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\zh-cn\ZedGraph.resources.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\bin\zh-tw\ZedGraph.resources.dll
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.csproj.AssemblyReference.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPort.E86648B3.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Web\obj\Debug\mojoPortal.Web.pdb

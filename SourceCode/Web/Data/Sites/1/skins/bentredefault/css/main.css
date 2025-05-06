@@ -12090,8 +12090,7 @@ a.jp-shuffle-off {
 img {
     max-width: 100%;
     height: auto;
-    max-height: 100%;
-    object-fit: cover;
+    width: 100%; 
 }
 
 .authorinfo .avatar img, .media-object {

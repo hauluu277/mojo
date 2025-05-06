@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArticleFeature.UI {
-    
-    
-    public partial class TabLoader {
-        
+namespace ArticleFeature.UI
+{
+
+
+    public partial class TabLoader
+    {
+
         /// <summary>
         /// pnlTinMoiTinDocNhieu control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlTinMoiTinDocNhieu;
-        
+
         /// <summary>
         /// hplTinMoi control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplTinMoi;
-        
+
         /// <summary>
         /// HyperTinDocNhieu control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperTinDocNhieu;
-        
+
         /// <summary>
         /// rptTinMoi control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTinMoi;
-        
+
         /// <summary>
         /// rptTinDocNhieu control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTinDocNhieu;
-        
+
         /// <summary>
         /// pnlThongBao control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlThongBao;
-        
+
         /// <summary>
         /// rptThongBao control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptThongBao;
-        
+
         /// <summary>
         /// pnlVanBanMoi control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlVanBanMoi;
-        
+
         /// <summary>
         /// rptDocument control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptDocument;
-        
+
         /// <summary>
         /// pnlCongNgheThongTin control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlCongNgheThongTin;
-        
+
         /// <summary>
         /// hplCongNgheThongTin control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplCongNgheThongTin;
-        
+
         /// <summary>
         /// hplMoreCongNgheThongTin control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor hplMoreCongNgheThongTin;
-        
+
         /// <summary>
         /// imgArticleCongNgheThongTin control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgArticleCongNgheThongTin;
-        
+
         /// <summary>
         /// hplArticleCongNgheThongTin control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplArticleCongNgheThongTin;
-        
+
         /// <summary>
         /// rptCongNgheThongTin control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptCongNgheThongTin;
-        
+
         /// <summary>
         /// pnlThongTinTuyenSinh control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlThongTinTuyenSinh;
-        
+
         /// <summary>
         /// hplCategoryThongTinTuyenSinh control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplCategoryThongTinTuyenSinh;
-        
+
         /// <summary>
         /// rptCategoryTuyenSinh control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptCategoryTuyenSinh;
-        
+
         /// <summary>
         /// imgArticleTuyenSinh control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgArticleTuyenSinh;
-        
+
         /// <summary>
         /// hplArticleTuyenSinh control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplArticleTuyenSinh;
-        
+
         /// <summary>
         /// liArticleTuyenSinh control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal liArticleTuyenSinh;
-        
+
         /// <summary>
         /// rptThongTinTuyenSinh control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptThongTinTuyenSinh;
-        
+
         /// <summary>
         /// pnlGalleryVideo control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlGalleryVideo;
-        
+
         /// <summary>
         /// imgThuVienAnh control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgThuVienAnh;
-        
+
         /// <summary>
         /// hplThuVienAnh control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplThuVienAnh;
-        
+
         /// <summary>
         /// rptThuVienAnh control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptThuVienAnh;
-        
+
         /// <summary>
         /// pnlTab5 control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlTab5;
-        
+
         /// <summary>
         /// pnlCacPhongDonVi control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlCacPhongDonVi;
-        
+
         /// <summary>
         /// hplCategoryCacPhong control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplCategoryCacPhong;
-        
+
         /// <summary>
         /// rptArticleCacPhong control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptArticleCacPhong;
-        
+
         /// <summary>
         /// pnlDanhSach control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlDanhSach;
-        
+
         /// <summary>
         /// rptDanhSachTruong control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptDanhSachTruong;
-        
+
         /// <summary>
         /// rptCacTruong control.
         /// </summary>
@@ -308,7 +310,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptCacTruong;
-        
+
         /// <summary>
         /// hplMoreDanhSachTruong control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplMoreDanhSachTruong;
-        
+
         /// <summary>
         /// pnlThanhTichBangVang control.
         /// </summary>
@@ -326,7 +328,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlThanhTichBangVang;
-        
+
         /// <summary>
         /// hplThanhTichNamHoc control.
         /// </summary>
@@ -335,7 +337,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplThanhTichNamHoc;
-        
+
         /// <summary>
         /// rptThanhTichNamHoc control.
         /// </summary>
@@ -344,7 +346,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptThanhTichNamHoc;
-        
+
         /// <summary>
         /// pnlLienKetWebsite control.
         /// </summary>
@@ -353,7 +355,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlLienKetWebsite;
-        
+
         /// <summary>
         /// ddlLienKetWebsite control.
         /// </summary>
@@ -362,7 +364,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLienKetWebsite;
-        
+
         /// <summary>
         /// pnlTinTucSuKien control.
         /// </summary>
@@ -371,7 +373,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlTinTucSuKien;
-        
+
         /// <summary>
         /// hplTinTucSuKien control.
         /// </summary>
@@ -380,7 +382,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplTinTucSuKien;
-        
+
         /// <summary>
         /// hplMoreTinTucSuKien control.
         /// </summary>
@@ -389,7 +391,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor hplMoreTinTucSuKien;
-        
+
         /// <summary>
         /// rptTinTucSuKien control.
         /// </summary>
@@ -398,7 +400,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTinTucSuKien;
-        
+
         /// <summary>
         /// pnlGuongSang control.
         /// </summary>
@@ -407,7 +409,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlGuongSang;
-        
+
         /// <summary>
         /// hplGuongSang control.
         /// </summary>
@@ -416,7 +418,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplGuongSang;
-        
+
         /// <summary>
         /// hplMoreGuongSang control.
         /// </summary>
@@ -425,7 +427,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor hplMoreGuongSang;
-        
+
         /// <summary>
         /// imgArticleGuongSang control.
         /// </summary>
@@ -434,7 +436,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgArticleGuongSang;
-        
+
         /// <summary>
         /// hplArticleGuongSang control.
         /// </summary>
@@ -443,7 +445,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplArticleGuongSang;
-        
+
         /// <summary>
         /// liArticleGuongSang control.
         /// </summary>
@@ -452,7 +454,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal liArticleGuongSang;
-        
+
         /// <summary>
         /// rptArticleGuongSang control.
         /// </summary>
@@ -461,7 +463,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptArticleGuongSang;
-        
+
         /// <summary>
         /// pnlThongBaoVanBan control.
         /// </summary>
@@ -470,7 +472,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlThongBaoVanBan;
-        
+
         /// <summary>
         /// hplThongBaoMoiNhat control.
         /// </summary>
@@ -479,7 +481,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplThongBaoMoiNhat;
-        
+
         /// <summary>
         /// hplThongBaoMoiMore control.
         /// </summary>
@@ -488,7 +490,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplThongBaoMoiMore;
-        
+
         /// <summary>
         /// rptThongBaoMoi control.
         /// </summary>
@@ -497,7 +499,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptThongBaoMoi;
-        
+
         /// <summary>
         /// hplVanBanMoiNhat control.
         /// </summary>
@@ -506,7 +508,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplVanBanMoiNhat;
-        
+
         /// <summary>
         /// hplVanBanMoiMore control.
         /// </summary>
@@ -515,7 +517,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplVanBanMoiMore;
-        
+
         /// <summary>
         /// rptVanBanMoi control.
         /// </summary>
@@ -524,7 +526,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptVanBanMoi;
-        
+
         /// <summary>
         /// rptDocNhieuNhat control.
         /// </summary>
@@ -533,7 +535,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptDocNhieuNhat;
-        
+
         /// <summary>
         /// pnlHienThiCacChuyenMuc control.
         /// </summary>
@@ -542,7 +544,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlHienThiCacChuyenMuc;
-        
+
         /// <summary>
         /// rptChuyenMucLienKet control.
         /// </summary>
@@ -551,5 +553,68 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptChuyenMucLienKet;
+
+        /// <summary>
+        /// pnlChuyenMucCon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlChuyenMucCon;
+
+        /// <summary>
+        /// hplChuyenMucCon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplChuyenMucCon;
+
+        /// <summary>
+        /// rptChuyenMucCon1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptChuyenMucCon1;
+
+        /// <summary>
+        /// ImgChuyenMucCon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgChuyenMucCon;
+
+        /// <summary>
+        /// hplChuyenMucCon2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplChuyenMucCon2;
+
+        /// <summary>
+        /// liArticleChuyenMucCon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal liArticleChuyenMucCon;
+
+        /// <summary>
+        /// rptChuyenMucCon2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptChuyenMucCon2;
     }
 }

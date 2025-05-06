@@ -21420,6 +21420,7 @@
     <Content Include="App_GlobalResources\ArticleResources.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ArticleResources1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\ArticleResources.vi-VN.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>

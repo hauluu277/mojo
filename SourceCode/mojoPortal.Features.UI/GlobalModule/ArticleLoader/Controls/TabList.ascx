@@ -138,8 +138,8 @@
                     <ItemTemplate>
                         <div class="col-sm-12 d-flex p-0 mb-20 fix_mobile">
                             <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                
-                            <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>'  ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+
+                                <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
 
 
                             </a>
@@ -191,7 +191,7 @@
                     <ItemTemplate>
                         <div class="col-sm-12 col-lg-6">
                             <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>'  ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+                                <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
                                 <a class="tieude-dv thongtin_ts-title-right" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><%# Eval("Title") %></a>
                                 <div class="linktip"><%#Eval("Summary") %></div>
                             </a>
@@ -402,8 +402,8 @@
                         <ItemTemplate>
                             <div class="col-lg-3 col-sm-12 tintuc_sukien-item">
                                 <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                    <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>'  ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
-                     
+                                    <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+
                                     <a class="tieude-dv" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><%# Eval("Title") %></a>
                                     <div class="cds-content__right-time"><%#string.Format("{0:dd/MM/yyyy}", Eval("StartDate")) %></div>
                                     <div class="linktip">
@@ -450,7 +450,7 @@
                                 <div class="col-sm-12 col-lg-6">
                                     <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
 
-                                        <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>'  ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+                                        <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
 
 
                                         <a class="tieude-dv thongtin_ts-title-right" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><%# Eval("Title") %></a>
@@ -502,7 +502,7 @@
     <div class="van-ban-moi">
         <div class="card">
             <div class="card-header spacer header-snip">
-               <asp:HyperLink ID="hplVanBanMoiNhat" runat="server" CssClass="text-uppercase bt-titct"></asp:HyperLink>
+                <asp:HyperLink ID="hplVanBanMoiNhat" runat="server" CssClass="text-uppercase bt-titct"></asp:HyperLink>
                 <asp:HyperLink ID="hplVanBanMoiMore" runat="server" CssClass="more-ctsn">
                     Xem thêm&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i>
                 </asp:HyperLink>
@@ -516,7 +516,7 @@
                                 <a title="<%#Eval("Summary") %>" class="text-justify txt-snipt hov-underline" href="<%#DocumentUltils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId,true,SiteRoot+"document/detail.aspx?item="+Eval("ItemID")) %>">
                                     <%#Eval("Summary") %>
                                 </a>
-                                <span class="timesnip"> 
+                                <span class="timesnip">
                                     <asp:Image ID="img" runat="server" Visible='<%# bool.Parse(Eval("IsNew").ToString()) %>' ImageUrl="/data/images/iconnew.png" />
                                     <%#string.Format("{0:dd/MM/yyyy}",Eval("ApprovedDate")) %></span>
                             </div>
@@ -578,3 +578,54 @@
 </asp:Panel>
 <%-- Kết thúc hiển thị các chuyên mục --%>
 
+
+<asp:Panel ID="pnlChuyenMucCon" runat="server" CssClass="item-box-cate box-last">
+    <div class="box-category box-cate-featured box-cate-featured-vertical">
+        <!-- Tiêu đề chuyên mục -->
+        <hgroup class="width_common title-box-category thoisu">
+            <h2 class="parent-cate">
+                <asp:HyperLink ID="hplChuyenMucCon" runat="server" CssClass="inner-title" />
+            </h2>
+            <asp:Repeater ID="rptChuyenMucCon1" runat="server">
+                <ItemTemplate>
+                    <span class="sub-cate">
+                        <a href='<%# Eval("Description") %>' title='<%# Eval("Name") %>'><%# Eval("Name") %></a>
+                    </span>
+                </ItemTemplate>
+            </asp:Repeater>
+        </hgroup>
+
+        <!-- Nội dung bài viết -->
+        <div class="width_common content-box-category">
+            <!-- Bài viết nổi bật -->
+            <article class="item-news full-thumb">
+                <div class="thumb-art">
+                    <asp:Image ID="ImgChuyenMucCon" runat="server" CssClass="lazy" AlternateText="" />
+                </div>
+                <div class="width_common box-info-news">
+                    <h3 class="title-news">
+                        <asp:HyperLink ID="hplChuyenMucCon2" runat="server" />
+                    </h3>
+                    <p class="description">
+                        <asp:Literal ID="liArticleChuyenMucCon" runat="server"></asp:Literal>
+                    </p>
+                </div>
+            </article>
+
+            <!-- Danh sách bài viết phụ -->
+            <div class="sub-news-cate list-dotted">
+                <asp:Repeater ID="rptChuyenMucCon2" runat="server">
+                    <ItemTemplate>
+                        <article class="item-news">
+                            <h3 class="title-news">
+                                <a class="tieude-dv" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
+                                    <span class="dotted"></span> <%# Eval("Title") %>
+                                </a>
+                            </h3>
+                        </article>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+    </div>
+</asp:Panel>

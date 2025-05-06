@@ -1,5 +1,3 @@
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.AssemblyReference.cache
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll.config
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.pdb
@@ -26,6 +24,8 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Busine
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Web.Framework.pdb
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Data.pdb
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\CsvHelper.xml
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.AssemblyReference.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPort.B0CE3B26.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.pdb

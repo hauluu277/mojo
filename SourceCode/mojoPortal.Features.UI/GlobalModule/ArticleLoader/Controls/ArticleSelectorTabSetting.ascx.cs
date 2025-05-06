@@ -87,6 +87,7 @@ namespace ArticleFeature.UI
             listTab.Add(new ListItem { Text = "Hiển thị kiểu gương sáng", Value = ArticleConstant.TabGuongSang.ToString() });
 
             listTab.Add(new ListItem { Text = "Hiển thị thông báo mới, văn bản mới", Value = ArticleConstant.TabVanBanThongBao.ToString() });
+            listTab.Add(new ListItem { Text = "Hiển thị tin tức và chuyên mục con", Value = ArticleConstant.TabTinVaChuyenMucCon.ToString() });
 
             listTab.Add(new ListItem { Text = "Hiển thị danh sách các chuyên mục", Value = ArticleConstant.TabDanhSachCacChuyenMuc.ToString() });
 

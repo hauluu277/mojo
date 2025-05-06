@@ -1,5 +1,3 @@
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.csproj.AssemblyReference.cache
-D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\mojoPortal.Service.dll.config
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\mojoPortal.Service.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\mojoPortal.Service.pdb
@@ -34,6 +32,8 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Deb
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\mojoPortal.Web.Framework.pdb
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\mojoPortal.Data.pdb
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\bin\Debug\CsvHelper.xml
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.csproj.AssemblyReference.cache
+D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPort.7424B55B.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Service\obj\Debug\mojoPortal.Service.pdb

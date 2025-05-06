@@ -61,8 +61,7 @@ namespace ArticleFeature.UI
         public string lnkHotArticle_Title = "";
         public string lnkHotArticle_HRef = "";
         public string lnkHotArticle_Summary = "";
-        public string lnkHotArticle_Src = "";
-
+        public string lnkHotArticle_Src = ""; 
         public string[] ListModuleId
         {
             get { return listModuleId; }
@@ -164,7 +163,8 @@ namespace ArticleFeature.UI
             pnlHienThiCacChuyenMuc.Visible = false;
 
 
-            pnlGuongSang.Visible = false;
+            pnlGuongSang.Visible = false; 
+            pnlChuyenMucCon.Visible = false;
 
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
@@ -221,6 +221,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabDanhSachCacChuyenMuc)
             {
                 BindDanhSachChuyenMuc();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabTinVaChuyenMucCon)
+            {
+                BindHienThiTinVaChuyenMuc();
             }
             else
             {
@@ -314,6 +318,50 @@ namespace ArticleFeature.UI
         private void BindTinTucSuKien()
         {
             LoadTab(pnlTinTucSuKien, rptTinTucSuKien, hplTinTucSuKien, hplMoreTinTucSuKien);
+        }/// <summary>
+        /// tin tức sự kiện
+        /// </summary>
+        private void BindHienThiTinVaChuyenMuc()
+        {
+            pnlChuyenMucCon.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
+
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính (hiển thị trong HyperLink)
+                LoadCategory(config.ArticleCategoryConfig, hplChuyenMucCon);
+
+                // Load các sub-categories (hiển thị trong Repeater)
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory)).Take(3);
+
+                rptChuyenMucCon1.DataSource = listCategory;
+                rptChuyenMucCon1.DataBind();
+
+                // Tạo danh sách category IDs để lấy bài viết
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết hot theo categories
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+
+                if (listArticle != null && listArticle.Any())
+                {
+                    // Bài viết đầu tiên hiển thị bên trái
+                    var firstArticle = listArticle[0];
+
+                    hplChuyenMucCon2.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, firstArticle.ItemUrl, firstArticle.ItemID, pageId, moduleId);
+                    hplChuyenMucCon2.Text = firstArticle.Title;
+                    liArticleChuyenMucCon.Text = firstArticle.Summary;
+                    ImgChuyenMucCon.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
+
+                    // Các bài viết còn lại hiển thị bên phải (skip bài đầu tiên)
+                    rptChuyenMucCon2.DataSource = listArticle.Skip(1).ToList();
+                    rptChuyenMucCon2.DataBind();
+                }
+            }
         }
 
         private void BindLienKetWebsite()

@@ -131,13 +131,13 @@
 
                         <div class="class-but-ul">
                             <ul class=" hidden-xs nav_right-btn">
-                                <li style="padding-right: 5px;display:none">
+                                <li style="padding-right: 5px; display: none">
                                     <img src="/data/sites/1/skins/framework/images/icon_user.png" />
                                 </li>
                                 <li class="nav_user">
-								<i class='fa fa-user' aria-hidden='true' style="font-size: 18px;color: white;"></i> 
+                                    <i class='fa fa-user' aria-hidden='true' style="font-size: 18px; color: white;"></i>
                                     <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
-                                    <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" visible="false" />
+                                    <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" Visible="false" />
                                     <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
                                 </li>
 
@@ -199,7 +199,8 @@
             </div>
         </div>
 
-        <%--            <main class="main-content">--%>
+
+        <%-- <main class="main-content">--%>
 
 
         <div class="container bg-body">
@@ -230,38 +231,82 @@
 
             <portal:FooterControl runat="server" ID="FooterControl1" />
         </div>--%>
+    </form>
 
-        <footer class="footer">
-            <div class="container">
-                <p class="tieude-footer">CỔNG THÔNG TIN ĐIỆN TỬ SỞ GIÁO DỤC VÀ ĐÀO TẠO (GD&ĐT) TỈNH BẾN TRE</p>
-                <div class="contact">
-                    <div class="row">
-                        <div class="contact_left col-sm-12 col-lg-7 ">
-                            <div class="manager_boss">
-                                <p>Người chịu trách nhiệm: Bà La Thị Thúy - Giám Đốc sở GD&ĐT Tỉnh Bến Tre</p>
-                            </div>
-                            <div class="dia-chi">
-                                <p>Địa chỉ: tầng 4-5, số 126A, Nguyễn Thị Định, phường Phú Tân, thành phố Bến Tre, tỉnh Bến Tre</p>
-                            </div>
-                            <div class="ban-quyen">Bản quyền của Sở Giáo dục và Đào tạo Bến Tre</div>
-                        </div>
-                        <div class="contact-right col-sm-12 col-lg-5 ">
-                            <div class="sdt">
-                                <a class="telephone" href="/">Điện thoại: (0275) 3 822  217 </a>
-                            </div>
-                            <div class="fax">
-                                <a>Fax: (0275) 3 825 090</a>
-                            </div>
-                            <div class="dcs-email">
-                                <a class="email" href="/">Email: vanphong.sobentre@moet.edu.vn</a>
-                            </div>
-                        </div>
+    <div style="margin-bottom:15px;" id="ctl00_divBottom" class="bottom-pane clearfix container cmszone" bis_skin_checked="1">
+        <div class="newsletter-box">
+            <div class="newsletter-content">
+                <div class="newsletter-left col-4">
+                    <div class="label">
+                        <img src="/Data/Icon16x16/Mail.png" style="height: 16px; vertical-align: middle;">
+                        VnExpress Newsletters
+                    </div>
+                    <h3 class="title">Đừng bỏ lỡ tin tức quan trọng!</h3>
+                    <p class="desc">Nhận tóm tắt tin tức nổi bật, hấp dẫn nhất 24 giờ qua trên VnExpress.</p>
+                </div>
+                <div class="newsletter-right row col-8">
+                    <div class="social-login col-4">
+                        <a href="javascript:;" id="myvne_google_login_footer" class="social-btn">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9597/icons/icon-google.svg" alt="Google">
+                        </a>
+                        <a href="javascript:;" id="myvne_facebook_login_footer" class="social-btn">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9597/icons/icon-facebook.svg" alt="Facebook">
+                        </a>
+                        <span class="or-text">Hoặc</span>
+                    </div>
+                    <div class="newsletter-form  col-8">
+                        <input type="text" placeholder="Địa chỉ Email..." class="newsletter-input" />
+                        <a href="javascript:;" class="btn-submit">Đăng ký</a>
+                    </div>
+                    <div class="note col-12">
+                        *Khi đăng ký, bạn đồng ý <a href="https://vnexpress.net/dieu-khoan-su-dung">điều khoản</a> của VnExpress
                     </div>
                 </div>
             </div>
-        </footer>
-    </form>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer-container bottom-pane clearfix container cmszone">
+        <div  style="margin :15px 0 0 0; border-bottom:1px solid #e5e5e5;padding-bottom: 15px" class="footer-top">
+            <div class="col-4">
+                <span>Báo điện tử</span>
+                <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9597/v2_2019/pc/graphics/logo.svg" alt="VnExpress Logo" class="logo">
+            </div>
+            <div class="footer-links col-8">
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Cookies</a>
+                <a href="#">RSS</a>
+                <span>Theo dõi VnExpress trên</span>
+                <span>
+                    <img src="/Data/Icon16x16/facebook.png" style="height: 16px; vertical-align: middle;">
+                    <img src="/Data/Icon16x16/facebook.png" style="height: 16px; vertical-align: middle;">
+                    <img src="/Data/Icon16x16/facebook.png" style="height: 16px; vertical-align: middle;">
+                </span>
+            </div>
+        </div>
 
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p>
+                    <strong>Báo tiếng Việt nhiều người xem nhất</strong><br>
+                    Thuộc Bộ Khoa học và Công nghệ<br>
+                    Số giấy phép: 548/GP-BTTTT do Bộ Thông tin và Truyền thông cấp ngày 24/08/2021
+                </p>
+            </div>
+            <div class="footer-contact">
+                <p>
+                    Tổng biên tập: Phạm Văn Hiếu<br>
+                    Địa chỉ: Tầng 10, Tòa A FPT Tower, số 10 Phạm Văn Bạch, Dịch Vọng, Cầu Giấy, Hà Nội<br>
+                    Điện thoại: 024 7300 8899 - máy lẻ 4500<br>
+                    Email: <a href="mailto:webmaster@vnexpress.net">webmaster@vnexpress.net</a>
+                </p>
+            </div>
+            <div class="footer-copyright">
+                © 1997-2025. Toàn bộ bản quyền thuộc VnExpress
+            </div>
+        </div>
+    </div>
     <portal:AnalyticsAsyncBottomScript ID="analyticsBottom" runat="server" />
 
     <!-- Main Script -->
