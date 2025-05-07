@@ -7,12 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArticleFeature.UI {
-    
-    
+namespace ArticleFeature.UI
+{
+
+
     public partial class AllSiteModule
     {
-        
+
         /// <summary>
         /// pnlOuterWrap control.
         /// </summary>
@@ -21,7 +22,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.OuterWrapperPanel pnlOuterWrap;
-        
+
         /// <summary>
         /// ctop1 control.
         /// </summary>
@@ -30,7 +31,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.Controls.CornerRounderTop ctop1;
-        
+
         /// <summary>
         /// pnlInnerWrap control.
         /// </summary>
@@ -39,7 +40,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.InnerWrapperPanel pnlInnerWrap;
-        
+
         /// <summary>
         /// TitleControl control.
         /// </summary>
@@ -48,7 +49,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.ModuleTitleControl TitleControl;
-        
+
         /// <summary>
         /// pnlOuterBody control.
         /// </summary>
@@ -57,7 +58,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.OuterBodyPanel pnlOuterBody;
-        
+
         /// <summary>
         /// pnlInnerBody control.
         /// </summary>
@@ -66,7 +67,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.InnerBodyPanel pnlInnerBody;
-        
+
         /// <summary>
         /// divCleared control.
         /// </summary>
@@ -75,7 +76,7 @@ namespace ArticleFeature.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.EmptyPanel divCleared;
-        
+
         /// <summary>
         /// cbottom1 control.
         /// </summary>
