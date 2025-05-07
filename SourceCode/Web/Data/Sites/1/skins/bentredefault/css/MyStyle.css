@@ -5039,20 +5039,25 @@ item-news:first-child
 .ic-comment {
     width: 12px;
     height: 12px;
-}
+} 
 [class*="box-col-"] {
     float: left;
     padding: 10px; 
     box-sizing: border-box;
-    border-top: 2px solid #ededed;
+    /*border-top: 2px solid #ededed;*/
 }
+
+[class*="wrapper-col-"] {
+    display: flex;
+    flex-wrap: wrap;
+} 
 
 .box-col-1 {
     width: 8.3333%;
 }
 
 .box-col-2 {
-    width: 16.6667%;
+    width: 16.6666%;
 }
 
 .box-col-3 {
@@ -5077,4 +5082,14 @@ item-news:first-child
 
 .clear-both {
     clear: both;
+}
+[class^="wrapper-grid-layout-"] {
+    display: flex !important; 
+    overflow: hidden;
+    border: 1px solid #ededed;
+    margin-bottom: 10px;
+    clear: both; /* tạo khoảng cách giữa các khối */
+}
+
+[class^="grid-layout-"] { 
 }

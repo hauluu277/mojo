@@ -547,6 +547,53 @@
         //    fixBrokenImages('/data/images/no-img.png');
         //}
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tìm tất cả phần tử có class bắt đầu bằng grid-layout-
+            const gridItems = document.querySelectorAll('[class*="grid-layout-"]');
+            if (gridItems.length === 0) return;
+
+            // Tạo wrapper chính
+            const mainWrapper = document.createElement('div');
+            mainWrapper.className = 'wrapper-grid-layout-1';
+            gridItems[0].parentNode.insertBefore(mainWrapper, gridItems[0]);
+
+            // Đối tượng lưu trữ các wrapper theo col (sau khi bỏ boxchild-)
+            const colWrappers = {};
+
+            // Phân loại các item vào các wrapper tương ứng
+            gridItems.forEach(item => {
+                // Tìm class boxchild-col-* trong phần tử
+                const boxchildClass = Array.from(item.classList).find(c => /^boxchild-col-(1|2|3|4|6|8|12)$/.test(c));
+
+                if (!boxchildClass) {
+                    mainWrapper.appendChild(item);
+                    return;
+                }
+
+                // Chuyển thành col-*
+                const colClass = boxchildClass.replace('boxchild-', '');
+
+                // Nếu chưa có wrapper thì tạo mới
+                if (!colWrappers[colClass]) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = `wrapper-${colClass} ${colClass}`; // ví dụ: wrapper-col-4 col-4
+                    colWrappers[colClass] = wrapper;
+                    mainWrapper.appendChild(wrapper);
+                }
+
+                // Thêm item vào wrapper tương ứng
+                colWrappers[colClass].appendChild(item);
+            });
+
+            // Xóa wrapper không có phần tử nào (nếu cần)
+            Object.keys(colWrappers).forEach(colClass => {
+                if (colWrappers[colClass].children.length === 0) {
+                    colWrappers[colClass].remove();
+                }
+            });
+        });
+    </script>
     <%--    <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
