@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mojoportal.ConvertData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71eb12735c12fd9e88457f3571b7a9d391ef1dfc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("mojoportal.ConvertData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mojoportal.ConvertData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
