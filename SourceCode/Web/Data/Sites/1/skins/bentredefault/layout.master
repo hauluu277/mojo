@@ -664,11 +664,11 @@
 
             // Xử lý từng item để thêm vào wrapper tương ứng
             gridItems.forEach(item => {
-                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-(1|2)$/.test(c));
+                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-\d+$/.test(c));
                 if (!layoutClass || !layoutWrappers[layoutClass]) return;
 
                 // Tìm class boxchild-col-*
-                const boxchildClass = Array.from(item.classList).find(c => /^boxchild-col-(8|4)$/.test(c));
+                const boxchildClass = Array.from(item.classList).find(c => /^boxchild-col-(8|4|12|1|2|3|6)$/.test(c));
                 if (!boxchildClass) {
                     layoutWrappers[layoutClass].wrapper.appendChild(item);
                     return;
