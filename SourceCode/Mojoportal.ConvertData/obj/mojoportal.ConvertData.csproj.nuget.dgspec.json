@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj": {}
+    "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj": {}
   },
   "projects": {
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj",
         "projectName": "Brettle.Web.NeatHtml",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -19,22 +19,22 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj",
         "projectName": "mojoPortal.Business.WebHelpers",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
               }
             }
           }
@@ -44,22 +44,22 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj",
         "projectName": "mojoPortal.Business",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
               }
             }
           }
@@ -69,17 +69,20 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
         "projectName": "mojoportal.ConvertData",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\obj\\",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
+        "packagesPath": "G:\\AppData\\.nuget\\packages",
+        "outputPath": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,18 +90,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net48": {
             "targetAlias": "net48",
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj"
               }
             }
           }
@@ -107,11 +109,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -127,7 +124,7 @@
               "version": "[4.8.5, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -136,11 +133,11 @@
         }
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj",
         "projectName": "mojoportal.CoreHelpers",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -151,11 +148,11 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj",
         "projectName": "mojoPortal.Data.MSSQL",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -166,25 +163,25 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj",
         "projectName": "mojoPortal.Features.Business",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj"
               }
             }
           }
@@ -194,16 +191,16 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj",
         "projectName": "mojoPortal.Features.Data.MSSQL",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Data.MSSQL\\mojoPortal.Features.Data.MSSQL.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj"
               }
             }
           }
@@ -213,11 +210,11 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj",
         "projectName": "mojoPortal.Model",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -228,16 +225,16 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj",
         "projectName": "mojoPortal.Net",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
               }
             }
           }
@@ -247,25 +244,25 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj",
         "projectName": "mojoPortal.Service",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj"
               }
             }
           }
@@ -275,16 +272,16 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj",
         "projectName": "mojoPortal.Web.Controls",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
               }
             }
           }
@@ -294,11 +291,11 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj",
         "projectName": "mojoPortal.Web.Editor",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -309,11 +306,11 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj",
         "projectName": "mojoPortal.Web.Framework",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {}
@@ -324,46 +321,46 @@
         "net462": {}
       }
     },
-    "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
+    "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj",
+        "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj",
         "projectName": "mojoPortal.Web",
-        "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj",
+        "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj",
         "frameworks": {
           "net462": {
             "projectReferences": {
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Brettle.Web.NeatHtml\\Brettle.Web.NeatHtml.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business.WebHelpers\\mojoPortal.Business.WebHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoportal.CoreHelpers\\mojoportal.CoreHelpers.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Model\\mojoPortal.Model.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Net\\mojoPortal.Net.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Service\\mojoPortal.Service.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Controls\\mojoPortal.Web.Controls.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Editor\\mojoPortal.Web.Editor.csproj"
               },
-              "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
-                "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
+              "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj": {
+                "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Web.Framework\\mojoPortal.Web.Framework.csproj"
               }
             }
           }
