@@ -1572,23 +1572,19 @@
     ]
   },
   "packageFolders": {
-    "G:\\AppData\\.nuget\\packages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
+      "projectUniqueName": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
       "projectName": "mojoportal.ConvertData",
-      "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
-      "packagesPath": "G:\\AppData\\.nuget\\packages",
-      "outputPath": "G:\\Project\\2025\\mojo\\SourceCode\\Mojoportal.ConvertData\\obj\\",
+      "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\mojoportal.ConvertData.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Mojoportal.ConvertData\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1596,17 +1592,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net48": {
           "targetAlias": "net48",
           "projectReferences": {
-            "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
-              "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
+            "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj": {
+              "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Business\\mojoPortal.Business.csproj"
             },
-            "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
-              "projectPath": "G:\\Project\\2025\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj"
+            "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj": {
+              "projectPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\mojoPortal.Web.csproj"
             }
           }
         }
@@ -1615,6 +1612,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1630,7 +1632,7 @@
             "version": "[4.8.5, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
