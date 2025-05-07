@@ -7,3 +7,12 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPort.205EE34E.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\bin\Debug\mojoPortal.Data.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\bin\Debug\mojoPortal.Data.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\bin\Debug\log4net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\bin\Debug\log4net.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.MSSQL.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.MSSQL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPort.205EE34E.Up2Date
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Data.MSSQL\obj\Debug\mojoPortal.Data.pdb

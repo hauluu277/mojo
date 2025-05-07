@@ -12,3 +12,17 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\m
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPort.37CD48B3.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPort.37CD48B3.Up2Date
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb

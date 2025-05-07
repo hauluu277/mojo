@@ -43,7 +43,107 @@
     <script src="/scripts/jquery/jquery-2.2.1.min.js"></script>
     <script src="/scripts/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
+    <style>
+        /* Header styles */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+}
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    height: 30px;
+    margin-bottom: 3px;
+}
+
+.slogan {
+    font-size: 11px;
+    color: #757575;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-weather {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.city {
+    color: #666;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.city i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.weather {
+    color: #757575;
+    font-size: 13px;
+}
+
+.date-time {
+    color: #757575;
+    font-size: 13px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.header-nav a {
+    color: #666;
+}
+
+.header-nav a.active {
+    color: #9f224e;
+    font-weight: bold;
+}
+
+.international {
+    color: #9f224e !important;
+    display: flex;
+    align-items: center;
+}
+
+.international i {
+    margin-right: 3px;
+    font-size: 12px;
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-icon, .user-icon, .notify-icon {
+    color: #757575;
+    font-size: 13px;
+}
+
+    </style>
 
 
 
@@ -75,98 +175,80 @@
             </div>
         </div>
         <div class="sitewrap">
-            <div id="haan_header_top">
-                <div class="Banner-School">
-                    <div class="container pd0">
-                        <div class="col-sm-12 Banner-School__logo pdl0">
-                            <div class="logo_top">
-                                <div class="header-logo">
-                                    <portal:SiteLogo runat="server" />
-                                    <%--<img src="/Data/Sites/1/skins/framework/images/img_header-logo.png" alt="Alternate Text" />--%>
-                                </div>
-                                <div class="tit-site">
-
-                                    <h1 class="art-slogan">
-                                        <portal:SiteSlogan ID="SiteSlogan1" runat="server"></portal:SiteSlogan>
-                                    </h1>
-                                    <h2 class="art-title">
-                                        <portal:SiteTitle ID="SiteTitle" runat="server" IncludeStandardClasses="false" UseElement="false" CssClass="art-headline"></portal:SiteTitle>
-                                    </h2>
-                                    <%-- <h1 class="art-subSlogan">
-                                    <portal:SiteSubSlogan ID="ss" runat="server"></portal:SiteSubSlogan>
-                                </h1> --%>
-                                </div>
-                            </div>
-
-
-                            <%-- 
-                            <div class="class-but-ul">
-                                <ul class=" hidden-xs">
-                                    <li class="li-class">
-                                        <portal:RegisterLink ID="RegisterLink1" runat="server" RenderAsListItem="false" />
-                                        <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
-                                    </li>
-                                    <li>
-                                        <img src="/data/sites/1/skins/framework/ImgCucTTDLV2/logo-user.png" /></li>
-                                    <li class="li-class">
-                                        <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" />
-                                        <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" />
-                                    </li>
-                                    <li style="padding: 0px 5px" class="li-class">| </li>
-
-                                    <li style="margin-top: -5px;"><a href="/">
-                                        <img src="/data/sites/1/skins/framework/ImgCucTTDLV2/LoGo-vn.png" /></a></li>
-                                </ul>
-                            </div>     
-                            --%>
-                        </div>
+           
+            <div class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v651/v2_2019/pc/graphics/logo.svg" alt="VnExpress"></a>
+            </div>
+            <div class="header-right">
+                <div class="location-weather dropdown">
+                    <a href="#" class="city">Hà Nội <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu city-dropdown">
+                        <a href="#">TP Hồ Chí Minh</a>
+                        <a href="#">Đà Nẵng</a>
+                        <a href="#">Hải Phòng</a>
+                        <a href="#">Cần Thơ</a>
                     </div>
+                    <span class="weather"><i class="fa fa-cloud-sun"></i> 29°</span>
+                </div>
+                <div class="date-time">Thứ tư, 7/5/2025 <span class="live-time">10:48</span></div>
+                <div class="header-nav">
+                    <a href="#" class="active">Mới nhất</a>
+                    <a href="#">Tin theo khu vực</a>
+                    <a href="#" class="international"><i class="fa fa-globe"></i> International</a>
+                </div>
+                <div class="header-tools">
+                   
+                   <div class="class-but-ul">
+     <ul class=" hidden-xs nav_right-btn">
+         <li style="padding-right: 5px; display: none">
+             <img src="/data/sites/1/skins/framework/images/icon_user.png" />
+         </li>
+            <li>
+       <div class="ButtonSearch">
+           <div class="form-control">
+               <asp:TextBox ID="search_text" runat="server" CssClass="form-control" placeholder="Nhập từ khóa"></asp:TextBox>
+           </div>
+           <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
+           <div id="search-header">
+           </div>
+       </div>
+   </li>
+         <li class="nav_user">
+             <i class='fa fa-user' aria-hidden='true' style="font-size: 13px;color:gray"></i>
+             <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
+             <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" Visible="false" />
+             <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
+         </li>
+
+      
+        
+     </ul>
+ </div>
                 </div>
             </div>
+        </div>
+    </div>
             <header class="head header-top" role="banner">
                 <div id="menu_desktop">
                     <asp:Panel ID="pnlSearch" runat="server" CssClass="container no-padding" DefaultButton="search_button">
 
                         <portal:MenuControl runat="server" ID="MenuControl" />
-
-                        <div class="class-but-ul">
-                            <ul class=" hidden-xs nav_right-btn">
-                                <li style="padding-right: 5px; display: none">
-                                    <img src="/data/sites/1/skins/framework/images/icon_user.png" />
-                                </li>
-                                <li class="nav_user">
-                                    <i class='fa fa-user' aria-hidden='true' style="font-size: 18px; color: white;"></i>
-                                    <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
-                                    <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" Visible="false" />
-                                    <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
-                                </li>
-
-                                <li>
-                                    <div class="ButtonSearch">
-                                        <div class="form-control">
-                                            <asp:TextBox ID="search_text" runat="server" CssClass="form-control" placeholder="Nhập từ khóa"></asp:TextBox>
-                                        </div>
-                                        <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
-                                        <div id="search-header">
-                                        </div>
-                                    </div>
-                                </li>
-                                <%-- 
-                                        <li>
-                                        <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
-                                        <img src="/data/sites/1/skins/framework/images/img_header-find.png" alt="Alternate Text" />
-                                    </li>
-                                --%>
-                                <li class="menu_chil">
-                                    <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
-                                    <div class="menu_chil-chil">
-                                        <div class="menu-child-header active-menu">
-                                            <portal:MenuTopControl runat="server" ID="MenuControl1" />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                                          <div class="class-but-ul">
+    <ul class=" hidden-xs nav_right-btn">
+       
+        <li class="menu_chil">
+            <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
+            <div class="menu_chil-chil">
+                <div class="menu-child-header active-menu">
+                    <portal:MenuTopControl runat="server" ID="MenuTopControl1" />
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+                       
                     </asp:Panel>
                     <portal:GenderPageID ID="gdp" runat="server"></portal:GenderPageID>
                 </div>
