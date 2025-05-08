@@ -51,6 +51,9 @@ SourceCode/Web/Data/Sites/1/skins/Fake/
 SourceCode/Web/Data/Sites/1/skins/GiaoDien2/
 SourceCode/Web/Data/Sites/1/skins/Bentre/
 SourceCode/Web/Data/Sites/1/skins/GiaoDienTest2/
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
 
 SourceCode/Web/ThongKetruyCap.txt
 SourceCode/Web/Data/currentlog.config
@@ -70,3 +73,4 @@ SourceCode/Mojoportal.ConvertData/bin/Debug/net5.0/Mojoportal.ConvertData.exe
 SourceCode/Mojoportal.ConvertData/obj/Debug/net5.0/Mojoportal.ConvertData.csproj.FileListAbsolute.txt
 SourceCode/Mojoportal.ConvertData/obj/
 SourceCode/mojoportal.App/obj/
+/SourceCode/.vs/mojo/FileContentIndex
