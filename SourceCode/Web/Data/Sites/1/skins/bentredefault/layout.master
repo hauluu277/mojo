@@ -701,6 +701,8 @@
                 const items = widget.querySelectorAll('.event-item');
                 const prevBtn = widget.querySelector('.nav-left');
                 const nextBtn = widget.querySelector('.nav-right');
+                const prevBtnImg = prevBtn.querySelector('img');
+                const nextBtnImg = nextBtn.querySelector('img');
                 const visibleCount = 3;
                 let currentIndex = 0;
 
@@ -711,6 +713,19 @@
                             item.classList.add('active');
                         }
                     });
+
+                    // Kiểm tra dữ liệu để làm mờ nút
+                    if (currentIndex === 0) {
+                        prevBtnImg.classList.add('faded');
+                    } else {
+                        prevBtnImg.classList.remove('faded');
+                    }
+
+                    if (currentIndex + visibleCount >= items.length) {
+                        nextBtnImg.classList.add('faded');
+                    } else {
+                        nextBtnImg.classList.remove('faded');
+                    }
                 }
 
                 prevBtn.addEventListener('click', function () {
@@ -728,6 +743,16 @@
 
                 // Hiển thị 3 item đầu tiên cho mỗi widget
                 showItems(currentIndex);
+            });
+        });
+
+        document.querySelectorAll('div[id*="_pnlChuyenMucCon"], div[id*="_pnlTinSuKien"]').forEach(function (targetDiv) {
+            const parent = targetDiv.parentElement;
+
+            parent.querySelectorAll(':scope > div').forEach(function (sibling) {
+                if (sibling.id && sibling.id.includes("_Panelkd")) {
+                    sibling.remove();
+                }
             });
         });
     </script>

@@ -485,7 +485,7 @@ namespace ArticleFeature.UI
                     hpldescriptionKinhDoanh.Text = firstArticle.Summary;
                     imgKinhDoanh.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
 
-                    var secondArticle = listArticle[1];
+                    var secondArticle = listArticle.Count() > 1 ?  listArticle[1] : new Article();
 
                     hplKinhDoanh1.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, secondArticle.ItemUrl, secondArticle.ItemID, pageId, moduleId);
                     hplKinhDoanh1.Text = secondArticle.Title;

@@ -668,12 +668,12 @@
         <!-- Nội dung bài viết -->
         <div class="width_common content-box-category">
             <!-- Bài viết nổi bật -->
-            <article class="item-news full-thumb">
+            <article class="item-news-cmc full-thumb-cmc">
                 <div class="thumb-art">
                     <asp:Image ID="ImgChuyenMucCon" runat="server" CssClass="lazy" AlternateText="" />
                 </div>
                 <div class="width_common box-info-news">
-                    <h3 class="title-news">
+                    <h3 class="title-news-cmc">
                         <asp:HyperLink ID="hplChuyenMucCon2" runat="server" />
                     </h3>
                     <p class="description">
@@ -698,6 +698,7 @@
             </div>
         </div>
     </div>
+
 </asp:Panel>
 
 
@@ -706,15 +707,15 @@
 <asp:Panel ID="pnlTinSuKien" runat="server" CssClass="item-box-cate box-last">
     <div class="event-widget">
         <div class="event-header">
-            <h3>
+            <h3 class="font-Merriweather">
                 <asp:HyperLink ID="hplChuyenMucTin" runat="server" CssClass="inner-title" />
             </h3>
-            <div class="nav-buttons"> 
+            <div class="nav-buttons">
                 <button class="nav-left" type="button">
-                    <img src="/Data/Sites/1/skins/bentredefault/images/prev.png" alt="Prev" width="16" height="16" />
+                    <img src="/Data/Icon16x16/Previous.png" alt="Prev" width="16" height="16" class="faded">
                 </button>
                 <button class="nav-right" type="button">
-                    <img src="/Data/Sites/1/skins/bentredefault/images/next.png" alt="Next" width="16" height="16" />
+                    <img src="/Data/Icon16x16/next.png" alt="Next" width="16" height="16" class="">
                 </button>
             </div>
         </div>

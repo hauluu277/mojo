@@ -4941,13 +4941,11 @@ ul.topaddres > li > ul.menu-item {
 .width_common {
     width: 100%;
 }
-
-/* Tiêu đề chuyên mục */
+ 
 .title-box-category {
     margin-bottom: 15px;
     padding-bottom: 8px;
 }
-
 .parent-cate {
     display: inline-block;
     margin: 0 15px 0 0;
@@ -4959,9 +4957,29 @@ ul.topaddres > li > ul.menu-item {
         color: #d00;
         text-transform: uppercase;
     }
+.nav-buttons button {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
 
+    .nav-buttons button:focus {
+        outline: none;
+        box-shadow: none;
+    }
+.nav-buttons img {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+    .nav-buttons img.faded {
+        opacity: 0.1;
+    }
 .sub-cate {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
     .sub-cate a {
@@ -4976,6 +4994,7 @@ ul.topaddres > li > ul.menu-item {
 
 .parent-cate {
     border-bottom: 1px solid #923A3C;
+    padding-bottom: 2px;
 }
 
 item-news:first-child
@@ -5022,6 +5041,14 @@ item-news:first-child
     padding-bottom: 5px;
 }
 
+.title-news-cmc a {
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
 .description {
     color: #555;
     margin-top: 5px;
@@ -5135,6 +5162,13 @@ item-news:first-child
     border-bottom: none;
 }
 
+    .item-news-cmc.full-thumb-cmc .title-news {
+        padding-right: 20px;
+    }
+
+.box-cate-featured .item-news-cmc.full-thumb-cmc .title-news {
+    padding-left: 15px;
+}
     .item-news.full-thumb .thumb-art {
         width: 50%;
         margin: 0;
@@ -5229,16 +5263,19 @@ item-news:first-child
     margin-bottom: 10px;
 
 }
-.inner-title {
-    font-family: "Merriweather", serif;
+.inner-title { 
     font-size: 20px;
+}
+.font-Merriweather {
+    font-family: "Merriweather", serif;
 }
 
 .event-header h3 {
     font-size: 16px;
     color: #800000;
     margin: 0;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid #923A3C;
 }
 
 .nav-buttons button {
