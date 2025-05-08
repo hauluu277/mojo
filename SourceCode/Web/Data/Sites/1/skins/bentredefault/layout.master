@@ -692,6 +692,44 @@
             // Debug: Kiểm tra kết quả
             console.log('Layout wrappers created:', Object.keys(layoutWrappers));
         });
+
+
+
+        // Tin chuyển tiếp
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.event-widget').forEach(widget => {
+                const items = widget.querySelectorAll('.event-item');
+                const prevBtn = widget.querySelector('.nav-left');
+                const nextBtn = widget.querySelector('.nav-right');
+                const visibleCount = 3;
+                let currentIndex = 0;
+
+                function showItems(startIndex) {
+                    items.forEach((item, index) => {
+                        item.classList.remove('active');
+                        if (index >= startIndex && index < startIndex + visibleCount) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    currentIndex -= visibleCount;
+                    if (currentIndex < 0) currentIndex = 0;
+                    showItems(currentIndex);
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex + visibleCount < items.length) {
+                        currentIndex += visibleCount;
+                    }
+                    showItems(currentIndex);
+                });
+
+                // Hiển thị 3 item đầu tiên cho mỗi widget
+                showItems(currentIndex);
+            });
+        });
     </script>
     <%--    <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

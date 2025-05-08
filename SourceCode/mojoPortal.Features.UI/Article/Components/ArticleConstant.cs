@@ -74,7 +74,11 @@ namespace mojoPortal.Features
         /// <summary>
         /// tab hiển thị tin tức và chuyên mục con
         /// </summary>
-        public static int TabTinVaChuyenMucCon = 22; 
+        public static int TabTinVaChuyenMucCon = 22;
+        
+        // Tab hiển thị kiểu chuyển tiếp
+        public static int TabTinChuyenTiep = 31; 
+
 
     }
 

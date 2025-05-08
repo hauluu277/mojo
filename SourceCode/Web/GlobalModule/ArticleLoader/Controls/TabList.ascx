@@ -618,13 +618,49 @@
                         <article class="item-news">
                             <h3 class="title-news">
                                 <a class="tieude-dv" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
-                                   <span class="dotted"></span> <%# Eval("Title") %>
+                                    <span class="dotted"></span><%# Eval("Title") %>
                                 </a>
                             </h3>
                         </article>
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<!-- Dạng hiển thị chuyển trang -->
+
+<asp:Panel ID="pnlTinSuKien" runat="server" CssClass="item-box-cate box-last">
+    <div class="event-widget">
+        <div class="event-header">
+            <h3>
+                <asp:HyperLink ID="hplChuyenMucTin" runat="server" CssClass="inner-title" />
+            </h3>
+            <div class="nav-buttons"> 
+                <button class="nav-left" type="button">
+                    <img src="/Data/Sites/1/skins/bentredefault/images/prev.png" alt="Prev" width="16" height="16" />
+                </button>
+                <button class="nav-right" type="button">
+                    <img src="/Data/Sites/1/skins/bentredefault/images/next.png" alt="Next" width="16" height="16" />
+                </button>
+            </div>
+        </div>
+        <div class="event-list">
+
+            <asp:Repeater ID="rptTinSuKien" runat="server">
+                <ItemTemplate>
+                    <div class="event-item" data-index='<%# Container.ItemIndex %>'>
+                        <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+                        <div class="event-info">
+                            <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
+                                <%# Eval("Title") %>
+                            </a>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
 </asp:Panel>
