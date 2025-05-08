@@ -22,6 +22,32 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Business\obj\De
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPort.E7ADB5E5.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.pdb
+<<<<<<< HEAD
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Business.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Business.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\log4net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoportal.CoreHelpers.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Data.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\Mono.Security.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\Novell.Directory.Ldap.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Web.Framework.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\CsvHelper.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\HtmlAgilityPack.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Data.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoportal.CoreHelpers.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Net.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\log4net.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Web.Framework.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\bin\Debug\CsvHelper.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.csproj.AssemblyReference.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.Properties.Resources.resources
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.csproj.GenerateResource.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.csproj.CoreCompileInputs.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.csproj.CopyComplete
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.pdb
+=======
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Business.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\bin\Debug\mojoPortal.Business.pdb
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\bin\Debug\log4net.dll
@@ -46,3 +72,4 @@ C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPorta
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPort.E7ADB5E5.Up2Date
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Business\obj\Debug\mojoPortal.Business.pdb
+>>>>>>> 8f30d66359c4b4c42ec12172ef0fcbda26acfe73

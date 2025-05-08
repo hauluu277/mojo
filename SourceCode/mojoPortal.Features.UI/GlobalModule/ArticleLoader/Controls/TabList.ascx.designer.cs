@@ -555,6 +555,87 @@ namespace ArticleFeature.UI
         protected global::System.Web.UI.WebControls.Repeater rptChuyenMucLienKet;
 
         /// <summary>
+        /// Panelkd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panelkd;
+
+        /// <summary>
+        /// hplCategoryKinhDoanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplCategoryKinhDoanh;
+
+        /// <summary>
+        /// Repeaterkd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeaterkd;
+
+        /// <summary>
+        /// imgKinhDoanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgKinhDoanh;
+
+        /// <summary>
+        /// hplKinhDoanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplKinhDoanh;
+
+        /// <summary>
+        /// hpldescriptionKinhDoanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpldescriptionKinhDoanh;
+
+        /// <summary>
+        /// hplKinhDoanh1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplKinhDoanh1;
+
+        /// <summary>
+        /// hpldescriptionKinhDoanh1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpldescriptionKinhDoanh1;
+
+        /// <summary>
+        /// rptKinhDoanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptKinhDoanh;
+
+        /// <summary>
         /// pnlChuyenMucCon control.
         /// </summary>
         /// <remarks>
@@ -616,5 +697,32 @@ namespace ArticleFeature.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptChuyenMucCon2;
+
+        /// <summary>
+        /// pnlTinSuKien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTinSuKien;
+
+        /// <summary>
+        /// hplChuyenMucTin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplChuyenMucTin;
+
+        /// <summary>
+        /// rptTinSuKien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptTinSuKien;
     }
 }

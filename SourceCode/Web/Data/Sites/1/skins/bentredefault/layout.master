@@ -635,44 +635,99 @@
             const gridItems = document.querySelectorAll('[class*="grid-layout-"]');
             if (gridItems.length === 0) return;
 
-            // Tạo wrapper chính
-            const mainWrapper = document.createElement('div');
-            mainWrapper.className = 'wrapper-grid-layout-1';
-            gridItems[0].parentNode.insertBefore(mainWrapper, gridItems[0]);
+            // Đối tượng lưu trữ các main wrapper theo layout type
+            const layoutWrappers = {};
 
-            // Đối tượng lưu trữ các wrapper theo col (sau khi bỏ boxchild-)
-            const colWrappers = {};
-
-            // Phân loại các item vào các wrapper tương ứng
+            // Phân loại các item theo layout type trước
             gridItems.forEach(item => {
-                // Tìm class boxchild-col-* trong phần tử
-                const boxchildClass = Array.from(item.classList).find(c => /^boxchild-col-(1|2|3|4|6|8|12)$/.test(c));
+                // Tìm class grid-layout-1 hoặc grid-layout-2
+                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-(1|2)$/.test(c));
+                if (!layoutClass) return;
 
+                // Tạo main wrapper nếu chưa tồn tại
+                if (!layoutWrappers[layoutClass]) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'wrapper-' + layoutClass;
+                    // Chèn vào trước phần tử đầu tiên của loại này
+                    const firstOfType = document.querySelector('.' + layoutClass);
+                    if (firstOfType) {
+                        firstOfType.parentNode.insertBefore(wrapper, firstOfType);
+                    } else {
+                        document.body.appendChild(wrapper); // fallback
+                    }
+                    layoutWrappers[layoutClass] = {
+                        wrapper: wrapper,
+                        colWrappers: {}
+                    };
+                }
+            });
+
+            // Xử lý từng item để thêm vào wrapper tương ứng
+            gridItems.forEach(item => {
+                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-\d+$/.test(c));
+                if (!layoutClass || !layoutWrappers[layoutClass]) return;
+
+                // Tìm class boxchild-col-*
+                const boxchildClass = Array.from(item.classList).find(c => /^boxchild-col-(8|4|12|1|2|3|6)$/.test(c));
                 if (!boxchildClass) {
-                    mainWrapper.appendChild(item);
+                    layoutWrappers[layoutClass].wrapper.appendChild(item);
                     return;
                 }
 
-                // Chuyển thành col-*
                 const colClass = boxchildClass.replace('boxchild-', '');
+                const currentLayout = layoutWrappers[layoutClass];
 
-                // Nếu chưa có wrapper thì tạo mới
-                if (!colWrappers[colClass]) {
-                    const wrapper = document.createElement('div');
-                    wrapper.className = `wrapper-${colClass} ${colClass}`; // ví dụ: wrapper-col-4 col-4
-                    colWrappers[colClass] = wrapper;
-                    mainWrapper.appendChild(wrapper);
+                // Tạo col wrapper nếu chưa có
+                if (!currentLayout.colWrappers[colClass]) {
+                    const colWrapper = document.createElement('div');
+                    colWrapper.className = colClass + " d-flex flex-wrap";
+                    currentLayout.wrapper.appendChild(colWrapper);
+                    currentLayout.colWrappers[colClass] = colWrapper;
                 }
 
                 // Thêm item vào wrapper tương ứng
-                colWrappers[colClass].appendChild(item);
+                currentLayout.colWrappers[colClass].appendChild(item);
             });
 
-            // Xóa wrapper không có phần tử nào (nếu cần)
-            Object.keys(colWrappers).forEach(colClass => {
-                if (colWrappers[colClass].children.length === 0) {
-                    colWrappers[colClass].remove();
+            // Debug: Kiểm tra kết quả
+            console.log('Layout wrappers created:', Object.keys(layoutWrappers));
+        });
+
+
+
+        // Tin chuyển tiếp
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.event-widget').forEach(widget => {
+                const items = widget.querySelectorAll('.event-item');
+                const prevBtn = widget.querySelector('.nav-left');
+                const nextBtn = widget.querySelector('.nav-right');
+                const visibleCount = 3;
+                let currentIndex = 0;
+
+                function showItems(startIndex) {
+                    items.forEach((item, index) => {
+                        item.classList.remove('active');
+                        if (index >= startIndex && index < startIndex + visibleCount) {
+                            item.classList.add('active');
+                        }
+                    });
                 }
+
+                prevBtn.addEventListener('click', function () {
+                    currentIndex -= visibleCount;
+                    if (currentIndex < 0) currentIndex = 0;
+                    showItems(currentIndex);
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex + visibleCount < items.length) {
+                        currentIndex += visibleCount;
+                    }
+                    showItems(currentIndex);
+                });
+
+                // Hiển thị 3 item đầu tiên cho mỗi widget
+                showItems(currentIndex);
             });
         });
     </script>

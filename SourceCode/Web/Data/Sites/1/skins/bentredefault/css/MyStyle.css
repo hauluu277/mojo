@@ -4310,7 +4310,7 @@ ul.main-menu > li:hover > .menu-gt-truong {
     display: flex;
     justify-content: left;
     width: 75%;
-	    padding-left: 20px;
+    padding-left: 20px;
 }
 
 .hienthi > input {
@@ -4897,10 +4897,10 @@ ul.topaddres > li > ul.menu-item {
     margin: 0;
 }
 
-.tintuc_sukien-item .linktip{
-	width:100% !important;
-	 padding-left:0 !important;
-	     color: rgb(51, 51, 51) !important;
+.tintuc_sukien-item .linktip {
+    width: 100% !important;
+    padding-left: 0 !important;
+    color: rgb(51, 51, 51) !important;
 }
 
 
@@ -4911,26 +4911,26 @@ ul.topaddres > li > ul.menu-item {
     margin: 0;
 }
 
-.thongtin_tuyensinh-ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-/*hgroup{
+    .thongtin_tuyensinh-ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+        /*hgroup{
     display: ruby-text !important;
 }*/
 
-    .thongtin_tuyensinh-ul li a {
-        font-size: 14px;
-        color: #666;
-        text-decoration: none;
-    }
-
-        .thongtin_tuyensinh-ul li a:hover {
-            color: #d10000;
-            text-decoration: underline;
+        .thongtin_tuyensinh-ul li a {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
         }
+
+            .thongtin_tuyensinh-ul li a:hover {
+                color: #d10000;
+                text-decoration: underline;
+            }
 /* Layout chung */
-.item-box-cate { 
+.item-box-cate {
     position: relative;
 }
 
@@ -4944,7 +4944,7 @@ ul.topaddres > li > ul.menu-item {
 
 /* Tiêu đề chuyên mục */
 .title-box-category {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     padding-bottom: 8px;
 }
 
@@ -4961,7 +4961,7 @@ ul.topaddres > li > ul.menu-item {
     }
 
 .sub-cate {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
     .sub-cate a {
@@ -4977,6 +4977,7 @@ ul.topaddres > li > ul.menu-item {
 .parent-cate {
     border-bottom: 1px solid #923A3C;
 }
+
 item-news:first-child
 
 .full-thumb {
@@ -4984,7 +4985,7 @@ item-news:first-child
     flex-wrap: wrap;
 }
 
-.thumb-art { 
+.thumb-art {
     padding-right: 15px;
 }
 
@@ -5031,6 +5032,7 @@ item-news:first-child
 .sub-news-cate {
     margin-top: 15px;
 }
+
 .dotted {
     padding-left: 15px;
     position: relative;
@@ -5069,7 +5071,7 @@ item-news:first-child
 } 
 [class*="box-col-"] {
     float: left;
-    padding: 10px; 
+    padding: 10px;
     box-sizing: border-box;
     /*border-top: 2px solid #ededed;*/
 }
@@ -5119,4 +5121,179 @@ item-news:first-child
 }
 
 [class^="grid-layout-"] { 
+} 
+
+.content-box-category {
+    flex-wrap: wrap;
 }
+
+.item-news.full-thumb {
+    width: 68%;
+    background: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+    .item-news.full-thumb .thumb-art {
+        width: 50%;
+        margin: 0;
+        padding-top: 4px;
+    }
+.thumb-art {
+    position: relative;
+}
+.item-news .thumb-art {
+    float: left;
+
+}
+.item-news {
+    float: left;
+}
+.wrap-sum-news {
+    width: 50%;
+}
+.item-news.full-thumb .title-news {
+    padding-right: 20px;
+}
+.box-cate-featured .item-news.full-thumb .title-news {
+    padding-left: 15px;
+}
+.box-cate-featured .item-news .title-news {
+    font-size: 15px;
+    font-weight: 700;
+    clear: both;
+}
+.item-news .title-news {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 160%;
+    margin-bottom: 4px;
+}
+.has_transition, a.title-news  {
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+.article-sub-right {
+    width: 32.352%;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    border-left: 2px solid #ededed;
+}
+.tieude-3 {
+    text-align: left;
+    font-size: 19px !important;
+    font-family: RobotoCondensed-Bold;
+    color: #333333 !important;
+    width: 90%;
+    float: left;
+    line-height: 28px;
+}
+.boddertopkhoi3 {
+    border-top: 2px solid #ededed;
+} 
+
+
+/*
+
+    TIn chuyển tiếp
+*/
+.nav-left > img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.nav-right > img {
+    width: 20px !important;
+    height: 20px !important;
+}
+.event-widget {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+
+}
+.inner-title {
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+}
+
+.event-header h3 {
+    font-size: 16px;
+    color: #800000;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+    .nav-buttons button:hover {
+        color: #000;
+    }
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.event-item {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+    .event-item.active {
+        display: flex;
+    }
+
+    .event-item img {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+.event-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 

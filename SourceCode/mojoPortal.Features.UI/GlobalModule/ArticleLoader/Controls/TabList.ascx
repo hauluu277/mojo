@@ -578,6 +578,75 @@
 </asp:Panel>
 <%-- Kết thúc hiển thị các chuyên mục --%>
 
+<%--Hiển thị các Tin Kinh Doanh --%>
+<asp:Panel ID="Panelkd" runat="server">
+    <div class="nopd">
+        <hgroup class="width_common title-box-category thoisu">
+            <h2 class="parent-cate">
+                <asp:HyperLink ID="hplCategoryKinhDoanh" runat="server" CssClass="inner-title" />
+            </h2>
+            <asp:Repeater ID="Repeaterkd" runat="server">
+                <ItemTemplate>
+                    <span class="sub-cate">
+                        <a href='<%# Eval("Description") %>' title='<%# Eval("Name") %>'><%# Eval("Name") %></a>
+                    </span>
+                </ItemTemplate>
+            </asp:Repeater>
+        </hgroup>
+        <div class="d-flex float-left row">
+            <div class="width_common content-box-category flexbox row">
+                <div class="item-news full-thumb flexbox col-sm-12">
+                    <div class="thumb-art col-sm-6 ">
+                        <asp:Image ID="imgKinhDoanh" runat="server" CssClass="" />
+                    </div>
+                    <div class="wrap-sum-news col-sm-3">
+                        <div>
+                            <asp:HyperLink ID="hplKinhDoanh" runat="server" class="title-news"></asp:HyperLink>
+
+                        </div>
+
+                        <div>
+
+                            <asp:HyperLink ID="hpldescriptionKinhDoanh" runat="server" class="description"></asp:HyperLink>
+
+                        </div>
+
+                    </div>
+                    <div class="wrap-sum-news col-sm-3">
+                        <div>
+                            <asp:HyperLink ID="hplKinhDoanh1" runat="server" class="title-news"></asp:HyperLink>
+
+                        </div>
+
+                        <div>
+
+                            <asp:HyperLink ID="hpldescriptionKinhDoanh1" runat="server" class="description"></asp:HyperLink>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-news-cate col-sm-12 list-dotted">
+                    <asp:Repeater ID="rptKinhDoanh" runat="server">
+                        <ItemTemplate>
+                            <article class="item-news">
+                                <h3 class="title-news">
+                                    <a class="tieude-dv" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
+                                        <span class="dotted"></span><%# Eval("Title") %>
+                                    </a>
+                                </h3>
+                            </article>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</asp:Panel>
+<%-- Kết thúc hiển thị các Tin Kinh Doanh --%>
+
 
 <asp:Panel ID="pnlChuyenMucCon" runat="server" CssClass="item-box-cate box-last">
     <div class="box-category box-cate-featured box-cate-featured-vertical">
@@ -619,13 +688,48 @@
                         <article class="item-news">
                             <h3 class="title-news">
                                 <a class="tieude-dv" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
-                                    <span class="dotted"></span> <%# Eval("Title") %>
+                                    <span class="dotted"></span><%# Eval("Title") %>
                                 </a>
                             </h3>
                         </article>
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
+        </div>
+    </div>
+</asp:Panel>
+
+<!-- Dạng hiển thị chuyển trang -->
+
+<asp:Panel ID="pnlTinSuKien" runat="server" CssClass="item-box-cate box-last">
+    <div class="event-widget">
+        <div class="event-header">
+            <h3>
+                <asp:HyperLink ID="hplChuyenMucTin" runat="server" CssClass="inner-title" />
+            </h3>
+            <div class="nav-buttons">
+                <button class="nav-left" type="button">
+                    <img src="/Data/Sites/1/skins/bentredefault/images/prev.png" alt="Prev" width="16" height="16" />
+                </button>
+                <button class="nav-right" type="button">
+                    <img src="/Data/Sites/1/skins/bentredefault/images/next.png" alt="Next" width="16" height="16" />
+                </button>
+            </div>
+        </div>
+        <div class="event-list">
+
+            <asp:Repeater ID="rptTinSuKien" runat="server">
+                <ItemTemplate>
+                    <div class="event-item" data-index='<%# Container.ItemIndex %>'>
+                        <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+                        <div class="event-info">
+                            <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
+                                <%# Eval("Title") %>
+                            </a>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
 </asp:Panel>
