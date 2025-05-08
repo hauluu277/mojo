@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
@@ -23,8 +19,12 @@
       "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\layout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -128,7 +128,7 @@
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAAFwAAAB2AAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAF0AAAB2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T03:11:45.04Z",
               "EditorCaption": ""
@@ -213,13 +213,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ArticleConstant.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD8AAAAWAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwD8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T03:04:49.877Z",
               "EditorCaption": ""
@@ -324,33 +324,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MyStyle.css",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
-              "ViewState": "AQIAAAMUAAAAAAAAAAAAAA8UAAAXAAAA",
+              "ViewState": "AQIAAFQOAAAAAAAAAAAAANoNAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-06T04:26:30.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "TabList.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
-              "ViewState": "AQIAANYAAAAAAAAAAAAAAOUAAABSAAAA",
+              "ViewState": "AQIAANYAAAAAAAAAAAAAAOkAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T04:17:42.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TabList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
               "RelativeDocumentMoniker": "Web\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
@@ -363,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TabList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\ArticleLoader\\Controls\\TabList.ascx",
               "RelativeDocumentMoniker": "Web\\ArticleLoader\\Controls\\TabList.ascx",
@@ -376,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TabList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
