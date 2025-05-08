@@ -41,6 +41,8 @@ SourceCode/Web/ThongKetruyCap.txt
 Document/Home_sualai copy.jpg
 
 .vs
+.vs/
+bin/Debug
 
 SourceCode/.vs/
 

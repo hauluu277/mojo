@@ -7,3 +7,12 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPort.58E39726.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.AssemblyReference.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.CoreCompileInputs.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.CopyComplete
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb

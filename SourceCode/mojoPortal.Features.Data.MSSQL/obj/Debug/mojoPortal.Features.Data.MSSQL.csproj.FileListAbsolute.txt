@@ -9,3 +9,14 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Data.M
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPort.9970CE1D.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\mojoPortal.Features.Data.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\mojoPortal.Features.Data.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\mojoPortal.Data.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\log4net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\mojoPortal.Data.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\bin\Debug\log4net.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.MSSQL.csproj.AssemblyReference.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.MSSQL.csproj.CoreCompileInputs.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.MSSQL.csproj.CopyComplete
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Data.MSSQL\obj\Debug\mojoPortal.Features.Data.pdb

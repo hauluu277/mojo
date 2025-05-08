@@ -12,3 +12,17 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\m
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPort.37CD48B3.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\HtmlAgilityPack.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.pdb
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.xml
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.AssemblyReference.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.CoreCompileInputs.cache
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.CopyComplete
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
+G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
