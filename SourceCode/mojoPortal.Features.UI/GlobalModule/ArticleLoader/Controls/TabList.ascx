@@ -643,6 +643,7 @@
 
 
         </div>
+    </div>
 </asp:Panel>
 <%-- Kết thúc hiển thị các Tin Kinh Doanh --%>
 
@@ -723,7 +724,7 @@
                         <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
                         <div class="event-info">
                             <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
-                                 <%# Eval("Title") %>
+                                <%# Eval("Title") %>
                             </a>
                         </div>
                     </div>
