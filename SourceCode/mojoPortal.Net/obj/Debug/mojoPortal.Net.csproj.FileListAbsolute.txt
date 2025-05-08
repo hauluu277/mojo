@@ -12,6 +12,7 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\m
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPort.37CD48B3.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
+<<<<<<< HEAD
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.dll
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.pdb
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.dll
@@ -26,3 +27,19 @@ G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.C
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.CopyComplete
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
 G:\Project\2025\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
+=======
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Net.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\mojoPortal.Web.Framework.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\log4net.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\bin\Debug\CsvHelper.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPort.37CD48B3.Up2Date
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Net\obj\Debug\mojoPortal.Net.pdb
+>>>>>>> 8f30d66359c4b4c42ec12172ef0fcbda26acfe73

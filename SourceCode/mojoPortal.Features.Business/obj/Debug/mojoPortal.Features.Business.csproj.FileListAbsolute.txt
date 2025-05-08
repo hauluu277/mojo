@@ -29,6 +29,7 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Busine
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPort.B0CE3B26.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.pdb
+<<<<<<< HEAD
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll.config
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.pdb
@@ -61,3 +62,36 @@ G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPorta
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.CopyComplete
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.dll
 G:\Project\2025\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.pdb
+=======
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll.config
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Business.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\log4net.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Business.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Business.WebHelpers.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoportal.CoreHelpers.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Data.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\GCheckout.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Web.Framework.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\Novell.Directory.Ldap.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\Mono.Security.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Data.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\CsvHelper.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Business.WebHelpers.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Business.WebHelpers.dll.config
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Business.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoportal.CoreHelpers.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Features.Data.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\log4net.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Web.Framework.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\mojoPortal.Data.pdb
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\bin\Debug\CsvHelper.xml
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPort.B0CE3B26.Up2Date
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.dll
+C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Features.Business\obj\Debug\mojoPortal.Features.Business.pdb
+>>>>>>> 8f30d66359c4b4c42ec12172ef0fcbda26acfe73
