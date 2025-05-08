@@ -641,7 +641,7 @@
             // Phân loại các item theo layout type trước
             gridItems.forEach(item => {
                 // Tìm class grid-layout-1 hoặc grid-layout-2
-                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-(1|2)$/.test(c));
+                const layoutClass = Array.from(item.classList).find(c => /^grid-layout-\d+$/.test(c));
                 if (!layoutClass) return;
 
                 // Tạo main wrapper nếu chưa tồn tại
