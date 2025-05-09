@@ -4,9 +4,3 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Brettle.Web.NeatHtml\obj\D
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.csproj.CoreCompileInputs.cache
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.pdb
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\bin\Debug\Brettle.Web.NeatHtml.dll
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\bin\Debug\Brettle.Web.NeatHtml.pdb
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.csproj.AssemblyReference.cache
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.csproj.CoreCompileInputs.cache
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.dll
-G:\Project\2025\mojo\SourceCode\Brettle.Web.NeatHtml\obj\Debug\Brettle.Web.NeatHtml.pdb

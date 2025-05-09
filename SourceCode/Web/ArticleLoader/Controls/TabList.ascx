@@ -8,136 +8,142 @@
     }
 </style>
 <div style="margin-bottom: 0px;">
-       <%--Hiển thị kiểu tab 10--%>
+    <%--Hiển thị kiểu tab 10--%>
     <asp:Panel ID="pnlUseTab10" runat="server">
         <div class="container">
             <div class="why__choose__us">
                 <div class="why__choose-head">
-                    <h3><asp:HyperLink ID="hplcategorytab10" runat="server"></asp:HyperLink></h3>
+                    <h3>
+                        <asp:HyperLink ID="hplcategorytab10" runat="server"></asp:HyperLink></h3>
                 </div>
-                   
+
                 <div class="sinhvien__totnghiep__content">
                     <div class="sv_totnghiep_item_left col-sm-5">
-                <asp:Repeater ID="rptActicleTab10" runat="server">
-                    <ItemTemplate>
-                        <div class="box-1 sv_tn_content-left wow fadeInLeft " style="visibility: visible; animation-delay: 0.2s;">
-                            <div class="sv_tn_content-left-1">
-                                <h3>
-                                     <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                            <%#Eval("Title") %>
-                                     </a>
-                                </h3>
-                                 <p>
-                                    <%#Eval("Description") %>
-                                </p>
-                            </div>
+                        <asp:Repeater ID="rptActicleTab10" runat="server">
+                            <ItemTemplate>
+                                <div class="box-1 sv_tn_content-left wow fadeInLeft " style="visibility: visible; animation-delay: 0.2s;">
+                                    <div class="sv_tn_content-left-1">
+                                        <h3>
+                                            <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                                <%#Eval("Title") %>
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <%#Eval("Description") %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <div class="sv_totnghiep_item_center col-sm-2">
+                        <div class="box-2 sv_tn_content-center wow bounceInDown " style="visibility: visible; animation-delay: 0.3s;">
+                            <img alt="" class="cangiua" src="../Data/Sites/120/skins/framework/images/why_tuyen_sinh.png" />
                         </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-                        </div>
-                     <div class="sv_totnghiep_item_center col-sm-2">
-                     <div class="box-2 sv_tn_content-center wow bounceInDown " style="visibility: visible; animation-delay: 0.3s;"><img alt="" class="cangiua" src="../Data/Sites/120/skins/framework/images/why_tuyen_sinh.png" /></div>
-                </div>
-                     <div class="sv_totnghiep_item_right col-sm-5">
-                         <asp:Repeater ID="rptActicleTab10_2" runat="server">
-                    <ItemTemplate>
-                        <div class="sv_tn_content-right-1 wow fadeInRight" style="visibility: visible; animation-delay: 0.2s;">
-                            <div class="sv_tn_content-left-1">
-                                <h3>
-                                     <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                            <%#Eval("Title") %>
-                                     </a>
-                                </h3>
-                                 <p>
-                                    <%#Eval("Description") %>
-                                </p>
-                            </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-                         </div>
-                  </div>
+                    </div>
+                    <div class="sv_totnghiep_item_right col-sm-5">
+                        <asp:Repeater ID="rptActicleTab10_2" runat="server">
+                            <ItemTemplate>
+                                <div class="sv_tn_content-right-1 wow fadeInRight" style="visibility: visible; animation-delay: 0.2s;">
+                                    <div class="sv_tn_content-left-1">
+                                        <h3>
+                                            <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                                <%#Eval("Title") %>
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <%#Eval("Description") %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                 </div>
             </div>
+        </div>
     </asp:Panel>
     <%--end tab10--%>
-   
+
     <%--Hiển thị kiểu tab 9--%>
-        <style type="text/css">.ahover:hover{
-            color:#d12b22
-            }
-        </style>
-     <asp:Panel ID="pnlUseTab9" runat="server">
-       <div class="why__ts">
-         <div class="container">
-            <div class="why__choose__us__full">
-                <div class="container">
-                    <div class="why__choose__us">
-                        <div class="why__choose-head">
-                            <h3> <asp:HyperLink ID="hplcategorytab9" runat="server"></asp:HyperLink></h3>
-                        </div>
-                        <div class="why__choose-content">
-                            <asp:Repeater ID="rptActicleTab9" runat="server">
-                                <ItemTemplate>
-                                    <div class="han-dt-content wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
-                                        <div class="han-dt--img"> <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
-                                            <div class="han-dt--hover"><a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" tabindex="0"><i class="fa fa-check-square-o"><span>a</span></i></a></div>
+    <style type="text/css">
+        .ahover:hover {
+            color: #d12b22
+        }
+    </style>
+    <asp:Panel ID="pnlUseTab9" runat="server">
+        <div class="why__ts">
+            <div class="container">
+                <div class="why__choose__us__full">
+                    <div class="container">
+                        <div class="why__choose__us">
+                            <div class="why__choose-head">
+                                <h3>
+                                    <asp:HyperLink ID="hplcategorytab9" runat="server"></asp:HyperLink></h3>
+                            </div>
+                            <div class="why__choose-content">
+                                <asp:Repeater ID="rptActicleTab9" runat="server">
+                                    <ItemTemplate>
+                                        <div class="han-dt-content wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
+                                            <div class="han-dt--img">
+                                                <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
+                                                <div class="han-dt--hover"><a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" tabindex="0"><i class="fa fa-check-square-o"><span>a</span></i></a></div>
                                             </div>
 
-                                       <p>
-                                        <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                            <%#Eval("Title") %>
-                                        </a>
-                                    </p>
-                                    </div>
-                                </ItemTemplate>
-                            </asp:Repeater>
+                                            <p>
+                                                <a title="<%#Eval("Title") %>" class="ahover" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                                    <%#Eval("Title") %>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-           </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </asp:Panel>
     <%--end tab9--%>
 
-   <%--Hiển thị kiểu tab 8--%>
+    <%--Hiển thị kiểu tab 8--%>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet " />
     <asp:Panel ID="pnlUseTab8" runat="server">
         <div class="taisao_chonchung_toi_haan">
             <div id="intro-toan">
-            <div class="container">
-            <div class="intro-left">
-                <h3>
-                <asp:HyperLink ID="hplcategorytab8" runat="server"></asp:HyperLink>
-                    </h3>
+                <div class="container">
+                    <div class="intro-left">
+                        <h3>
+                            <asp:HyperLink ID="hplcategorytab8" runat="server"></asp:HyperLink>
+                        </h3>
+                    </div>
+                    <div class="haan_chon_chungtoi_content intro-right">
+                        <asp:Repeater ID="rptActicleTab8" runat="server">
+                            <ItemTemplate>
+                                <div class="intro-item wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="col-sm-6 pdl0 why__choose__img">
+                                        <div class="item-img">
+                                            <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                                <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
+                                            </a>
+                                        </div>
+
+
+                                        <p>
+                                            <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                                <%#Eval("Title") %>
+                                            </a>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
                 </div>
-            <div class="haan_chon_chungtoi_content intro-right">
-                <asp:Repeater ID="rptActicleTab8" runat="server">
-                    <ItemTemplate>
-                        <div class="intro-item wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                            <div class="col-sm-6 pdl0 why__choose__img">
-                                <div class="item-img">
-                                    <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                        <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
-                                     </a>
-                                     </div>
-                          
-                           
-                                <p>
-                                    <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                        <%#Eval("Title") %>
-                                    </a>
-                                </p>
-                           
-                        </div>
-                            </div>
-                    </ItemTemplate>
-                </asp:Repeater>
             </div>
         </div>
-                </div>
-            </div>
     </asp:Panel>
 
     <%--end tab 8--%>
@@ -146,48 +152,50 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet " />
     <asp:Panel ID="pnlUseTab7" runat="server">
         <div class="sinhvien_totnghiep_haan">
-             <h2 class="page-header">
-            <asp:HyperLink ID="hplcategorytab7"  runat="server"></asp:HyperLink>
-                </h2>
+            <h2 class="page-header">
+                <asp:HyperLink ID="hplcategorytab7" runat="server"></asp:HyperLink>
+            </h2>
             <div class="container">
-            <div class="col-sm-6 pdl0"><img alt="Sinh viên sau khi tốt nghiệp ĐHSPTN" src="/Data/Sites/1/media/admin/images/SV%20Tot%20nghiep(2).png"></div>
-           <div class="totnghiep col-sm-6 pdr0">
-                <asp:Repeater ID="rptActicleTab7" runat="server">
-                    <ItemTemplate>
-                        <div class="totnghiep__content wow fadeInLeft" data-wow-delay="0.1s">
-                            <div class="pdl0 why__choose__img">
-                               <%-- <div class="item-img">
+                <div class="col-sm-6 pdl0">
+                    <img alt="Sinh viên sau khi tốt nghiệp ĐHSPTN" src="/Data/Sites/1/media/admin/images/SV%20Tot%20nghiep(2).png">
+                </div>
+                <div class="totnghiep col-sm-6 pdr0">
+                    <asp:Repeater ID="rptActicleTab7" runat="server">
+                        <ItemTemplate>
+                            <div class="totnghiep__content wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="pdl0 why__choose__img">
+                                    <%-- <div class="item-img">
                                     <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
                                         <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
                                      </a>
                                     <div class="why-hover-icon"><a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><i class="fa fa-check">a</i></a></div>
                                  </div>--%>
-                          
-                                <h3>
-                                    <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                        <%#Eval("Title") %>
-                                    </a>
-                                </h3>
-                                <p>
-                                    <%#Eval("Summary") %>
-                                </p>
+
+                                    <h3>
+                                        <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                            <%#Eval("Title") %>
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        <%#Eval("Summary") %>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </div>
-        </div>
         </div>
     </asp:Panel>
 
     <%--end tab 7--%>
 
 
-     <%--Hiển thị kiểu tab 6--%>
+    <%--Hiển thị kiểu tab 6--%>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet " />
     <asp:Panel ID="pnlUseTab6" runat="server">
         <div class="taisao_chonchung_toi_haan">
-             <h2 class="page-header">
+            <h2 class="page-header">
                 <asp:HyperLink ID="hplcategorytab6" CssClass="page-header" runat="server"></asp:HyperLink>
             </h2>
             <div class="haan_chon_chungtoi_content">
@@ -198,9 +206,9 @@
                                 <div class="item-img">
                                     <a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
                                         <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
-                                     </a>
+                                    </a>
                                     <div class="why-hover-icon"><a title="<%#Eval("Title") %>" class="linktip" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><i class="fa fa-check"><span>a</span></i></a></div>
-                                 </div>
+                                </div>
                             </div>
                             <div class="col-sm-6 pdr0 why__choose__content">
                                 <h3>
@@ -224,38 +232,38 @@
     <%--Hiển thị tin hot tin hoạt động của khoa--%>
     <asp:Panel ID="pnlUseTab5" runat="server">
         <div class="container">
-        <div class="tin-hoat-dong">
-            <div class="header">
-                <h2>
-                    <asp:HyperLink ID="hplTieuDe" runat="server" ></asp:HyperLink>
-                </h2>
-            </div>
-            <div class="tin-hoat-dong-content">
-                <asp:Repeater ID="rptTab_5" runat="server">
-                    <ItemTemplate>
-                        <div class="tin-hoat-dong-item col-md-3">
-                            <div class="tinhoatdong-image">
-                            <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
-                            <div class="tinhoatdong-hover">
-                               <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" class="fa fa-info" tabindex="0"><span>a</span></a>
-                        </div>
-                            </div>
+            <div class="tin-hoat-dong">
+                <div class="header">
+                    <h2>
+                        <asp:HyperLink ID="hplTieuDe" runat="server"></asp:HyperLink>
+                    </h2>
+                </div>
+                <div class="tin-hoat-dong-content">
+                    <asp:Repeater ID="rptTab_5" runat="server">
+                        <ItemTemplate>
+                            <div class="tin-hoat-dong-item col-md-3">
+                                <div class="tinhoatdong-image">
+                                    <img src="<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>" title="<%#Eval("Title") %>" />
+                                    <div class="tinhoatdong-hover">
+                                        <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" class="fa fa-info" tabindex="0"><span>a</span></a>
+                                    </div>
+                                </div>
                                 <div class="tin-hoat-dong-date">
-                                <%#FormartDateTime(Eval("StartDate")) %>
+                                    <%#FormartDateTime(Eval("StartDate")) %>
+                                </div>
+                                <h3>
+                                    <a title="<%#Eval("Title") %>" class="linktip han_title_article_thd_khoa" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                        <%#Eval("Title") %>
+                                    </a>
+                                </h3>
+                                <div class="tin-hot-dong-summary tin-hot-dong-summary_han_lenght">
+                                    <%#Eval("Summary") %>
+                                </div>
                             </div>
-                            <h3>
-                                <a title="<%#Eval("Title") %>" class="linktip han_title_article_thd_khoa" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                    <%#Eval("Title") %>
-                                </a>
-                            </h3>
-                            <div class="tin-hot-dong-summary tin-hot-dong-summary_han_lenght">
-                                <%#Eval("Summary") %>
-                            </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </div>
-        </div>
         </div>
     </asp:Panel>
 
@@ -421,15 +429,15 @@
 
                 <%--Kết thúc tab kiểu 2--%>
                 <%--Hiển thị tab kiểu 3--%>
-                <asp:Repeater ID="rptTab_3"  runat="server">
+                <asp:Repeater ID="rptTab_3" runat="server">
                     <ItemTemplate>
                         <div>
                             <div class="tab-3  shd-content">
 
-                                 <a class="linktip" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                        <asp:Image ID="image28" runat="server" ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
-                                    CssClass='<%# "rimg" + ModuleId + Eval("ItemID") %>' Visible='<%#ShowImage(Eval("ImageUrl").ToString()) %>' />
-                                    </a>
+                                <a class="linktip" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
+                                    <asp:Image ID="image28" runat="server" ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                        CssClass='<%# "rimg" + ModuleId + Eval("ItemID") %>' Visible='<%#ShowImage(Eval("ImageUrl").ToString()) %>' />
+                                </a>
                                 <div class="tab-3-content shd-tab-3-content">
                                     <a class="linktip han_title_lich" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
                                         <%#Eval("Title") %>
@@ -477,43 +485,40 @@
             </asp:Panel>
             <div class="clear"></div>
         </div>
-    </asp:Panel> 
+    </asp:Panel>
 
     <script>
-        
-         var isIE = /*@cc_on!@*/false || !!document.documentMode;
-            if (isIE == true) {
-                $(document).ready(function() 
-                    { $(".han_title_lich").each(function(i){ 
-                     var len=$(this).text().trim().length; 
-                     if(len>120) 
-                     { 
-                      $(this).text($(this).text().substr(0,120)+'...'); 
-                     } 
-                    }); 
-                }); 
 
-                 $(document).ready(function() 
-                    { $(".tin-hot-dong-summary_han_lenght").each(function(i){ 
-                     var len=$(this).text().trim().length; 
-                     if(len>130) 
-                     { 
-                      $(this).text($(this).text().substr(0,130)+'...'); 
-                     } 
-                    }); 
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        if (isIE == true) {
+            $(document).ready(function () {
+                $(".han_title_lich").each(function (i) {
+                    var len = $(this).text().trim().length;
+                    if (len > 120) {
+                        $(this).text($(this).text().substr(0, 120) + '...');
+                    }
                 });
-                
+            });
 
-                $(document).ready(function() 
-                    { $(".han_title_article_thd_khoa").each(function(i){ 
-                     var len=$(this).text().trim().length; 
-                     if(len>75) 
-                     { 
-                      $(this).text($(this).text().substr(0,75)+'...'); 
-                     } 
-                    }); 
+            $(document).ready(function () {
+                $(".tin-hot-dong-summary_han_lenght").each(function (i) {
+                    var len = $(this).text().trim().length;
+                    if (len > 130) {
+                        $(this).text($(this).text().substr(0, 130) + '...');
+                    }
                 });
-            }
+            });
+
+
+            $(document).ready(function () {
+                $(".han_title_article_thd_khoa").each(function (i) {
+                    var len = $(this).text().trim().length;
+                    if (len > 75) {
+                        $(this).text($(this).text().substr(0, 75) + '...');
+                    }
+                });
+            });
+        }
         $(function () {
             <%--$("#nbcwrap<%=ModuleId.ToString()%> .nbccTabContent:first-child").slideDown();--%>
             $("#nbcwrap<%=ModuleId.ToString()%> .nbchTabs ul li a").click(function () {
@@ -571,8 +576,8 @@
                         <ItemTemplate>
                             <div class="col-lg-3 col-sm-12 tintuc_sukien-item">
                                 <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>">
-                                    <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>'  ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
-                     
+                                    <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
+
                                     <a class="tieude-dv" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><%# Eval("Title") %></a>
                                     <div class="cds-content__right-time"><%#string.Format("{0:dd/MM/yyyy}", Eval("StartDate")) %></div>
                                     <div class="linktip">
@@ -608,12 +613,12 @@
         <!-- Nội dung bài viết -->
         <div class="width_common content-box-category">
             <!-- Bài viết nổi bật -->
-            <article class="item-news full-thumb    ">
+            <article class="item-news-cmc full-thumb-cmc">
                 <div class="thumb-art">
                     <asp:Image ID="ImgChuyenMucCon" runat="server" CssClass="lazy" AlternateText="" />
                 </div>
                 <div class="width_common box-info-news">
-                    <h3 class="title-news">
+                    <h3 class="title-news-cmc">
                         <asp:HyperLink ID="hplChuyenMucCon2" runat="server" />
                     </h3>
                     <p class="description">
@@ -645,15 +650,15 @@
 <asp:Panel ID="pnlTinSuKien" runat="server" CssClass="item-box-cate box-last">
     <div class="event-widget">
         <div class="event-header">
-            <h3>
+            <h3 class="font-Merriweather">
                 <asp:HyperLink ID="hplChuyenMucTin" runat="server" CssClass="inner-title" />
             </h3>
-            <div class="nav-buttons"> 
+            <div class="nav-buttons">
                 <button class="nav-left" type="button">
-                    <img src="/Data/Sites/1/skins/bentredefault/images/prev.png" alt="Prev" width="16" height="16" />
+                    <img src="/Data/Icon16x16/Previous.png" alt="Prev" width="16" height="16" class="faded">
                 </button>
                 <button class="nav-right" type="button">
-                    <img src="/Data/Sites/1/skins/bentredefault/images/next.png" alt="Next" width="16" height="16" />
+                    <img src="/Data/Icon16x16/next.png" alt="Next" width="16" height="16" class="">
                 </button>
             </div>
         </div>
@@ -665,7 +670,7 @@
                         <asp:Image runat="server" CssClass="img-hoatdong-dp" ID="Image2" Visible='<%# ArticleUtils.ShowImage(Eval("ImageUrl").ToString()) %>' ImageUrl='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' AlternateText='<%#Eval("Title") %>' />
                         <div class="event-info">
                             <a href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>">
-                                 <%# Eval("Title") %>
+                                <%# Eval("Title") %>
                             </a>
                         </div>
                     </div>

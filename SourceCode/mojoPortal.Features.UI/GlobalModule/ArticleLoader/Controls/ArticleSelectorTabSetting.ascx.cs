@@ -92,6 +92,7 @@ namespace ArticleFeature.UI
             listTab.Add(new ListItem { Text = "Hiển thị danh sách các chuyên mục", Value = ArticleConstant.TabDanhSachCacChuyenMuc.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị danh sách các tin kinh doanh", Value = ArticleConstant.TabKinhDoanh.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị tin tức chuyển tiếp", Value = ArticleConstant.TabTinChuyenTiep.ToString() });
+            listTab.Add(new ListItem { Text = "Hiển thị danh sách 5 tin 2 ảnh", Value = ArticleConstant.Tab5Tin2Anh.ToString() });
 
 
             rblTab.DataSource = listTab;

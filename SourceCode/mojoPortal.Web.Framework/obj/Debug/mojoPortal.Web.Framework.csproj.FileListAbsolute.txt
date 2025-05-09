@@ -10,20 +10,6 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\o
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPort.A7DF4B80.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.pdb
-<<<<<<< HEAD
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.pdb
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\CsvHelper.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\HtmlAgilityPack.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\log4net.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\CsvHelper.xml
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\log4net.xml
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.csproj.AssemblyReference.cache
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.csproj.CoreCompileInputs.cache
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.csproj.CopyComplete
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.pdb
-=======
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\mojoPortal.Web.Framework.pdb
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\bin\Debug\CsvHelper.dll
@@ -36,4 +22,3 @@ C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojo
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPort.A7DF4B80.Up2Date
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Framework\obj\Debug\mojoPortal.Web.Framework.pdb
->>>>>>> 8f30d66359c4b4c42ec12172ef0fcbda26acfe73

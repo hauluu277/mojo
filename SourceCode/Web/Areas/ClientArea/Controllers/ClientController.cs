@@ -444,7 +444,7 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
                                             //lưu lại ảnh vật lý
                                             webClient.DownloadFile(new Uri(img.ToString()), duongDanLuuTin + "\\" + fileName);
                                             //replace ảnh cũ theo ảnh của server mình
-                                            item.NoiDung = item.NoiDung.Replace(img.ToString(), "/Data/Images/Article/"+  fileName);
+                                            item.NoiDung = item.NoiDung.Replace(img.ToString(), "/Data/Images/Article/" + fileName);
 
                                         }
                                     }
@@ -476,7 +476,7 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
                                     //lưu lại ảnh vật lý
                                     webClient.DownloadFile(new Uri(item.AnhDaiDien.ToString()), duongDanLuuTin + "/" + fileName);
                                     //Lấy theo đưuòng dẫn server
-                                    item.AnhDaiDien =  fileName;
+                                    item.AnhDaiDien = fileName;
 
                                 }
                             }
@@ -567,5 +567,28 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
             return Json(result);
 
         }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult GetSearchThongTinXe(string keyWord = "")
+        {
+            var result = new JsonResultBO(true, "Thành công");
+
+            try
+            {
+                var objArtical = _articlesBusiness.GetByIdBaiVetClientKeyWord(9770, keyWord);
+                if (objArtical != null && objArtical.Any())
+                {
+                    result.Data = objArtical.Select(x => new { title = x.Title, Url = x.ItemUrl.Replace("~", "") }); // Title, ItemUrl
+                }
+            }
+            catch (Exception ex)
+            {
+                result.MessageFail("Không có dữ liệu");
+            }
+            return Json(result);
+        }
+
     }
 }

@@ -7,17 +7,6 @@ D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPort.58E39726.Up2Date
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
 D:\downnnnnnnnnnn\11SS\MojoPortal_Git\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb
-<<<<<<< HEAD
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.pdb
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.xml
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.AssemblyReference.cache
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.CoreCompileInputs.cache
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.csproj.CopyComplete
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
-G:\Project\2025\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb
-=======
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\mojoPortal.Web.Editor.pdb
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\bin\Debug\log4net.dll
@@ -27,4 +16,3 @@ C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPor
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPort.58E39726.Up2Date
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.dll
 C:\Users\Admin\Downloads\mojo\SourceCode\mojoPortal.Web.Editor\obj\Debug\mojoPortal.Web.Editor.pdb
->>>>>>> 8f30d66359c4b4c42ec12172ef0fcbda26acfe73
