@@ -22,5 +22,12 @@ namespace mojoPortal.Service.Business
         {
             return this.GetAllAsQueryable().Where(x => x.CategoryID == IdCategory).ToList();
         }
+
+        public List<md_Articles> GetByIdBaiVetClientKeyWord(int IdCategory, string keyWord)
+        {
+            return this.GetAllAsQueryable().Where(x => x.CategoryID == IdCategory 
+            && (string.IsNullOrEmpty(keyWord) || x.Title.ToLower().Contains(keyWord.ToLower())
+            || x.TitleFTS.ToLower().Contains(keyWord.ToLower()))).ToList();
+        }
     }
 }
