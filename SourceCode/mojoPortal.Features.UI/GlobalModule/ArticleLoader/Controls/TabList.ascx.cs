@@ -61,7 +61,7 @@ namespace ArticleFeature.UI
         public string lnkHotArticle_Title = "";
         public string lnkHotArticle_HRef = "";
         public string lnkHotArticle_Summary = "";
-        public string lnkHotArticle_Src = ""; 
+        public string lnkHotArticle_Src = "";
         public string[] ListModuleId
         {
             get { return listModuleId; }
@@ -163,7 +163,7 @@ namespace ArticleFeature.UI
             pnlHienThiCacChuyenMuc.Visible = false;
 
 
-            pnlGuongSang.Visible = false; 
+            pnlGuongSang.Visible = false;
             pnlChuyenMucCon.Visible = false;
 
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
@@ -229,6 +229,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabKinhDoanh)
             {
                 BindTinKinhDoanh();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.Tab5Tin2Anh)
+            {
+                Bind5Tin2Anh();
             }
             else
             {
@@ -323,8 +327,8 @@ namespace ArticleFeature.UI
         {
             LoadTab(pnlTinTucSuKien, rptTinTucSuKien, hplTinTucSuKien, hplMoreTinTucSuKien);
         }/// <summary>
-        /// tin tức sự kiện
-        /// </summary>
+         /// tin tức sự kiện
+         /// </summary>
         private void BindHienThiTinVaChuyenMuc()
         {
             pnlChuyenMucCon.Visible = true;
@@ -427,7 +431,7 @@ namespace ArticleFeature.UI
                 hplMoreDanhSachTruong.NavigateUrl = siteRoot + firstLoaiTruong.Description;
             }
         }
-        
+
         private void BindTinKinhDoanh()
         {
             Panelkd.Visible = true;
@@ -456,17 +460,63 @@ namespace ArticleFeature.UI
 
                     hpldescriptionKinhDoanh.Text = firstArticle.Summary;
                     imgKinhDoanh.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
+                    if (listArticle.Count > 2)
+                    {
+                        var secondArticle = listArticle[1];
 
-                    var secondArticle = listArticle[1];
+                        hplKinhDoanh1.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, secondArticle.ItemUrl, secondArticle.ItemID, pageId, moduleId);
+                        hplKinhDoanh1.Text = secondArticle.Title;
+                        hpldescriptionKinhDoanh1.Text = secondArticle.Summary;
+                    }
 
-                    hplKinhDoanh1.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, secondArticle.ItemUrl, secondArticle.ItemID, pageId, moduleId);
-                    hplKinhDoanh1.Text = secondArticle.Title;
-                    hpldescriptionKinhDoanh1.Text = secondArticle.Summary;
 
 
 
                     rptKinhDoanh.DataSource = listArticle.Skip(2).ToList();
                     rptKinhDoanh.DataBind();
+                }
+            }
+        }
+        private void Bind5Tin2Anh()
+        {
+            Panel5Tin2anh.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
+
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var fistCategory = config.ArticleCategoryConfig.Split('-')[0];
+                LoadCategory(config.ArticleCategoryConfig, hplCategory1);
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(fistCategory));
+
+                Repeater5tin2anh.DataSource = listCategory;
+                Repeater5tin2anh.DataBind();
+
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + fistCategory;
+
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                if (listArticle != null && listArticle.Any())
+                {
+                    var firstArticle = listArticle[0];
+
+                    hplTin1.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, firstArticle.ItemUrl, firstArticle.ItemID, pageId, moduleId);
+                    hplTin1.Text = firstArticle.Title;
+
+                    hpldescriptionTin1.Text = firstArticle.Summary;
+                    imgTin1.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
+                    if (listArticle.Count > 2)
+                    {
+                        var secondArticle = listArticle[1];
+
+                        hplTin2.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, secondArticle.ItemUrl, secondArticle.ItemID, pageId, moduleId);
+                        hplTin2.Text = secondArticle.Title;
+                        hpldescriptionTin2.Text = secondArticle.Summary;
+                        imgTin2.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], secondArticle.ImageUrl);
+                    }
+
+                    rptList5tin2anh.DataSource = listArticle.Skip(2).ToList();
+                    rptList5tin2anh.DataBind();
                 }
             }
         }

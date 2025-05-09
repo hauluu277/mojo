@@ -79,6 +79,10 @@ namespace mojoPortal.Features
         /// Hiển thị kiểu thư viện kinh Doanh
         /// </summary>
         public static int TabKinhDoanh = 23;
+        /// <summary>
+        /// Hiển thị kiểu thư viện kinh Doanh
+        /// </summary>
+        public static int Tab5Tin2Anh = 24;
     }
 
     public class ArticleTabListTypeConstant
