@@ -163,10 +163,11 @@ namespace ArticleFeature.UI
             pnlHienThiCacChuyenMuc.Visible = false;
 
 
-            pnlGuongSang.Visible = false; 
+            pnlGuongSang.Visible = false;
+            Panelkd.Visible = false; 
             pnlChuyenMucCon.Visible = false;
             pnlTinSuKien.Visible = false;
-
+            pnlTinNoiBat.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -234,6 +235,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabTinChuyenTiep)
             {
                 BindHienThiTinChuyenTiep();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabTinNoiBat)
+            {
+                BindHienThiTinNoiBat();
             }
             else
             {
@@ -394,6 +399,44 @@ namespace ArticleFeature.UI
                 var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
                 rptTinSuKien.DataSource = listArticle;
                 rptTinSuKien.DataBind(); 
+            }
+        }
+
+        private void BindHienThiTinNoiBat()
+        {
+            pnlTinNoiBat.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
+
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính (hiển thị trong HyperLink)
+                LoadCategory(config.ArticleCategoryConfig, hplChuyenMucTinNoiBat);
+                // Load các sub-categories (hiển thị trong Repeater)
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
+
+                rptChuyenMucPhuTinNoiBat.DataSource = listCategory;
+                rptChuyenMucPhuTinNoiBat.DataBind(); 
+                // Tạo danh sách category IDs để lấy bài viết
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết hot theo categories
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                var list1 = listArticle.Take(1).ToList();
+                var list2_3 = listArticle.Skip(1).Take(2).ToList();
+                var listOthers = listArticle.Skip(3).ToList();
+
+                rptTinNoiBat_1.DataSource = list1;
+                rptTinNoiBat_1.DataBind();
+
+                rptTinNoiBat_2_3.DataSource = list2_3;
+                rptTinNoiBat_2_3.DataBind();
+
+                rptTinNoiBat_Others.DataSource = listOthers;
+                rptTinNoiBat_Others.DataBind();
             }
         }
         private void BindLienKetWebsite()

@@ -82,6 +82,8 @@ namespace mojoPortal.Features
         
         // Tab hiển thị kiểu chuyển tiếp
         public static int TabTinChuyenTiep = 31; 
+        // Tab hiển thị kiểu bố cục nổi bật
+        public static int TabTinNoiBat = 32; 
 
 
     }

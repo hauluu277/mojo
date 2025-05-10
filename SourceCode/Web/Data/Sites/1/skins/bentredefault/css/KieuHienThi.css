@@ -1,0 +1,120 @@
+﻿.small-item {
+    border-bottom: 1px solid #ededed;
+    margin-bottom : 15px;
+    padding-bottom : 5px;
+}
+
+.tnb-title-box-category {
+    margin-bottom: 10px;
+}
+.list-other-item > img{
+    width: 100px;
+}
+.list-other-item, .small-item, .featured-item {
+    text-align: justify;
+}
+.list-other-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+}
+.small-item:last-child, .list-other-item:last-child {
+    border-bottom: none;
+}
+
+    .list-other-item > img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+    .list-other-item > a {
+        text-align: justify;
+        padding: 6px;
+    }
+
+/*Form search*/
+.box-search-car {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px;
+    background: #F7F7F7;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    display: none;
+}
+
+.tab-search {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #999;
+    font-weight: bold;
+}
+
+    .tab-item img {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .tab-item.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+    }
+
+.form-search {
+    position: relative;
+}
+
+.input-search {
+    width: 100%;
+    padding: 8px 35px 8px 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.btn-search {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.ic {
+    fill: #999;
+}
+
+.tab-item > img {
+    width : 24px;
+    height : 16px;
+}
+
+.box-search .box-search-car {
+    display: block;
+}
+#suggestionList { 
+    border: 1px solid #E5E5E5;
+    background: #FFFFFF;
+    position: absolute;
+    top: 43px;
+    padding: 15px 10px 15px 15px;
+    border-radius: 3px;
+    width: 100%;
+}
+#suggestionList>li {
+    padding: 8px;
+}

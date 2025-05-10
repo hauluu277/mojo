@@ -19,6 +19,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="/Data/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css">
     <link href="css/MyStyle.css" rel="stylesheet" />
+    <link href="css/KieuHienThi.css" rel="stylesheet" />
     <link href="/scripts/jquery/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
 
     <link href="/Data/plugins/smartmenu/bootstrap.min.css" rel="stylesheet" />
@@ -744,17 +745,7 @@
                 // Hiển thị 3 item đầu tiên cho mỗi widget
                 showItems(currentIndex);
             });
-        });
-
-        document.querySelectorAll('div[id*="_pnlChuyenMucCon"], div[id*="_pnlTinSuKien"]').forEach(function (targetDiv) {
-            const parent = targetDiv.parentElement;
-
-            parent.querySelectorAll(':scope > div').forEach(function (sibling) {
-                if (sibling.id && sibling.id.includes("_Panelkd")) {
-                    sibling.remove();
-                }
-            });
-        });
+        }); 
     </script>
     <%--    <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

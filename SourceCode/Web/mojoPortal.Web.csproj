@@ -3678,6 +3678,7 @@
     <Content Include="Data\Sites\1\skins\bentredefault\css\animate.min.css" />
     <Content Include="Data\Sites\1\skins\bentredefault\css\cogai.png" />
     <Content Include="Data\Sites\1\skins\bentredefault\css\CongThongTin.css" />
+    <Content Include="Data\Sites\1\skins\bentredefault\css\KieuHienThi.css" />
     <Content Include="Data\Sites\1\skins\bentredefault\css\main.css" />
     <Content Include="Data\Sites\1\skins\bentredefault\css\mainvlvh.css" />
     <Content Include="Data\Sites\1\skins\bentredefault\css\menu_desktop.css" />

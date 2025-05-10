@@ -577,10 +577,15 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
 
             try
             {
-                var objArtical = _articlesBusiness.GetByIdBaiVetClientKeyWord(9770, keyWord);
+                var objArtical = _articlesBusiness.GetByIdBaiVetClientKeyWord(9812, keyWord);
                 if (objArtical != null && objArtical.Any())
                 {
                     result.Data = objArtical.Select(x => new { title = x.Title, Url = x.ItemUrl.Replace("~", "") }); // Title, ItemUrl
+                }
+                else
+                {
+                    result.Status = false;
+                    result.Message = "Không có dữ liệu"; 
                 }
             }
             catch (Exception ex)

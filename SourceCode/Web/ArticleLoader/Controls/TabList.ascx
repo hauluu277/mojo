@@ -343,7 +343,7 @@
             </div>
         </div>
     </asp:Panel>
-    <%--Hết hiển thị danh sách kiểu dọc và các danh mục con--%>
+    <!--Hết hiển thị danh sách kiểu dọc và các danh mục con-->
 
     <asp:Panel ID="mp_modulecontent" runat="server">
         <div id="nbcwrap<%=ModuleId.ToString() %>" class="nbcwrap shd-title">
@@ -555,8 +555,7 @@
 </div>
 
 
-
-<%--Hiển kiểu  tiêu đề chuyên mục con và tin tức --%>
+<!--Hiển kiểu  tiêu đề chuyên mục con và tin tức -->
 <asp:Panel runat="server" ID="pnlHienThiTinVaChuyenMuc" CssClass="nbcContent">
     <div class="nopd">
         <div class="dichvuthongke document fix_title-tintuc">
@@ -592,7 +591,7 @@
         </div>
     </div>
 </asp:Panel>
-<%--Kết thúc hiển thị tiêu đề chuyên mục con và tin tức--%>
+<!--Kết thúc hiển thị tiêu đề chuyên mục con và tin tức-->
 
 <asp:Panel ID="pnlChuyenMucCon" runat="server" CssClass="item-box-cate box-last">
     <div class="box-category box-cate-featured box-cate-featured-vertical">
@@ -679,3 +678,92 @@
         </div>
     </div>
 </asp:Panel>
+
+
+
+<!-- Dạng hiển thị Bố cục tin nổi bật 
+    Bài đầu tiên: hiển thị lớn (chiếm nhiều không gian, hình to, có mô tả),
+
+    Bài thứ 2 và 3: hiển thị nhỏ hơn, ảnh nhỏ, chỉ tiêu đề ngắn,
+
+    Các bài còn lại: hiển thị dạng danh sách đơn giản, chỉ tiêu đề, ảnh nhỏ xíu,
+    -->
+
+<asp:Panel ID="pnlTinNoiBat" runat="server" CssClass="tnb-item-box-cate tnb-box-last">
+    <hgroup class="tnb-width_common tnb-title-box-category">
+        <h2 class="parent-cate">
+            <asp:HyperLink ID="hplChuyenMucTinNoiBat" runat="server" CssClass="inner-title" />
+        </h2>
+        <asp:Repeater ID="rptChuyenMucPhuTinNoiBat" runat="server">
+            <ItemTemplate>
+                <span class="sub-cate">
+                    <a href='<%# Eval("Description") %>' title='<%# Eval("Name") %>'><%# Eval("Name") %></a>
+                </span>
+            </ItemTemplate>
+        </asp:Repeater>
+    </hgroup>
+    <div class="event-tintuc row">
+        <!-- Cột trái: Bài viết nổi bật -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 article-featured">
+            <asp:Repeater ID="rptTinNoiBat_1" runat="server">
+                <ItemTemplate>
+                    <div class="featured-item">
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                        <h2><a href="#"><%# Eval("Title") %></a></h2>
+                        <p><%# Eval("Summary") %></p>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột giữa: 2 bài nổi bật tiếp theo -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-small-box">
+            <asp:Repeater ID="rptTinNoiBat_2_3" runat="server">
+                <ItemTemplate>
+                    <div class="small-item">
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                        <h4><a href="#"><%# Eval("Title") %></a></h4>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột phải: Danh sách tin -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-list-item">
+            <div class="box-search-car">
+                <ul class="tab-search">
+                    <li class="tab-item active" data-type="vcar">
+                        <a href="javascript:;">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vcar.svg" alt="V-car">
+                            V-car
+                        </a>
+                    </li>
+                    <li class="tab-item" data-type="vbike">
+                        <a href="javascript:;">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vbike.svg" alt="V-Bike">
+                            V-Bike
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="form-search">
+                    <input type="search" class="input-search" placeholder="Nhập tên xe cần tìm" /> 
+                </div>
+            </div>
+            <asp:Repeater ID="rptTinNoiBat_Others" runat="server">
+                <ItemTemplate>
+                    <div class="list-other-item">
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                        <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'>
+                            <%# Eval("Title") %>
+                        </a>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+
+<!-- Kết thúc hiển thị Bố cục nổi bật -->
