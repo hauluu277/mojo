@@ -169,6 +169,8 @@ namespace ArticleFeature.UI
             pnlChuyenMucCon.Visible = false;
             pnlTinSuKien.Visible = false;
             pnlTinNoiBat.Visible = false;
+            Panel5Tin2anh.Visible = false;
+            
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
