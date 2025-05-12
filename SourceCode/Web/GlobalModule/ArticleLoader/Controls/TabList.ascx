@@ -944,3 +944,98 @@
 
 
 <%-- Kết thúc hiển thị Bố cục nổi bật --%>
+
+<%-- Hiển thị Spotlight --%>
+
+<asp:Panel ID="pnlSpotlight" runat="server" CssClass="item-box-cate box-last">
+    <div class="event-widget spotlight">
+        <div class="event-header">
+            <h3 class="font-Merriweather">
+                <asp:HyperLink ID="hplSpotlight" runat="server" CssClass="inner-title" />
+            </h3>
+        </div> 
+        <div class="event-list">
+            <asp:Repeater ID="rptSpotlight" runat="server">
+                <ItemTemplate>
+                    <div class="event-item-spl d-flex mb-3" data-index='<%# Container.ItemIndex %>'>
+                        <!-- ẢNH BÊN TRÁI (66%) -->
+                        <div class="col-8 pe-2">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                alt='<%# Eval("Title") %>'
+                                class="img-responsive-custom" />
+                        </div>
+
+                        <!-- THÔNG TIN BÊN PHẢI (33%) -->
+                        <div class="col-4 d-flex flex-column justify-content-center">
+                            <div class="event-info">
+                                <a id="lnkTieuDeTin"
+                                    class="fw-bold d-block mb-1"
+                                    href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                    title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>'>
+                                    <%#Eval("Summary") %>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Hiển thị tin xem nhiều --%>
+
+
+
+<asp:Panel ID="pnlXemNhieu" runat="server" CssClass="popular-news-panel">
+    <div class="section-title">Xem nhiều</div>
+    <div class="row">
+        <div class="event-header">
+            <h3 class="font-Merriweather">
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="inner-title" />
+            </h3>
+        </div>
+        <!-- Cột trái -->
+        <div class="col-6">
+            <asp:Repeater ID="rptXemNhieuTrai" runat="server">
+                <ItemTemplate>
+                    <div class="news-item">
+                        <span class="news-rank"><%# Container.ItemIndex + 1 %></span>
+                        <div class="news-content">
+                            <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
+                                <%# Eval("Title") %>
+                                <span class='news-comments'>
+                                    <i class='fa fa-comment'></i><%# Eval("CommentCount") %>
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột phải -->
+        <div class="col-6">
+            <asp:Repeater ID="rptXemNhieuPhai" runat="server">
+                <ItemTemplate>
+                    <div class="news-item">
+                        <span class="news-rank"><%# Container.ItemIndex + 1 %></span>
+                        <div class="news-content">
+                            <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
+                                <%# Eval("Title") %>
+                                <span class='news-comments'>
+                                    <i class='fa fa-comment'></i><%# Eval("CommentCount") %>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
