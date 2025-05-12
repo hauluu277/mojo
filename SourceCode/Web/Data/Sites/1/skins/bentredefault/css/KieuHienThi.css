@@ -25,11 +25,19 @@
     .list-other-item > img {
         max-width: 100px;
         max-height: 60px;
+        margin-left: auto;
     }
     .list-other-item > a {
         text-align: justify;
-        padding: 6px;
+        padding: 4px 10px 4px 4px;
+        font-weight: bold;
     }
+.small-item > a {
+    font-weight: bold;
+}
+.featured-item > a {
+    font-weight: bold;
+}
 
 /*Form search*/
 .box-search-car {
@@ -118,3 +126,8 @@
 #suggestionList>li {
     padding: 8px;
 }
+
+
+/* Sportlight */
+/* Xem Nhiều */
+/* Kiểu hiển thị Ảnh */
