@@ -91,7 +91,11 @@ namespace mojoPortal.Features
         // Tab hiển thị kiểu SportLight
         public static int TabSpotlight = 33; 
         // Tab hiển thị Xem nhiều
-        public static int TabTopHitCount = 34;  
+        public static int TabTopHitCount = 34;
+        // Tab hiển thị Infographics
+        public static int TabInfographics = 35;
+        // Tab hiển thị Quảng cáo
+        public static int TabQuangCao = 36;
     }
 
     public class ArticleTabListTypeConstant

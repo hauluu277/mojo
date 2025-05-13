@@ -134,6 +134,7 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
+    margin-left: -15px;
 }
 
     /* Ảnh bên trái */
@@ -204,8 +205,7 @@
     }
 /* Xem Nhiều */
 .popular-news-panel {
-    padding: 15px;
-    border-top: 1px solid #ddd;
+    padding: 15px; 
     overflow: hidden;
 }
 
@@ -219,6 +219,7 @@
 .news-item {
     display: flex;
     margin-bottom: 10px;
+    padding: 8px;
     width: 100%;
 }
 
@@ -231,9 +232,29 @@
     float: right;
 }
 
+.list-tinxemnhieu {
+    display: flex; /* Kích hoạt Flexbox */
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+}
+
+.box-item-left, .box-item-right {
+    display: flex; /* Đảm bảo các item bên trong cũng co giãn */
+    flex-direction: column; /* Sắp xếp các item theo chiều dọc */
+}
+
+.news-item {
+    flex: 1; /* Các item sẽ chiếm hết không gian còn lại */
+    min-height: 0; /* Tránh trường hợp bị tràn */
+}
+.news-item:last-child{
+    border: none !important;
+}
+
 .news-rank {
-    font-size: 24px;
+    font-family: "Merriweather", serif;
+    font-size: 48px;
     font-weight: bold;
+    margin-top: 8px;
     width: 30px;
     flex-shrink: 0;
 }
@@ -275,3 +296,55 @@
 .hide-title .d-flex.float-left { 
     width: 100% !important;
 }
+
+
+
+/* infographic */
+.infographic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.infographic-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+    .infographic-card:hover {
+        transform: translateY(-5px);
+    }
+
+.infographic-image {
+    height: 160px;
+    overflow: hidden;
+}
+
+    .infographic-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.infographic-content {
+    padding: 15px;
+}
+
+.infographic-title {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+    .infographic-title a {
+        color: #333;
+        text-decoration: none;
+    }
+
+        .infographic-title a:hover {
+            color: #0066cc;
+        }

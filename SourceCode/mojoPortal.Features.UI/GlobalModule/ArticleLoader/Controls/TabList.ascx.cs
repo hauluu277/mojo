@@ -172,6 +172,8 @@ namespace ArticleFeature.UI
             Panel5Tin2anh.Visible = false;
             pnlSpotlight.Visible = false;
             pnlXemNhieu.Visible = false;
+            pnlInfographics.Visible = false;
+            pnlBoxQuangCao.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -255,6 +257,14 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabTopHitCount)
             {
                 BindHienThiXemNhieu();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabInfographics)
+            {
+                BindHienThiInfographics();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabQuangCao)
+            {
+                BindHienThiBoxQuangCao();
             }
             else
             {
@@ -508,6 +518,7 @@ namespace ArticleFeature.UI
 
                 // Lấy danh sách bài viết hot theo categories
                 var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                var dataUrl = config.UrlTitleSetting;
                 rptSpotlight.DataSource = listArticle;
                 rptSpotlight.DataBind();
             }
@@ -518,6 +529,7 @@ namespace ArticleFeature.UI
             var listArticle = Article.GetArticleTopHitCount("", config.NumberArticleLimit, siteId);
 
             int splitIndex = (int)Math.Ceiling(listArticle.Count / 2.0);
+            ViewState["SplitIndex"] = splitIndex;
             var listLeft = listArticle.Take(splitIndex).ToList();
             var listRight = listArticle.Skip(splitIndex).ToList();
 
@@ -526,6 +538,12 @@ namespace ArticleFeature.UI
 
             rptXemNhieuPhai.DataSource = listRight;
             rptXemNhieuPhai.DataBind();
+        }
+        private void BindHienThiBoxQuangCao()
+        {
+            pnlBoxQuangCao.Visible = true;
+            hdnUrlApi.Value = config.UrlTitleSetting;
+            hdnCountItem.Value = config.NumberArticleLimit.ToString();
         }
 
         private void BindDanhSachTruong()
@@ -743,7 +761,30 @@ namespace ArticleFeature.UI
             rptTinMoi.DataSource = listArticle.Skip(5).Take(5);
             rptTinMoi.DataBind();
         }
+        private void BindHienThiInfographics()
+        {
+            pnlInfographics.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
 
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính (hiển thị trong HyperLink)
+                LoadCategory(config.ArticleCategoryConfig, hplInfographicsCategory);
+
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
+                // Tạo danh sách category IDs để lấy bài viết
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết hot theo categories
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                rptInfographics.DataSource = listArticle;
+                rptInfographics.DataBind();
+            }
+        }
 
         /// <summary>
         /// Hiển tab thông tin tuyển sinh

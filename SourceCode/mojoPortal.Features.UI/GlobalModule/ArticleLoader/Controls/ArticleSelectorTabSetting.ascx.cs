@@ -96,6 +96,8 @@ namespace ArticleFeature.UI
             listTab.Add(new ListItem { Text = "Hiển thị kiểu bố cục nổi bật", Value = ArticleConstant.TabTinNoiBat.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị danh sách 5 tin 2 ảnh", Value = ArticleConstant.Tab5Tin2Anh.ToString() });
             listTab.Add(new ListItem { Text = "Danh sách tin xem nhiều tất cả chuyên mục", Value = ArticleConstant.TabTopHitCount.ToString() });
+            listTab.Add(new ListItem { Text = "Hiển thị kiểu Infographics ", Value = ArticleConstant.TabTopHitCount.ToString() });
+            listTab.Add(new ListItem { Text = "Quảng cáo ( API của website khác điền vào đường dẫn tiêu đề ) ", Value = ArticleConstant.TabQuangCao.ToString() });
 
 
             rblTab.DataSource = listTab;

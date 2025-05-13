@@ -670,7 +670,7 @@
                         <div class="thumb-art col-sm-6 ">
                             <asp:Image ID="imgTin1" runat="server" CssClass="" />
                         </div>
-                        <div >
+                        <div>
                             <asp:HyperLink ID="hplTin1" runat="server" class="title-news"></asp:HyperLink>
 
                         </div>
@@ -860,20 +860,20 @@
         <!-- Cột phải: Danh sách tin -->
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-list-item">
             <div class="box-search-car">
-                <ul class="tab-search"> 
-                    <li class="tab-item active" data-type="vcar" onclick="switchTab(this)"> 
-                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vcar.svg" alt="V-car" width="24" height="16">
-                            V-car 
+                <ul class="tab-search">
+                    <li class="tab-item active" data-type="vcar" onclick="switchTab(this)">
+                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vcar.svg" alt="V-car" width="24" height="16">
+                        V-car 
                     </li>
-                    <li class="tab-item" data-type="vbike" onclick="switchTab(this)"> 
-                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vbike.svg" alt="V-Bike" width="24" height="16">
-                            V-Bike 
+                    <li class="tab-item" data-type="vbike" onclick="switchTab(this)">
+                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vbike.svg" alt="V-Bike" width="24" height="16">
+                        V-Bike 
                     </li>
                 </ul>
 
                 <div class="form-search">
                     <input type="search" id="searchInput" class="input-search" placeholder="Nhập tên xe cần tìm" autocomplete="off" />
-                    <ul id="suggestionList" style="display:none; position:absolute; z-index:999; background:#fff; border:1px solid #ccc;"></ul>
+                    <ul id="suggestionList" style="display: none; position: absolute; z-index: 999; background: #fff; border: 1px solid #ccc;"></ul>
                 </div>
             </div>
             <script>
@@ -953,7 +953,7 @@
             <h3 class="font-Merriweather">
                 <asp:HyperLink ID="hplSpotlight" runat="server" CssClass="inner-title" />
             </h3>
-        </div> 
+        </div>
         <div class="event-list">
             <asp:Repeater ID="rptSpotlight" runat="server">
                 <ItemTemplate>
@@ -992,18 +992,18 @@
 
 
 <asp:Panel ID="pnlXemNhieu" runat="server" CssClass="popular-news-panel">
-    <div class="section-title">Xem nhiều</div>
-    <div class="row">
-        <div class="event-header">
-            <h3 class="font-Merriweather">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="inner-title" />
-            </h3>
-        </div>
+
+    <div class="event-header">
+        <h3 class="font-Merriweather">
+            <a href="/tin-tuc" class="inner-title">Xem nhiều </a>
+        </h3>
+    </div>
+    <div class="row list-tinxemnhieu">
         <!-- Cột trái -->
-        <div class="col-6">
+        <div class="col-6 box-item-left border-right">
             <asp:Repeater ID="rptXemNhieuTrai" runat="server">
                 <ItemTemplate>
-                    <div class="news-item">
+                    <div class="news-item border-bottom">
                         <span class="news-rank"><%# Container.ItemIndex + 1 %></span>
                         <div class="news-content">
                             <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
@@ -1020,11 +1020,11 @@
         </div>
 
         <!-- Cột phải -->
-        <div class="col-6">
+        <div class="col-6 box-item-right">
             <asp:Repeater ID="rptXemNhieuPhai" runat="server">
                 <ItemTemplate>
-                    <div class="news-item">
-                        <span class="news-rank"><%# Container.ItemIndex + 1 %></span>
+                    <div class="news-item border-bottom">
+                        <span class="news-rank"><%# Container.ItemIndex + (int)ViewState["SplitIndex"] + 1 %></span>
                         <div class="news-content">
                             <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
                                 <%# Eval("Title") %>
@@ -1038,4 +1038,134 @@
             </asp:Repeater>
         </div>
     </div>
+</asp:Panel>
+
+
+
+<%-- Hiển thị Info  --%>
+<asp:Panel ID="pnlInfographics" runat="server" CssClass="item-box-cate box-last">
+    <div class="event-widget infographics-container">
+        <div class="event-header">
+            <h3 class="font-Merriweather">
+                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title" />
+            </h3>
+        </div>
+        <div class="infographic-grid">
+            <asp:Repeater ID="rptInfographics" runat="server">
+                <ItemTemplate>
+                    <div class="infographic-card col-6">
+                        <!-- Hình ảnh -->
+                        <div class="infographic-image">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                alt='<%# Eval("Title") %>'
+                                class="img-fluid" />
+                        </div>
+
+                        <!-- Nội dung text -->
+                        <div class="infographic-content">
+                            <h3 class="infographic-title">
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                    title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Quảng cáo Lấy từ api của website khác --%>
+<asp:Panel ID="pnlBoxQuangCao" runat="server" CssClass="box-quangcao-website">
+    <!-- Thêm các hidden field -->
+    <asp:HiddenField ID="hdnUrlApi" runat="server" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnCountItem" runat="server" ClientIDMode="Static" />
+    
+    <div class="box-quangcao-container" id="boxQuangCaoContainer"></div>
+    <script>
+        $(document).ready(function () {
+            var urlApi = $("#hdnUrlApi").val();
+            var countItem = parseInt($("#hdnCountItem").val());
+            console.log("🔍 URL API:", urlApi);
+            console.log("🔍 Số lượng item cần hiển thị:", countItem);
+
+            $.ajax({
+                type: "POST",
+                url: urlApi,
+                dataType: "json", // Thêm ràng buộc kiểu dữ liệu
+                success: function (data) {
+                    console.log("✅ API Response:", JSON.stringify(data)); // Log chi tiết
+                    console.log("API status check:", data.Status);
+                    console.log("API data.Data:", data.Data);
+                    console.log("API data.Data.length:", data.Data.ListItem.length);
+                    console.log("API status check:", data.status, data.Status);
+                    if (data && data.Status && data.Data && data.Data.ListItem.length > 0) {
+                        console.log("✅ Valid data with", data.Data.length, "items");
+
+                        renderQuangCao(data.Data, countItem);
+                    } else {
+                        console.warn("⚠️ Empty or invalid data structure");
+                        renderFallbackContent();
+                    }
+                },
+                error: handleApiError
+            });
+
+            $("#loading").hide();
+        });
+
+        function renderQuangCao(data, countItem) {
+            console.log("🖌️ Rendering with", Math.min(countItem, data.ListItem.length), "items");
+            console.log(data.ListItem.slice(0, countItem));
+            $.ajax({
+                type: "POST",
+                url: '/ClientArea/Client/RenderBoxQuangCaoHtml',
+                contentType: "application/json; charset=utf-8", // 🔴 BẮT BUỘC
+                data: JSON.stringify({
+                    Model: {
+                        TenNhanHieu: data.TenNhanHieu,
+                        UrlWebsite: data.UrlWebsite,
+                        UrlLogo: data.UrlLogo,
+                        ListItem: data.ListItem.slice(0, countItem) // chỉ gửi số lượng mong muốn
+                    },
+                    CountItem: countItem
+                }),
+                success: function (html) {
+                    $("#boxQuangCaoContainer").html(html);
+                },
+                error: function (xhr) {
+                    console.error("❌ Error:", xhr.responseText);
+                }
+            });
+
+            $("#loading").hide();
+        }
+
+        function renderFallbackContent() {
+            console.log("🔄 Loading fallback content");
+            $("#boxQuangCaoContainer").html(`
+        <div class="alert alert-warning">
+            <i class="fa fa-info-circle"></i>
+            Hiện không có quảng cáo nào để hiển thị
+        </div>
+    `);
+        }
+
+        function handleApiError(xhr) {
+            console.error("❌ API Error:", xhr.Status, xhr.responseText);
+
+            // Thử lấy cached data nếu có
+            var cachedData = localStorage.getItem('cachedQuangCao');
+            if (cachedData) {
+                console.log("♻️ Using cached data");
+                renderQuangCao(JSON.parse(cachedData), $("#hdnCountItem").val());
+            } else {
+                renderFallbackContent();
+            }
+        }
+
+    </script>
 </asp:Panel>
