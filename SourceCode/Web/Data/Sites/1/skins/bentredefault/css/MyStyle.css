@@ -2354,6 +2354,7 @@ h3.article-title a {
 #ctl00_pnlSearch {
     max-width: 100% !important;
     width: 100%;
+    display:flex;
 }
 
 #ctl00_pnlSearch > ul > li:nth-child(1) {
