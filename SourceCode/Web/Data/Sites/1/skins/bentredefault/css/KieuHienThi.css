@@ -129,5 +129,149 @@
 
 
 /* Sportlight */
+/* Cấu trúc layout của item */
+.event-item-spl {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+    /* Ảnh bên trái */
+    .event-item-spl .col-8 {
+        padding-right: 0;
+        width:66.6666%; /* Chiếm 75% chiều rộng */
+        position: relative;
+    }
+
+.img-responsive-custom {
+    width: 100%; /* Ảnh chiếm 100% chiều rộng của div cha */
+    height: 100%; /* Đảm bảo chiều cao của ảnh bằng chiều cao của div */
+    object-fit: cover; /* Phóng to ảnh và cắt theo chiều rộng và chiều cao của div */
+    display: block;
+}
+
+/* Thông tin bên phải */
+.event-item-spl .col-4 {
+    width: 33.3333%; /* Chiếm 25% chiều rộng */
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+    .event-info a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Tiêu đề bài viết */
+    .event-info .fw-bold {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Tóm tắt bài viết */
+    .event-info a:last-of-type {
+        color: #777; /* Màu nhạt cho phần tóm tắt */
+        font-size: 0.9rem;
+    }
+
+.spotlight {
+    border: none;
+    max-width: 100% !important;
+    background: none;
+}
+.event-item-spl .flex-column {
+    background: #f7f7f7;
+}
+    .spotlight .event-header {
+        border: none;
+    }
+.spotlight envent{
+    border: none;
+    max-width: 100% !important;
+}
+
+    .spotlight #lnkTieuDeTin {
+        font-size: 19px;
+    }
+    .spotlight .event-info a:last-child {
+        font-size: 16px;
+    }
 /* Xem Nhiều */
+.popular-news-panel {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.left-col {
+    float: left;
+    clear: both;
+}
+
+.right-col {
+    float: right;
+}
+
+.news-rank {
+    font-size: 24px;
+    font-weight: bold;
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.news-content {
+    padding-left: 10px;
+}
+
+.news-title {
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+    .news-title:hover {
+        text-decoration: underline;
+    }
+
+.news-comments {
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+    display: inline-block;
+}
 /* Kiểu hiển thị Ảnh */
+
+
+
+/* Ẩn tin khối 3 - 5 tin 2 ảnh*/
+
+.hide-title .title-box-category {
+    display: none;
+}
+
+.hide-title .boddertopkhoi3 {
+    display: none;
+}
+.hide-title .d-flex.float-left { 
+    width: 100% !important;
+}

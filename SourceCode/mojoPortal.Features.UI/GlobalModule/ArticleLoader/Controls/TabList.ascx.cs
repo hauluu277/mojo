@@ -164,13 +164,14 @@ namespace ArticleFeature.UI
 
 
             pnlGuongSang.Visible = false;
-            Panelkd.Visible = false; 
+            Panelkd.Visible = false;
             pnlGuongSang.Visible = false;
             pnlChuyenMucCon.Visible = false;
             pnlTinSuKien.Visible = false;
             pnlTinNoiBat.Visible = false;
             Panel5Tin2anh.Visible = false;
-            
+            pnlSpotlight.Visible = false;
+            pnlXemNhieu.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -246,6 +247,14 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabTinNoiBat)
             {
                 BindHienThiTinNoiBat();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabSpotlight)
+            {
+                BindHienThiSpotlight();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabTopHitCount)
+            {
+                BindHienThiXemNhieu();
             }
             else
             {
@@ -405,7 +414,7 @@ namespace ArticleFeature.UI
                 // Lấy danh sách bài viết hot theo categories
                 var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
                 rptTinSuKien.DataSource = listArticle;
-                rptTinSuKien.DataBind(); 
+                rptTinSuKien.DataBind();
             }
         }
 
@@ -425,7 +434,7 @@ namespace ArticleFeature.UI
                 var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
 
                 rptChuyenMucPhuTinNoiBat.DataSource = listCategory;
-                rptChuyenMucPhuTinNoiBat.DataBind(); 
+                rptChuyenMucPhuTinNoiBat.DataBind();
                 // Tạo danh sách category IDs để lấy bài viết
                 var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
                 lstCategory += " " + firstCategory;
@@ -479,7 +488,45 @@ namespace ArticleFeature.UI
                 }
             }
         }
+        private void BindHienThiSpotlight()
+        {
+            pnlSpotlight.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
 
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính (hiển thị trong HyperLink)
+                LoadCategory(config.ArticleCategoryConfig, hplSpotlight);
+
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
+                // Tạo danh sách category IDs để lấy bài viết
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết hot theo categories
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                rptSpotlight.DataSource = listArticle;
+                rptSpotlight.DataBind();
+            }
+        }
+        private void BindHienThiXemNhieu()
+        {
+            pnlXemNhieu.Visible = true;
+            var listArticle = Article.GetArticleTopHitCount("", config.NumberArticleLimit, siteId);
+
+            int splitIndex = (int)Math.Ceiling(listArticle.Count / 2.0);
+            var listLeft = listArticle.Take(splitIndex).ToList();
+            var listRight = listArticle.Skip(splitIndex).ToList();
+
+            rptXemNhieuTrai.DataSource = listLeft;
+            rptXemNhieuTrai.DataBind();
+
+            rptXemNhieuPhai.DataSource = listRight;
+            rptXemNhieuPhai.DataBind();
+        }
 
         private void BindDanhSachTruong()
         {
@@ -579,7 +626,7 @@ namespace ArticleFeature.UI
 
                     hpldescriptionTin1.Text = firstArticle.Summary;
                     imgTin1.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
-                    if (listArticle.Count > 2)
+                    if (listArticle.Count > 1)
                     {
                         var secondArticle = listArticle[1];
 

@@ -88,8 +88,10 @@ namespace mojoPortal.Features
         public static int TabTinChuyenTiep = 31; 
         // Tab hiển thị kiểu bố cục nổi bật
         public static int TabTinNoiBat = 32; 
-
-
+        // Tab hiển thị kiểu SportLight
+        public static int TabSpotlight = 33; 
+        // Tab hiển thị Xem nhiều
+        public static int TabTopHitCount = 34;  
     }
 
     public class ArticleTabListTypeConstant
