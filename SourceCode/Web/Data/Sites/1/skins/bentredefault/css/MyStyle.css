@@ -3862,7 +3862,31 @@ ul.main-menu > li:hover > .menu-gt-truong {
         border-right: 2px solid #fff;
         display: none;
     }
-
+.khcn {
+    border: 1px solid rgba(134, 116, 40, 0.16);
+    background: #FCFAF6;
+    padding: 15px;
+}
+    .khcn .sub-cate {
+        display: inline-block;
+        border-radius: 100px;
+        border: 1px solid rgba(134, 116, 40, 0.16);
+        background: rgba(134, 116, 40, 0.08);
+        padding: 8px 12px;
+        font-size: 14px;
+        color: #726322;
+        font-weight: 700;
+        font: 400 15px arial margin-right: 0;
+    }
+.khcn .parent-cate {
+    border: none;
+}
+    .khcn .parent-cate a {
+        color: #867428;
+        text-decoration: none;
+        outline: 1;
+        font-size: 24px;
+    }
 .art-title > a {
     font-size: 24px !important;
     padding: 0;
