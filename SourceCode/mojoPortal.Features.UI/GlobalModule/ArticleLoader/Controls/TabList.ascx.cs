@@ -174,6 +174,7 @@ namespace ArticleFeature.UI
             pnlXemNhieu.Visible = false;
             pnlInfographics.Visible = false;
             pnlBoxQuangCao.Visible = false;
+            pnlSwipe.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -265,6 +266,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabQuangCao)
             {
                 BindHienThiBoxQuangCao();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabSwipe)
+            {
+                BindHienThiSwipe();
             }
             else
             {
@@ -427,7 +432,30 @@ namespace ArticleFeature.UI
                 rptTinSuKien.DataBind();
             }
         }
+        private void BindHienThiSwipe()
+        {
+            pnlSwipe.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
 
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính (hiển thị trong HyperLink)
+                LoadCategory(config.ArticleCategoryConfig, hplSwipe);
+
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
+                // Tạo danh sách category IDs để lấy bài viết
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết hot theo categories
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                rptSwipe.DataSource = listArticle;
+                rptSwipe.DataBind();
+            }
+        }
         private void BindHienThiTinNoiBat()
         {
             pnlTinNoiBat.Visible = true;

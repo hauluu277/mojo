@@ -96,6 +96,8 @@ namespace mojoPortal.Features
         public static int TabInfographics = 35;
         // Tab hiển thị Quảng cáo
         public static int TabQuangCao = 36;
+        // Tab hiển thị Swipe
+        public static int TabSwipe = 37;
     }
 
     public class ArticleTabListTypeConstant

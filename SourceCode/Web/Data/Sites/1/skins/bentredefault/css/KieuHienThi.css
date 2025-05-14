@@ -1,40 +1,47 @@
 ﻿.small-item {
     border-bottom: 1px solid #ededed;
-    margin-bottom : 15px;
-    padding-bottom : 5px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 .tnb-title-box-category {
     margin-bottom: 10px;
 }
-.list-other-item > img{
+
+.list-other-item > img {
     width: 100px;
 }
+
 .list-other-item, .small-item, .featured-item {
     text-align: justify;
 }
+
 .list-other-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #ededed;
 }
-.small-item:last-child, .list-other-item:last-child {
-    border-bottom: none;
-}
+
+    .small-item:last-child, .list-other-item:last-child {
+        border-bottom: none;
+    }
 
     .list-other-item > img {
         max-width: 100px;
         max-height: 60px;
         margin-left: auto;
     }
+
     .list-other-item > a {
         text-align: justify;
         padding: 4px 10px 4px 4px;
         font-weight: bold;
     }
+
 .small-item > a {
     font-weight: bold;
 }
+
 .featured-item > a {
     font-weight: bold;
 }
@@ -107,14 +114,15 @@
 }
 
 .tab-item > img {
-    width : 24px;
-    height : 16px;
+    width: 24px;
+    height: 16px;
 }
 
 .box-search .box-search-car {
     display: block;
 }
-#suggestionList { 
+
+#suggestionList {
     border: 1px solid #E5E5E5;
     background: #FFFFFF;
     position: absolute;
@@ -123,9 +131,10 @@
     border-radius: 3px;
     width: 100%;
 }
-#suggestionList>li {
-    padding: 8px;
-}
+
+    #suggestionList > li {
+        padding: 8px;
+    }
 
 
 /* Sportlight */
@@ -140,7 +149,7 @@
     /* Ảnh bên trái */
     .event-item-spl .col-8 {
         padding-right: 0;
-        width:66.6666%; /* Chiếm 75% chiều rộng */
+        width: 66.6666%; /* Chiếm 75% chiều rộng */
         position: relative;
     }
 
@@ -186,26 +195,30 @@
     max-width: 100% !important;
     background: none;
 }
+
 .event-item-spl .flex-column {
     background: #f7f7f7;
 }
-    .spotlight .event-header {
-        border: none;
-    }
-.spotlight envent{
+
+.spotlight .event-header {
+    border: none;
+}
+
+.spotlight envent {
     border: none;
     max-width: 100% !important;
 }
 
-    .spotlight #lnkTieuDeTin {
-        font-size: 19px;
-    }
-    .spotlight .event-info a:last-child {
-        font-size: 16px;
-    }
+.spotlight #lnkTieuDeTin {
+    font-size: 19px;
+}
+
+.spotlight .event-info a:last-child {
+    font-size: 16px;
+}
 /* Xem Nhiều */
 .popular-news-panel {
-    padding: 15px; 
+    padding: 15px;
     overflow: hidden;
 }
 
@@ -246,9 +259,10 @@
     flex: 1; /* Các item sẽ chiếm hết không gian còn lại */
     min-height: 0; /* Tránh trường hợp bị tràn */
 }
-.news-item:last-child{
-    border: none !important;
-}
+
+    .news-item:last-child {
+        border: none !important;
+    }
 
 .news-rank {
     font-family: "Merriweather", serif;
@@ -293,7 +307,8 @@
 .hide-title .boddertopkhoi3 {
     display: none;
 }
-.hide-title .d-flex.float-left { 
+
+.hide-title .d-flex.float-left {
     width: 100% !important;
 }
 
@@ -301,16 +316,21 @@
 
 /* infographic */
 .infographic-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 15px;
+    display: flex;
+}
+
+.event-header-Infographics h3 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #800000;
+    margin: 0;
+    text-decoration: none;
+    border-bottom: 1px solid #923A3C;
 }
 
 .infographic-card {
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     background: white;
 }
@@ -338,6 +358,7 @@
     font-size: 16px;
     margin: 0;
     line-height: 1.4;
+    font-weight: bold;
 }
 
     .infographic-title a {
@@ -348,3 +369,77 @@
         .infographic-title a:hover {
             color: #0066cc;
         }
+
+
+
+/* Hiển thị Swiper */
+.pd-10 {
+    padding: 10px;
+}
+
+.mySwiper {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mySwiper {
+    margin-top: 0 !important;
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden; /* QUAN TRỌNG để ẩn phần tràn */
+    padding: 10px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+.title-swipe{
+    border: none;
+    margin-bottom: 0;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto;
+    box-sizing: border-box;
+}
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.item-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item-box h4 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.bg-swipe {
+    background-color: #f7f7f7;
+}
+/* Điều hướng */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000; /* Hoặc #fff tùy nền */
+    width: 30px;
+    height: 30px;
+    top: 40%; /* Căn giữa chiều dọc */
+    z-index: 10;
+}

@@ -984,12 +984,14 @@
 
 <%-- Hiển thị Info  --%>
 <asp:Panel ID="pnlInfographics" runat="server" CssClass="item-box-cate box-last">
-    <div class="event-widget infographics-container">
-        <div class="event-header">
-            <h3 class="font-Merriweather">
-                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title" />
-            </h3>
-        </div>
+    <div class="infographics-container">
+        
+    <div class="event-header">
+        <h3 class="font-Merriweather">
+                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title border-infogeaphics" />
+            
+        </h3>
+    </div>
         <div class="infographic-grid">
             <asp:Repeater ID="rptInfographics" runat="server">
                 <ItemTemplate>
@@ -1023,6 +1025,43 @@
     <asp:HiddenField ID="hdnUrlApi" runat="server" ClientIDMode="Static" />
     <asp:HiddenField ID="hdnCountItem" runat="server" ClientIDMode="Static" />
     <div class="box-quangcao-container" id="boxQuangCaoContainer">
-
     </div>
+</asp:Panel>
+
+
+
+<%-- Hiển thị Swipe  --%>
+<asp:Panel ID="pnlSwipe" runat="server" CssClass="item-box-cate box-last bg-swipe" Visible="false">
+    <div class="event-header pd-10 title-swipe">
+        <h3 class="font-Merriweather">
+            <asp:HyperLink ID="hplSwipe" runat="server" CssClass="inner-title border-infogeaphics" />
+        </h3>
+    </div>
+
+    <!-- Swiper container đúng chuẩn HTML -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <asp:Repeater ID="rptSwipe" runat="server">
+                <ItemTemplate>
+                    <div class="swiper-slide">
+                        <div class="item-box">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                 alt='<%# Eval("Title") %>'
+                                 class="img-fluid" />
+                            <h4>
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                   title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div> 
 </asp:Panel>

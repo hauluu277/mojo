@@ -1044,10 +1044,12 @@
 
 <%-- Hiển thị Info  --%>
 <asp:Panel ID="pnlInfographics" runat="server" CssClass="item-box-cate box-last">
-    <div class="event-widget infographics-container">
+    <div class="infographics-container">
+
         <div class="event-header">
             <h3 class="font-Merriweather">
-                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title" />
+                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title border-infogeaphics" />
+
             </h3>
         </div>
         <div class="infographic-grid">
@@ -1083,31 +1085,23 @@
     <!-- Thêm các hidden field -->
     <asp:HiddenField ID="hdnUrlApi" runat="server" ClientIDMode="Static" />
     <asp:HiddenField ID="hdnCountItem" runat="server" ClientIDMode="Static" />
-    
+
     <div class="box-quangcao-container" id="boxQuangCaoContainer"></div>
     <script>
         $(document).ready(function () {
             var urlApi = $("#hdnUrlApi").val();
             var countItem = parseInt($("#hdnCountItem").val());
-            console.log("🔍 URL API:", urlApi);
-            console.log("🔍 Số lượng item cần hiển thị:", countItem);
 
             $.ajax({
                 type: "POST",
                 url: urlApi,
                 dataType: "json", // Thêm ràng buộc kiểu dữ liệu
                 success: function (data) {
-                    console.log("✅ API Response:", JSON.stringify(data)); // Log chi tiết
-                    console.log("API status check:", data.Status);
-                    console.log("API data.Data:", data.Data);
-                    console.log("API data.Data.length:", data.Data.ListItem.length);
-                    console.log("API status check:", data.status, data.Status);
+
                     if (data && data.Status && data.Data && data.Data.ListItem.length > 0) {
-                        console.log("✅ Valid data with", data.Data.length, "items");
 
                         renderQuangCao(data.Data, countItem);
                     } else {
-                        console.warn("⚠️ Empty or invalid data structure");
                         renderFallbackContent();
                     }
                 },
@@ -1118,8 +1112,6 @@
         });
 
         function renderQuangCao(data, countItem) {
-            console.log("🖌️ Rendering with", Math.min(countItem, data.ListItem.length), "items");
-            console.log(data.ListItem.slice(0, countItem));
             $.ajax({
                 type: "POST",
                 url: '/ClientArea/Client/RenderBoxQuangCaoHtml',
@@ -1160,12 +1152,77 @@
             // Thử lấy cached data nếu có
             var cachedData = localStorage.getItem('cachedQuangCao');
             if (cachedData) {
-                console.log("♻️ Using cached data");
                 renderQuangCao(JSON.parse(cachedData), $("#hdnCountItem").val());
             } else {
                 renderFallbackContent();
             }
         }
 
+    </script>
+</asp:Panel>
+
+
+ 
+
+<%-- Hiển thị Swipe  --%>
+<asp:Panel ID="pnlSwipe" runat="server" CssClass="item-box-cate box-last bg-swipe" Visible="false">
+    <div class="event-header pd-10 title-swipe">
+        <h3 class="font-Merriweather">
+            <asp:HyperLink ID="hplSwipe" runat="server" CssClass="inner-title border-infogeaphics" />
+        </h3>
+    </div>
+
+    <!-- Swiper container đúng chuẩn HTML -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <asp:Repeater ID="rptSwipe" runat="server">
+                <ItemTemplate>
+                    <div class="swiper-slide">
+                        <div class="item-box">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                 alt='<%# Eval("Title") %>'
+                                 class="img-fluid" />
+                            <h4>
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                   title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.mySwiper', {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        });
     </script>
 </asp:Panel>
