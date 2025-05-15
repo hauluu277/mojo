@@ -387,7 +387,7 @@
 }
 
 .swiper-container {
-    width: 100%;
+    width: 100%;    
     overflow: hidden; /* QUAN TRỌNG để ẩn phần tràn */
     padding: 10px;
 }
@@ -443,3 +443,115 @@
     top: 40%; /* Căn giữa chiều dọc */
     z-index: 10;
 }
+
+
+/* SSwipe Ảnh */
+
+
+.container-swipeImg {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    flex-direction: row;
+}
+.image-section {
+    height: 500px;
+    width: 66%;
+    position: relative;
+}
+
+.news-section {
+    height: 500px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+swiper-container {
+    width: 100%;
+    height: 500px !important;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+.news-item-article {
+    flex: 1;
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    box-sizing: border-box;
+    display: flow;
+}
+
+.news-item-article:last-child {
+    border-bottom: none;
+}
+
+.news-item-article h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-item-article p {
+    margin: 0;
+}
+
+.navigation-buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.nav-button {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+    .nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+#news-top {
+    background-color: #17191a;
+}
+
+    #news-top a {
+        color: #bdbdbd;
+    }
+
+#news-bottom {
+    background-color: #222
+}
+
+    #news-bottom a {
+        color: #616161
+    }

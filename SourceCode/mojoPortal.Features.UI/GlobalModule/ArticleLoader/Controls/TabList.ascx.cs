@@ -3,9 +3,11 @@ using MediaGroupFeature.Business;
 using mojoPortal.Business;
 using mojoPortal.Business.WebHelpers;
 using mojoPortal.Features;
+using mojoPortal.Features.UI.Article.Components;
 using mojoPortal.Service.Business;
 using mojoPortal.Web;
 using mojoPortal.Web.Framework;
+using Newtonsoft.Json;
 using Resources;
 using System;
 using System.Collections.Generic;
@@ -175,6 +177,7 @@ namespace ArticleFeature.UI
             pnlInfographics.Visible = false;
             pnlBoxQuangCao.Visible = false;
             pnlSwipe.Visible = false;
+            pnlImageSwipe.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -270,6 +273,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabSwipe)
             {
                 BindHienThiSwipe();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabImageSwipe)
+            {
+                BindHienThiImageSwipe();
             }
             else
             {
@@ -454,6 +461,62 @@ namespace ArticleFeature.UI
                 var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
                 rptSwipe.DataSource = listArticle;
                 rptSwipe.DataBind();
+            }
+        }
+        private void BindHienThiImageSwipe()
+        {
+            pnlImageSwipe.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
+
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var firstCategory = config.ArticleCategoryConfig.Split('-')[0];
+
+                // Load category chính
+                LoadCategory(config.ArticleCategoryConfig, hplImageSwipe);
+
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(firstCategory));
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + firstCategory;
+
+                // Lấy danh sách bài viết
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                var ListSwipeData = new List<ImageSwipeData>();
+                var totalArticle = listArticle.Count;
+
+                for (int i = 0; i < totalArticle; i++)
+                {
+                    ListSwipeData.Add(new ImageSwipeData()
+                    {
+                        TitleTop = listArticle[i].Title,
+                        SummaryTop = listArticle[i].Summary,
+                        UrlTop = listArticle[i].ItemUrl.Replace("~", ""),
+                        TitleBot = listArticle[i == totalArticle - 1 ? 0 : i + 1].Title,
+                        SummaryBot = listArticle[i == totalArticle - 1 ? 0 : i + 1].Summary,
+                        UrlBot = listArticle[i == totalArticle - 1 ? 0 : i + 1].ItemUrl.Replace("~", ""),
+                    });
+                }
+
+                // Gán dữ liệu cho Repeater
+                rptImageSwipe.DataSource = listArticle;
+                rptImageSwipe.DataBind();
+
+                // Lưu dữ liệu dưới dạng JSON
+                hfSwipeData.Value = JsonConvert.SerializeObject(ListSwipeData);
+
+                // Cập nhật nội dung ban đầu
+                if (ListSwipeData.Count > 0)
+                {
+                    var topUrl = ListSwipeData[0].UrlTop;
+                    var botUrl = ListSwipeData[0].UrlBot;
+
+                    newsTopTitle.InnerHtml = $"<a href='{topUrl}' target='_blank'>{ListSwipeData[0].TitleTop}</a>";
+                    newsTopContent.InnerHtml = $"<a href='{topUrl}' target='_blank'>{ListSwipeData[0].SummaryTop}</a>";
+
+                    newsBottomTitle.InnerHtml = $"<a href='{botUrl}' target='_blank'>{ListSwipeData[0].TitleBot}</a>";
+                    newsBottomContent.InnerHtml = $"<a href='{botUrl}' target='_blank'>{ListSwipeData[0].SummaryBot}</a>";
+                }
             }
         }
         private void BindHienThiTinNoiBat()

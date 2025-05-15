@@ -98,6 +98,7 @@ namespace ArticleFeature.UI
             listTab.Add(new ListItem { Text = "Danh sách tin xem nhiều tất cả chuyên mục", Value = ArticleConstant.TabTopHitCount.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị kiểu Infographics ", Value = ArticleConstant.TabInfographics.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị kiểu Swipe ngang ", Value = ArticleConstant.TabSwipe.ToString() });
+            listTab.Add(new ListItem { Text = "Hiển thị kiểu Swipe Ảnh ", Value = ArticleConstant.TabImageSwipe.ToString() });
             listTab.Add(new ListItem { Text = "Quảng cáo ( API của website khác điền vào đường dẫn tiêu đề ) ", Value = ArticleConstant.TabQuangCao.ToString() });
 
 

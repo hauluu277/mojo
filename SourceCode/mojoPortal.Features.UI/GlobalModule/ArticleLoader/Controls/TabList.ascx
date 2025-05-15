@@ -985,13 +985,13 @@
 <%-- Hiển thị Info  --%>
 <asp:Panel ID="pnlInfographics" runat="server" CssClass="item-box-cate box-last">
     <div class="infographics-container">
-        
-    <div class="event-header">
-        <h3 class="font-Merriweather">
+
+        <div class="event-header">
+            <h3 class="font-Merriweather">
                 <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title border-infogeaphics" />
-            
-        </h3>
-    </div>
+
+            </h3>
+        </div>
         <div class="infographic-grid">
             <asp:Repeater ID="rptInfographics" runat="server">
                 <ItemTemplate>
@@ -1046,11 +1046,11 @@
                     <div class="swiper-slide">
                         <div class="item-box">
                             <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
-                                 alt='<%# Eval("Title") %>'
-                                 class="img-fluid" />
+                                alt='<%# Eval("Title") %>'
+                                class="img-fluid" />
                             <h4>
                                 <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
-                                   title='<%# Eval("Title") %>'>
+                                    title='<%# Eval("Title") %>'>
                                     <%# Eval("Title") %>
                                 </a>
                             </h4>
@@ -1063,5 +1063,55 @@
         <!-- Navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-    </div> 
+    </div>
+</asp:Panel>
+
+
+
+
+
+<%-- Hiển thị ImageSwipe  --%>
+<asp:Panel ID="pnlImageSwipe" runat="server" Visible="false">
+    <!-- Phần ảnh (66%) -->
+    <div class="event-header pd-10 title-swipe">
+        <h3 class="font-Merriweather">
+            <asp:HyperLink ID="hplImageSwipe" runat="server" CssClass="inner-title border-infogeaphics" />
+        </h3>
+    </div>
+        <div class="container-swipeImg">
+    <div class="image-section">
+        <swiper-container class="image-swiper" direction="vertical" pagination="true" pagination-clickable="true">
+            <asp:Repeater ID="rptImageSwipe" runat="server">
+                <itemtemplate>
+                    <swiper-slide>
+                        <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                              title='<%# Eval("Title") %>'>
+                               <img width:100% height:auto src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Title") %>' />
+                           </a> 
+                    </swiper-slide>
+                </itemtemplate>
+            </asp:Repeater>
+        </swiper-container>
+
+        <!-- Nút điều hướng -->
+        <div class="navigation-buttons">
+            <button type="button" style="transform: rotate(-90deg);" class="nav-button" id="prev-btn">❮</button>
+            <button type="button" style="transform: rotate(90deg);" class="nav-button" id="next-btn">❯</button>
+        </div>
+    </div>
+
+    <!-- Phần tin tức (33%) -->
+    <div class="news-section">
+        <div class="news-item-article" id="news-top">
+    <h2 runat="server" id="newsTopTitle">Đang tải...</h2>
+    <p runat="server" id="newsTopContent"></p> 
+</div>
+<div class="news-item-article" id="news-bottom">
+    <h2 runat="server" id="newsBottomTitle">Đang tải...</h2>
+    <p runat="server" id="newsBottomContent"></p> 
+</div>
+    </div>
+</div> 
+    <!-- Render dữ liệu dưới dạng JSON -->
+    <asp:HiddenField ID="hfSwipeData" runat="server" />
 </asp:Panel>

@@ -1217,6 +1217,7 @@
     <Compile Include="Article\Components\ArticleNewConfiguration.cs" />
     <Compile Include="Article\Components\ArticleOrtherBO.cs" />
     <Compile Include="Article\Components\ArticleUtils.cs" />
+    <Compile Include="Article\Components\ImageSwipeData.cs" />
     <Compile Include="Article\Components\CommonArticle.cs" />
     <Compile Include="Article\Controls\ArticleCategorySetting.ascx.cs">
       <DependentUpon>ArticleCategorySetting.ascx</DependentUpon>
