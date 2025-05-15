@@ -77,3 +77,7 @@ SourceCode/Mojoportal.ConvertData/obj/
 SourceCode/mojoportal.App/obj/
 /SourceCode/.vs/mojo/FileContentIndex
 /SourceCode/.vs/mojo/v17/.suo
+/SourceCode/Web/mojoPortal.Web.csproj.user
+/SourceCode/Web/Properties/PublishProfiles/FolderProfile.pubxml
+/SourceCode/Web/obj/Debug/mojoPortal.Web.csproj.AssemblyReference.cache
+/SourceCode/.vs/mojo/v17/.suo
