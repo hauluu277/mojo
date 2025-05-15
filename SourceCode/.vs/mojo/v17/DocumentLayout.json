@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\layout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\layout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\kieuhienthi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\kieuhienthi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DDFE292-37AA-4A02-B2F0-BA7968A026EF}|mojoPortal.Data.MSSQL\\mojoPortal.Data.MSSQL.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.data.mssql\\sqlparameterhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,45 +34,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "layout.master",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
+              "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
+              "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-13T10:14:06.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MyStyle.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
               "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\MyStyle.css",
-              "ViewState": "AgIAAPYOAAAAAAAAAAAAAA8PAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAGYUAAAAAAAAAAAAAGQJAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-10T04:40:44.288Z",
               "EditorCaption": ""
@@ -81,13 +82,14 @@
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
               "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
               "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIoAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-10T04:16:07.238Z"
+              "WhenOpened": "2025-05-10T04:16:07.238Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Web.config",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Web.config",
@@ -100,19 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SQLParameterHelper.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\SQLParameterHelper.cs",
               "RelativeDocumentMoniker": "mojoPortal.Data.MSSQL\\SQLParameterHelper.cs",
               "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Data.MSSQL\\SQLParameterHelper.cs",
               "RelativeToolTip": "mojoPortal.Data.MSSQL\\SQLParameterHelper.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAiwEIAAAA5AAAA",
+              "ViewState": "AgIAACEAAAAAAAAAAAAiwEIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T03:52:11.771Z"
+              "WhenOpened": "2025-05-10T03:52:11.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Web.config",
               "RelativeDocumentMoniker": "Web\\Web.config",
