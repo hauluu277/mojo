@@ -809,6 +809,7 @@
     <Compile Include="Areas\CategoryArea\Models\mp_UsersCategoryModel.cs" />
     <Compile Include="Areas\ClientArea\ClientAreaAreaRegistration.cs" />
     <Compile Include="Areas\ClientArea\Controllers\ClientController.cs" />
+    <Compile Include="Areas\ClientArea\Models\BoxQuangCaoSanPham.cs" />
     <Compile Include="Areas\ClientArea\Models\FormVM.cs" />
     <Compile Include="Areas\ClientArea\Models\IndexClientVM.cs" />
     <Compile Include="Areas\ClientArea\Models\ResultAPI.cs" />
@@ -18126,6 +18127,7 @@
     <Content Include="Data\Sites\1\skins\bentredefault\Views\Blog\_BlogPostList--3-Columns.cshtml" />
     <Content Include="Data\Sites\1\skins\bentredefault\Views\Blog\_BlogPostList--Default.cshtml" />
     <Content Include="Data\Sites\1\skins\bentredefault\Views\Web.config" />
+    <Content Include="Areas\ClientArea\Views\Client\_BoxQuangCaoPartial.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\MSSQL.pubxml" />
     <None Include="Properties\PublishProfiles\MySQL.pubxml" />

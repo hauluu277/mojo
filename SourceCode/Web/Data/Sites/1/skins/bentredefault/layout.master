@@ -44,106 +44,110 @@
     <script src="/scripts/jquery/jquery-2.2.1.min.js"></script>
     <script src="/scripts/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
+    <!-- Swiper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <style>
         /* Header styles */
-.main-header {
-    background-color: #fff;
-    border-bottom: 1px solid #e1e1e1;
-    padding: 10px 0;
-}
+        .main-header {
+            background-color: #fff;
+            border-bottom: 1px solid #e1e1e1;
+            padding: 10px 0;
+        }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-}
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
 
-.logo img {
-    height: 30px;
-    margin-bottom: 3px;
-}
+            .logo img {
+                height: 30px;
+                margin-bottom: 3px;
+            }
 
-.slogan {
-    font-size: 11px;
-    color: #757575;
-}
+        .slogan {
+            font-size: 11px;
+            color: #757575;
+        }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-.location-weather {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+        .location-weather {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
-.city {
-    color: #666;
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-}
+        .city {
+            color: #666;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+        }
 
-.city i {
-    font-size: 10px;
-    margin-left: 3px;
-}
+            .city i {
+                font-size: 10px;
+                margin-left: 3px;
+            }
 
-.weather {
-    color: #757575;
-    font-size: 13px;
-}
+        .weather {
+            color: #757575;
+            font-size: 13px;
+        }
 
-.date-time {
-    color: #757575;
-    font-size: 13px;
-}
+        .date-time {
+            color: #757575;
+            font-size: 13px;
+        }
 
-.header-nav {
-    display: flex;
-    gap: 15px;
-    font-size: 13px;
-}
+        .header-nav {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+        }
 
-.header-nav a {
-    color: #666;
-}
+            .header-nav a {
+                color: #666;
+            }
 
-.header-nav a.active {
-    color: #9f224e;
-    font-weight: bold;
-}
+                .header-nav a.active {
+                    color: #9f224e;
+                    font-weight: bold;
+                }
 
-.international {
-    color: #9f224e !important;
-    display: flex;
-    align-items: center;
-}
+        .international {
+            color: #9f224e !important;
+            display: flex;
+            align-items: center;
+        }
 
-.international i {
-    margin-right: 3px;
-    font-size: 12px;
-}
+            .international i {
+                margin-right: 3px;
+                font-size: 12px;
+            }
 
-.header-tools {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .header-tools {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.search-icon, .user-icon, .notify-icon {
-    color: #757575;
-    font-size: 13px;
-}
-
+        .search-icon, .user-icon, .notify-icon {
+            color: #757575;
+            font-size: 13px;
+        }
     </style>
 
 
@@ -176,80 +180,81 @@
             </div>
         </div>
         <div class="sitewrap">
-           
-            <div class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="#"><img src="https://s1.vnecdn.net/vnexpress/restruct/i/v651/v2_2019/pc/graphics/logo.svg" alt="VnExpress"></a>
-            </div>
-            <div class="header-right">
-                <div class="location-weather dropdown">
-                    <a href="#" class="city">Hà Nội <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu city-dropdown">
-                        <a href="#">TP Hồ Chí Minh</a>
-                        <a href="#">Đà Nẵng</a>
-                        <a href="#">Hải Phòng</a>
-                        <a href="#">Cần Thơ</a>
-                    </div>
-                    <span class="weather"><i class="fa fa-cloud-sun"></i> 29°</span>
-                </div>
-                <div class="date-time">Thứ tư, 7/5/2025 <span class="live-time">10:48</span></div>
-                <div class="header-nav">
-                    <a href="#" class="active">Mới nhất</a>
-                    <a href="#">Tin theo khu vực</a>
-                    <a href="#" class="international"><i class="fa fa-globe"></i> International</a>
-                </div>
-                <div class="header-tools">
-                   
-                   <div class="class-but-ul">
-     <ul class=" hidden-xs nav_right-btn">
-         <li style="padding-right: 5px; display: none">
-             <img src="/data/sites/1/skins/framework/images/icon_user.png" />
-         </li>
-            <li>
-       <div class="ButtonSearch">
-           <div class="form-control">
-               <asp:TextBox ID="search_text" runat="server" CssClass="form-control" placeholder="Nhập từ khóa"></asp:TextBox>
-           </div>
-           <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
-           <div id="search-header">
-           </div>
-       </div>
-   </li>
-         <li class="nav_user">
-             <i class='fa fa-user' aria-hidden='true' style="font-size: 13px;color:gray"></i>
-             <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
-             <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" Visible="false" />
-             <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
-         </li>
 
-      
-        
-     </ul>
- </div>
+            <div class="main-header">
+                <div class="container header-container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v651/v2_2019/pc/graphics/logo.svg" alt="VnExpress"></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="location-weather dropdown">
+                            <a href="#" class="city">Hà Nội <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu city-dropdown">
+                                <a href="#">TP Hồ Chí Minh</a>
+                                <a href="#">Đà Nẵng</a>
+                                <a href="#">Hải Phòng</a>
+                                <a href="#">Cần Thơ</a>
+                            </div>
+                            <span class="weather"><i class="fa fa-cloud-sun"></i>29°</span>
+                        </div>
+                        <div class="date-time">Thứ tư, 7/5/2025 <span class="live-time">10:48</span></div>
+                        <div class="header-nav">
+                            <a href="#" class="active">Mới nhất</a>
+                            <a href="#">Tin theo khu vực</a>
+                            <a href="#" class="international"><i class="fa fa-globe"></i>International</a>
+                        </div>
+                        <div class="header-tools">
+
+                            <div class="class-but-ul">
+                                <ul class=" hidden-xs nav_right-btn">
+                                    <li style="padding-right: 5px; display: none">
+                                        <img src="/data/sites/1/skins/framework/images/icon_user.png" />
+                                    </li>
+                                    <li>
+                                        <div class="ButtonSearch">
+                                            <div class="form-control">
+                                                <asp:TextBox ID="search_text" runat="server" CssClass="form-control" placeholder="Nhập từ khóa"></asp:TextBox>
+                                            </div>
+                                            <asp:Button ID="search_button" runat="server" OnClick="search_button_Click" />
+                                            <div id="search-header">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav_user">
+                                        <i class='fa fa-user' aria-hidden='true' style="font-size: 13px; color: gray"></i>
+                                        <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" UseLeftSeparator="true" />
+                                        <portal:UserProfileLink ID="UserProfileLink1" runat="server" RenderAsListItem="false" Visible="false" />
+                                        <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
             <header class="head header-top" role="banner">
                 <div id="menu_desktop">
                     <asp:Panel ID="pnlSearch" runat="server" CssClass="container no-padding" DefaultButton="search_button">
 
                         <portal:MenuControl runat="server" ID="MenuControl" />
-                                          <div class="class-but-ul">
-    <ul class=" hidden-xs nav_right-btn">
-       
-        <li class="menu_chil">
-            <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
-            <div class="menu_chil-chil">
-                <div class="menu-child-header active-menu">
-                    <portal:MenuTopControl runat="server" ID="MenuTopControl1" />
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
-                       
+                        <div class="class-but-ul">
+                            <ul class=" hidden-xs nav_right-btn">
+
+                                <li class="menu_chil">
+                                    <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
+                                    <div class="menu_chil-chil">
+                                        <div class="menu-child-header active-menu">
+                                            <portal:MenuTopControl runat="server" ID="MenuTopControl1" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
                     </asp:Panel>
                     <portal:GenderPageID ID="gdp" runat="server"></portal:GenderPageID>
                 </div>
@@ -316,7 +321,7 @@
         </div>--%>
     </form>
 
-    <div style="margin-bottom:15px;" id="ctl00_divBottom" class="bottom-pane clearfix container cmszone" bis_skin_checked="1">
+    <div style="margin-bottom: 15px;" id="ctl00_divBottom" class="bottom-pane clearfix container cmszone" bis_skin_checked="1">
         <div class="newsletter-box">
             <div class="newsletter-content">
                 <div class="newsletter-left col-4">
@@ -350,7 +355,7 @@
     </div>
     <!-- FOOTER -->
     <div class="footer-container bottom-pane clearfix container cmszone">
-        <div  style="margin :15px 0 0 0; border-bottom:1px solid #e5e5e5;padding-bottom: 15px" class="footer-top">
+        <div style="margin: 15px 0 0 0; border-bottom: 1px solid #e5e5e5; padding-bottom: 15px" class="footer-top">
             <div class="col-4">
                 <span>Báo điện tử</span>
                 <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9597/v2_2019/pc/graphics/logo.svg" alt="VnExpress Logo" class="logo">
@@ -745,7 +750,7 @@
                 // Hiển thị 3 item đầu tiên cho mỗi widget
                 showItems(currentIndex);
             });
-        }); 
+        });
     </script>
     <%--    <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
