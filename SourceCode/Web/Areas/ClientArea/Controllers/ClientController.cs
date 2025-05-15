@@ -577,10 +577,15 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
 
             try
             {
-                var objArtical = _articlesBusiness.GetByIdBaiVetClientKeyWord(9770, keyWord);
+                var objArtical = _articlesBusiness.GetByIdBaiVetClientKeyWord(9812, keyWord);
                 if (objArtical != null && objArtical.Any())
                 {
                     result.Data = objArtical.Select(x => new { title = x.Title, Url = x.ItemUrl.Replace("~", "") }); // Title, ItemUrl
+                }
+                else
+                {
+                    result.Status = false;
+                    result.Message = "Không có dữ liệu";
                 }
             }
             catch (Exception ex)
@@ -589,6 +594,65 @@ namespace mojoPortal.Web.Areas.ClientArea.Controllers
             }
             return Json(result);
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult GetBoxQuangCao()
+        {
+            var result = new JsonResultBO(true, "Thành công");
+
+            var data = new BoxQuangCaoSanPham()
+            {
+                TenNhanHieu = "Ebox",
+                UrlLogo = "https://s1.vnecdn.net/vnexpress/restruct/i/v9610/banner/logo-ebox.svg",
+                UrlWebsite = "https://ebox.com.vn/",
+                ListItem = GetQuangCaoItems()
+            };
+            result.Data = data;
+            return Json(result);
+        }
+        [AllowAnonymous]
+        public List<QuangCaoItem> GetQuangCaoItems()
+        {
+            return new List<QuangCaoItem>
+            {
+                new QuangCaoItem
+                {
+                    Title = "#Ep1 - Từ Áp lực tới Thành công",
+                    ImageUrl = "https://i.ebox.com.vn/2023/11/09/93883617_1699498941.jpg?w=500&h=300&q=100&dpr=1&rt=fit&g=no&s=rmFUFuhRJZJ9qvm0qk1Xvg",
+                    Url = "detail-econference/ep1-tu-ap-luc-toi-thanh-cong-33.html",
+                    Price = "199.000 đ"
+                },
+                new QuangCaoItem
+                {
+                    Title = "Kỹ năng chỉnh sửa ảnh đẹp bằng điện thoại",
+                    ImageUrl = "https://i.ebox.com.vn/2024/09/10/cf9f1f61_1725935995.jpg?w=500&h=300&q=100&dpr=1&rt=fit&g=no&s=--d0U86Fwitc0T90iKRUyA",
+                    Url = "detail-econference/ky-nang-chinh-sua-anh-dep-bang-dien-thoai-71.html",
+                    Price = "299.000 đ"
+                },
+                new QuangCaoItem
+                {
+                    Title = "Chạy bộ không chấn thương",
+                    ImageUrl = "https://i.ebox.com.vn/2025/01/13/e0662222_1736757604.jpg?w=500&h=300&q=100&dpr=1&rt=fit&g=no&s=zndIR-Yym9eyUAS-MbeDlw",
+                    Url = "detail-econference/chay-bo-khong-chan-thuong-76.html",
+                    Price = "300.000 đ"
+                },
+                // Thêm các item khác tương tự
+            };
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult RenderBoxQuangCaoHtml(RenderBoxQuangCaoInput input)
+        {
+            var model = input?.Model ?? new BoxQuangCaoSanPham();
+            if (model.ListItem != null && model.ListItem.Any())
+            {
+                model.ListItem = model.ListItem.Take(input.CountItem).ToList();
+            }
+            return PartialView("_BoxQuangCaoPartial", model);
+        }
+
+
 
     }
 }

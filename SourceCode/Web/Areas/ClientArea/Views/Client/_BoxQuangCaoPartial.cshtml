@@ -1,0 +1,129 @@
+﻿@using mojoPortal.Web.Areas.ClientArea.Models;
+@model BoxQuangCaoSanPham
+
+<div class="header d-flex justify-content-between align-items-center mb-2">
+    <div class="logo-website">
+        <img style="margin:10px;" src="@Model.UrlLogo" alt="@Model.TenNhanHieu" style="height: 24px;" />
+    </div>
+    <a style="margin:10px;" href="@Model.UrlWebsite" class="view-all">Tất cả</a>
+</div>
+
+@if (Model != null && Model.ListItem != null && Model.ListItem.Any())
+{
+    <!-- Swiper Container -->
+    <swiper-container class="mySwiper"
+                      navigation="true"
+                      pagination="true"
+                      space-between="10"
+                      slides-per-view="1"
+                      autoplay-delay="3000"
+                      autoplay-disable-on-interaction="false">
+        @foreach (var item in Model.ListItem)
+        {
+            <swiper-slide>
+                <div class="swiper-slide-content">
+                    <a href="@(Model.UrlWebsite + item.Url)">
+                        <img src="@item.ImageUrl" alt="@item.Title" />
+                    </a>
+                    <div class="content">
+                        <h4>
+                            <a href="@(Model.UrlWebsite + item.Url)" class="title-link">@item.Title</a>
+                        </h4>
+                        <p>@item.Price</p>
+                        <a href="@(Model.UrlWebsite + item.Url)" class="btn-detail">Xem chi tiết</a>
+                    </div>
+                </div>
+            </swiper-slide>
+        }
+    </swiper-container>
+}
+else
+{
+    <span>Không có thông tin</span>
+}
+
+<style>
+    .box-quangcao-container {
+        background: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        padding: 0;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .logo-website img {
+        max-height: 40px;
+    }
+
+    .view-all {
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    swiper-container {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    swiper-slide {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 350px;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .swiper-slide-content img {
+        margin-left: 5%;
+        width: 90%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .content {
+        padding: 10px;
+        text-align: center;
+    }
+
+        .content h4 {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+    .btn-detail {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+    .mySwiper {
+        margin-top: 20px
+    }
+</style>

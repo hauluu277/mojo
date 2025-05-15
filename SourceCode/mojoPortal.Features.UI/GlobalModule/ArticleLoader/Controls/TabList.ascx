@@ -578,7 +578,7 @@
 </asp:Panel>
 <%-- Kết thúc hiển thị các chuyên mục --%>
 
-<%--Hiển thị các Tin Kinh Doanh --%>
+<!--Hiển thị các Tin Kinh Doanh -->
 <asp:Panel ID="Panelkd" runat="server">
     <div class="nopd">
         <hgroup class="width_common title-box-category thoisu">
@@ -804,4 +804,264 @@
             </asp:Repeater>
         </div>
     </div>
+</asp:Panel>
+
+<!-- Dạng hiển thị Bố cục tin nổi bật 
+    Bài đầu tiên: hiển thị lớn (chiếm nhiều không gian, hình to, có mô tả),
+
+    Bài thứ 2 và 3: hiển thị nhỏ hơn, ảnh nhỏ, chỉ tiêu đề ngắn,
+
+    Các bài còn lại: hiển thị dạng danh sách đơn giản, chỉ tiêu đề, ảnh nhỏ xíu,
+    -->
+<asp:Panel ID="pnlTinNoiBat" runat="server" CssClass="tnb-item-box-cate tnb-box-last">
+    <hgroup class="tnb-width_common tnb-title-box-category">
+        <h2 class="parent-cate">
+            <asp:HyperLink ID="hplChuyenMucTinNoiBat" runat="server" CssClass="inner-title" />
+        </h2>
+        <asp:Repeater ID="rptChuyenMucPhuTinNoiBat" runat="server">
+            <ItemTemplate>
+                <span class="sub-cate">
+                    <a href='<%# Eval("Description") %>' title='<%# Eval("Name") %>'><%# Eval("Name") %></a>
+                </span>
+            </ItemTemplate>
+        </asp:Repeater>
+    </hgroup>
+    <div class="event-tintuc row">
+        <!-- Cột trái: Bài viết nổi bật -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 article-featured border-right">
+            <asp:Repeater ID="rptTinNoiBat_1" runat="server">
+                <ItemTemplate>
+                    <div class="featured-item">
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                        <h2><a href="#"><%# Eval("Title") %></a></h2>
+                        <p><%# Eval("Summary") %></p>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột giữa: 2 bài nổi bật tiếp theo -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-small-box  border-right">
+            <asp:Repeater ID="rptTinNoiBat_2_3" runat="server">
+                <ItemTemplate>
+                    <div class="small-item">
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                        <h4><a href="#"><%# Eval("Title") %></a></h4>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột phải: Danh sách tin -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 article-list-item">
+            <div class="box-search-car">
+                <ul class="tab-search">
+                    <li class="tab-item active" data-type="vcar">
+                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vcar.svg" alt="V-car" width="24" height="16">
+                        V-car 
+                    </li>
+                    <li class="tab-item" data-type="vbike">
+                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9604/v2_2019/pc/graphics/ico-vbike.svg" alt="V-Bike" width="24" height="16">
+                        V-Bike 
+                    </li>
+                </ul>
+
+                <div class="form-search">
+                    <input type="search" id="searchInput" class="input-search" placeholder="Nhập tên xe cần tìm" autocomplete="off" />
+                    <ul id="suggestionList" style="display: none; position: absolute; z-index: 999; background: #fff; border: 1px solid #ccc;"></ul>
+                </div>
+            </div>
+            <asp:Repeater ID="rptTinNoiBat_Others" runat="server">
+                <ItemTemplate>
+                    <div class="list-other-item d-flex">
+                        <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'>
+                            <%# Eval("Title") %>
+                        </a>
+                        <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>' alt='<%# Eval("Title") %>' />
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Kết thúc hiển thị Bố cục nổi bật --%>
+
+
+<%-- Hiển thị Spotlight --%>
+
+<asp:Panel ID="pnlSpotlight" runat="server" CssClass="item-box-cate box-last">
+    <div class="event-widget spotlight">
+        <div class="event-header">
+            <h3 class="font-Merriweather">
+                <asp:HyperLink ID="hplSpotlight" runat="server" CssClass="inner-title" />
+            </h3>
+        </div>
+        <div class="event-list">
+            <asp:Repeater ID="rptSpotlight" runat="server">
+                <ItemTemplate>
+                    <div class="event-item-spl d-flex mb-3" data-index='<%# Container.ItemIndex %>'>
+                        <!-- ẢNH BÊN TRÁI (66%) -->
+                        <div class="col-8 pe-2">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                alt='<%# Eval("Title") %>'
+                                class="img-responsive-custom" />
+                        </div>
+
+                        <!-- THÔNG TIN BÊN PHẢI (33%) -->
+                        <div class="col-4 d-flex flex-column justify-content-center">
+                            <div class="event-info">
+                                <a id="lnkTieuDeTin"
+                                    class="fw-bold d-block mb-1"
+                                    href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                    title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>" title="<%#Eval("Title") %>'>
+                                    <%#Eval("Summary") %>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Hiển thị tin xem nhiều --%>
+<asp:Panel ID="pnlXemNhieu" runat="server" CssClass="popular-news-panel">
+
+    <div class="event-header">
+        <h3 class="font-Merriweather">
+            <a href="/tin-tuc" class="inner-title">Xem nhiều </a>
+        </h3>
+    </div>
+    <div class="row list-tinxemnhieu">
+        <!-- Cột trái -->
+        <div class="col-6 box-item-left border-right">
+            <asp:Repeater ID="rptXemNhieuTrai" runat="server">
+                <ItemTemplate>
+                    <div class="news-item border-bottom">
+                        <span class="news-rank"><%# Container.ItemIndex + 1 %></span>
+                        <div class="news-content">
+                            <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
+                                <%# Eval("Title") %>
+                                <span class='news-comments'>
+                                    <i class='fa fa-comment'></i><%# Eval("CommentCount") %>
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Cột phải -->
+        <div class="col-6 box-item-right">
+            <asp:Repeater ID="rptXemNhieuPhai" runat="server">
+                <ItemTemplate>
+                    <div class="news-item border-bottom">
+                        <span class="news-rank"><%# Container.ItemIndex + (int)ViewState["SplitIndex"] + 1 %></span>
+                        <div class="news-content">
+                            <a href='<%# Eval("ItemUrl") %>' title='<%# Eval("Title") %>' class='news-title'>
+                                <%# Eval("Title") %>
+                                <span class='news-comments'>
+                                    <i class='fa fa-comment'></i><%# Eval("CommentCount") %>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Hiển thị Info  --%>
+<asp:Panel ID="pnlInfographics" runat="server" CssClass="item-box-cate box-last">
+    <div class="infographics-container">
+        
+    <div class="event-header">
+        <h3 class="font-Merriweather">
+                <asp:HyperLink ID="hplInfographicsCategory" runat="server" CssClass="inner-title border-infogeaphics" />
+            
+        </h3>
+    </div>
+        <div class="infographic-grid">
+            <asp:Repeater ID="rptInfographics" runat="server">
+                <ItemTemplate>
+                    <div class="infographic-card col-6">
+                        <!-- Hình ảnh -->
+                        <div class="infographic-image">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                alt='<%# Eval("Title") %>'
+                                class="img-fluid" />
+                        </div>
+
+                        <!-- Nội dung text -->
+                        <div class="infographic-content">
+                            <h3 class="infographic-title">
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                    title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Quảng cáo Lấy từ api của website khác --%>
+<asp:Panel ID="pnlBoxQuangCao" runat="server" CssClass="box-quangcao-website">
+    <asp:HiddenField ID="hdnUrlApi" runat="server" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnCountItem" runat="server" ClientIDMode="Static" />
+    <div class="box-quangcao-container" id="boxQuangCaoContainer">
+    </div>
+</asp:Panel>
+
+
+
+<%-- Hiển thị Swipe  --%>
+<asp:Panel ID="pnlSwipe" runat="server" CssClass="item-box-cate box-last bg-swipe" Visible="false">
+    <div class="event-header pd-10 title-swipe">
+        <h3 class="font-Merriweather">
+            <asp:HyperLink ID="hplSwipe" runat="server" CssClass="inner-title border-infogeaphics" />
+        </h3>
+    </div>
+
+    <!-- Swiper container đúng chuẩn HTML -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <asp:Repeater ID="rptSwipe" runat="server">
+                <ItemTemplate>
+                    <div class="swiper-slide">
+                        <div class="item-box">
+                            <img src='<%# ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], Eval("ImageUrl").ToString()) %>'
+                                 alt='<%# Eval("Title") %>'
+                                 class="img-fluid" />
+                            <h4>
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                                   title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div> 
 </asp:Panel>
