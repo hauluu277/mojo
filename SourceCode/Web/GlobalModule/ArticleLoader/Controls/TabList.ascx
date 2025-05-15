@@ -1255,7 +1255,7 @@
 
             <!-- Nút điều hướng -->
             <div class="navigation-buttons">
-                <button type="button" style="transform: rotate(-90deg);" class="nav-button" id="prev-btn">❮</button>
+                <button type="button" style="transform: rotate(90deg);" class="nav-button" id="prev-btn">❮</button>
                 <button type="button" style="transform: rotate(90deg);" class="nav-button" id="next-btn">❯</button>
             </div>
         </div>

@@ -179,6 +179,7 @@
     <Compile Include="FileAttachments\DBFileAttachments.cs" />
     <Compile Include="FileDuThaoVanBan\DBFileDuThaoVanBan.cs" />
     <Compile Include="Forums\DBForums.cs" />
+    <Compile Include="Gold_Price\DBmd_Gold_Price.cs" />
     <Compile Include="InterestLookUp\DBInterestRate.cs" />
     <Compile Include="InterestLookUp\DBLookup.cs" />
     <Compile Include="Media\DBMediaAlbum.cs" />

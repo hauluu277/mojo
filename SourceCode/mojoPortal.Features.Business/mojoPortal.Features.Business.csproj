@@ -204,6 +204,7 @@
     <Compile Include="Forums\ForumThread.cs" />
     <Compile Include="Forums\ForumThreadMovedArgs.cs" />
     <Compile Include="Forums\RSSForum.cs" />
+    <Compile Include="Gold_Price\md_Gold_Price.cs" />
     <Compile Include="Lookup\Lookup.cs" />
     <Compile Include="Lookup\LookupRespository.cs" />
     <Compile Include="Media\MediaAlbum.cs" />

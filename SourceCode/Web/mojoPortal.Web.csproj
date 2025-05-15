@@ -6008,6 +6008,11 @@
     <Content Include="GlobalModule\ThuTucHanhChinh\ManageThuTuc.aspx" />
     <Content Include="GlobalModule\ThuTucHanhChinh\ThuTucHanhChinhModule.ascx" />
     <Content Include="GlobalModule\ThuTucHanhChinh\ViewPost.aspx" />
+    <Content Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.aspx" />
+    <Content Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.aspx" />
+    <Content Include="Gold_Price\Gold_Price_DisplayEdit.aspx" />
+    <Content Include="Gold_Price\Gold_Price_DisplayModule.aspx" />
+    <Content Include="Gold_Price\Gold_PriceDisplayManager.aspx" />
     <Content Include="home.html" />
     <Content Include="LichCongTac\ManagePostNew.aspx" />
     <Content Include="Media\GalleryModule.ascx" />
