@@ -178,6 +178,7 @@ namespace ArticleFeature.UI
             pnlBoxQuangCao.Visible = false;
             pnlSwipe.Visible = false;
             pnlImageSwipe.Visible = false;
+            pnlTinMoiNhat.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -277,6 +278,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabImageSwipe)
             {
                 BindHienThiImageSwipe();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.TabTinMoiNhat)
+            {
+                BindTinMoiNhat();
             }
             else
             {
@@ -851,6 +856,14 @@ namespace ArticleFeature.UI
 
             rptTinMoi.DataSource = listArticle.Skip(5).Take(5);
             rptTinMoi.DataBind();
+        }
+        private void BindTinMoiNhat()
+        {
+            var listArticle = Article.GetAll().OrderBy(x=>x.CreatedDate).Take(21).ToList();
+            pnlTinMoiNhat.Visible = true;
+
+            rptTinMoiNhat.DataSource = listArticle;
+            rptTinMoiNhat.DataBind();
         }
         private void BindHienThiInfographics()
         {

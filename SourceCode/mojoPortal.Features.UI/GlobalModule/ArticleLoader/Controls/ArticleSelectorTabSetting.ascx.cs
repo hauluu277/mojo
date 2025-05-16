@@ -100,6 +100,7 @@ namespace ArticleFeature.UI
             listTab.Add(new ListItem { Text = "Hiển thị kiểu Swipe ngang ", Value = ArticleConstant.TabSwipe.ToString() });
             listTab.Add(new ListItem { Text = "Hiển thị kiểu Swipe Ảnh ", Value = ArticleConstant.TabImageSwipe.ToString() });
             listTab.Add(new ListItem { Text = "Quảng cáo ( API của website khác điền vào đường dẫn tiêu đề ) ", Value = ArticleConstant.TabQuangCao.ToString() });
+            listTab.Add(new ListItem { Text = "Tin mới nhất ", Value = ArticleConstant.TabTinMoiNhat.ToString() });
 
 
             rblTab.DataSource = listTab;

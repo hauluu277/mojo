@@ -1319,3 +1319,35 @@
          });
     </script>
 </asp:Panel>
+
+<%-- Hiển thị Tin Mới Nhất  --%>
+
+<asp:Panel ID="pnlTinMoiNhat" runat="server" CssClass="item-box-cate box-last">
+    <div class="tin-moi-nhat"> 
+        <div class="tin-moi-nhat-item">
+            <asp:Repeater ID="rptTinMoiNhat" runat="server">
+                <ItemTemplate>
+                     <div class="data-news-item">
+                        <div class="news-img">
+                            <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+      title='<%# Eval("Title") %>'>
+                                <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Title") %>'
+     width="150" height="90"
+     onerror="this.onerror=null;this.src='https://i1-kinhdoanh.vnecdn.net/2025/05/16/chungkhoan-14-jpg-1747384189-1-3666-9278-1747384307.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=nQ5q3w-5gwmuDTiw3Rhszg';" />
+
+                            </a>
+                        </div>
+                        <div class="data-news-content">
+                            <h4 class="data-news-title">
+                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+      title='<%# Eval("Title") %>'>
+                                    <%# Eval("Title") %></a>
+                            </h4>
+                            <p class="data-news-summary"><%# Eval("Summary") %></p>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>

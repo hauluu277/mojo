@@ -1,35 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\",
+  "WorkspaceRootPath": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\",
   "Documents": [
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\css\\kieuhienthi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\css\\kieuhienthi.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\areas\\clientarea\\views\\client\\_boxquangcaopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\areas\\clientarea\\views\\client\\_boxquangcaopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
       "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\articleloader\\controls\\tablist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\articleselectortabsetting.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\articleselectortabsetting.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\article\\components\\articleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\controls\\loadgold_price.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\web\\areas\\clientarea\\views\\client\\_boxquangcaopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\areas\\clientarea\\views\\client\\_boxquangcaopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\loadgold_price.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -136,10 +147,6 @@
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_priceloadermodule.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\globalmodule\\articleloader\\controls\\tablist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\component\\gold_priceconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\component\\gold_priceconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -202,21 +209,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-=======
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\data\\sites\\1\\skins\\bentredefault\\layout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\data\\sites\\1\\skins\\bentredefault\\layout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\controls\\menutopcontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\controls\\menutopcontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\controls\\menutopcontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\controls\\menutopcontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -310,213 +308,62 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-=======
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\managepost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\managepost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\controls\\menucontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\controls\\menucontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\controls\\menucontrol.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\controls\\menucontrol.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\controls\\menucontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\controls\\menucontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|c:\\users\\admin\\downloads\\mojo\\sourcecode\\web\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_price_displayedit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postquestion.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postquestion.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postlistanswer.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postlistanswer.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postlistanswer.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postlistanswer.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65849992-8F44-4480-9494-1CA0D6325795}|mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.business\\questionanswers\\questionanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65849992-8F44-4480-9494-1CA0D6325795}|mojoPortal.Features.Business\\mojoPortal.Features.Business.csproj|solutionrelative:mojoportal.features.business\\questionanswers\\questionanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\controls\\gold_price_displaymodulecontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\controls\\gold_pricedisplaymanagercontrols.ascx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\gold_price\\gold_pricedisplaymanager.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\gold_price\\gold_pricedisplaymanager.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\questionanswers\\controls\\qasetting.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\questionanswers\\controls\\qasetting.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\questionanswers\\controls\\postquestion.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\questionanswers\\controls\\postquestion.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\questionanswers\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\questionanswers\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\web\\googlemap\\googlemapmodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{8E511D65-4779-4689-82D4-811D3FE6866E}|Web\\mojoPortal.Web.csproj|solutionrelative:web\\googlemap\\googlemapmodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\lichcongtacmodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\lichcongtac\\lichcongtacmodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\lichcongtac\\controls\\postlist.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\gold_pricedisplaymanager.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\banner\\bannerusemodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\banner\\bannerusemodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\banner\\bannerusemodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\banner\\bannermodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\banner\\bannermodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\banner\\bannermodule.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\banner\\click.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|d:\\downnnnnnnnnnn\\11ss\\mojoportal_git\\mojo\\sourcecode\\mojoportal.features.ui\\banner\\click.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\banner\\click.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\component\\gold_priceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\component\\gold_priceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\component\\gold_priceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\component\\questionanswerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\component\\gold_priceconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\component\\gold_priceconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\gold_price\\component\\gold_priceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\gold_price\\component\\gold_priceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\component\\questionanswerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\component\\questionanswerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\component\\questionanswerutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\component\\questionanswerutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\component\\questionanswerutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\listqaforuser.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\questionanswers\\listquestionanswer.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\lichcongtac\\managepost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\lichcongtac\\managepost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoportal.features.ui\\lichcongtac\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{103F2B02-3224-48BC-B173-1F7E1C85178A}|mojoPortal.Features.UI\\mojoPortal.Features.UI.csproj|solutionrelative:mojoportal.features.ui\\lichcongtac\\managepost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -527,12 +374,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Gold_PriceDisplayManager.aspx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
@@ -546,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ManagePost.aspx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
@@ -560,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ArticleLoaderModule.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx.cs",
@@ -574,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Gold_PriceDisplayManagerControls.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
@@ -585,17 +431,6 @@
               "WhenOpened": "2025-05-16T06:42:50.138Z",
               "IsPinned": true,
               "EditorCaption": ""
-=======
-          "SelectedChildIndex": 11,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
             },
             {
               "$type": "Bookmark",
@@ -615,12 +450,41 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "ArticleSelectorTabSetting.ascx.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
+              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
+              "RelativeToolTip": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\ArticleSelectorTabSetting.ascx.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAIwGYAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:40:19.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArticleConstant.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
+              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
+              "RelativeToolTip": "mojoPortal.Features.UI\\Article\\Components\\ArticleConstant.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAiwGYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:24:06.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "_BoxQuangCaoPartial.cshtml",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Areas\\ClientArea\\Views\\Client\\_BoxQuangCaoPartial.cshtml",
               "RelativeDocumentMoniker": "Web\\Areas\\ClientArea\\Views\\Client\\_BoxQuangCaoPartial.cshtml",
@@ -633,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "TabList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
               "RelativeDocumentMoniker": "Web\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
@@ -646,20 +510,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "KieuHienThi.css",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
               "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\css\\KieuHienThi.css",
-              "ViewState": "AQIAABsCAAAAAAAAAAAAADACAAAAAAAA",
+              "ViewState": "AQIAACYCAAAAAAAAAAAUwD0CAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-16T08:51:23.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "LoadGold_Price.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\LoadGold_Price.ascx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Controls\\LoadGold_Price.ascx",
@@ -672,20 +536,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "LoadGold_Price.ascx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs",
-              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs*",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHQAAAAAAAAA",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs",
+              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.designer.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAADgv1YAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:28:34.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "LoadGold_Price.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx.cs",
@@ -698,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "LoadGold_Price.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\LoadGold_Price.ascx",
@@ -711,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "main.min.js",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\main.min.js",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\main.min.js",
@@ -724,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "administration.min.js",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\administration.min.js",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\administration.min.js",
@@ -737,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "administration.js",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\administration.js",
               "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\js\\administration.js",
@@ -750,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "ModuleTitleControl.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Controls\\ModuleTitleControl.cs",
               "RelativeDocumentMoniker": "Web\\Controls\\ModuleTitleControl.cs",
@@ -763,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "EditLinkToggle.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Controls\\EditLinkToggle.cs",
               "RelativeDocumentMoniker": "Web\\Controls\\EditLinkToggle.cs",
@@ -776,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "HomeArticleHotModule.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleHot\\HomeArticleHotModule.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleHot\\HomeArticleHotModule.ascx.cs",
@@ -789,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Gold_PriceLoaderModule.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_PriceLoaderModule.aspx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Gold_PriceLoaderModule.aspx",
@@ -802,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Gold_PriceLoaderModule.aspx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx.cs",
@@ -815,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "Gold_PriceLoaderModule.aspx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx.designer.cs",
@@ -828,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Gold_PriceLoaderModule.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceLoaderModule.aspx",
@@ -841,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "PostList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\PostList.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\PostList.ascx",
@@ -854,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "ArticleLoaderModule.ascx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx.designer.cs",
@@ -867,7 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "ArticleLoaderModule.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\ArticleLoaderModule.ascx",
@@ -893,7 +757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "NewRight.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Controls\\NewRight.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\Controls\\NewRight.ascx",
@@ -906,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "ArticleResources.resx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\App_GlobalResources\\ArticleResources.resx",
               "RelativeDocumentMoniker": "Web\\App_GlobalResources\\ArticleResources.resx",
@@ -918,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "ArticleResources.resx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.resx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.resx",
@@ -930,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "ThongKeTruyCapConfiguration.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ThongKeTruyCap\\ThongKeTruyCapConfiguration.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ThongKeTruyCap\\ThongKeTruyCapConfiguration.cs",
@@ -943,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "ArticleResources.resx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.resx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.resx",
@@ -956,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "PostList.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Controls\\PostList.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\Controls\\PostList.ascx.cs",
@@ -969,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "AllSiteModule.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\AllSiteModule.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\AllSiteModule.ascx.cs",
@@ -982,20 +846,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 1,
               "Title": "TabList.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx.cs",
-              "ViewState": "AQIAAIYDAAAAAAAAAAAAAEAEAAAwAAAA",
+              "ViewState": "AQIAADoDAAAAAAAAAAAswGADAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T04:41:30.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "TabList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\GlobalModule\\ArticleLoader\\Controls\\TabList.ascx",
@@ -1008,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "ArticleConfiguration.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Article\\Components\\ArticleConfiguration.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Article\\Components\\ArticleConfiguration.cs",
@@ -1021,7 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "ArticleResources.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\App_GlobalResources\\ArticleResources.designer.cs",
@@ -1034,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Gold_Price_DisplayEdit.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
@@ -1047,7 +911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "EditAnswer.aspx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\EditAnswer.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\EditAnswer.aspx.cs",
@@ -1060,7 +924,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "ManagePostAnswer.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePostAnswer.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePostAnswer.aspx",
@@ -1073,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "ListQAForUser.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx",
@@ -1086,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "EditAnswer.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\EditAnswer.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\EditAnswer.aspx",
@@ -1099,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "EditPost.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\EditPost.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\EditPost.aspx",
@@ -1112,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "mojoBasePage.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Components\\mojoBasePage.cs",
               "RelativeDocumentMoniker": "Web\\Components\\mojoBasePage.cs",
@@ -1125,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "RouteRegistrar.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Components\\RouteRegistrar.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Components\\RouteRegistrar.cs",
@@ -1138,7 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "EditAnswer.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\QuestionAnswers\\EditAnswer.aspx",
               "RelativeDocumentMoniker": "Web\\QuestionAnswers\\EditAnswer.aspx",
@@ -1151,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 64,
               "Title": "PostListAnswer.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
@@ -1164,7 +1028,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 62,
               "Title": "PostQuestion.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
@@ -1177,7 +1041,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 65,
               "Title": "QuestionAnswer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
@@ -1190,203 +1054,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 63,
               "Title": "PostListAnswer.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
               "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
               "ViewState": "AQIAAGoAAAAAAAAAAAAwwAAAAAAAAAAA",
-=======
-              "DocumentIndex": 15,
-              "Title": "Gold_PriceDisplayManager.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAwDIAAAAlAAAA",
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:10:17.654Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManagePost.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwDoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:07:36.225Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-05-16T02:17:09.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 69,
-=======
-              "DocumentIndex": 1,
-              "Title": "MenuTopControl.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuTopControl.ascx.cs",
-              "RelativeDocumentMoniker": "Web\\Controls\\MenuTopControl.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuTopControl.ascx.cs",
-              "RelativeToolTip": "Web\\Controls\\MenuTopControl.ascx.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAgwH8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:53:12.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuTopControl.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuTopControl.ascx",
-              "RelativeDocumentMoniker": "Web\\Controls\\MenuTopControl.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuTopControl.ascx",
-              "RelativeToolTip": "Web\\Controls\\MenuTopControl.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T06:52:57.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "layout.master",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
-              "RelativeDocumentMoniker": "Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
-              "RelativeToolTip": "Web\\Data\\Sites\\1\\skins\\bentredefault\\layout.master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-16T06:52:39.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuControl.ascx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx.designer.cs",
-              "RelativeDocumentMoniker": "Web\\Controls\\MenuControl.ascx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx.designer.cs",
-              "RelativeToolTip": "Web\\Controls\\MenuControl.ascx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:52:06.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MenuControl.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx.cs",
-              "RelativeDocumentMoniker": "Web\\Controls\\MenuControl.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx.cs",
-              "RelativeToolTip": "Web\\Controls\\MenuControl.ascx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:52:04.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuControl.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx",
-              "RelativeDocumentMoniker": "Web\\Controls\\MenuControl.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Controls\\MenuControl.ascx",
-              "RelativeToolTip": "Web\\Controls\\MenuControl.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T06:52:03.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 71,
               "Title": "PostQuestion.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
               "RelativeDocumentMoniker": "Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
               "RelativeToolTip": "Web\\QuestionAnswers\\Controls\\PostQuestion.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T02:13:57.617Z"
+              "WhenOpened": "2025-05-16T02:13:57.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 70,
-=======
-              "DocumentIndex": 32,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 72,
               "Title": "GoogleMapModule.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\GoogleMap\\GoogleMapModule.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\GoogleMap\\GoogleMapModule.ascx",
               "RelativeDocumentMoniker": "Web\\GoogleMap\\GoogleMapModule.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\GoogleMap\\GoogleMapModule.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\GoogleMap\\GoogleMapModule.ascx",
               "RelativeToolTip": "Web\\GoogleMap\\GoogleMapModule.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T02:13:08.664Z"
+              "WhenOpened": "2025-05-16T02:13:08.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 71,
-=======
-              "DocumentIndex": 33,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 73,
               "Title": "LichCongTacModule.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
               "RelativeToolTip": "mojoPortal.Features.UI\\LichCongTac\\LichCongTacModule.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T02:12:30.236Z"
+              "WhenOpened": "2025-05-16T02:12:30.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 72,
-=======
-              "DocumentIndex": 34,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 74,
               "Title": "PostList.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
               "RelativeToolTip": "mojoPortal.Features.UI\\LichCongTac\\Controls\\PostList.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T02:11:59.956Z"
+              "WhenOpened": "2025-05-16T02:11:59.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 73,
-=======
-              "DocumentIndex": 36,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 75,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Web.config",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Web.config",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Web.config",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Web.config",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Web.config",
               "RelativeToolTip": "mojoPortal.Features.UI\\Web.config",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvw0AAAAuAAAAAAAAAA==",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvw0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-05-16T02:03:40.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "Gold_Price_DisplayEdit.aspx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
@@ -1399,7 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Gold_Price_DisplayModuleControls.ascx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
@@ -1412,7 +1158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Gold_Price_DisplayModuleControls.ascx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
@@ -1425,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "Gold_Price_DisplayEdit.aspx.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
@@ -1438,7 +1184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 70,
               "Title": "QASetting.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\QASetting.ascx",
               "RelativeDocumentMoniker": "Web\\QuestionAnswers\\Controls\\QASetting.ascx",
@@ -1451,7 +1197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "PostList.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostList.ascx",
               "RelativeDocumentMoniker": "Web\\QuestionAnswers\\Controls\\PostList.ascx",
@@ -1464,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 77,
               "Title": "BannerUseModule.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
@@ -1477,7 +1223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 78,
               "Title": "BannerModule.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
@@ -1490,7 +1236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 79,
               "Title": "Click.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\Click.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\Click.aspx",
@@ -1503,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "Gold_Price_DisplayEdit.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
@@ -1516,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 69,
               "Title": "Gold_Price_DisplayModuleControls.ascx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
@@ -1525,209 +1271,15 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
               "WhenOpened": "2025-05-15T10:01:54.659Z",
-=======
-              "DocumentIndex": 7,
-              "Title": "Gold_Price_DisplayEdit.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "RelativeDocumentMoniker": "Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "RelativeToolTip": "Web\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-15T09:57:30.096Z",
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-<<<<<<< HEAD
-=======
-              "Title": "PostListAnswer.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T02:17:09.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "QuestionAnswer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
-              "RelativeToolTip": "mojoPortal.Features.Business\\QuestionAnswers\\QuestionAnswer.cs",
-              "ViewState": "AQIAAD8BAAAAAAAAAAAvwFgBAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T02:39:53.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PostQuestion.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostQuestion.ascx.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAApwBsAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T02:40:19.222Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PostListAnswer.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
-              "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostListAnswer.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T02:43:31.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Gold_Price_DisplayEdit.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAQwFkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T01:56:18.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Gold_Price_DisplayModuleControls.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T01:56:11.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Gold_Price_DisplayModuleControls.ascx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx.designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T01:56:10.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Gold_Price_DisplayEdit.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAwwEYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T01:47:52.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "QASetting.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\QASetting.ascx",
-              "RelativeDocumentMoniker": "Web\\QuestionAnswers\\Controls\\QASetting.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\QASetting.ascx",
-              "RelativeToolTip": "Web\\QuestionAnswers\\Controls\\QASetting.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T01:41:46.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "PostList.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostList.ascx",
-              "RelativeDocumentMoniker": "Web\\QuestionAnswers\\Controls\\PostList.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\QuestionAnswers\\Controls\\PostList.ascx",
-              "RelativeToolTip": "Web\\QuestionAnswers\\Controls\\PostList.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T01:41:36.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "BannerUseModule.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Banner\\BannerUseModule.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T01:32:18.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "BannerModule.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Banner\\BannerModule.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-16T01:31:36.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Click.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\Click.aspx",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Banner\\Click.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Banner\\Click.aspx",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Banner\\Click.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-16T01:30:23.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Gold_Price_DisplayEdit.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_Price_DisplayEdit.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-15T10:11:01.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Gold_Price_DisplayModuleControls.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
-              "RelativeDocumentMoniker": "Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
-              "RelativeToolTip": "Web\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-15T10:01:54.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 15,
               "Title": "Gold_PriceDisplayManagerControls.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "RelativeToolTip": "Web\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
@@ -1736,15 +1288,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 80,
-=======
-              "DocumentIndex": 45,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 82,
               "Title": "QuestionAnswerConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1753,47 +1301,37 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 11,
-=======
-              "DocumentIndex": 19,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 14,
               "Title": "Gold_PriceDisplayManagerControls.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-15T09:38:34.771Z"
+              "WhenOpened": "2025-05-15T09:38:34.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 66,
-=======
-              "DocumentIndex": 25,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 68,
               "Title": "PostList.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-15T09:34:14.717Z"
+              "WhenOpened": "2025-05-15T09:34:14.717Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 79,
-=======
-              "DocumentIndex": 42,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 81,
               "Title": "Gold_PriceUtils.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceUtils.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1802,15 +1340,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 34,
-=======
-              "DocumentIndex": 43,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 36,
               "Title": "Gold_PriceConstant.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConstant.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1819,15 +1353,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 29,
-=======
-              "DocumentIndex": 44,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 32,
               "Title": "Gold_PriceConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Component\\Gold_PriceConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAkwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1836,15 +1366,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 81,
-=======
-              "DocumentIndex": 46,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 83,
               "Title": "QuestionAnswerUtils.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Component\\QuestionAnswerUtils.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1853,15 +1379,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 82,
-=======
-              "DocumentIndex": 47,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 84,
               "Title": "ListQAForUser.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1870,15 +1392,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 83,
-=======
-              "DocumentIndex": 48,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 85,
               "Title": "ListQAForUser.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ListQAForUser.aspx.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1887,15 +1405,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 84,
-=======
-              "DocumentIndex": 49,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 86,
               "Title": "ListQuestionAnswer.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1904,15 +1418,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 85,
-=======
-              "DocumentIndex": 50,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 87,
               "Title": "ListQuestionAnswer.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ListQuestionAnswer.aspx.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1921,15 +1431,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 88,
-=======
-              "DocumentIndex": 53,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 90,
               "Title": "ManagePost.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.designer.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAQwEsAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1938,43 +1444,24 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 9,
-=======
-              "DocumentIndex": 20,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 13,
               "Title": "Gold_PriceDisplayManagerControls.ascx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:22:38.485Z"
+              "WhenOpened": "2025-05-15T09:22:38.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 78,
-=======
-              "DocumentIndex": 17,
-              "Title": "Gold_PriceDisplayManagerControls.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_PriceDisplayManagerControls.ascx.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAMwE4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:17:59.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 80,
               "Title": "ManagePost.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx.designer.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAQwFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1983,53 +1470,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 18,
               "Title": "Gold_Price_DisplayModuleControls.ascx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Controls\\Gold_Price_DisplayModuleControls.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-15T09:13:28.85Z"
+              "WhenOpened": "2025-05-15T09:13:28.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 64,
-=======
-              "DocumentIndex": 23,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 66,
               "Title": "PostList.ascx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:13:01.371Z"
+              "WhenOpened": "2025-05-15T09:13:01.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 65,
-=======
-              "DocumentIndex": 24,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 67,
               "Title": "PostList.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\Controls\\PostList.ascx.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAA8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
               "WhenOpened": "2025-05-15T09:11:58.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Gold_PriceDisplayManager.aspx",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
               "RelativeDocumentMoniker": "Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
@@ -2042,7 +1522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Gold_PriceDisplayManager.aspx.designer.cs",
               "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
@@ -2055,42 +1535,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-=======
-              "WhenOpened": "2025-05-15T09:11:58.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Gold_PriceDisplayManager.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
-              "RelativeDocumentMoniker": "Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
-              "RelativeToolTip": "Web\\Gold_Price\\Gold_PriceDisplayManager.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-15T09:11:44.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Gold_PriceDisplayManager.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
-              "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
-              "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx.designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:10:22.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 88,
               "Title": "ManagePost.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
               "RelativeToolTip": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -2099,15 +1548,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 87,
-=======
-              "DocumentIndex": 52,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 89,
               "Title": "ManagePost.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
               "RelativeToolTip": "mojoPortal.Features.UI\\LichCongTac\\ManagePost.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -2116,35 +1561,29 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 14,
-=======
-              "DocumentIndex": 16,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 17,
               "Title": "Gold_PriceDisplayManager.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
               "RelativeToolTip": "mojoPortal.Features.UI\\Gold_Price\\Gold_PriceDisplayManager.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-15T09:07:51.654Z"
+              "WhenOpened": "2025-05-15T09:07:51.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 74,
-=======
-              "DocumentIndex": 37,
->>>>>>> 3803acb529466b6d73e5c377570ee4b8a85a85a5
+              "DocumentIndex": 76,
               "Title": "ManagePost.aspx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
+              "DocumentMoniker": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
               "RelativeDocumentMoniker": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
-              "ToolTip": "C:\\Users\\Admin\\Downloads\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
+              "ToolTip": "D:\\downnnnnnnnnnn\\11SS\\MojoPortal_Git\\mojo\\SourceCode\\mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
               "RelativeToolTip": "mojoPortal.Features.UI\\QuestionAnswers\\ManagePost.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-15T09:07:37.554Z"
+              "WhenOpened": "2025-05-15T09:07:37.554Z",
+              "EditorCaption": ""
             }
           ]
         }
