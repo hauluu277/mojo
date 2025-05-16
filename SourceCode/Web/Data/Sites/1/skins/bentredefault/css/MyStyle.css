@@ -434,7 +434,7 @@ background: #28a745;
     padding: 10px 22px;
     height: 42px;
     border: none;
-    background-color: #00882f;
+    background-color: #ffffff;
     border-radius: 60%;
     box-shadow: none;
     margin-top: 5px;
@@ -452,7 +452,7 @@ background: #28a745;
         height: 52px;
         border-radius: 0;
         padding: 10px 15px;
-        background: #00882f;
+        background: #fff;
         border: 0;
         width: 0;
         -webkit-transition: width 1.5s;
@@ -704,13 +704,7 @@ button, input, select, textarea {
         margin-bottom: 25px;
     }
 
-.footer {
-    padding: 15px;
-    text-align: center;
-    font-family: Roboto-Thin;
-    color: white;
-    background-color: #28a745;
-}
+
 
 #ctl00_bottomContent_ctl01_divContent {
     background-color: #1b4557;

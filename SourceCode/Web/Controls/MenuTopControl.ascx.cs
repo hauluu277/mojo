@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace mojoPortal.Web.Controls
 {
@@ -14,11 +13,13 @@ namespace mojoPortal.Web.Controls
     {
         private readonly SiteSettings siteSettings = CacheHelper.GetCurrentSiteSettings();
         private string siteRoot = SiteUtils.GetNavigationSiteRoot();
+
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
             Load += new EventHandler(Page_Load);
         }
+
         private string GenderLink(coreMenu menu)
         {
             if (menu.TypeLink == MenuTypeLinkConstant.Page)
@@ -38,7 +39,8 @@ namespace mojoPortal.Web.Controls
                 var getCategory = new CoreCategory((int)menu.ItemLink.GetValueOrDefault(0));
                 if (getCategory.ItemID > 0)
                 {
-                    if (!string.IsNullOrEmpty(getCategory.Description) && (getCategory.Description.Contains("https") || getCategory.Description.Contains("http")))
+                    if (!string.IsNullOrEmpty(getCategory.Description) &&
+                        (getCategory.Description.Contains("https") || getCategory.Description.Contains("http")))
                     {
                         return getCategory.Description;
                     }
@@ -48,61 +50,76 @@ namespace mojoPortal.Web.Controls
                     }
                 }
             }
+
             if (string.IsNullOrEmpty(menu.LinkMenu))
             {
                 return "javascript:void(0)";
             }
+
             if (menu.LinkMenu.Contains("https") || menu.LinkMenu.Contains("http"))
             {
                 return menu.LinkMenu;
             }
+
             return siteRoot + menu.LinkMenu;
         }
+
         public string GenderLinkUnit(string link)
         {
             return System.Configuration.ConfigurationManager.AppSettings["Domain"] + link;
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 StringBuilder menuAppend = new StringBuilder();
                 var isEnglish = false;
+
                 if (!string.IsNullOrEmpty(WebConfigSettings.SiteEnglish))
                 {
-                    isEnglish = WebConfigSettings.SiteEnglish.ToListInt(',').IndexOf(siteSettings.SiteId) >= 0;
+                    isEnglish = WebConfigSettings.SiteEnglish.ToListInt(',').Contains(siteSettings.SiteId);
                 }
-                var root = coreMenu.GetRoot(1, MenuConstant.MenuTop, isEnglish).Where(x => x.Show == true).ToList();
-                menuAppend.Append("<ul class='topaddres header__area__container__row__text--left__ul'>");
-                //menu cấp 1
+
+                var root = coreMenu.GetRoot(1, MenuConstant.MenuTop, isEnglish)
+                                   .Where(x => x.Show == true)
+                                   .ToList();
+
+                menuAppend.Append("<div class='mega-wrapper'>");
+
                 foreach (var item in root)
                 {
-                    menuAppend.Append("<li class='menu-bf'>");
-                    //if (root.IndexOf(item) > 0)
-                    //{
-                    //    menuAppend.Append($"<a class='rc lh han_disable_a' href='javascript:void(0)'>{item.Name}</a>");
-                    //}
-                    //else
-                    //{
-                    menuAppend.Append($"<a class='rc lh han_disable_a' href='{GenderLink(item)}'>{item.Name}</a>");
-                    //}
-
                     var children = coreMenu.GetByParent(item.ItemID, isEnglish, true);
+                    menuAppend.Append("<div class='mega-col'>");
+                    menuAppend.Append($"<h3>{HttpUtility.HtmlEncode(item.Name)}</h3>");
+
                     if ((children != null && children.Count > 0) || item.IsPhongBan)
                     {
-                        menuAppend.Append("<ul class='menu-item'>");
-                        //menu cấp 2
+                        menuAppend.Append("<ul class='submenu-vertical'>");
+
+                        int maxChildren = 7; // Hiển thị tối đa 7 menu con
+                        int count = 0;
+
                         foreach (var child in children)
                         {
-                            menuAppend.Append("<li>");
-                            menuAppend.Append($"<a class='rc lh' href='{GenderLink(child)}'>{child.Name}</a>");
-                            menuAppend.Append("</li>");
+                            if (count >= maxChildren) break;
+                            menuAppend.Append("<li><a href='" + GenderLink(child) + "'>" + HttpUtility.HtmlEncode(child.Name) + "</a></li>");
+                            count++;
                         }
+
+                        // Nếu còn mục con, thêm nút Xem thêm
+                        if (children.Count > maxChildren)
+                        {
+                            menuAppend.Append("<li><a class='see-more-menu' href='" + GenderLink(item) + "'>Xem thêm</a></li>");
+                        }
+
                         menuAppend.Append("</ul>");
                     }
-                    menuAppend.Append("</li>");
+
+                    menuAppend.Append("</div>");
                 }
-                menuAppend.Append("</ul>");
+
+                menuAppend.Append("</div>");
                 literMenuLeft.Text = menuAppend.ToString();
             }
         }

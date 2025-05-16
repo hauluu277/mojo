@@ -148,6 +148,67 @@
             color: #757575;
             font-size: 13px;
         }
+        .newsletter-input {
+        
+        padding: 14px 10px;
+    width: 354px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+        }
+        .btn-submit {
+        display: flex;
+    align-items: center;
+        
+        }
+
+        .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  background: #fafafd;
+  padding: 24px 0;
+  font-size: 15px;
+  color: #222;
+  border-top: 1px solid #eee;
+}
+
+.footer-info,
+.footer-contact,
+.footer-copyright {
+  flex: 1;
+}
+
+.footer-info,
+.footer-contact {
+  min-width: 220px;
+  max-width: 360px;
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: bold;
+  min-width: 180px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive: Khi màn nhỏ hơn 900px thì xuống hàng */
+@media (max-width: 900px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  .footer-copyright {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+
     </style>
 
 
@@ -241,19 +302,19 @@
                     <asp:Panel ID="pnlSearch" runat="server" CssClass="container no-padding" DefaultButton="search_button">
 
                         <portal:MenuControl runat="server" ID="MenuControl" />
-                        <div class="class-but-ul">
-                            <ul class=" hidden-xs nav_right-btn">
+                       <div class="class-but-ul">
+  <ul class="hidden-xs nav_right-btn">
+    <li class="menu_chil">
+      <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
+      <div class="menu_chil-chil">
+        <div class="menu-child-header active-menu">
+          <portal:MenuTopControl runat="server" ID="MenuTopControl1" />
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
-                                <li class="menu_chil">
-                                    <img src="/data/sites/1/skins/framework/images/img_header-menu.png" alt="Alternate Text" />
-                                    <div class="menu_chil-chil">
-                                        <div class="menu-child-header active-menu">
-                                            <portal:MenuTopControl runat="server" ID="MenuTopControl1" />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
 
                     </asp:Panel>
                     <portal:GenderPageID ID="gdp" runat="server"></portal:GenderPageID>
@@ -356,7 +417,7 @@
     <!-- FOOTER -->
     <div class="footer-container bottom-pane clearfix container cmszone">
         <div style="margin: 15px 0 0 0; border-bottom: 1px solid #e5e5e5; padding-bottom: 15px" class="footer-top">
-            <div class="col-4">
+            <div class="col-4" style="display: flex;">
                 <span>Báo điện tử</span>
                 <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v9597/v2_2019/pc/graphics/logo.svg" alt="VnExpress Logo" class="logo">
             </div>
@@ -417,7 +478,22 @@
     <script src="/Data/Script/Common.js"></script>
     <script src="/Data/Script/CommonValidation.js"></script>
     <script src="/ClientScript/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var trigger = document.getElementById("menu-trigger");
+            var menu = document.getElementById("fullMegaMenu");
+            if (trigger && menu) {
+                trigger.addEventListener("click", function () {
+                    menu.classList.toggle("open");
+                });
+            }
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && e.target !== trigger) {
+                    menu.classList.remove('open');
+                }
+            });
+        });
+    </script>
     <script type="text/javascript">
         wow = new WOW(
             {
