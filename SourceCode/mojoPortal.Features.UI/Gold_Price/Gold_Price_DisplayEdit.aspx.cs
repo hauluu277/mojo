@@ -3,16 +3,22 @@ using mojoPortal.Business.WebHelpers;
 using mojoPortal.Web;
 using mojoPortal.Web.Framework;
 using System;
+using System.Globalization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using static mojoPortal.Web.WindowsLiveLogin;
 
-namespace mojoPortal.Features.UI.Gold_Price
+namespace Gold_PriceFeatures.UI
 {
     public partial class Gold_Price_DisplayEdit : mojoBasePage
     {
 
         private readonly SiteUser user = SiteUtils.GetCurrentSiteUser();
+        override protected void OnInit(EventArgs e)
+        {
+            Load += Page_Load;
+            base.OnInit(e);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -40,30 +46,33 @@ namespace mojoPortal.Features.UI.Gold_Price
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            var goldPrice = new md_Gold_Price
-            {
-                ItemID = int.Parse(hfItemID.Value ?? "0"), // 0 = thêm mới
-            };
-            if (goldPrice.ItemID > 0)
+            var goldPrice = new md_Gold_Price(); 
+            if (int.TryParse(hfItemID.Value, out int itemId) && itemId > 0)
             {
                 goldPrice = new md_Gold_Price(goldPrice.ItemID);
+            }
+            else
+            {
+                goldPrice.ItemID = 0;
+                goldPrice.CreatedBy = user.UserId;
+                goldPrice.CreatedDate = DateTime.Now;
+            }
 
-                goldPrice.TenLoaiVang = txtTenLoaiVang.Text;
-                goldPrice.GiaMuaHomNay = double.Parse(txtGiaMuaHomNay.Text.Replace(",", ""));
-                goldPrice.GiaBanHomNay = double.Parse(txtGiaBanHomNay.Text.Replace(",", ""));
-                goldPrice.GiaMuaHomTruoc = double.Parse(txtGiaMuaHomNay.Text.Replace(",", ""));
-                goldPrice.GiaBanHomTruoc = double.Parse(txtGiaBanHomNay.Text.Replace(",", ""));
-                goldPrice.EditedDate = DateTime.Now;
-                if (user != null)
-                {
-                    goldPrice.EditedBy = user.UserId; 
-                }
+            goldPrice.TenLoaiVang = txtTenLoaiVang.Text; 
+            goldPrice.GiaMuaHomNay = double.Parse(txtGiaMuaHomNay.Text.Replace(",", ""), CultureInfo.InvariantCulture);
+            goldPrice.GiaBanHomNay = double.Parse(txtGiaBanHomNay.Text.Replace(",", ""), CultureInfo.InvariantCulture);
+            goldPrice.GiaMuaHomTruoc = double.Parse(txtGiaMuaHomTruoc.Text.Replace(",", ""), CultureInfo.InvariantCulture);
+            goldPrice.GiaBanHomTruoc = double.Parse(txtGiaBanHomTruoc.Text.Replace(",", ""), CultureInfo.InvariantCulture);
+            goldPrice.EditedDate = DateTime.Now;
+            if (user != null)
+            {
+                goldPrice.EditedBy = user.UserId;
             }
             if (goldPrice.Save()) // Gọi phương thức Save() đã có sẵn
             {
-                // Thông báo thành công và chuyển hướng (nếu cần)
+                // Thông báo thành công và chuyển hướng
                 lblMessage.Text = "Lưu dữ liệu thành công!";
-                WebUtils.SetupRedirect(this, Request.RawUrl); // Tải lại trang
+                WebUtils.SetupRedirect(this, SiteRoot + "/Gold_Price/Gold_PriceDisplayManager.aspx");
             }
             else
             {

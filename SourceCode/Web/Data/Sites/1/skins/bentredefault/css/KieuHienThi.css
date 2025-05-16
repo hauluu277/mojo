@@ -471,8 +471,11 @@
 
 swiper-container {
     width: 100%;
-    height: 500px !important;
 }
+
+    swiper-container.image-swiper {
+        height: 500px !important;
+    }
 
 swiper-slide {
     text-align: center;

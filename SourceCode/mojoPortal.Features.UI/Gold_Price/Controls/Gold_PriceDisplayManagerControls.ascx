@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="Gold_PriceDisplayManagerControls.ascx.cs" Inherits="Gold_PriceFeatures.UI.Gold_PriceDisplayManagerControls" %> 
+﻿<%@  Control Language="C#" AutoEventWireup="false" CodeBehind="Gold_PriceDisplayManagerControls.ascx.cs" Inherits="Gold_PriceFeatures.UI.Gold_PriceDisplayManagerControls" %>
 <%@ Import Namespace="Gold_PriceFeatures.UI" %>
 <%@ Import Namespace="mojoPortal.Features" %>
 <style type="text/css">
@@ -47,52 +47,36 @@
     .myTable select {
         width: 250px;
     }
-</style>
-<fieldset runat="server" style="display: none">
-    <legend id="legendQuestionAnswer" runat="server"></legend>
-</fieldset>
-<div class="panel panel-border-title">
-    <div class="panel-heading">
-        <div>Tiêu chí tìm kiếm</div>
-    </div> 
-</div>
-<div id="toolbar-box">
-    <div class="tool-btn"> 
-    </div>
-</div>
+</style> 
+ 
+
 <asp:Panel ID="pnlPostList" runat="server">
     <asp:Repeater ID="rptQuestion" runat="server" SkinID="Blog">
-        <HeaderTemplate>
+        <headertemplate>
             <table class="table table-striped table-bordered table-hover table-condensed" style="width: 100%">
                 <thead>
                     <tr>
                         <th style="width: 5%; text-align: center">
                             <input type="checkbox" onclick="DoCheckAll(this)" id="checkAll" runat="server" />
                         </th>
-                        <th class="tbl-header" style="width: 35%">
-                            Tên loại vàng
+                        <th class="tbl-header" style="width: 15%">Tên loại vàng
                         </th>
-                        <th class="tbl-header">
-                            Giá bán hôm nay
+                        <th class="tbl-header">Giá bán hôm nay
                         </th>
-                        <th class="tbl-header">
-                            Giá mua hôm nay
+                        <th class="tbl-header">Giá mua hôm nay
+                        </th>   
+                        <th class="tbl-header">Giá bán hôm trước
                         </th>
-                        <th class="tbl-header">
-                            Giá bán hôm trước
+                        <th class="tbl-header">Giá mua hôm trước
                         </th>
-                        <th class="tbl-header">
-                            Giá mua hôm trước
-                        </th>  
-                        <th class="tbl-header">
-                            Thời gian cập nhật
-                        </th> 
+                        <th class="tbl-header">Thời gian cập nhật
+                        </th>
                         <th style="width: 5%" class="tbl-header"></th>
                     </tr>
                 </thead>
                 <tbody>
-        </HeaderTemplate>
-        <ItemTemplate>
+        </headertemplate>
+        <itemtemplate>
             <tr>
                 <td style="text-align: center">
                     <asp:Literal ID="repeaterID" runat="server" Text='<%# Eval("ItemID") %>' Visible="false"></asp:Literal>
@@ -116,15 +100,26 @@
                 <td style="text-align: center">
                     <%#Eval("GiaMuaHomTruoc") %>
 
-                </td> 
+                </td>
                 <td style="text-align: center">
-                    <%#Eval("UpdateDate") %> 
+                    <%#Eval("EditedDate") %> 
+                </td>
+                <td style="text-align: center">
+                    <a href='<%# "/Gold_Price/Gold_Price_DisplayEdit.aspx?itemid=" + Eval("ItemID") %>' class="btn btn-sm btn-warning">Sửa</a>
+                    <asp:Button 
+                        ID="btnDelete" 
+                        runat="server" 
+                        Text="Xoá" 
+                        CssClass="btn btn-danger"
+                        CommandName="Delete"
+                        CommandArgument='<%# Eval("ItemID") %>'
+                        OnCommand="btnDelete_Command" />
                 </td>
             </tr>
-        </ItemTemplate>
-        <FooterTemplate>
+        </itemtemplate>
+        <footertemplate>
             </tbody>
         </table>
-        </FooterTemplate>
-    </asp:Repeater>  
+        </footertemplate>
+    </asp:Repeater>
 </asp:Panel>

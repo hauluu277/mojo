@@ -6,7 +6,12 @@
 
 <asp:content contentplaceholderid="mainContent" id="MPContent" runat="server">
 <portal:ModulePanel ID="pnlContainer" runat="server" CssClass="admin">
-    <portal:ModuleTitleControl EditText="Add" EditUrl="~/menu/editpost.aspx" runat="server" ID="TitleControl" />
+    <portal:ModuleTitleControl 
+    EditText="Add" 
+    EditUrl="~/Gold_Price/Gold_Price_DisplayEdit.aspx" 
+    ShowEditButton="true"
+    runat="server" 
+    ID="TitleControl" />
     <portal:mojoPanel ID="mp1" runat="server" ArtisteerCssClass="art-Post" RenderArtisteerBlockContentDivs="true">
         <mp:CornerRounderTop ID="ctop1" runat="server" EnableViewState="false" />
         <asp:Panel ID="pnlWrapper" runat="server" CssClass="art-Post-inner panelwrapper managepost">

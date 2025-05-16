@@ -512,6 +512,8 @@
     <Content Include="GlobalModule\Webservice\ManagerPost.aspx" />
     <Content Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.ascx" />
     <Content Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx" />
+    <Content Include="Gold_Price\Controls\LoadGold_Price.ascx" />
+    <Content Include="Gold_Price\Gold_PriceLoaderModule.aspx" />
     <Content Include="Gold_Price\Gold_Price_DisplayEdit.aspx" />
     <Content Include="Gold_Price\Gold_PriceDisplayManager.aspx" />
     <Content Include="KDMediaPlayer\AudioPlayer.ascx" />
@@ -3013,6 +3015,20 @@
     <Compile Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx.designer.cs">
       <DependentUpon>Gold_Price_DisplayModuleControls.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Gold_Price\Controls\LoadGold_Price.ascx.cs">
+      <DependentUpon>LoadGold_Price.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gold_Price\Controls\LoadGold_Price.ascx.designer.cs">
+      <DependentUpon>LoadGold_Price.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Gold_Price\Gold_PriceLoaderModule.aspx.cs">
+      <DependentUpon>Gold_PriceLoaderModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gold_Price\Gold_PriceLoaderModule.aspx.designer.cs">
+      <DependentUpon>Gold_PriceLoaderModule.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Gold_Price\Gold_Price_DisplayEdit.aspx.cs">
       <DependentUpon>Gold_Price_DisplayEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4682,6 +4698,7 @@
     <Content Include="App_GlobalResources\ArticleResources.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ArticleResources.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\ArticleResources.vi-VN.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>

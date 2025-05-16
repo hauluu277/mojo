@@ -1242,8 +1242,8 @@
         <div class="image-section">
             <swiper-container class="image-swiper" direction="vertical" pagination="true" pagination-clickable="true">
             <asp:Repeater ID="rptImageSwipe" runat="server">
-                <itemtemplate>
-                    <swiper-slide>
+                <itemtemplate> 
+                    <swiper-slide class="swipe-img">
                         <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
                               title='<%# Eval("Title") %>'>
                                <img width:100% height:auto src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Title") %>' />

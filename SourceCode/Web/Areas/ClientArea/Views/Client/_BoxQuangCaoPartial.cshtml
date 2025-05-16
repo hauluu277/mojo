@@ -20,7 +20,7 @@
                       autoplay-disable-on-interaction="false">
         @foreach (var item in Model.ListItem)
         {
-            <swiper-slide>
+            <swiper-slide class="swipe-quangcao">
                 <div class="swiper-slide-content">
                     <a href="@(Model.UrlWebsite + item.Url)">
                         <img src="@item.ImageUrl" alt="@item.Title" />
@@ -65,13 +65,13 @@ else
         text-decoration: none;
     }
 
-    swiper-container {
+    swiper-container.mySwiper {
         width: 100%;
         height: auto;
         position: relative;
     }
 
-    swiper-slide {
+    swiper-slide.swipe-quangcao {
         background: #fff;
         display: flex;
         justify-content: center;
