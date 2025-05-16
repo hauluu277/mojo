@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Gold_PriceDisplayManagerControls.aspx.cs" Inherits="Gold_PriceFeatures.UI.Gold_PriceDisplayManagerControls" %> 
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="Gold_PriceDisplayManagerControls.ascx.cs" Inherits="Gold_PriceFeatures.UI.Gold_PriceDisplayManagerControls" %> 
 <%@ Import Namespace="Gold_PriceFeatures.UI" %>
 <%@ Import Namespace="mojoPortal.Features" %>
 <style type="text/css">

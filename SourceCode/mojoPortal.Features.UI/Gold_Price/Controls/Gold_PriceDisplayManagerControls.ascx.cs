@@ -16,8 +16,8 @@ using System.Collections;
 namespace Gold_PriceFeatures.UI
 {
 
-    public partial class Gold_PriceDisplayManagerControls : mojoBasePage
-    {
+    public partial class Gold_PriceDisplayManagerControls : System.Web.UI.UserControl
+    {/*
         #region Properties
         private int pageNumber = 1;
         private int totalPages = 1;
@@ -41,35 +41,8 @@ namespace Gold_PriceFeatures.UI
         readonly PageSettings pageSettings = CacheHelper.GetCurrentPage();
         protected string StateLink = SwirlingQuestionResource.StateStatusTitle;
         readonly SiteUser siteUser = SiteUtils.GetCurrentSiteUser();
-        public int PageId
-        {
-            get { return pageId; }
-            set { pageId = value; }
-        }
-
-        public int ModuleId
-        {
-            get { return moduleId; }
-            set { moduleId = value; }
-        }
-        public Gold_PriceConfiguration Config
-        {
-            get { return config; }
-            set { config = value; }
-        }
          
-        public string SiteRoot
-        {
-            get { return siteRoot; }
-            set { siteRoot = value; }
-        }
-
-        public string ImageSiteRoot
-        {
-            get { return imageSiteRoot; }
-            set { imageSiteRoot = value; }
-        }
-        #endregion
+        #endregion*/
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
@@ -80,8 +53,6 @@ namespace Gold_PriceFeatures.UI
          
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadParams();
-            LoadSettings();
             PopulateLabels();
             if (!Page.IsPostBack)
             {
@@ -108,21 +79,5 @@ namespace Gold_PriceFeatures.UI
             rptQuestion.DataSource = reader;
             rptQuestion.DataBind();
         }
-        private void LoadParams()
-        {
-            pageId = WebUtils.ParseInt32FromQueryString("pageid", -1);
-            moduleId = WebUtils.ParseInt32FromQueryString("mid", -1);
-        }
-        protected virtual void LoadSettings()
-        {
-            Hashtable getModuleSettings = ModuleSettings.GetModuleSettings(ModuleId);
-            config = new Gold_PriceConfiguration(getModuleSettings); 
-
-            if (Page is mojoBasePage)
-            {
-                basePage = Page as mojoBasePage;
-                module = basePage.GetModule(moduleId);
-            }
-        } 
     }
 }

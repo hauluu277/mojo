@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Gold_Price_DisplayModuleControls.ascx.cs" Inherits="mojoPortal.Features.UI.Gold_Price.Gold_Price_DisplayModuleControls" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="Gold_Price_DisplayModuleControls.ascx.cs" Inherits="mojoPortal.Features.UI.Gold_Price.Gold_Price_DisplayModuleControls" %>
 
 <asp:Panel ID="pnlGiaVang" runat="server" CssClass="container">
     <link href="/Data/plugins/accordion/css/style.css" rel="stylesheet" />

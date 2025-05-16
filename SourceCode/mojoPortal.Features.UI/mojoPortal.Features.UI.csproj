@@ -510,10 +510,9 @@
     <Content Include="GlobalModule\ThuTucHanhChinh\ManageThuTuc.aspx" />
     <Content Include="GlobalModule\ThuTucHanhChinh\ViewPost.aspx" />
     <Content Include="GlobalModule\Webservice\ManagerPost.aspx" />
-    <Content Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.aspx" />
-    <Content Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.aspx" />
+    <Content Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.ascx" />
+    <Content Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx" />
     <Content Include="Gold_Price\Gold_Price_DisplayEdit.aspx" />
-    <Content Include="Gold_Price\Gold_Price_DisplayModule.aspx" />
     <Content Include="Gold_Price\Gold_PriceDisplayManager.aspx" />
     <Content Include="KDMediaPlayer\AudioPlayer.ascx" />
     <Content Include="KDMediaPlayer\Edit.aspx" />
@@ -3000,19 +2999,19 @@
     <Compile Include="Gold_Price\Component\Gold_PriceConfiguration.cs" />
     <Compile Include="Gold_Price\Component\Gold_PriceConstant.cs" />
     <Compile Include="Gold_Price\Component\Gold_PriceUtils.cs" />
-    <Compile Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.aspx.cs">
-      <DependentUpon>Gold_PriceDisplayManagerControls.aspx</DependentUpon>
+    <Compile Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.ascx.cs">
+      <DependentUpon>Gold_PriceDisplayManagerControls.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.aspx.designer.cs">
-      <DependentUpon>Gold_PriceDisplayManagerControls.aspx</DependentUpon>
+    <Compile Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.ascx.designer.cs">
+      <DependentUpon>Gold_PriceDisplayManagerControls.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.aspx.cs">
-      <DependentUpon>Gold_Price_DisplayModuleControls.aspx</DependentUpon>
+    <Compile Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx.cs">
+      <DependentUpon>Gold_Price_DisplayModuleControls.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.aspx.designer.cs">
-      <DependentUpon>Gold_Price_DisplayModuleControls.aspx</DependentUpon>
+    <Compile Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx.designer.cs">
+      <DependentUpon>Gold_Price_DisplayModuleControls.ascx</DependentUpon>
     </Compile>
     <Compile Include="Gold_Price\Gold_Price_DisplayEdit.aspx.cs">
       <DependentUpon>Gold_Price_DisplayEdit.aspx</DependentUpon>
@@ -3020,13 +3019,6 @@
     </Compile>
     <Compile Include="Gold_Price\Gold_Price_DisplayEdit.aspx.designer.cs">
       <DependentUpon>Gold_Price_DisplayEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Gold_Price\Gold_Price_DisplayModule.aspx.cs">
-      <DependentUpon>Gold_Price_DisplayModule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gold_Price\Gold_Price_DisplayModule.aspx.designer.cs">
-      <DependentUpon>Gold_Price_DisplayModule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gold_Price\Gold_PriceDisplayManager.aspx.cs">
       <DependentUpon>Gold_PriceDisplayManager.aspx</DependentUpon>

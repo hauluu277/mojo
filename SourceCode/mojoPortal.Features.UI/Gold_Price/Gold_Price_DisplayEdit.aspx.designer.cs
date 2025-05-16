@@ -15,15 +15,6 @@ namespace mojoPortal.Features.UI.Gold_Price
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// hfItemID control.
         /// </summary>
         /// <remarks>
@@ -78,60 +69,6 @@ namespace mojoPortal.Features.UI.Gold_Price
         protected global::System.Web.UI.WebControls.TextBox txtGiaBanHomTruoc;
 
         /// <summary>
-        /// txtNganHang control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNganHang;
-
-        /// <summary>
-        /// txtThang1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThang1;
-
-        /// <summary>
-        /// txtThang3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThang3;
-
-        /// <summary>
-        /// txtThang6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThang6;
-
-        /// <summary>
-        /// txtThang9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThang9;
-
-        /// <summary>
-        /// txtThang12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtThang12;
-
-        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
@@ -141,12 +78,12 @@ namespace mojoPortal.Features.UI.Gold_Price
         protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
-        /// btnCancel control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

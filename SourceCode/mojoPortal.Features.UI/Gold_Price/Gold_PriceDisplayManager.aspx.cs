@@ -16,10 +16,10 @@ namespace Gold_PriceFeatures.UI
 {
     public partial class Gold_PriceDisplayManager : mojoBasePage
     {
-        readonly SiteUser siteUser = SiteUtils.GetCurrentSiteUser();
-        private int pageId = -1;
+        //readonly SiteUser siteUser = SiteUtils.GetCurrentSiteUser();
+        /*private int pageId = -1;
         private int moduleId = -1;
-        private bool userCanEdit;
+        private bool userCanEdit;*/
         override protected void OnInit(EventArgs e)
         {
             Load += Page_Load;
@@ -52,18 +52,14 @@ namespace Gold_PriceFeatures.UI
         {
             Title = "Giá vàng ";
             TitleControl.Visible = false;
-            TitleControl.ModuleInstance = GetModule(moduleId);
-            if (siteUser.IsInRoles("Admins"))
-            {
-                TitleControl.Visible = true;
-            }
+            
 
         }
 
         private void LoadSettings()
         {
             //userCanEdit = UserCanEditModule(moduleId);
-            pnlContainer.ModuleId = moduleId;
+            //pnlContainer.ModuleId = moduleId; 
         } 
     }
 } 

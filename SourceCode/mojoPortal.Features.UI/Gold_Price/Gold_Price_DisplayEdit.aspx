@@ -5,57 +5,44 @@
 <head runat="server">
     <title>CHỈNH SỬA GIÁ VÀNG</title>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body> 
         <div>
             <h2>Chỉnh sửa giá vàng</h2>
 
             <asp:HiddenField ID="hfItemID" runat="server" />
 
-            <table>
-                <tr>
-                    <td>Tên loại vàng:</td>
-                    <td><asp:TextBox ID="txtTenLoaiVang" runat="server" Width="300px" /></td>
-                </tr>
-                <tr>
-                    <td>Giá mua hôm nay:</td>
-                    <td><asp:TextBox ID="txtGiaMuaHomNay" runat="server" /></td>
-                </tr>
-                <tr>
-                    <td>Giá bán hôm nay:</td>
-                    <td><asp:TextBox ID="txtGiaBanHomNay" runat="server" /></td>
-                </tr>
-                <tr>
-                    <td>Giá mua hôm trước:</td>
-                    <td><asp:TextBox ID="txtGiaMuaHomTruoc" runat="server" /></td>
-                </tr>
-                <tr>
-                    <td>Giá bán hôm trước:</td>
-                    <td><asp:TextBox ID="txtGiaBanHomTruoc" runat="server" /></td>
-                </tr>
-                <tr>
-                    <td>Ngân hàng:</td>
-                    <td><asp:TextBox ID="txtNganHang" runat="server" Width="300px" /></td>
-                </tr>
+            <div class="form-group">
+                <label>Tên loại vàng:</label>
+                <asp:TextBox ID="txtTenLoaiVang" runat="server" CssClass="form-control" />
+            </div>
 
-                <%-- Tháng 1 đến tháng 12 --%>
-                <tr><td>Tháng 1:</td><td><asp:TextBox ID="txtThang1" runat="server" /></td></tr>
-                <tr><td>Tháng 3:</td><td><asp:TextBox ID="txtThang3" runat="server" /></td></tr>
-                <tr><td>Tháng 6:</td><td><asp:TextBox ID="txtThang6" runat="server" /></td></tr>
-                <tr><td>Tháng 9:</td><td><asp:TextBox ID="txtThang9" runat="server" /></td></tr>
-                <tr><td>Tháng 12:</td><td><asp:TextBox ID="txtThang12" runat="server" /></td></tr>
+           
 
-                <%-- Meta Info --%> 
+            <!-- Các trường giá -->
+            <div class="form-group">
+                <label>Giá mua hôm nay:</label>
+                <asp:TextBox ID="txtGiaMuaHomNay" runat="server" CssClass="form-control price" />
+            </div>
 
-                <%-- Nút lưu --%>
-                <tr>
-                    <td colspan="2">
-                        <asp:Button ID="btnSave" runat="server" Text="Lưu" OnClick="btnSave_Click" />
-                        <asp:Button ID="btnCancel" runat="server" Text="Hủy" PostBackUrl="~/Gold_Price/Gold_Price_DisplayModule.aspx" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
+            <div class="form-group">
+                <label>Giá bán hôm nay:</label>
+                <asp:TextBox ID="txtGiaBanHomNay" runat="server" CssClass="form-control price" />
+            </div>
+            <!-- Các trường giá -->
+            <div class="form-group">
+                <label>Giá mua hôm nay:</label>
+                <asp:TextBox ID="txtGiaMuaHomTruoc" runat="server" CssClass="form-control price" />
+            </div>
+
+            <div class="form-group">
+                <label>Giá bán hôm nay:</label>
+                <asp:TextBox ID="txtGiaBanHomTruoc" runat="server" CssClass="form-control price" />
+            </div>
+
+            <!-- Thêm các trường khác tương tự (GiaMuaHomTruoc, GiaBanHomTruoc, Thang1, Thang3,...) -->
+
+            <asp:Button ID="btnSave" runat="server" Text="Lưu" OnClick="btnSave_Click" CssClass="btn btn-primary" />
+            <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" />
+        </div> 
 </body>
 </html>

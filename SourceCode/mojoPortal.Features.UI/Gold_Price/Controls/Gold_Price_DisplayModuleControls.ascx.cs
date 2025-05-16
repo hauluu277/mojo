@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 namespace mojoPortal.Features.UI.Gold_Price
 {
 
-    public partial class Gold_Price_DisplayModuleControls : mojoBasePage
+    public partial class Gold_Price_DisplayModuleControls : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
