@@ -1124,26 +1124,58 @@
         <div class="tin-moi-nhat-item">
             <asp:Repeater ID="rptTinMoiNhat" runat="server">
                 <ItemTemplate>
+                    <div class="news-title">
+                        <a class="news-link-title" title="<%#Eval("Title") %>" href="<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>"><span><%# Eval("Title") %></span> </a>
+                    </div>
                      <div class="data-news-item">
                         <div class="news-img">
-                            <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
+                            
+                            <a style="width:150px; height:90px;" href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
       title='<%# Eval("Title") %>'>
-                                <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Title") %>'
+                                <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Summary") %>'
      width="150" height="90"
      onerror="this.onerror=null;this.src='https://i1-kinhdoanh.vnecdn.net/2025/05/16/chungkhoan-14-jpg-1747384189-1-3666-9278-1747384307.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=nQ5q3w-5gwmuDTiw3Rhszg';" />
 
                             </a>
                         </div>
-                        <div class="data-news-content">
-                            <h4 class="data-news-title">
-                                <a href='<%# ArticleUtils.FormatBlogTitleUrl(SiteRoot, Eval("ItemUrl").ToString(), Convert.ToInt32(Eval("ItemID")), PageId, ModuleId) %>'
-      title='<%# Eval("Title") %>'><%# Eval("Title") %></a>
-                            </h4>
+                        <div class="data-news-content"> 
                             <p class="data-news-summary"><%# Eval("Summary") %></p>
                         </div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+        </div>
+    </div>
+</asp:Panel>
+
+
+<%-- Hiển thị Tin Mới Nhất  --%>
+<asp:Panel ID="pnl_1Chinh_1Phu" runat="server">
+    <div class="tin-1-1">
+        <hgroup class="">
+            <h2 class="parent-cate-category">
+                <asp:HyperLink ID="hplCategory1_1" runat="server" CssClass="" />
+            </h2>
+            <asp:Repeater ID="RepeaterChuyenMuc1_1" runat="server">
+                <ItemTemplate>
+                    <span class="sub-cate-news">
+                        <a href='<%# Eval("Description") %>' title='<%# Eval("Name") %>'><%# Eval("Name") %></a>
+                    </span>
+                </ItemTemplate>
+            </asp:Repeater>
+        </hgroup>
+        <div class="d-flex float-left row">
+            <div class="col-md-8 main-article-data">
+                <div class="thumb-art">
+                    <asp:Image ID="imgTin1_Chinh" runat="server" CssClass="img-fluid" />
+                </div>
+                <div class="wrap-sum-news">
+                    <asp:HyperLink ID="hplTin1_Chinh" runat="server" class="title-news"></asp:HyperLink>
+                </div>
+            </div>
+            <div class="col-md-4 sub-article-news">
+                <asp:HyperLink ID="hplTin2_Phu" runat="server" class="sub-title"></asp:HyperLink>
+            </div>
         </div>
     </div>
 </asp:Panel>

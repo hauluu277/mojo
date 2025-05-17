@@ -69,17 +69,24 @@ namespace Gold_PriceFeatures.UI
 
             pnlContainer.ModuleId = ModuleId;
             Title1.Visible = false;
-            if (siteUser.IsInRoles("Admins") && ModuleId > 0 && PageId > 0)
+            try
             {
-                string html = $@"
-                <a id='module{ModuleId}' class='moduleanchor'></a>
-                <span class='modulelinks'>
-                    <a title='Chỉnh sửa thiết lập cho thực thể nội dung này' class='ModuleEditLink' 
-                       href='/Admin/ModuleSettings.aspx?mid={ModuleId}&amp;pageid={PageId}'>
-                        Thiết lập
-                    </a>
-                </span>";
-                litModuleLinks.Text = html;
+
+                if (siteUser.IsInRoles("Admins") && ModuleId > 0 && PageId > 0)
+                {
+                    string html = $@"
+                    <a id='module{ModuleId}' class='moduleanchor'></a>
+                    <span class='modulelinks'>
+                        <a title='Chỉnh sửa thiết lập cho thực thể nội dung này' class='ModuleEditLink' 
+                           href='/Admin/ModuleSettings.aspx?mid={ModuleId}&amp;pageid={PageId}'>
+                            Thiết lập
+                        </a>
+                    </span>";
+                    litModuleLinks.Text = html;
+                }
+            }
+            catch (Exception)
+            { 
             }
         }
     }
