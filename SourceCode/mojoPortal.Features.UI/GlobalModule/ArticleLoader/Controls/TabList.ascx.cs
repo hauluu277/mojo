@@ -179,6 +179,7 @@ namespace ArticleFeature.UI
             pnlSwipe.Visible = false;
             pnlImageSwipe.Visible = false;
             pnlTinMoiNhat.Visible = false;
+            pnl_1Chinh_1Phu.Visible = false;
             if (config.TabSelectorSetting == ArticleConstant.TabTinMoiDocNhieu)
             {
                 BindTinMoiDocNhieu();
@@ -282,6 +283,10 @@ namespace ArticleFeature.UI
             else if (config.TabSelectorSetting == ArticleConstant.TabTinMoiNhat)
             {
                 BindTinMoiNhat();
+            }
+            else if (config.TabSelectorSetting == ArticleConstant.Tab1TinChinh1Phu)
+            {
+                Bind_1Chinh_1Phu();
             }
             else
             {
@@ -755,6 +760,44 @@ namespace ArticleFeature.UI
                 }
             }
         }
+        private void Bind_1Chinh_1Phu()
+        {
+
+            pnl_1Chinh_1Phu.Visible = true;
+            var categories = config.ArticleCategoryConfig.Replace("-", " ");
+
+            if (!string.IsNullOrEmpty(categories))
+            {
+                categories = categories.Trim();
+                var fistCategory = config.ArticleCategoryConfig.Split('-')[0];
+                LoadCategory(config.ArticleCategoryConfig, hplCategory1_1);
+                var listCategory = CoreCategory.GetChildren(Convert.ToInt32(fistCategory));
+
+                RepeaterChuyenMuc1_1.DataSource = listCategory;
+                RepeaterChuyenMuc1_1.DataBind();
+
+                var lstCategory = string.Join(" ", listCategory.Select(x => x.ItemID).ToArray());
+                lstCategory += " " + fistCategory;
+
+                var listArticle = Article.GetArticleHotByCategory(siteId, lstCategory, config.NumberArticleLimit, 0, true);
+                if (listArticle != null && listArticle.Any())
+                {
+                    var firstArticle = listArticle[0];
+
+                    hplTin1_Chinh.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, firstArticle.ItemUrl, firstArticle.ItemID, pageId, moduleId);
+                    hplTin1_Chinh.Text = firstArticle.Title;
+                     
+                    imgTin1_Chinh.ImageUrl = ArticleUtils.FormatImageDialog(ConfigurationManager.AppSettings["ArticleImagesFolder"], firstArticle.ImageUrl);
+                    if (listArticle.Count > 1)
+                    {
+                        var secondArticle = listArticle[1];
+
+                        hplTin2_Phu.NavigateUrl = ArticleUtils.FormatBlogTitleUrl(SiteRoot, secondArticle.ItemUrl, secondArticle.ItemID, pageId, moduleId);
+                        hplTin2_Phu.Text = secondArticle.Title; 
+                    } 
+                }
+            }
+        }
 
 
 
@@ -859,7 +902,7 @@ namespace ArticleFeature.UI
         }
         private void BindTinMoiNhat()
         {
-            var listArticle = Article.GetAll().OrderBy(x=>x.CreatedDate).Take(21).ToList();
+            var listArticle = Article.GetAll().OrderByDescending(x=>x.CreatedDate).Take(18).ToList();
             pnlTinMoiNhat.Visible = true;
 
             rptTinMoiNhat.DataSource = listArticle;
