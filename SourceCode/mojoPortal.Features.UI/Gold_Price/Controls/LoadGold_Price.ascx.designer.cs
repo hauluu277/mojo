@@ -11,8 +11,17 @@ namespace Gold_PriceFeatures.UI
 {
 
 
-    public partial class Gold_Price_DisplayEdit
+    public partial class LoadGold_Price
     {
+
+        /// <summary>
+        /// pnlOuterWrap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.UI.OuterWrapperPanel pnlOuterWrap;
 
         /// <summary>
         /// pnlContainer control.
@@ -22,15 +31,6 @@ namespace Gold_PriceFeatures.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.UI.ModulePanel pnlContainer;
-
-        /// <summary>
-        /// TitleControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::mojoPortal.Web.UI.ModuleTitleControl TitleControl;
 
         /// <summary>
         /// mp1 control.
@@ -60,6 +60,15 @@ namespace Gold_PriceFeatures.UI
         protected global::System.Web.UI.WebControls.Panel pnlWrapper;
 
         /// <summary>
+        /// Title1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.UI.ModuleTitleControl Title1;
+
+        /// <summary>
         /// MojoPanel1 control.
         /// </summary>
         /// <remarks>
@@ -69,85 +78,31 @@ namespace Gold_PriceFeatures.UI
         protected global::mojoPortal.Web.UI.mojoPanel MojoPanel1;
 
         /// <summary>
-        /// hfItemID control.
+        /// pnlPostList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfItemID;
+        protected global::System.Web.UI.WebControls.Panel pnlPostList;
 
         /// <summary>
-        /// txtTenLoaiVang control.
+        /// litModuleLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenLoaiVang;
+        protected global::System.Web.UI.WebControls.Literal litModuleLinks;
 
         /// <summary>
-        /// txtGiaMuaHomNay control.
+        /// rptQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaMuaHomNay;
-
-        /// <summary>
-        /// txtGiaBanHomNay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaBanHomNay;
-
-        /// <summary>
-        /// txtGiaMuaHomTruoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaMuaHomTruoc;
-
-        /// <summary>
-        /// txtGiaBanHomTruoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaBanHomTruoc;
-
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-
-        /// <summary>
-        /// lnkCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkCancel;
-
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Repeater rptQuestion;
 
         /// <summary>
         /// cbottom1 control.

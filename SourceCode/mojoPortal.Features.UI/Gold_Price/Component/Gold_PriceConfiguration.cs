@@ -10,6 +10,12 @@ namespace Gold_PriceFeatures.UI
 {
     public class Gold_PriceConfiguration
     {
+
+        string moduleGold_PriceCssCustome = "";
+        public string ModuleGold_PriceCssCustome
+        {
+            get { return moduleGold_PriceCssCustome; }
+        }
         public Gold_PriceConfiguration()
         { }
 
@@ -32,7 +38,8 @@ namespace Gold_PriceFeatures.UI
             {
                 titleSetting = settings["TitleSetting"].ToString();
             }
-
+            if (settings.Contains("ModuleGold_PriceCssCustome"))
+                moduleGold_PriceCssCustome = settings["ModuleGold_PriceCssCustome"].ToString();
             if (settings.Contains("GiaoDienHienThiQASetting"))
             {
                 giaoDienHienThi = settings["GiaoDienHienThiQASetting"].ToString();

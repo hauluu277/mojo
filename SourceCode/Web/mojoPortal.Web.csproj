@@ -6010,6 +6010,8 @@
     <Content Include="GlobalModule\ThuTucHanhChinh\ViewPost.aspx" />
     <Content Include="Gold_Price\Controls\Gold_PriceDisplayManagerControls.ascx" />
     <Content Include="Gold_Price\Controls\Gold_Price_DisplayModuleControls.ascx" />
+    <Content Include="Gold_Price\Controls\LoadGold_Price.ascx" />
+    <Content Include="Gold_Price\Gold_PriceLoaderModule.aspx" />
     <Content Include="Gold_Price\Gold_Price_DisplayEdit.aspx" />
     <Content Include="Gold_Price\Gold_PriceDisplayManager.aspx" />
     <Content Include="home.html" />

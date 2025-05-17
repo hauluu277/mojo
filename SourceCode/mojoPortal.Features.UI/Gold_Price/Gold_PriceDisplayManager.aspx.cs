@@ -15,11 +15,7 @@ using ArticleFeature.UI;
 namespace Gold_PriceFeatures.UI
 {
     public partial class Gold_PriceDisplayManager : mojoBasePage
-    {
-        //readonly SiteUser siteUser = SiteUtils.GetCurrentSiteUser();
-        /*private int pageId = -1;
-        private int moduleId = -1;
-        private bool userCanEdit;*/
+    { 
         override protected void OnInit(EventArgs e)
         {
             Load += Page_Load;
@@ -27,16 +23,7 @@ namespace Gold_PriceFeatures.UI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadSettings();
-
-
-
-
-            //if (!userCanEdit)
-            //{
-            //    SiteUtils.RedirectToEditAccessDeniedPage();
-            //}
-
+            LoadSettings(); 
             PopulateLabels();
 
             PopulateControls();
@@ -51,9 +38,7 @@ namespace Gold_PriceFeatures.UI
         private void PopulateLabels()
         {
             Title = "Giá vàng ";
-            TitleControl.Visible = false;
-            
-
+            TitleControl.Visible = true; 
         }
 
         private void LoadSettings()
