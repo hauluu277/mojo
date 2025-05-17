@@ -1164,12 +1164,12 @@
                 </ItemTemplate>
             </asp:Repeater>
         </hgroup>
-        <div class="d-flex float-left row">
+        <div class="row">
             <div class="col-md-8 main-article-data">
                 <div class="thumb-art">
                     <asp:Image ID="imgTin1_Chinh" runat="server" CssClass="img-fluid" />
                 </div>
-                <div class="wrap-sum-news">
+                <div class="wrap-sum-news-1">
                     <asp:HyperLink ID="hplTin1_Chinh" runat="server" class="title-news"></asp:HyperLink>
                 </div>
             </div>
